@@ -44,3 +44,10 @@ eBay provides lots of categories with different mandatory/optional item specific
 1. Clone/Copy/Download this repository
 1. Navigate to the project directory and update/install the composer.json with `composer install`
 1. Copy the `.env.example` file to a new file called `.env` and fill in your eBay API credentials
+
+## Learn More
+
+-   [PHP](https://www.php.net/) - The programming language used
+-   [Composer](https://getcomposer.org/) - Dependency Management
+-   [MariaDB](https://mariadb.org/documentation/) - The database used
+-   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - For traditional APIs like the Trading API
