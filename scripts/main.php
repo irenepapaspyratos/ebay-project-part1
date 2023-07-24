@@ -1,5 +1,6 @@
 <?php
 
+// Load classes
 require __DIR__ . '/../vendor/autoload.php';
 
 // Load configuration values
@@ -7,7 +8,7 @@ $config = require __DIR__ . '/../config.php';
 
 use App\Service\EbayApiService;
 
-// Load environment and configuration variables
+// Assign environment and configuration variables
 $apiUrl = $config['ebay']['xml_api_production'];
 $apiToken = getenv('EBAY_API_TOKEN');
 $compatLevel = $config['ebay']['combatibility_level'];

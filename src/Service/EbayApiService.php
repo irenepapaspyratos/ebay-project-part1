@@ -17,7 +17,7 @@ class EbayApiService {
         $this->siteId = $siteId;
     }
 
-    // Create the base for xml requests using HEREDOC
+    // Create the base for XML requests using HEREDOC (each call will have to add specific elements to the XML request)
     protected function getBasicRequestXml(string $callName): string {
 
         return <<<XML
@@ -32,7 +32,7 @@ class EbayApiService {
         XML;
     }
 
-    // Get basic (non-optional) headers
+    // Get basic (non-optional) headers (additional headers are optional or mandatory, depending on the call)
     protected function getBasicHeaders(string $callName): array {
 
         return [
@@ -42,7 +42,7 @@ class EbayApiService {
         ];
     }
 
-    // Execute an API call
+    // Execute an XML API call using POST (returns XML string)
     protected function executeCurl(array $headers, string $xmlRequest): string {
 
         $ch = curl_init();
@@ -61,7 +61,7 @@ class EbayApiService {
         return $response;
     }
 
-    // Get eBay's current timestamp
+    // Get eBay's current timestamp (the timestamp will be included in the response stating a failure, due to the wrong call for this API)
     public function getEbayTimestamp() {
 
         // Set defaults
