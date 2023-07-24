@@ -3,6 +3,6 @@
 // Set global configurations
 return [
     'ebay' => [
-        'trading_api' => 'https://api.ebay.com/ws/api.dll',
+        'xml_api_production' => 'https://api.ebay.com/ws/api.dll',
     ],
 ];
