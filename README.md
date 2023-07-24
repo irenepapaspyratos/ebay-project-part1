@@ -18,7 +18,7 @@ _The Ebay Project_ was written in PHP, because this is one requirement of the se
 
 ### Ebay API
 
-Only the _Trading API_ is used in order to reduce the effort of eventually extending the project, as this API provides ALL specifics of an item and can also be used to delete, update or add items.
+Only the _Trading API_ is used in order to reduce the effort of eventually extending the project, as this API provides ALL specifics of an item and can be used to delete, update or add items as well as to receive a list of modified items for a specified time window.
 
 ### Ebay API Access
 
@@ -44,6 +44,7 @@ eBay provides lots of categories with different mandatory/optional item specific
 1. Clone/Copy/Download this repository
 1. Navigate to the project directory and update/install the composer.json with `composer install`
 1. Copy the `.env.example` file to a new file called `.env` and fill in your eBay API credentials
+1. Edit the variables in the `config.php` file according to your requirements
 
 ## Learn More
 
