@@ -7,15 +7,19 @@ require __DIR__ . '/../vendor/autoload.php';
 $config = require __DIR__ . '/../config.php';
 
 use App\Service\EbayApiService;
+use App\Utility\CustomCurl;
+use App\Utility\CustomLogger;
 
 // Assign environment and configuration variables
-$apiUrl = $config['ebay']['xml_api_production'];
-$apiToken = getenv('EBAY_API_TOKEN');
-$compatLevel = $config['ebay']['combatibility_level'];
-$siteId = $config['ebay']['site_id'];
+$ebayApiUrl = $config['ebay']['xml_api_production'];
+$ebayApiToken = getenv('EBAY_API_TOKEN');
+$ebayCompatLevel = $config['ebay']['combatibility_level'];
+$ebaySiteId = $config['ebay']['site_id'];
 
 // Create services
-$ebayApiService = new EbayApiService($apiUrl, $apiToken, $compatLevel, $siteId);
+$customLogger = new CustomLogger();
+$ebayCurl = new CustomCurl($ebayApiUrl);
+$ebayApiService = new EbayApiService($customLogger, $ebayApiToken, $ebayCompatLevel, $ebaySiteId, $ebayCurl);
 
 // Fetch timestamp from eBay
-$ebayTimestamp = $ebayApiService->getEbayTimestamp();
+$ebayTimestamp = $ebayApiService->getTimestamp();

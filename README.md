@@ -1,3 +1,5 @@
+<h2 style="color:red">!! Under Construction !!</h2>
+
 # The Ebay Project </br>Part 1 - Creating a Database
 
 </br>
@@ -27,6 +29,10 @@ Different use-cases for having/wishing to create a database of eBay listings may
 ### Database
 
 eBay provides lots of categories with different mandatory/optional item specifics as well as several other differences depending on the country of publishing. Because of it's performance and unique features, MariaDB has been chosen as local database for the items' details along with a simple online hosted space to act as datapool for images and original responses. Like this, the code can be kept generalized, reusable and as simple as possible while minimizing the local storage.
+
+### Testing
+
+The testing framework for Codeception is used to ensure the quality and functionality of the codebase. A 'test run' command has been added to the composer.json file, allowing easy execution.
 
 </br>
 

@@ -3,18 +3,19 @@
 namespace App\Service;
 
 class EbayApiService {
-    protected $apiUrl;
+    protected $customLogger;
     protected $apiToken;
     protected $compatLevel;
     protected $siteId;
+    protected $customCurl;
 
-    public function __construct($apiUrl, $apiToken, $compatLevel, $siteId) {
+    public function __construct($customLogger, $apiToken, $compatLevel, $siteId, $customCurl) {
 
-        // Assign parameters
-        $this->apiUrl = $apiUrl;
+        $this->customLogger = $customLogger;
         $this->apiToken = $apiToken;
         $this->compatLevel = $compatLevel;
         $this->siteId = $siteId;
+        $this->customCurl = $customCurl;
     }
 
     // Create the base for XML requests using HEREDOC (each call will have to add specific elements to the XML request)
@@ -42,37 +43,37 @@ class EbayApiService {
         ];
     }
 
-    // Execute an XML API call using POST (returns XML string)
-    protected function executeCurl(array $headers, string $xmlRequest): string {
+    // Execute cURL with standard parameters for eBay's XML API
+    protected function executeXmlApiCurl(array $headers, string $postFields): string {
 
-        $ch = curl_init();
-        curl_setopt_array($ch, [
-            CURLOPT_URL => $this->apiUrl,
-            CURLOPT_SSL_VERIFYPEER => 0,
-            CURLOPT_SSL_VERIFYHOST => 0,
-            CURLOPT_HTTPHEADER => $headers,
-            CURLOPT_POST => 1,
-            CURLOPT_POSTFIELDS => $xmlRequest,
-            CURLOPT_RETURNTRANSFER => 1,
-        ]);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        return $response;
+        return $this->customCurl->execute_curl($headers, $postFields);
     }
 
     // Get eBay's current timestamp (the timestamp will be included in the response stating a failure, due to the wrong call for this API)
-    public function getEbayTimestamp() {
+    public function getTimestamp() {
 
-        // Set defaults
+        // Set basics (what is sufficient for this call)
         $callName = 'GeteBayOfficalTime';
         $xmlRequest = $this->getBasicRequestXml($callName);
         $headers = $this->getBasicHeaders($callName);
 
-        // Initialize curl and convert the response
-        $response = $this->executeCurl($headers, $xmlRequest);
-        $xmlResponse = simplexml_load_string($response);
+        // Initialize cURL with HTTP POST
+        try {
 
-        return (string) $xmlResponse->Timestamp;
+            $response = $this->executeXmlApiCurl($headers, $xmlRequest);
+            $xmlResponse = simplexml_load_string(trim($response));
+            $timestamp = (string) $xmlResponse->Timestamp;
+
+            // Log success
+            $this->customLogger->info_log("eBay timestamp: {$timestamp}");
+
+            return $timestamp;
+        } catch (\Exception $e) {
+
+            // Log error
+            $this->customLogger->error_log("Failed to fetch eBay timestamp: " . $e->getMessage());
+
+            throw new \Exception("Failed 'GeteBayOfficalTime': " . $e->getMessage());
+        }
     }
 }
