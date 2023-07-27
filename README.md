@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<h2 style="color:red">!! Under Construction !!</h2>
-=======
 ```diff
 -!! Under Construction !!-
 ```
->>>>>>> main
 
 # The Ebay Project </br>Part 1 - Creating a Database
 
