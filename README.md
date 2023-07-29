@@ -34,7 +34,7 @@ eBay provides lots of categories with different mandatory/optional item specific
 
 ### Testing
 
-The testing framework for Codeception is used to ensure the quality and functionality of the codebase. A 'test run' command has been added to the composer.json file, allowing easy execution.
+The testing framework for Codeception is used to ensure the quality and functionality of the codebase. A 'test' command has been added to the composer.json file, allowing easy execution.
 
 </br>
 
