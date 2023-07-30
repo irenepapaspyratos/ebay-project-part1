@@ -13,7 +13,7 @@ class CustomLogger {
 
     private function log(string $message, string $filePath): void {
         $date = gmdate('Y-m-d\TH:i:s.v\Z');
-        $message = "[{$date}] {$message}\n";
+        $message = "[{$date}] {$message}" . PHP_EOL;
         file_put_contents($filePath, $message, FILE_APPEND);
     }
 
