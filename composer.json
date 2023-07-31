@@ -3,7 +3,8 @@
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"App\\": "src/"
+			"App\\": "src/",
+			"Tests\\": "tests/"
 		}
 	},
 	"minimum-stability": "stable",
@@ -16,6 +17,7 @@
 	"require-dev": {
 		"codeception/codeception": "^5.0",
 		"codeception/module-phpbrowser": "*",
-		"codeception/module-asserts": "*"
+		"codeception/module-asserts": "*",
+		"codeception/module-filesystem": "^3.0"
 	}
 }
