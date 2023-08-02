@@ -18,7 +18,7 @@ class CustomCurl {
         $this->returnTransfer = $returnTransfer;
     }
 
-    public function execute_curl(array $headers, string $postFields): string {
+    public function executeCurl(array $headers, string $postFields): string {
 
         $ch = curl_init();
 

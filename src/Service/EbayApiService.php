@@ -46,7 +46,7 @@ class EbayApiService {
     // Execute cURL with standard parameters for eBay's XML API
     protected function executeXmlApiCurl(array $headers, string $postFields): string {
 
-        return $this->customCurl->execute_curl($headers, $postFields);
+        return $this->customCurl->executeCurl($headers, $postFields);
     }
 
     // Get eBay's current timestamp (the timestamp will be included in the response stating a failure, due to the wrong call for this API)
@@ -65,13 +65,13 @@ class EbayApiService {
             $timestamp = (string) $xmlResponse->Timestamp;
 
             // Log success
-            $this->customLogger->info_log("eBay timestamp: {$timestamp}");
+            $this->customLogger->infoLog("eBay timestamp: {$timestamp}");
 
             return $timestamp;
         } catch (\Exception $e) {
 
             // Log error
-            $this->customLogger->error_log("Failed to fetch eBay timestamp: " . $e->getMessage());
+            $this->customLogger->errorLog("Failed to fetch eBay timestamp: " . $e->getMessage());
 
             throw new \Exception("Failed 'GeteBayOfficalTime': " . $e->getMessage());
         }

@@ -17,11 +17,11 @@ class CustomLogger {
         file_put_contents($filePath, $message, FILE_APPEND);
     }
 
-    public function error_log(string $message): void {
+    public function errorLog(string $message): void {
         $this->log($message, $this->errorLogPath);
     }
 
-    public function info_log(string $message): void {
+    public function infoLog(string $message): void {
         $this->log($message, $this->infoLogPath);
     }
 }
