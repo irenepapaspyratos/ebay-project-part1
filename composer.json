@@ -18,6 +18,7 @@
 		"codeception/codeception": "^5.0",
 		"codeception/module-phpbrowser": "*",
 		"codeception/module-asserts": "*",
-		"codeception/module-filesystem": "^3.0"
+		"codeception/module-filesystem": "^3.0",
+		"phpunit/phpunit": "10.2.6"
 	}
 }
