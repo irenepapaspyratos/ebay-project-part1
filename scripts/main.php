@@ -19,7 +19,7 @@ $ebaySiteId = $config['ebay']['site_id'];
 // Create services
 $customLogger = new CustomLogger();
 $ebayCurl = new CustomCurl($ebayApiUrl);
-$ebayApiService = new EbayApiService($customLogger, $ebayApiToken, $ebayCompatLevel, $ebaySiteId, $ebayCurl);
+$ebayApiService = new EbayApiService($customLogger, $ebayCurl, $ebayApiToken, $ebayCompatLevel, $ebaySiteId);
 
-// Fetch timestamp from eBay
+// Fetch eBay's timestamp
 $ebayTimestamp = $ebayApiService->getTimestamp();

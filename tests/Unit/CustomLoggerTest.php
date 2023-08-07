@@ -6,9 +6,9 @@ use App\Utility\CustomLogger;
 use Codeception\Test\Unit;
 
 /**
- * The 'CustomLoggerTest' is a unit test class for the 'CustomLogger' class 
+ * The 'CustomLoggerTest' is a unit test class for the 'CustomLogger' class. 
  * 
- * It tests the functionality of writing error and info messages to the correct log files. 
+ * Tests the functionality of writing error and info messages to the correct log files. 
  */
 class CustomLoggerTest extends Unit {
 
@@ -19,31 +19,27 @@ class CustomLoggerTest extends Unit {
     private $nonWritableLogPath;
 
     /**
-     * The '_before' function is used to set up the necessary environment for running tests
-     * 
-     * In this case it is deleting all files in the test directory, 
-     * defining paths for writable/non-writable log files 
-     * and setting permissions for the non-writable log file.
+     * Sets up the necessary environment for running tests by cleaning up the test directory, 
+     * defining paths for writable test log files and 
+     * creating a non-writable test log file.
      */
     protected function _before() {
 
-        // Clean up the directory of the test files (just in case...)
+        // Clean up the directory of the test files
         $this->tester->cleanDir(codecept_data_dir());
 
         // Define the temporary paths for writable test log files
         $this->errorLogPath = codecept_data_dir('error.log');
         $this->infoLogPath = codecept_data_dir('info.log');
 
-        // Define the temporary path for a non-writable test log file and deny permission
+        // Define the temporary path for a non-writable test log file and set permissions to read-only simulating a non-writable file
         $this->nonWritableLogPath = codecept_data_dir('non_writable.log');
         touch($this->nonWritableLogPath);
         chmod($this->nonWritableLogPath, 0444);
     }
 
     /**
-     * The '_after' function is used to clean up the test environment after running tests
-     * 
-     * In this case it deletes all files in the test directory
+     * Cleans the codecept_data_dir directory after each test by deleting all files.
      */
     protected function _after() {
 
@@ -51,10 +47,9 @@ class CustomLoggerTest extends Unit {
     }
 
     /**
-     * The 'testErrorLogWritesToCorrectFile' function tests the 'errorLog' method
-     * 
-     * It tests wether an error message is written to the specified error file after creating it  
-     * as well as that the specified log file is not created, as both are non-existent before.
+     * Tests the 'errorLog' method of the 'CustomLogger' class 
+     * whether an error message is successfully written to the error log file 
+     * and the info log file does not exist.
      */
     public function testErrorLogWritesToCorrectFile() {
 
@@ -76,9 +71,8 @@ class CustomLoggerTest extends Unit {
     }
 
     /**
-     * The 'testErrorLogCannotWriteToFile' function tests the 'errorLog' method
-     * 
-     * It tests wether an error message can be written to a file with missing permissions
+     * Tests whether the 'errorLog' method of the 'CustomLogger' class throws a
+     * '\Codeception\Exception\Warning' exception when it cannot write to a log file.
      */
     public function testErrorLogCannotWriteToFile() {
 
@@ -96,10 +90,9 @@ class CustomLoggerTest extends Unit {
     }
 
     /**
-     * The 'testInfoLogWritesToCorrectFile' function tests the 'infoLog' method
-     * 
-     * It tests wether an info message is written to the specified info file after creating it 
-     * as well as that the specified error file is not created, as both are non-existent before.
+     * Tests the 'infoLog' method of the 'CustomLogger' class whether 
+     * an informational message is successfully written to the info log file 
+     * and the error log file does not exist.
      */
     public function testInfoLogWritesToCorrectFile() {
 
@@ -121,9 +114,8 @@ class CustomLoggerTest extends Unit {
     }
 
     /**
-     * The 'testInfoLogCannotWriteToFile' function tests the 'infoLog' method
-     * 
-     * It tests wether an info message can be written to a file with missing permissions
+     * Tests whether the 'infoLog' method of the 'CustomLogger' class throws a
+     * '\Codeception\Exception\Warning' exception when it cannot write to a log file.
      */
     public function testInfoLogCannotWriteToFile() {
 
