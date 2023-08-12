@@ -19,6 +19,7 @@
 		"codeception/module-phpbrowser": "*",
 		"codeception/module-asserts": "*",
 		"codeception/module-filesystem": "^3.0",
-		"phpunit/phpunit": "10.2.6"
+		"phpunit/phpunit": "10.2.6",
+		"php-coveralls/php-coveralls": "^2.6"
 	}
 }
