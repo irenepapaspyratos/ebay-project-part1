@@ -6,6 +6,11 @@
 
 </br>
 
+Backend Testing:  
+[![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=ebay-api-service)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1)
+
+</br>
+
 ## Overview
 
 _The Ebay Project_ can help people, who are selling manually listed items on eBay, to sell those items also on other portals - not having to change their eBay listing routine.
