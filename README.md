@@ -6,8 +6,9 @@
 
 </br>
 
-Backend Testing:  
-[![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=ebay-api-service&kill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=ebay-api-service)
+|Backend Testing:|
+|:-:|
+|[![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=ebay-api-service&kill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=ebay-api-service)|
 
 </br>
 
