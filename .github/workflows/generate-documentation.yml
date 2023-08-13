@@ -24,8 +24,14 @@ jobs:
             - name: Install dependencies
               run: composer install
 
+            - name: Download phpDocumentor PHAR
+              run: wget https://phpdoc.org/phpDocumentor.phar
+
+            - name: Make phpDocumentor executable
+              run: chmod +x phpDocumentor.phar
+
             - name: Generate Documentation
-              run: ./vendor/bin/phpdocumentor -d ./src,./tests -t docs
+              run: ./phpdocumentor.phar -d ./src,./tests -t docs
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
