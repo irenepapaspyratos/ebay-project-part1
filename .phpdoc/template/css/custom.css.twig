@@ -1,0 +1,24 @@
+/* Custom Base Color */
+:root {
+    --primary-color-hue: 170;
+        --primary-color-saturation: 65%;
+    --primary-color: hsl(var(--primary-color-hue), var(--primary-color-saturation), 70%);
+
+}
+
+/* Custom Icon Templates */
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry:before {
+    background: transparent url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="%2324A892"/></svg>') no-repeat center center;
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-method:before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="%2324A892"/></svg>');
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-function:before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="%2324A892"/></svg>');
+}
+
+.phpdocumentor-table-of-contents .phpdocumentor-table-of-contents__entry.-constant:before {
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-3.05176e-05" y="9.99998" width="14.1422" height="14.1422" transform="rotate(-45 -3.05176e-05 9.99998)" fill="%2324A892"/></svg>');
+}
