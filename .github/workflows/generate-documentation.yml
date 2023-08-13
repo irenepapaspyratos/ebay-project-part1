@@ -1,8 +1,12 @@
 name: Generate and Deploy Documentation on GitHub Pages
 
 on:
-    repository_dispatch:
-        types: [test-workflow-completed]
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
     build:

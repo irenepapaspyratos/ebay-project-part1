@@ -38,11 +38,3 @@ jobs:
 
             - name: Clean up Coveralls upload files
               run: rm -rf build/logs
-
-            - name: Trigger repository dispatch event
-              run: |
-                  curl -X POST \
-                  -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                  -H "Accept: application/vnd.github.everest-preview+json" \
-                  "https://api.github.com/repos/irenepapaspyratos/ebay-project-part1/dispatches" \
-                  -d '{"event_type": "test-workflow-completed"}'
