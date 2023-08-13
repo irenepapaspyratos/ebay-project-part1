@@ -41,15 +41,17 @@ eBay provides lots of categories with different mandatory/optional item specific
 
 ### Testing
 
-The testing framework Codeception is used to ensure the quality and functionality of the codebase. A 'test' command has been added to the composer.json file, allowing easy execution of actual available tests.
+The testing framework _Codeception_ is used to ensure the quality and functionality of the codebase. A 'test' command has been added to the composer.json file, allowing easy execution of actual available tests.
 
-## Development
+### Development
 
 GitHub Actions are used for continuous integration and deployment. Every push is automatically tested to ensure reliability and consistency while on every pull request or push to the main branch, the Technical Documentation is generated/updated and deployed. The main branch is protected by requiring pull requests and ensuring all action checks pass before merging.
 
-### Technical Documentation
+</br>
 
-The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages with details about the codebase. It was generated using [phpDocumentor](https://www.phpdoc.org/) with the help of [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) to create the necessary DocBlock styled comments.
+## Technical Documentation
+
+The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages with details about the codebase. It was generated using _phpDocumentor_ with the help of _Mintlify_ to create the necessary DocBlock styled comments.
 
 </br>
 
@@ -98,11 +100,13 @@ The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay
 
 ## Further Reading
 
--   [PHP](https://www.php.net/) - The programming language used
+-   [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) - Codebase Documentation
+-   [PHP](https://www.php.net/) - Programming Language
 -   [Composer](https://getcomposer.org/) - PHP Dependency Management Tool
 -   [phpDocumentor](https://www.phpdoc.org/) - PHP Document Creation Tool
--   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) - Special comment style to document code
--   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension to assist in creating styled comments
--   [MariaDB](https://mariadb.org/documentation/) - The database used
--   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General guide for traditional APIs (using XML or SOAP instead of REST) like the Trading API
--   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation and history of cronjobs
+-   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) - Special Comment Style (to document code)
+-   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension (assistance creating styled comments)
+-   [Codeception] (https://codeception.com/) - PHP Testing Framework
+-   [MariaDB](https://mariadb.org/documentation/) - SQL Database with NoSQL Capabilities
+-   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General Guide for Traditional APIs (using XML or SOAP instead of REST)
+-   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation/History of Cronjobs

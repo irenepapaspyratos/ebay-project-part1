@@ -9,7 +9,7 @@
 	},
 	"minimum-stability": "stable",
 	"scripts": {
-		"test": "vendor/bin/codecept run"
+		"test": "vendor/bin/codecept run Unit"
 	},
 	"require": {
 		"vlucas/phpdotenv": "^5.5"
