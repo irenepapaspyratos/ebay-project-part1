@@ -3,11 +3,22 @@
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"App\\": "src/"
+			"App\\": "src/",
+			"Tests\\": "tests/"
 		}
 	},
 	"minimum-stability": "stable",
+	"scripts": {
+		"test": "vendor/bin/codecept run"
+	},
 	"require": {
 		"vlucas/phpdotenv": "^5.5"
+	},
+	"require-dev": {
+		"codeception/codeception": "^5.0",
+		"codeception/module-phpbrowser": "*",
+		"codeception/module-asserts": "*",
+		"codeception/module-filesystem": "^3.0",
+		"phpunit/phpunit": "10.2.6"
 	}
 }
