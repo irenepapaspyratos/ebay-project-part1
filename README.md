@@ -6,6 +6,12 @@
 
 </br>
 
+|                                                                                               Backend Testing:                                                                                                |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=main) |
+
+</br>
+
 ## Overview
 
 _The Ebay Project_ can help people, who are selling manually listed items on eBay, to sell those items also on other portals - not having to change their eBay listing routine.
@@ -15,6 +21,10 @@ This first part of the project creates a database of the seller's items availabl
 </br>
 
 ## About
+
+### Technical Documentation
+
+The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages and offers details about the codebase. It was generated using [phpDocumentor](https://www.phpdoc.org/) with the help of [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) to create the necessary DocBlock styled comments.
 
 ### Language
 
@@ -82,6 +92,9 @@ The testing framework for Codeception is used to ensure the quality and function
 
 -   [PHP](https://www.php.net/) - The programming language used
 -   [Composer](https://getcomposer.org/) - Dependency Management
+-   [phpDocumentor](https://www.phpdoc.org/)
+-   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html)
+-   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document)
 -   [MariaDB](https://mariadb.org/documentation/) - The database used
 -   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General guide for traditional APIs (using XML or SOAP instead of REST) like the Trading API
 -   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation and history of cronjobs

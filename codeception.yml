@@ -10,3 +10,12 @@ actor_suffix: Tester
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+coverage:
+    enabled: true
+    include:
+        - ./src/*
+    exclude:
+        - ./src/cache/*
+    report:
+        xml: tests/_output/coverage.xml
+        html: tests/_output/coverage.html

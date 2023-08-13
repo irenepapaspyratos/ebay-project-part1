@@ -1,0 +1,40 @@
+name: Run Codeception unit tests with (XML-) coverage
+
+on:
+    push:
+        branches:
+            - '**'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 8.2
+                  extensions: mbstring, intl, pdo_sqlite, curl
+                  coverage: pcov
+
+            - name: Install dependencies
+              run: composer install
+
+            - name: Run unit tests with Codeception
+              run: ./vendor/bin/codecept run Unit --coverage-xml
+
+            - name: Prepare for upload to Coveralls
+              run: |
+                  mkdir -p build/logs
+                  cp tests/_output/coverage.xml build/logs/clover.xml
+
+            - name: Upload coverage to Coveralls
+              env:
+                  COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: ./vendor/bin/php-coveralls -v
+
+            - name: Clean up Coveralls upload files
+              run: rm -rf build/logs
