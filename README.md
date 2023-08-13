@@ -50,10 +50,8 @@ The testing framework for Codeception is used to ensure the quality and function
 
 ## Getting Started
 
-
-> **Important:**    
-This project was developed in a macOS environment. If you're using a different operating system, you might need to make minor adjustments to the setup or execution steps!
-
+> **Important:**  
+> This project was developed in a macOS environment. If you're using a different operating system, you might need to make minor adjustments to the setup or execution steps!
 
 ### Prerequisites
 
@@ -99,7 +97,7 @@ This project was developed in a macOS environment. If you're using a different o
 -   [Composer](https://getcomposer.org/) - PHP Dependency Management Tool
 -   [phpDocumentor](https://www.phpdoc.org/) - PHP Document Creation Tool
 -   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) - Special comment style to document code
--   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension to assist in creating styled comments.
+-   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension to assist in creating styled comments
 -   [MariaDB](https://mariadb.org/documentation/) - The database used
 -   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General guide for traditional APIs (using XML or SOAP instead of REST) like the Trading API
 -   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation and history of cronjobs
