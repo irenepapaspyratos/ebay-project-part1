@@ -88,13 +88,13 @@ The testing framework for Codeception is used to ensure the quality and function
 
 </br>
 
-## Learn More
+## Further Reading
 
 -   [PHP](https://www.php.net/) - The programming language used
--   [Composer](https://getcomposer.org/) - Dependency Management
--   [phpDocumentor](https://www.phpdoc.org/)
--   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html)
--   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document)
+-   [Composer](https://getcomposer.org/) - PHP Dependency Management Tool
+-   [phpDocumentor](https://www.phpdoc.org/) - PHP Document Creation Tool
+-   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) - Special comment style to document code
+-   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension to assist in creating styled comments.
 -   [MariaDB](https://mariadb.org/documentation/) - The database used
 -   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General guide for traditional APIs (using XML or SOAP instead of REST) like the Trading API
 -   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation and history of cronjobs
