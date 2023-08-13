@@ -6,8 +6,9 @@
 
 </br>
 
-|                                                                                               Backend Testing:                                                                                                |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+<!-- prettier-ignore -->
+| Backend Testing: |
+| :-: |
 | [![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=main) |
 
 </br>
@@ -22,13 +23,9 @@ This first part of the project creates a database of the seller's items availabl
 
 ## About
 
-### Technical Documentation
-
-The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages and offers details about the codebase. It was generated using [phpDocumentor](https://www.phpdoc.org/) with the help of [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) to create the necessary DocBlock styled comments.
-
 ### Language
 
-_The Ebay Project_ was written in PHP, because this is one requirement of the server it will be running on. No Framework is used and libraries are integrated as little as possible, in order to show the user the full ongoing process.
+_The Ebay Project_ was written in PHP, because this is one requirement of the server it will be running on. No Framework is used and libraries are integrated as little as possible, in order to show the ongoing processes.
 
 ### Ebay API
 
@@ -36,7 +33,7 @@ Only the _Trading API_ is used in order to reduce the effort of eventually exten
 
 ### Ebay API Access
 
-Different use-cases for having/wishing to create a database of eBay listings may exist, bot this project only covers the authentication of an eBay seller, who is also the owner of the necessary eBay developer account.
+Different use-cases for having/wishing to create a database of eBay listings may exist, but this project only covers the authentication of an eBay seller, who is also the owner of the necessary eBay developer account.
 
 ### Database
 
@@ -44,14 +41,22 @@ eBay provides lots of categories with different mandatory/optional item specific
 
 ### Testing
 
-The testing framework for Codeception is used to ensure the quality and functionality of the codebase. A 'test' command has been added to the composer.json file, allowing easy execution.
+The testing framework Codeception is used to ensure the quality and functionality of the codebase. A 'test' command has been added to the composer.json file, allowing easy execution of actual available tests.
+
+## Development
+
+GitHub Actions are used for continuous integration and deployment. Every push is automatically tested to ensure reliability and consistency while on every pull request or push to the main branch, the Technical Documentation is generated/updated and deployed. The main branch is protected by requiring pull requests and ensuring all action checks pass before merging.
+
+### Technical Documentation
+
+The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages with details about the codebase. It was generated using [phpDocumentor](https://www.phpdoc.org/) with the help of [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) to create the necessary DocBlock styled comments.
 
 </br>
 
 ## Getting Started
 
 > **Important:**  
-> This project was developed in a macOS environment. If you're using a different operating system, you might need to make minor adjustments to the setup or execution steps!
+> This project was developed in a macOS environment. Using it with other operating systems, might result in needing to adjust the setup or execution steps!
 
 ### Prerequisites
 
@@ -68,7 +73,7 @@ The testing framework for Codeception is used to ensure the quality and function
 1. Edit the variables in the `config.php` file according to your requirements
 1. Optional:  
    Install a cronjob to automatically update the database
-    - Open your crontab using your teminal with '`crontab -e`'
+    - Open your crontab using your terminal with '`crontab -e`'
     - Add a new line, e.g. like '`*/15 * * * * /usr/bin/php /path/to/your/main.php`',  
        where `/path/to/your/main.php` is the full path to the project's main.php on your system  
        and `/usr/bin/php` is the path, where your PHP is installed
