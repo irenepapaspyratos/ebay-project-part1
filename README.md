@@ -50,6 +50,11 @@ The testing framework for Codeception is used to ensure the quality and function
 
 ## Getting Started
 
+
+> **Important:**    
+This project was developed in a macOS environment. If you're using a different operating system, you might need to make minor adjustments to the setup or execution steps!
+
+
 ### Prerequisites
 
 -   PHP 8.0 or higher
