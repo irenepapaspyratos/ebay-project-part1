@@ -21,6 +21,10 @@ This first part of the project creates a database of the seller's items availabl
 
 ## About
 
+### Technical Documentation
+
+The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages and offers details about the codebase. It was generated using [phpDocumentor](https://www.phpdoc.org/) with the help of [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) to create the necessary DocBlock styled comments.
+
 ### Language
 
 _The Ebay Project_ was written in PHP, because this is one requirement of the server it will be running on. No Framework is used and libraries are integrated as little as possible, in order to show the user the full ongoing process.
@@ -87,6 +91,9 @@ The testing framework for Codeception is used to ensure the quality and function
 
 -   [PHP](https://www.php.net/) - The programming language used
 -   [Composer](https://getcomposer.org/) - Dependency Management
+-   [phpDocumentor](https://www.phpdoc.org/)
+-   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html)
+-   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document)
 -   [MariaDB](https://mariadb.org/documentation/) - The database used
 -   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General guide for traditional APIs (using XML or SOAP instead of REST) like the Trading API
 -   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation and history of cronjobs
