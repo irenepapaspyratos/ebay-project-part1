@@ -33,11 +33,9 @@ jobs:
             - name: Generate Documentation
               run: ./phpDocumentor.phar -d ./src,./tests -t docs
 
-            - name: Create .nojekyll file
-              run: touch docs/.nojekyll
-
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GH_PAGES_TOKEN }}
                   publish_dir: ./docs
+                  disable_nojekyll: true
