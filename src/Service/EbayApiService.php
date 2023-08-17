@@ -11,6 +11,7 @@ use App\Utility\CustomLogger;
  * The contained method is fetching eBay's current timestamp.
  */
 class EbayApiService {
+
     private CustomLogger $customLogger;
     private CustomCurl $customCurl;
     private string $apiToken;
@@ -115,6 +116,7 @@ class EbayApiService {
         // Try to execute cURL request
         try {
 
+            // Call API, convert response string to XML and get the value of the 'Timestamp' node
             $response = $this->executeXmlApiCurl($headers, $xmlRequest);
             $xmlResponse = simplexml_load_string(trim($response));
             $timestamp = (string) $xmlResponse->Timestamp;

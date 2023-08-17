@@ -6,6 +6,7 @@ namespace App\Utility;
  * The 'CustomLogger' class allows logging of error and info messages to separate, customized log files.
  */
 class CustomLogger {
+
     private string $errorLogPath;
     private string $infoLogPath;
 
