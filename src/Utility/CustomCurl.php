@@ -6,6 +6,7 @@ namespace App\Utility;
  * The 'CustomCurl' class allows to conveniently execute cURL requests with particular customizable options.
  */
 class CustomCurl {
+
     private string $apiUrl;
     private int $verifyPeer;
     private int $verifyHost;
