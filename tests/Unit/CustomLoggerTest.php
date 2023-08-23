@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Utility;
 
 use App\Utility\CustomLogger;
 use Codeception\Test\Unit;

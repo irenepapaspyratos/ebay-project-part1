@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Utility;
 
 use App\Utility\DateUtils;
 use Codeception\Test\Unit;
