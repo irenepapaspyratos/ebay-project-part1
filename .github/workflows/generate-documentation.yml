@@ -28,17 +28,14 @@ jobs:
               run: wget https://phpdoc.org/phpDocumentor.phar
 
             - name: Make phpDocumentor executable
-              run: chmod +x phpDocumentor.phar
+              run: chmod +x ./phpDocumentor.phar
 
             - name: Generate Documentation
               run: ./phpDocumentor.phar -d ./src,./tests -t docs
-
-            - name: Move docs for Deployment
-              run: mv ./docs ./deploy
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GH_PAGES_TOKEN }}
-                  publish_dir: ./deploy
+                  publish_dir: ./docs
                   keep_files: true
