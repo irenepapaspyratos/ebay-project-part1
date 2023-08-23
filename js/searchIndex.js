@@ -201,160 +201,160 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Utility-CustomCurlTest.html#property_customCurl"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest",
             "name": "CustomLoggerTest",
             "summary": "The\u0020\u0027CustomLoggerTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020the\u0020\u0027CustomLogger\u0027\u0020class.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
             "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\u0020cleaning\u0020up\u0020the\u0020test\u0020directory,\ndefining\u0020paths\u0020for\u0020writable\u0020test\u0020log\u0020files\u0020and\ncreating\u0020a\u0020non\u002Dwritable\u0020test\u0020log\u0020file.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method__before"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A_after\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A_after\u0028\u0029",
             "name": "_after",
             "summary": "Cleans\u0020the\u0020codecept_data_dir\u0020directory\u0020after\u0020each\u0020test\u0020by\u0020deleting\u0020all\u0020files.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method__after"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method__after"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003AtestErrorLogWritesToCorrectFile\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003AtestErrorLogWritesToCorrectFile\u0028\u0029",
             "name": "testErrorLogWritesToCorrectFile",
             "summary": "Tests\u0020the\u0020\u0027errorLog\u0027\u0020method\u0020of\u0020the\u0020\u0027CustomLogger\u0027\u0020class\nwhether\u0020an\u0020error\u0020message\u0020is\u0020successfully\u0020written\u0020to\u0020the\u0020error\u0020log\u0020file\nand\u0020the\u0020info\u0020log\u0020file\u0020does\u0020not\u0020exist.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method_testErrorLogWritesToCorrectFile"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method_testErrorLogWritesToCorrectFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003AtestErrorLogCannotWriteToFile\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003AtestErrorLogCannotWriteToFile\u0028\u0029",
             "name": "testErrorLogCannotWriteToFile",
             "summary": "Tests\u0020whether\u0020the\u0020\u0027errorLog\u0027\u0020method\u0020of\u0020the\u0020\u0027CustomLogger\u0027\u0020class\u0020throws\u0020a\n\u0027\\Codeception\\Exception\\Warning\u0027\u0020exception\u0020when\u0020it\u0020cannot\u0020write\u0020to\u0020a\u0020log\u0020file.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method_testErrorLogCannotWriteToFile"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method_testErrorLogCannotWriteToFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003AtestInfoLogWritesToCorrectFile\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003AtestInfoLogWritesToCorrectFile\u0028\u0029",
             "name": "testInfoLogWritesToCorrectFile",
             "summary": "Tests\u0020the\u0020\u0027infoLog\u0027\u0020method\u0020of\u0020the\u0020\u0027CustomLogger\u0027\u0020class\u0020whether\nan\u0020informational\u0020message\u0020is\u0020successfully\u0020written\u0020to\u0020the\u0020info\u0020log\u0020file\nand\u0020the\u0020error\u0020log\u0020file\u0020does\u0020not\u0020exist.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method_testInfoLogWritesToCorrectFile"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method_testInfoLogWritesToCorrectFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003AtestInfoLogCannotWriteToFile\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003AtestInfoLogCannotWriteToFile\u0028\u0029",
             "name": "testInfoLogCannotWriteToFile",
             "summary": "Tests\u0020whether\u0020the\u0020\u0027infoLog\u0027\u0020method\u0020of\u0020the\u0020\u0027CustomLogger\u0027\u0020class\u0020throws\u0020a\n\u0027\\Codeception\\Exception\\Warning\u0027\u0020exception\u0020when\u0020it\u0020cannot\u0020write\u0020to\u0020a\u0020log\u0020file.",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#method_testInfoLogCannotWriteToFile"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#method_testInfoLogCannotWriteToFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#property_tester"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A\u0024customLogger",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A\u0024customLogger",
             "name": "customLogger",
             "summary": "",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#property_customLogger"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#property_customLogger"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A\u0024errorLogPath",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A\u0024errorLogPath",
             "name": "errorLogPath",
             "summary": "",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#property_errorLogPath"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#property_errorLogPath"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A\u0024infoLogPath",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A\u0024infoLogPath",
             "name": "infoLogPath",
             "summary": "",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#property_infoLogPath"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#property_infoLogPath"
         },                {
-            "fqsen": "\\Tests\\Unit\\CustomLoggerTest\u003A\u003A\u0024nonWritableLogPath",
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomLoggerTest\u003A\u003A\u0024nonWritableLogPath",
             "name": "nonWritableLogPath",
             "summary": "",
-            "url": "classes/Tests-Unit-CustomLoggerTest.html#property_nonWritableLogPath"
+            "url": "classes/Tests-Unit-Utility-CustomLoggerTest.html#property_nonWritableLogPath"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest",
             "name": "DateUtilsTest",
             "summary": "The\u0020\u0027DateUtilsTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020the\u0020\u0027DateUtils\u0027\u0020class.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
             "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\nby\u0020initializing\u0020the\u0020DateUtils\u0020object\u0020and\u0020setting\u0020timestamp\u0020variables\nrepresenting\u0020a\u0020regular\u0020and\u0020a\u0020leap\u0020year.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method__before"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003AtestCalculateTimestampAddition\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateTimestampAddition\u0028\u0029",
             "name": "testCalculateTimestampAddition",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nadds\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method_testCalculateTimestampAddition"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateTimestampAddition"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003AtestCalculateTimestampSubtraction\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateTimestampSubtraction\u0028\u0029",
             "name": "testCalculateTimestampSubtraction",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nsubstracts\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method_testCalculateTimestampSubtraction"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateTimestampSubtraction"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003AtestCalculateTimestampInvalidOperator\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateTimestampInvalidOperator\u0028\u0029",
             "name": "testCalculateTimestampInvalidOperator",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020operator\u0020provided.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method_testCalculateTimestampInvalidOperator"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateTimestampInvalidOperator"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003AtestCalculateTimestampInvalidUnit\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateTimestampInvalidUnit\u0028\u0029",
             "name": "testCalculateTimestampInvalidUnit",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020unit\u0020provided.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method_testCalculateTimestampInvalidUnit"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateTimestampInvalidUnit"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003AtestCalculateTimestampLeapYear\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateTimestampLeapYear\u0028\u0029",
             "name": "testCalculateTimestampLeapYear",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\ncalculates\u0020a\u0020new\u0020timestamp\u0020in\u0020a\u0020leap\u0020year\u0020correctly.",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#method_testCalculateTimestampLeapYear"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateTimestampLeapYear"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#property_tester"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003A\u0024dateUtils",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A\u0024dateUtils",
             "name": "dateUtils",
             "summary": "",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#property_dateUtils"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#property_dateUtils"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003A\u0024timestampStart",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A\u0024timestampStart",
             "name": "timestampStart",
             "summary": "",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#property_timestampStart"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#property_timestampStart"
         },                {
-            "fqsen": "\\Tests\\Unit\\DateUtilsTest\u003A\u003A\u0024timestampStartLeap",
+            "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A\u0024timestampStartLeap",
             "name": "timestampStartLeap",
             "summary": "",
-            "url": "classes/Tests-Unit-DateUtilsTest.html#property_timestampStartLeap"
+            "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#property_timestampStartLeap"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest",
             "name": "EbayApiServiceTest",
             "summary": "The\u0020\u0060EbayApiServiceTest\u0060\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020of\u0020the\u0020\u0027EbayApiService\u0060\u0020class",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
             "summary": "Sets\u0020up\u0020the\u0020test\u0020environment\u0020by\u0020creating\u0020a\u0020mock\u0020object\u0020of\u0020the\u0020\u0027CustomLogger\u0027\u0020class.",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#method__before"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003AtestGetTimestampReturnsTimestamp\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampReturnsTimestamp\u0028\u0029",
             "name": "testGetTimestampReturnsTimestamp",
             "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020correct\u0020XML\u0020element\u0020\u0027Timestamp\u0027\u0020as\u0020string\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003AtestGetTimestampThrowsExceptionOnCurlError\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampThrowsExceptionOnCurlError\u0028\u0029",
             "name": "testGetTimestampThrowsExceptionOnCurlError",
             "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#property_tester"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003A\u0024customCurl",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customCurl",
             "name": "customCurl",
             "summary": "",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#property_customCurl"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customCurl"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003A\u0024customLogger",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customLogger",
             "name": "customLogger",
             "summary": "",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#property_customLogger"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customLogger"
         },                {
-            "fqsen": "\\Tests\\Unit\\EbayApiServiceTest\u003A\u003A\u0024ebayApiService",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024ebayApiService",
             "name": "ebayApiService",
             "summary": "",
-            "url": "classes/Tests-Unit-EbayApiServiceTest.html#property_ebayApiService"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_ebayApiService"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -395,5 +395,10 @@ Search.appendIndex(
             "name": "Unit",
             "summary": "",
             "url": "namespaces/tests-unit.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service",
+            "name": "Service",
+            "summary": "",
+            "url": "namespaces/tests-unit-service.html"
         }            ]
 );
