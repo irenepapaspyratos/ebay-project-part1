@@ -34,6 +34,8 @@ class EbayApiServiceTest extends Unit {
      * Tests the `getTimestamp` method of the `EbayApiService` class 
      * whether it returns the correct XML element 'Timestamp' as string
      * with mocked 'CustomLogger' and 'CustomCurl' classes. 
+     * 
+     * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
     public function testGetTimestampReturnsTimestamp() {
 
@@ -61,6 +63,8 @@ class EbayApiServiceTest extends Unit {
      * Tests the `getTimestamp` method of the `EbayApiService` class 
      * whether an exception is thrown after a cURL error of the API call
      * with mocked 'CustomLogger' and 'CustomCurl' classes. 
+     * 
+     * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
     public function testGetTimestampThrowsExceptionOnCurlError() {
 
