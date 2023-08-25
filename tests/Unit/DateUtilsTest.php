@@ -33,13 +33,13 @@ class DateUtilsTest extends Unit {
      * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * adds the correct amount of time.
      */
-    public function testCalculateTimestampAddition() {
+    public function testCalculateUtcTimestampAddition() {
 
         // Arrange 'add 1 day'
         $expect = '2023-03-01T05:42:13.030Z';
 
         // Act
-        $result = $this->dateUtils->calculateNewTimestamp($this->timestampStart, '+', 1, 'D');
+        $result = $this->dateUtils->calculateNewUtcTimestamp($this->timestampStart, '+', 1, 'D');
 
         // Assert
         $this->assertEquals($expect, $result);
@@ -49,13 +49,13 @@ class DateUtilsTest extends Unit {
      * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * substracts the correct amount of time.
      */
-    public function testCalculateTimestampSubtraction() {
+    public function testCalculateUtcTimestampSubtraction() {
 
         // Arrange 'substract 2 hours'
         $expect = '2023-02-27T23:42:13.030Z';
 
         // Act
-        $result = $this->dateUtils->calculateNewTimestamp($this->timestampStart, '-', 6, 'H');
+        $result = $this->dateUtils->calculateNewUtcTimestamp($this->timestampStart, '-', 6, 'H');
 
         // Assert
         $this->assertEquals($expect, $result);
@@ -65,41 +65,41 @@ class DateUtilsTest extends Unit {
      * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * throws an exception with invalid operator provided.
      */
-    public function testCalculateTimestampInvalidOperator() {
+    public function testCalculateUtcTimestampInvalidOperator() {
 
         // Assert 'wrong operator'
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Timestamp Calculation: Invalid parameter.');
 
         // Act
-        $this->dateUtils->calculateNewTimestamp($this->timestampStart, '*', 5, 'M');
+        $this->dateUtils->calculateNewUtcTimestamp($this->timestampStart, '*', 5, 'M');
     }
 
     /**
      * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * throws an exception with invalid unit provided.
      */
-    public function testCalculateTimestampInvalidUnit() {
+    public function testCalculateUtcTimestampInvalidUnit() {
 
         // Assert 'wrong unit'
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('Timestamp Calculation: Invalid parameter.');
 
         // Act
-        $this->dateUtils->calculateNewTimestamp($this->timestampStart, '+', 5, 'Y');
+        $this->dateUtils->calculateNewUtcTimestamp($this->timestampStart, '+', 5, 'Y');
     }
 
     /**
      * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * calculates a new timestamp in a leap year correctly.
      */
-    public function testCalculateTimestampLeapYear() {
+    public function testCalculateUtcTimestampLeapYear() {
 
         // Arrange 'not switching to next month'
         $expectLeap = '2024-02-29T05:42:13.030Z';
 
         // Act
-        $result = $this->dateUtils->calculateNewTimestamp($this->timestampStartLeap, '+', 1, 'D');
+        $result = $this->dateUtils->calculateNewUtcTimestamp($this->timestampStartLeap, '+', 1, 'D');
 
         // Assert
         $this->assertEquals($expectLeap, $result);
