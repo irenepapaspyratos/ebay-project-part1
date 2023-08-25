@@ -5,6 +5,7 @@ namespace Tests\Unit\Service;
 use App\Service\EbayApiService;
 use App\Utility\CustomCurl;
 use App\Utility\CustomLogger;
+use App\Utility\DateUtils;
 use Codeception\Test\Unit;
 
 /**
@@ -17,6 +18,7 @@ class EbayApiServiceTest extends Unit {
     protected $tester;
     private $customCurl;
     private $customLogger;
+    private $dateUtils;
     private $ebayApiService;
 
     /**
@@ -25,6 +27,7 @@ class EbayApiServiceTest extends Unit {
     protected function _before() {
 
         $this->customLogger = $this->makeEmpty(CustomLogger::class);
+        $this->dateUtils = $this->makeEmpty(DateUtils::class);
     }
 
     /**
@@ -43,7 +46,7 @@ class EbayApiServiceTest extends Unit {
         }]);
 
         // Create a new 'EbayApiService' with the two mocked objects and random values for the other parameters 
-        $this->ebayApiService = new EbayApiService($this->customLogger, $this->customCurl, '9', 1, 1,);
+        $this->ebayApiService = new EbayApiService($this->customLogger, $this->customCurl, $this->dateUtils, '9', 1, 1,);
 
         // Act
         $result = $this->ebayApiService->getTimestamp();
@@ -67,7 +70,7 @@ class EbayApiServiceTest extends Unit {
         }]);
 
         // Create a new 'EbayApiService' with the two mocked objects and random values for the other parameters 
-        $this->ebayApiService = new EbayApiService($this->customLogger, $this->customCurl, 9, '1', 1,);
+        $this->ebayApiService = new EbayApiService($this->customLogger, $this->customCurl, $this->dateUtils, 9, '1', 1,);
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);

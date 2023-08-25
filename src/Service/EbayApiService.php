@@ -4,6 +4,9 @@ namespace App\Service;
 
 use App\Utility\CustomCurl;
 use App\Utility\CustomLogger;
+use App\Utility\DateUtils;
+use App\Enum\Ebay\EbayDetailLevel;
+use App\Enum\Ebay\EbayGranularityLevel;
 
 /**
  * The `EbayApiService` class provides methods for making API calls to eBay.
@@ -14,6 +17,7 @@ class EbayApiService {
 
     private CustomLogger $customLogger;
     private CustomCurl $customCurl;
+    private DateUtils $dateUtils;
     private string $apiToken;
     private int $compatLevel;
     private int $siteId;
@@ -23,19 +27,21 @@ class EbayApiService {
      * 
      * @param CustomLogger $customLogger Passes an instance of a custom logging class to use the customized logging implementation.
      * @param CustomCurl $customCurl Passes an instance of a custom cURL class to use the customized cURL implementation.
+     * @param DateUtils $dateUtils Passes an Instance of a class to calculate dates.
      * @param string $apiToken Passes the API token required for authentication with an external API. 
      * @param int $compatLevel Specifies the version of the API that the code is compatible with.
      * @param int $siteId Specifies the unique country site on eBay that the code is being used for.
      * 
      * @return void
      */
-    public function __construct(CustomLogger $customLogger, CustomCurl $customCurl, string $apiToken, int $compatLevel, int $siteId,) {
+    public function __construct(CustomLogger $customLogger, CustomCurl $customCurl, DateUtils $dateUtils, string $apiToken, int $compatLevel, int $siteId,) {
 
         $this->customLogger = $customLogger;
+        $this->customCurl = $customCurl;
+        $this->dateUtils = $dateUtils;
         $this->apiToken = $apiToken;
         $this->compatLevel = $compatLevel;
         $this->siteId = $siteId;
-        $this->customCurl = $customCurl;
     }
 
     /**
@@ -122,7 +128,7 @@ class EbayApiService {
             $timestamp = (string) $xmlResponse->Timestamp;
 
             // Log success
-            $this->customLogger->infoLog("eBay timestamp: {$timestamp}");
+            $this->customLogger->infoLog("eBay timestamp: $timestamp");
 
             return $timestamp;
         } catch (\Exception $e) {
