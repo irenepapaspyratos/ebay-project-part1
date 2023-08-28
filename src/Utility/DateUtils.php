@@ -21,7 +21,7 @@ class DateUtils {
      * @param string $operator Specifies whether to add or subtract ('+' or '-').
      * @param string $quantity Positive integer as string specifying the amount of time to be added or subtracted.
      * @param string $unit Specifies wether to add/substract seconds, minutes, hours or days ('S', 'M', 'H' or 'D').
-     * @param string $format Format in which the new is returned (by default: ISO8601 -> 'Y-m-d\TH:i:s.u\Z'). 
+     * @param string $format Format in which the new is returned (Default: ISO8601 -> 'Y-m-d\TH:i:s.u\Z'). 
      * 
      * @return string New calculated timestamp in ISO8601 format.
      * @throws \Exception If the operator, quantity or unit parameter is not valid.
