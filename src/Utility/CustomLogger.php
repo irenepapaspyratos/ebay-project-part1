@@ -16,8 +16,8 @@ class CustomLogger {
      * The errorLogPath and infoLogPath are set 
      * to the `log` directory in the project's root directory.
      * 
-     * @param string $errorLogPath File path where the error messages will be logged.
-     * @param string $infoLogPath File path where informational messages will be logged. 
+     * @param string $errorLogPath File path where the error messages will be logged (Default: __DIR__ . '/../../log/error.log').
+     * @param string $infoLogPath File path where informational messages will be logged (Default: __DIR__ . '/../../log/info.log'). 
      * 
      * @return void
      */
