@@ -103,7 +103,7 @@ class EbayApiService {
     }
 
     /**
-     * The `getTimestamp` method retrieves the current eBay timestamp and logs the result to either the info or error log.
+     * The `getTimestamp` method returns the current eBay timestamp and logs to error log on failure.
      * 
      * There is no need for additional XML elements or headers, as this call will not be recognized by the Trading API. 
      * Nevertheless, the API will return a response stating this failure and including eBay's current timestamp.
@@ -126,9 +126,6 @@ class EbayApiService {
             $response = $this->executeXmlApiCurl($headers, $xmlRequest);
             $xmlResponse = simplexml_load_string(trim($response));
             $timestamp = (string) $xmlResponse->Timestamp;
-
-            // Log success
-            $this->customLogger->infoLog("eBay timestamp: $timestamp");
 
             return $timestamp;
         } catch (\Exception $e) {
