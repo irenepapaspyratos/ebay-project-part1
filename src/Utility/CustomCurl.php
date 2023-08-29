@@ -41,7 +41,7 @@ class CustomCurl {
      * The 'executeCurl' method executes a cURL request with specified headers & post fields and returns the
      * response.
      * 
-     * @param array $headers An array of HTTP headers to be included in the request.
+     * @param array<string|int, mixed> string $headers An array of HTTP headers to be included in the request.
      * @param string $postFields Contains the data to be sent in the HTTP POST request. 
      * Although the content can generally be in various formats, for this eBay API an XML string is used.
      * 
