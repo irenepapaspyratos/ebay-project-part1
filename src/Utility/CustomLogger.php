@@ -16,8 +16,8 @@ class CustomLogger {
      * The errorLogPath and infoLogPath are set 
      * to the `log` directory in the project's root directory.
      * 
-     * @param string $errorLogPath File path where the error messages will be logged.
-     * @param string $infoLogPath File path where informational messages will be logged. 
+     * @param string $errorLogPath File path where the error messages will be logged (Default: __DIR__ . '/../../log/error.log').
+     * @param string $infoLogPath File path where informational messages will be logged (Default: __DIR__ . '/../../log/info.log'). 
      * 
      * @return void
      */
@@ -27,7 +27,7 @@ class CustomLogger {
     }
 
     /**
-     * The 'log' method appends a formatted message with a timestamp to a specified file.
+     * The 'log' method appends a formatted message with a UTC+0 timestamp in ISO8601 format to a specified file.
      * 
      * @param string $message Message to be written to the log file.
      * @param string $filePath Path of the file where the message will be logged.
