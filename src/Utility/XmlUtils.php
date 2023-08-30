@@ -15,7 +15,7 @@ class XmlUtils {
      * and adds the nodes to the XML.
      * 
      * @param string|\SimpleXMLElement $srcXml XML to receive new nodes.
-     * @param array<string,string|array<string,string>> $nodes An associative array where the keys represent the names of the nodes to be added,
+     * @param array<string,string|int|array<string,string|int>> $nodes An associative array where the keys represent the names of the nodes to be added,
      * and the values represent either the values of the nodes or an array with possible children (also as name => value).
      * 
      * @return string|\SimpleXMLElement Depending on the input parameter type, either an XML string or object will returned.
@@ -40,13 +40,13 @@ class XmlUtils {
         // Add nodes and their possible children to the initial XML
         foreach ($nodes as $nodeName => $nodeValue) {
 
-            if (!is_string($nodeValue)) {
+            if (!is_string($nodeValue) && !is_int($nodeValue)) {
 
                 $child = $xmlObj->addChild($nodeName);
 
                 foreach ($nodeValue as $firstGenNodeName => $firstGenNodeValue) {
 
-                    if (!is_string($firstGenNodeName) || !is_string($firstGenNodeValue))
+                    if (!is_string($firstGenNodeName) || (!is_string($firstGenNodeValue) && !is_int($firstGenNodeValue)))
                         throw new \Exception('Add child nodes to XML: Invalid type.');
 
                     $child->addChild($firstGenNodeName, $firstGenNodeValue);

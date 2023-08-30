@@ -10,10 +10,9 @@ $config = require __DIR__ . '/../config.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $errors = $dotenv->load();
 
+use App\Enum\Ebay\EbayGranularityLevel;
 use App\Service\EbayApiService;
-use App\Utility\CustomCurl;
-use App\Utility\CustomLogger;
-use App\Utility\DateUtils;
+use App\Utility as Utils;
 
 // Assign environment and configuration variables
 $ebayApiUrl = $config['ebay']['xml_api_production'];
@@ -22,10 +21,11 @@ $ebayCompatLevel = $config['ebay']['combatibility_level'];
 $ebaySiteId = $config['ebay']['site_id'];
 
 // Create services
-$customLogger = new CustomLogger();
-$ebayCurl = new CustomCurl($ebayApiUrl);
-$ebayDateUtils = new DateUtils();
-$ebayApiService = new EbayApiService($customLogger, $ebayCurl, $ebayDateUtils, $ebayApiToken, $ebayCompatLevel, $ebaySiteId);
+$xmlUtils = new Utils\XmlUtils();
+$customLogger = new Utils\CustomLogger();
+$ebayCurl = new Utils\CustomCurl($ebayApiUrl);
+$ebayDateUtils = new Utils\DateUtils();
+$ebayApiService = new EbayApiService($xmlUtils, $customLogger, $ebayCurl, $ebayDateUtils, $ebayApiToken, $ebayCompatLevel, $ebaySiteId);
 
-// Fetch eBay's timestamp
-$ebayTimestamp = $ebayApiService->getTimestamp();
+if (!glob(__DIR__ . '/../data/ebay/initial_active_ids' . '*.xml'))
+    $ebayApiService->storeSellerList();
