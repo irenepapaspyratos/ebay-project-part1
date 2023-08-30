@@ -436,10 +436,10 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesToCorrectFileWithNoParameterSpecified\u0028\u0029",
-            "name": "testStoreSellerListWritesToCorrectFileWithNoParameterSpecified",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified\u0028\u0029",
+            "name": "testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified",
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020XML\u0020response\u0020is\u0020successfully\u0020written\u0020to\u0020the\u0020correct\u0020file\nwith\u0020no\u0020other\u0020parameters\u0020specified.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified\u0028\u0029",
             "name": "testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified",
@@ -461,15 +461,15 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020write\u0020to\u0020a\u0020log\u0020file.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithNoParameterSpecified\u0028\u0029",
-            "name": "testStoreSellerListNoConnectionWithNoParameterSpecified",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithNoParamsSpecified\u0028\u0029",
+            "name": "testStoreSellerListNoConnectionWithNoParamsSpecified",
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParameterSpecified"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParamsSpecified"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithAllParametersSpecified\u0028\u0029",
-            "name": "testStoreSellerListNoConnectionWithAllParametersSpecified",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithAllParamsSpecified\u0028\u0029",
+            "name": "testStoreSellerListNoConnectionWithAllParamsSpecified",
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParametersSpecified"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParamsSpecified"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
             "name": "tester",
