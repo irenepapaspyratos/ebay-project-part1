@@ -236,6 +236,24 @@ writing initially the actual active ids of a seller's items to a specified file.
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll">testGetItemDetailsReturnsAll()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the `getItemDetails` method of the `EbayApiService` class
+whether it returns the XML string of the correct item
+with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError">testGetItemDetailsThrowsExceptionOnCurlError()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the `getItemDetails` method of the `EbayApiService` class
+whether an exception is thrown after a cURL error of the API call
+with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp">testGetTimestampReturnsTimestamp()</a>
     <span>
                                 &nbsp;: mixed    </span>
@@ -270,7 +288,7 @@ whether it throws an &#039;\Exception&#039; with the correct message when it can
 wether it handles very large XML responses correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParamsSpecified">testStoreSellerListNoConnectionWithAllParamsSpecified()</a>
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError">testStoreSellerListWithAllParamsThrowsExceptionOnCurlError()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -278,7 +296,7 @@ wether it handles very large XML responses correctly.</dd>
 whether it throws an &#039;\Exception&#039; with the correct message when it cannot reach the API.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParamsSpecified">testStoreSellerListNoConnectionWithNoParamsSpecified()</a>
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError">testStoreSellerListWithNoParamsThrowsExceptionOnCurlError()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -628,6 +646,106 @@ values for the other parameters to keep the tests readable.</dd>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_testGetItemDetailsReturnsAll">
+        testGetItemDetailsReturnsAll()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">457</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the `getItemDetails` method of the `EbayApiService` class
+whether it returns the XML string of the correct item
+with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testGetItemDetailsReturnsAll</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testGetItemDetailsThrowsExceptionOnCurlError">
+        testGetItemDetailsThrowsExceptionOnCurlError()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">487</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the `getItemDetails` method of the `EbayApiService` class
+whether an exception is thrown after a cURL error of the API call
+with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testGetItemDetailsThrowsExceptionOnCurlError</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_testGetTimestampReturnsTimestamp">
         testGetTimestampReturnsTimestamp()
         <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp" class="headerlink"><i class="fas fa-link"></i></a>
@@ -810,9 +928,9 @@ wether it handles very large XML responses correctly.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListNoConnectionWithAllParamsSpecified">
-        testStoreSellerListNoConnectionWithAllParamsSpecified()
-        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParamsSpecified" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError">
+        testStoreSellerListWithAllParamsThrowsExceptionOnCurlError()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
@@ -827,7 +945,7 @@ whether it throws an &#039;\Exception&#039; with the correct message when it can
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testStoreSellerListNoConnectionWithAllParamsSpecified</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListWithAllParamsThrowsExceptionOnCurlError</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -843,9 +961,9 @@ whether it throws an &#039;\Exception&#039; with the correct message when it can
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListNoConnectionWithNoParamsSpecified">
-        testStoreSellerListNoConnectionWithNoParamsSpecified()
-        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParamsSpecified" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError">
+        testStoreSellerListWithNoParamsThrowsExceptionOnCurlError()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
@@ -860,7 +978,7 @@ whether it throws an &#039;\Exception&#039; with the correct message when it can
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testStoreSellerListNoConnectionWithNoParamsSpecified</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListWithNoParamsThrowsExceptionOnCurlError</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1248,12 +1366,14 @@ values for the other parameters to keep the tests readable.</p>
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll">testGetItemDetailsReturnsAll()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError">testGetItemDetailsThrowsExceptionOnCurlError()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp">testGetTimestampReturnsTimestamp()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError">testGetTimestampThrowsExceptionOnCurlError()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile">testStoreSellerListCannotWriteToFile()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses">testStoreSellerListHandlesLargeResponses()</a></li>
-                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParamsSpecified">testStoreSellerListNoConnectionWithAllParamsSpecified()</a></li>
-                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParamsSpecified">testStoreSellerListNoConnectionWithNoParamsSpecified()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError">testStoreSellerListWithAllParamsThrowsExceptionOnCurlError()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError">testStoreSellerListWithNoParamsThrowsExceptionOnCurlError()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified">testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified">testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified">testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified()</a></li>

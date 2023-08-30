@@ -232,6 +232,13 @@ and storing the actual active ids of a seller's items in a specified file.</p>
 <dd>The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Service-EbayApiService.html#method_getItemDetails">getItemDetails()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+<dd>The &#039;getItemDetails&#039; method retrieves details of a listing from eBay by using the listings ID.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Service-EbayApiService.html#method_getTimestamp">getTimestamp()</a>
     <span>
                                 &nbsp;: string    </span>
@@ -624,6 +631,107 @@ saves the results to a file.</dd>
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getItemDetails">
+        getItemDetails()
+        <a href="classes/App-Service-EbayApiService.html#method_getItemDetails" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">309</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;getItemDetails&#039; method retrieves details of a listing from eBay by using the listings ID.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getItemDetails</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$itemId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$itemCompatibilityList</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$itemSpecifics</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Enum-Ebay-EbayDetailLevel.html"><abbr title="\App\Enum\Ebay\EbayDetailLevel">EbayDetailLevel</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$detailLevel</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">EbayDetailLevel::ALL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>Regardless of the optional setting of a detail level to return,
+several details of a listing's item will only be retrieved by specifying the request correspondingly.
+This App uses by default the detail level 'ReturnAll' with the additional requests for item specifics
+and the compatibility list, which is used e.g. to sell car parts.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$itemId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Unique identifier of the item you want to retrieve details for.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$itemCompatibilityList</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Flag indicating whether or not to include the item compatibility list (Default: true).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$itemSpecifics</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Flag indicating whether or not to include the item specifics (Default: true).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$detailLevel</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Enum-Ebay-EbayDetailLevel.html"><abbr title="\App\Enum\Ebay\EbayDetailLevel">EbayDetailLevel</abbr></a></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">EbayDetailLevel::ALL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optional to specify the level of item details to be returned in the response (Default: 'ReturnAll'.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Service-EbayApiService.html#method_getItemDetails#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If there is an error executing the cURL request.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The XML string of the specified item with all requested details.</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getTimestamp">
         getTimestamp()
         <a href="classes/App-Service-EbayApiService.html#method_getTimestamp" class="headerlink"><i class="fas fa-link"></i></a>
@@ -802,6 +910,10 @@ If not provided, it will default to a calculated value of the <code class="prett
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Indicates the successful execution of the tasks.</p>
+</section>
+
             </section>
 
 </article>
@@ -1121,6 +1233,7 @@ Further optional or mandatory headers may need to be added before executing the 
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Service-EbayApiService.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/App-Service-EbayApiService.html#method_getItemDetails">getItemDetails()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_getTimestamp">getTimestamp()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_storeSellerList">storeSellerList()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_executeXmlApiCurl">executeXmlApiCurl()</a></li>

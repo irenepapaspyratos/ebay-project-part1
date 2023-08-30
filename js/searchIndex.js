@@ -101,6 +101,11 @@ Search.appendIndex(
             "summary": "The\u0020\u0060getSellerList\u0060\u0020method\u0020retrieves\u0020a\u0020list\u0020of\u0020a\u0020seller\u0027s\u0020items\u0020from\u0020eBay\u0020based\u0020on\u0020specified\u0020parameters\u0020and\nsaves\u0020the\u0020results\u0020to\u0020a\u0020file.",
             "url": "classes/App-Service-EbayApiService.html#method_storeSellerList"
         },                {
+            "fqsen": "\\App\\Service\\EbayApiService\u003A\u003AgetItemDetails\u0028\u0029",
+            "name": "getItemDetails",
+            "summary": "The\u0020\u0027getItemDetails\u0027\u0020method\u0020retrieves\u0020details\u0020of\u0020a\u0020listing\u0020from\u0020eBay\u0020by\u0020using\u0020the\u0020listings\u0020ID.",
+            "url": "classes/App-Service-EbayApiService.html#method_getItemDetails"
+        },                {
             "fqsen": "\\App\\Service\\EbayApiService\u003A\u003A\u0024xmlUtils",
             "name": "xmlUtils",
             "summary": "",
@@ -461,15 +466,25 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020write\u0020to\u0020a\u0020log\u0020file.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithNoParamsSpecified\u0028\u0029",
-            "name": "testStoreSellerListNoConnectionWithNoParamsSpecified",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWithNoParamsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testStoreSellerListWithNoParamsThrowsExceptionOnCurlError",
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithNoParamsSpecified"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListNoConnectionWithAllParamsSpecified\u0028\u0029",
-            "name": "testStoreSellerListNoConnectionWithAllParamsSpecified",
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWithAllParamsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testStoreSellerListWithAllParamsThrowsExceptionOnCurlError",
             "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnectionWithAllParamsSpecified"
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsReturnsAll\u0028\u0029",
+            "name": "testGetItemDetailsReturnsAll",
+            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020item\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetItemDetailsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
             "name": "tester",
