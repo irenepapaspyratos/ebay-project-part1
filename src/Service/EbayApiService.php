@@ -170,7 +170,7 @@ class EbayApiService {
      * @param EbayDetailLevel|EbayGranularityLevel|null $setLevel Optionally used to specify the detail or granularity level for the eBay API response (Default: 'null').
      * @param array[string]|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: 'null'). 
      * 
-     * @return bool
+     * @return bool Indicates the successful execution of the tasks.
      * @throws \Exception If result could not be written to the file.
      */
     public function storeSellerList(
@@ -186,10 +186,10 @@ class EbayApiService {
         $callName = 'GetSellerList';
         $xmlRequest = $this->getBasicRequestXml($callName);
         $headers = $this->getBasicHeaders($callName);
-        $endTimeFrom = $endTimeFrom !== null ? $endTimeFrom : $this->getTimestamp();
+        $endTimeFrom = $endTimeFrom !== null ?: $this->getTimestamp();
         $xmlAddition = [];
 
-        // Create a string with all additional XML parameters necessary for this specific call
+        // Create an array with all additional XML parameters necessary for this specific call
         $xmlAddition['EndTimeFrom'] = $endTimeFrom;
 
         if (!isset($endTimeTo))
@@ -200,22 +200,24 @@ class EbayApiService {
 
             if ($setLevel instanceof EbayDetailLevel || $setLevel instanceof EbayGranularityLevel) {
 
-                //Create xml node for entries per page for necessary pagination loop (max result per call = 200)
+                //Create and add array element for entries per page for necessary pagination loop (max result per call = 200)
                 $entriesPerPage = $entriesPerPage !== null ? $entriesPerPage : 200;
                 $xmlAddition['Pagination'] = ['EntriesPerPage' => $entriesPerPage];
 
-                // Create xml node for detail or granularity level
+                // Add array element for detail or granularity level
                 $name = $setLevel instanceof EbayDetailLevel ? 'DetailLevel' : 'GranularityLevel';
                 $xmlAddition[$name] = $setLevel->value;
             }
 
             if ($outputSelector !== null) {
 
+                // Create comma separated string with desired output fields
                 $selectorStr = '';
                 foreach ($outputSelector ?? [] as $selector)
                     $selectorStr .= "$selector,";
                 $selectorStr = trim($selectorStr, ',');
 
+                // Add the created string as value of the array element for the output selector
                 $xmlAddition['OutputSelector'] = (string)$selectorStr;
             }
         }
@@ -223,7 +225,7 @@ class EbayApiService {
         // Execute a cURL request (corresponding to the desired detail/granularity level) and save the result(s)
         if (!isset($setLevel)) {
 
-            // Include the additional elements in the xml request string
+            // Add the additional elements to the xml request string
             $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
             // Try to execute cURL request and store the response
@@ -234,11 +236,12 @@ class EbayApiService {
                 // Initialize curl with necessary options array set and store structured XML string
                 $response = $this->executeXmlApiCurl($headers, $xmlRequest);
                 fwrite($initialFileHandle, $response, strlen($response));
+
                 fclose($initialFileHandle);
             } catch (\Exception $e) {
 
                 // Log error
-                $this->customLogger->errorLog("Failed call of eBay GetSellerList (without detail levels): " . $e->getMessage());
+                $this->customLogger->errorLog('Failed call of eBay GetSellerList (without detail levels): ' . $e->getMessage());
 
                 throw new \Exception("Failed 'GetSellerList': " . $e->getMessage());
             }
@@ -252,16 +255,16 @@ class EbayApiService {
 
                 $page++;
 
-                // Add pagination details to call-specific XML request 
+                // Add further pagination details to the array with additional XML nodes
                 $xmlAddition['Pagination']['PageNumber'] = $page;
 
-                // Include the additional elements in the xml request string
+                // Add the additional elements to the call-specific XML request string
                 $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
                 // Try to execute cURL request and store the response
                 try {
 
-                    // Create numbered filenames for the paginated response
+                    // Create corresponding filenames for the paginated response
                     $inititialPaginatedEbayFile = str_replace('.xml', sprintf("%'.03d", $page) . '.xml', $initialEbayFile);
                     $initialFileHandle = fopen($inititialPaginatedEbayFile, 'w');
 
@@ -269,9 +272,10 @@ class EbayApiService {
                     $response = $this->executeXmlApiCurl($headers, $xmlRequest);
                     $xmlResponse = simplexml_load_string(trim($response));
                     fwrite($initialFileHandle, $response, strlen($response));
+
                     fclose($initialFileHandle);
 
-                    // Check if further pages/items
+                    // Check if further pages/items to be called exist 
                     $hasMoreItems = strtolower((string)$xmlResponse->HasMoreItems) === 'true';
                 } catch (\Exception $e) {
 
@@ -284,5 +288,58 @@ class EbayApiService {
         }
 
         return true;
+    }
+
+    /**
+     * The 'getItemDetails' method retrieves details of a listing from eBay by using the listings ID. 
+     * 
+     * Regardless of the optional setting of a detail level to return, 
+     * several details of a listing's item will only be retrieved by specifying the request correspondingly. 
+     * This App uses by default the detail level 'ReturnAll' with the additional requests for item specifics 
+     * and the compatibility list, which is used e.g. to sell car parts.
+     * 
+     * @param string $itemId Unique identifier of the item you want to retrieve details for.
+     * @param bool $itemCompatibilityList Flag indicating whether or not to include the item compatibility list (Default: true). 
+     * @param bool $itemSpecifics Flag indicating whether or not to include the item specifics (Default: true). 
+     * @param EbayDetailLevel $detailLevel Optional to specify the level of item details to be returned in the response (Default: 'ReturnAll'. 
+     * 
+     * @return string The XML string of the specified item with all requested details.
+     * @throws \Exception If there is an error executing the cURL request.
+     */
+    public function getItemDetails(
+        string $itemId,
+        ?bool $itemCompatibilityList = true,
+        ?bool $itemSpecifics = true,
+        ?EbayDetailLevel $detailLevel = EbayDetailLevel::ALL,
+    ): string {
+
+        // Set basic variables
+        $callName = 'GetItem';
+        $xmlRequest = $this->getBasicRequestXml($callName);
+        $headers = $this->getBasicHeaders($callName);
+        $xmlAddition = [];
+
+        // Create an array with all additional XML parameters necessary for this specific call
+        $xmlAddition['ItemID'] = trim($itemId);
+        $itemCompatibilityList && $xmlAddition['IncludeItemCompatibilityList'] = 'true';
+        $itemSpecifics && $xmlAddition['IncludeItemSpecifics'] = 'true';
+        $detailLevel && $xmlAddition['DetailLevel'] = $detailLevel->value;
+
+        // Add the additional elements to the xml request string
+        $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
+        echo $xmlRequest;
+
+        // Try to execute cURL request and store the response
+        try {
+
+            // Initialize curl with necessary options array set and return the response
+            return $this->executeXmlApiCurl($headers, $xmlRequest);
+        } catch (\Exception $e) {
+
+            // Log error
+            $this->customLogger->errorLog("Failed call of eBay GetItem (for ID: $itemId)" . $e->getMessage());
+
+            throw new \Exception("Failed 'GetItem': " . $e->getMessage());
+        }
     }
 }

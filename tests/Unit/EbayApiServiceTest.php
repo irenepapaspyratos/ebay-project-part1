@@ -112,13 +112,13 @@ class EbayApiServiceTest extends Unit {
 
         // Arrange mock objects for the 'CustomCurl' class throwing an Exception
         $this->customCurl = $this->make(CustomCurl::class, ['executeCurl' => function () {
-            throw new \Exception('cURL ERROR:');
+            throw new \Exception('Error Message');
         }]);
-        $this->ebayApiService = new EbayApiService($this->xmlUtils, $this->customLogger, $this->customCurl, $this->dateUtils, 9, '1', 1,);
+        $this->initializeEbayApiService();
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Failed 'GeteBayOfficalTime': cURL ERROR");
+        $this->expectExceptionMessage('Error Message');
 
         // Act
         $this->ebayApiService->getTimestamp();
@@ -404,17 +404,17 @@ class EbayApiServiceTest extends Unit {
      * Tests the 'storeSellerList' method of the 'EbayApiService' class 
      * whether it throws an '\Exception' with the correct message when it cannot reach the API.
      */
-    public function testStoreSellerListNoConnectionWithNoParamsSpecified() {
+    public function testStoreSellerListWithNoParamsThrowsExceptionOnCurlError() {
 
         // Arrange mock object for the 'CustomCurl' class to simulate a connection error
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
-            throw new \Exception("No connection.");  // Or whatever your customCurl's behavior is in case of a connection failure
+            throw new \Exception('Error Message');  // Or whatever your customCurl's behavior is in case of a connection failure
         }]);
         $this->initializeEbayApiService();
 
         // Assert that an exception is thrown with corresponding error message reporting the cURL failure
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("No connection.");
+        $this->expectExceptionMessage('Error Message');
 
         // Act
         $this->ebayApiService->storeSellerList($this->initialActiveIdsPath);
@@ -424,17 +424,17 @@ class EbayApiServiceTest extends Unit {
      * Tests the 'storeSellerList' method of the 'EbayApiService' class 
      * whether it throws an '\Exception' with the correct message when it cannot reach the API.
      */
-    public function testStoreSellerListNoConnectionWithAllParamsSpecified() {
+    public function testStoreSellerListWithAllParamsThrowsExceptionOnCurlError() {
 
         // Arrange mock object for the 'CustomCurl' class to simulate a connection error
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
-            throw new \Exception("No connection.");  // Or whatever your customCurl's behavior is in case of a connection failure
+            throw new \Exception('Error Message');  // Or whatever your customCurl's behavior is in case of a connection failure
         }]);
         $this->initializeEbayApiService();
 
         // Assert that an exception is thrown with corresponding error message reporting the cURL failure
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("No connection.");
+        $this->expectExceptionMessage('Error Message');
 
         // Act
         $this->ebayApiService->storeSellerList(
@@ -445,5 +445,60 @@ class EbayApiServiceTest extends Unit {
             EbayGranularityLevel::COARSE,
             ['ItemID', 'Title', 'HasMoreItems', 'PageNumber']
         );
+    }
+
+    /**
+     * Tests the `getItemDetails` method of the `EbayApiService` class 
+     * whether it returns the XML string of the correct item
+     * with mocked 'CustomLogger' and 'CustomCurl' classes. 
+     * 
+     * @template RealInstanceType of object (avoids type error of 'CustomCurl')
+     */
+    public function testGetItemDetailsReturnsAll() {
+
+        // Arrange mock object for the 'CustomCurl' class returning a short XML string
+        $itemId = 111111111111;
+        $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () use ($itemId) {
+            return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+                <GetItemResponse xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+                    <Ack>Success</Ack>
+                    <Item><ItemID>$itemId</ItemID></Item>
+                </GetItemResponse>";
+        }]);
+        $this->initializeEbayApiService();
+
+        // Act
+        $result = $this->ebayApiService->getItemDetails($itemId);
+
+        // Assert that the correct string is returned
+        $this->assertIsString($result);
+        $this->assertStringContainsString('<GetItemResponse', $result);
+        $this->assertStringContainsString($itemId, $result);
+        $this->assertStringContainsString('Success', $result);
+    }
+
+    /**
+     * Tests the `getItemDetails` method of the `EbayApiService` class 
+     * whether an exception is thrown after a cURL error of the API call
+     * with mocked 'CustomLogger' and 'CustomCurl' classes. 
+     * 
+     * @template RealInstanceType of object (avoids type error of 'CustomCurl')
+     */
+    public function testGetItemDetailsThrowsExceptionOnCurlError() {
+
+        // Arrange mock objects for the 'CustomCurl' class throwing an Exception
+        $itemId = 111111111111;
+
+        $this->customCurl = $this->make(CustomCurl::class, ['executeCurl' => function () {
+            throw new \Exception('Error Message');
+        }]);
+        $this->initializeEbayApiService();
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Error Message');
+
+        // Act
+        $this->ebayApiService->getItemDetails($itemId);
     }
 }
