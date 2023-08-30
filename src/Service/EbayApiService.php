@@ -136,7 +136,7 @@ class EbayApiService {
         } catch (\Exception $e) {
 
             // Log error
-            $this->customLogger->errorLog("Failed to fetch eBay timestamp: " . $e->getMessage());
+            $this->customLogger->errorLog('Failed to fetch eBay timestamp: ' . $e->getMessage());
 
             throw new \Exception("Failed 'GeteBayOfficalTime': " . $e->getMessage());
         }
