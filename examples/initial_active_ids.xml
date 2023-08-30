@@ -1,0 +1,47 @@
+<!-- 
+    Description: 
+    This file contains sample data for the 'storeSellerList()' of the 'EbayApiService' class
+    when called without any parameter to retrieve all actual active ids of a seller's items.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSellerListResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+    <Timestamp>2023-08-28T20:04:38.705Z</Timestamp>
+    <Ack>Success</Ack>
+    <Version>1271</Version>
+    <Build>E1271_CORE_APISELLING_19187369_R1</Build>
+    <PaginationResult>
+        <TotalNumberOfEntries>4</TotalNumberOfEntries>
+    </PaginationResult>
+    <ItemArray>
+        <Item>
+            <ItemID>11111111111</ItemID>
+            <ListingDetails>
+                <StartTime>2022-06-29T05:04:15.000Z</StartTime>
+                <EndTime>2023-08-29T05:04:15.000Z</EndTime>
+            </ListingDetails>
+        </Item>
+        <Item>
+            <ItemID>222222222222</ItemID>
+            <ListingDetails>
+                <StartTime>2022-06-29T05:07:19.000Z</StartTime>
+                <EndTime>2023-08-29T05:07:19.000Z</EndTime>
+            </ListingDetails>
+        </Item>
+        <Item>
+            <ItemID>333333333333</ItemID>
+            <ListingDetails>
+                <StartTime>2022-06-29T05:14:03.000Z</StartTime>
+                <EndTime>2023-08-29T05:14:03.000Z</EndTime>
+            </ListingDetails>
+        </Item>
+        <Item>
+            <ItemID>44444444444</ItemID>
+            <ListingDetails>
+                <StartTime>2022-06-29T05:21:31.000Z</StartTime>
+                <EndTime>2023-08-29T05:21:31.000Z</EndTime>
+            </ListingDetails>
+        </Item>
+    </ItemArray>
+    <ReturnedItemCountActual>4</ReturnedItemCountActual>
+</GetSellerListResponse>

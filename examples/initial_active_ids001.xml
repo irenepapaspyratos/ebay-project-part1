@@ -1,0 +1,26 @@
+<!-- 
+    Description: 
+    This file contains sample data (first page only) for the 'storeSellerList()' of the 'EbayApiService' class
+    when called with given start and ending time, 
+    an 'EbayGranularityLevel' of 'COARSE', 
+    the output selectors ItemID, Title, HasMoreItems, PageNumber 
+    and a consequently necessary number of entries per page.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSellerListResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+    <Timestamp>2023-08-29T15:02:54.008Z</Timestamp>
+    <Ack>Success</Ack>
+    <Version>1271</Version>
+    <Build>E1271_CORE_APISELLING_19187371_R1</Build>
+    <HasMoreItems>true</HasMoreItems>
+    <ItemArray>
+        <Item>
+            <Title>LUFTFILTERKASTEN VOLVO V70 III XC70 II FORD 200PS 214PS 231PS 254PS 30677718</Title>
+        </Item>
+        <Item>
+            <Title>Getriebe komplett 47300-49100 KIA SORENTO 2,5CRDI 115TKM D4CB 125KW 170PS 2006-</Title>
+        </Item>
+    </ItemArray>
+    <PageNumber>1</PageNumber>
+</GetSellerListResponse>
