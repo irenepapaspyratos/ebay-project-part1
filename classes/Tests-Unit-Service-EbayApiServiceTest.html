@@ -61,6 +61,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/app-enum.html" class="">Enum</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
                 
             </li>
@@ -140,13 +144,15 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
             <p class="phpdocumentor-summary">The `EbayApiServiceTest` is a unit test class of the &#039;EbayApiService` class</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of getting the current eBay timestamp.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of
+getting the current eBay timestamp and
+writing initially the actual active ids of a seller's items to a specified file.</p>
 </section>
 
 
@@ -192,7 +198,31 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_dateUtils">$dateUtils</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_ebayApiService">$ebayApiService</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_initialActiveIdsPath">$initialActiveIdsPath</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_nonWritablePath">$nonWritablePath</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_xmlUtils">$xmlUtils</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -223,12 +253,80 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
 whether an exception is thrown after a cURL error of the API call
 with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile">testStoreSellerListCannotWriteToFile()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether it throws an &#039;\Exception&#039; with the correct message when it cannot write to a log file.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses">testStoreSellerListHandlesLargeResponses()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+wether it handles very large XML responses correctly.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnection">testStoreSellerListNoConnection()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether it throws an &#039;\Exception&#039; with the correct message when it cannot reach the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified">testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML responses of all pages are successfully written to the correct files
+with all parameters specified.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified">testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML response of only one page is successfully written to the correct file
+with all parameters specified.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified">testStoreSellerListWritesToCorrectFileWithNoParameterSpecified()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML response is successfully written to the correct file
+with no other parameters specified.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method__after">_after()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Cleans the codecept_data_dir directory after each test by deleting all files.</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method__before">_before()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Sets up the test environment by creating a mock object of the &#039;CustomLogger&#039; class.</dd>
+<dd>Sets up the necessary environment for running tests by cleaning up the test directory,
+defining paths for writable files, creating a non-writable test file
+and initializing an empty mock for every class except the `EbayApiService` class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_initializeEbayApiService">initializeEbayApiService()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Initializes an instance of the EbayApiService class with mocked objects and random
+values for the other parameters to keep the tests readable.</dd>
 
     </dl>
 
@@ -261,7 +359,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -294,7 +392,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -327,7 +425,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -336,6 +434,39 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
     <span class="phpdocumentor-signature__name">$customLogger</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_dateUtils">
+        $dateUtils
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_dateUtils" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">26</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$dateUtils</span>
     </code>
 
     
@@ -360,7 +491,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -369,6 +500,105 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
     <span class="phpdocumentor-signature__name">$ebayApiService</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_initialActiveIdsPath">
+        $initialActiveIdsPath
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_initialActiveIdsPath" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$initialActiveIdsPath</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_nonWritablePath">
+        $nonWritablePath
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_nonWritablePath" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">28</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$nonWritablePath</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_xmlUtils">
+        $xmlUtils
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_xmlUtils" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$xmlUtils</span>
     </code>
 
     
@@ -398,7 +628,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">84</span>
 
     </aside>
 
@@ -415,6 +645,22 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
     
     
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
 </article>
@@ -432,7 +678,7 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 
     </aside>
 
@@ -443,6 +689,319 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">testGetTimestampThrowsExceptionOnCurlError</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListCannotWriteToFile">
+        testStoreSellerListCannotWriteToFile()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">387</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether it throws an &#039;\Exception&#039; with the correct message when it cannot write to a log file.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListCannotWriteToFile</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListHandlesLargeResponses">
+        testStoreSellerListHandlesLargeResponses()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">360</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+wether it handles very large XML responses correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListHandlesLargeResponses</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListNoConnection">
+        testStoreSellerListNoConnection()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnection" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">407</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether it throws an &#039;\Exception&#039; with the correct message when it cannot reach the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListNoConnection</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified">
+        testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">242</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML responses of all pages are successfully written to the correct files
+with all parameters specified.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified">
+        testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">179</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML response of only one page is successfully written to the correct file
+with all parameters specified.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified">
+        testStoreSellerListWritesToCorrectFileWithNoParameterSpecified()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">134</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;storeSellerList&#039; method of the &#039;EbayApiService&#039; class
+whether the XML response is successfully written to the correct file
+with no other parameters specified.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testStoreSellerListWritesToCorrectFileWithNoParameterSpecified</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">template</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>RealInstanceType of object (avoids type error of 'CustomCurl')</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method__after">
+        _after()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method__after" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">61</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Cleans the codecept_data_dir directory after each test by deleting all files.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">_after</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -466,15 +1025,52 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Sets up the test environment by creating a mock object of the &#039;CustomLogger&#039; class.</p>
+        <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by cleaning up the test directory,
+defining paths for writable files, creating a non-writable test file
+and initializing an empty mock for every class except the `EbayApiService` class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
                     <span class="phpdocumentor-signature__name">_before</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>The <code class="prettyprint">EbayApiService</code> class has it's own function, so that each test only needs to adjust the needed objects.</p>
+</section>
+
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_initializeEbayApiService">
+        initializeEbayApiService()
+        <a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_initializeEbayApiService" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/EbayApiServiceTest.php"><a href="files/tests-unit-ebayapiservicetest.html"><abbr title="tests/Unit/EbayApiServiceTest.php">EbayApiServiceTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">71</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Initializes an instance of the EbayApiService class with mocked objects and random
+values for the other parameters to keep the tests readable.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">initializeEbayApiService</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -600,7 +1196,11 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
                                                     <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_tester">$tester<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customCurl">$customCurl<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customLogger">$customLogger<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_dateUtils">$dateUtils<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_ebayApiService">$ebayApiService<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_initialActiveIdsPath">$initialActiveIdsPath<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_nonWritablePath">$nonWritablePath<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#property_xmlUtils">$xmlUtils<a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"></li>
                                             </ul>
                 </li>
             
@@ -609,7 +1209,15 @@ with mocked &#039;CustomLogger&#039; and &#039;CustomCurl&#039; classes.</p>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp">testGetTimestampReturnsTimestamp()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError">testGetTimestampThrowsExceptionOnCurlError()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile">testStoreSellerListCannotWriteToFile()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses">testStoreSellerListHandlesLargeResponses()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListNoConnection">testStoreSellerListNoConnection()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified">testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified">testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesToCorrectFileWithNoParameterSpecified">testStoreSellerListWritesToCorrectFileWithNoParameterSpecified()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method__after">_after()</a></li>
                                             <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method__before">_before()</a></li>
+                                            <li><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html#method_initializeEbayApiService">initializeEbayApiService()</a></li>
                                     </ul>
             </li>
                     </ul>

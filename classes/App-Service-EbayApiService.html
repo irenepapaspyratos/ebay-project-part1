@@ -61,6 +61,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/app-enum.html" class="">Enum</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
                 
             </li>
@@ -136,13 +140,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
             <p class="phpdocumentor-summary">The `EbayApiService` class provides methods for making API calls to eBay.</p>
 
-    <section class="phpdocumentor-description"><p>The contained method is fetching eBay's current timestamp.</p>
+    <section class="phpdocumentor-description"><p>The contained methods are fetching eBay's current timestamp
+and storing the actual active ids of a seller's items in a specified file.</p>
 </section>
 
 
@@ -194,9 +199,21 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Service-EbayApiService.html#property_dateUtils">$dateUtils</a>
+    <span>
+                        &nbsp;: <a href="classes/App-Utility-DateUtils.html"><abbr title="\App\Utility\DateUtils">DateUtils</abbr></a>            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Service-EbayApiService.html#property_siteId">$siteId</a>
     <span>
                         &nbsp;: int            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Service-EbayApiService.html#property_xmlUtils">$xmlUtils</a>
+    <span>
+                        &nbsp;: <a href="classes/App-Utility-XmlUtils.html"><abbr title="\App\Utility\XmlUtils">XmlUtils</abbr></a>            </span>
 </dt>
 
     </dl>
@@ -219,7 +236,15 @@
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>The `getTimestamp` method retrieves the current eBay timestamp and logs the result to either the info or error log.</dd>
+<dd>The `getTimestamp` method returns the current eBay timestamp and logs to error log on failure.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Service-EbayApiService.html#method_storeSellerList">storeSellerList()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd>The `getSellerList` method retrieves a list of a seller&#039;s items from eBay based on specified parameters and
+saves the results to a file.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/App-Service-EbayApiService.html#method_executeXmlApiCurl">executeXmlApiCurl()</a>
@@ -273,7 +298,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -306,7 +331,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -339,7 +364,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -372,7 +397,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -381,6 +406,39 @@
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><a href="classes/App-Utility-CustomLogger.html"><abbr title="\App\Utility\CustomLogger">CustomLogger</abbr></a></span>
     <span class="phpdocumentor-signature__name">$customLogger</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_dateUtils">
+        $dateUtils
+        <a href="classes/App-Service-EbayApiService.html#property_dateUtils" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/App-Utility-DateUtils.html"><abbr title="\App\Utility\DateUtils">DateUtils</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$dateUtils</span>
     </code>
 
     
@@ -405,7 +463,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
@@ -414,6 +472,39 @@
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$siteId</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_xmlUtils">
+        $xmlUtils
+        <a href="classes/App-Service-EbayApiService.html#property_xmlUtils" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">20</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/App-Utility-XmlUtils.html"><abbr title="\App\Utility\XmlUtils">XmlUtils</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$xmlUtils</span>
     </code>
 
     
@@ -443,7 +534,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
@@ -451,13 +542,22 @@
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-CustomLogger.html"><abbr title="\App\Utility\CustomLogger">CustomLogger</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customLogger</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-CustomCurl.html"><abbr title="\App\Utility\CustomCurl">CustomCurl</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customCurl</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$apiToken</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$compatLevel</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-XmlUtils.html"><abbr title="\App\Utility\XmlUtils">XmlUtils</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$xmlUtils</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-CustomLogger.html"><abbr title="\App\Utility\CustomLogger">CustomLogger</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customLogger</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-CustomCurl.html"><abbr title="\App\Utility\CustomCurl">CustomCurl</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$customCurl</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-DateUtils.html"><abbr title="\App\Utility\DateUtils">DateUtils</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dateUtils</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$apiToken</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$compatLevel</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$xmlUtils</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-XmlUtils.html"><abbr title="\App\Utility\XmlUtils">XmlUtils</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Provides utility methods for working with XML data.</p>
+</section>
+
+            </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$customLogger</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-CustomLogger.html"><abbr title="\App\Utility\CustomLogger">CustomLogger</abbr></a></span>
@@ -473,6 +573,15 @@
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                     <section class="phpdocumentor-description"><p>Passes an instance of a custom cURL class to use the customized cURL implementation.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$dateUtils</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Utility-DateUtils.html"><abbr title="\App\Utility\DateUtils">DateUtils</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Passes an Instance of a class to calculate dates.</p>
 </section>
 
             </dd>
@@ -523,11 +632,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">109</span>
+    <span class="phpdocumentor-element-found-in__line">120</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The `getTimestamp` method retrieves the current eBay timestamp and logs the result to either the info or error log.</p>
+        <p class="phpdocumentor-summary">The `getTimestamp` method returns the current eBay timestamp and logs to error log on failure.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -573,6 +682,132 @@ Like this, the <code class="prettyprint">getTimestamp</code> method can utilize 
                     <article
         class="phpdocumentor-element
             -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_storeSellerList">
+        storeSellerList()
+        <a href="classes/App-Service-EbayApiService.html#method_storeSellerList" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">176</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The `getSellerList` method retrieves a list of a seller&#039;s items from eBay based on specified parameters and
+saves the results to a file.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">storeSellerList</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$initialEbayFile</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">__DIR__ . &#039;/../../data/ebay/initial_active_ids.xml&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$endTimeFrom</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$endTimeTo</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$entriesPerPage</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Enum-Ebay-EbayDetailLevel.html"><abbr title="\App\Enum\Ebay\EbayDetailLevel">EbayDetailLevel</abbr></a>|<a href="classes/App-Enum-Ebay-EbayGranularityLevel.html"><abbr title="\App\Enum\Ebay\EbayGranularityLevel">EbayGranularityLevel</abbr></a>|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$setLevel</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$outputSelector</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>A time window of max 120 days must be given to get all listings either starting OR ending in the specified window.
+All active(!) listings of a seller can be retrieved by requesting all listings ending(!) in the time window from 'now' to 'now +120 days'.</p>
+<p>If no level of response details (Granularity Level or Detail Level) is set, the response will only contain id, starting and end time of each listing,
+which could be reduced even further to only the id by setting the the output selector to ['ItemID'].
+However, as soon as a level of response details is set, pagination is mandatory and the amount of data schould be reduced using the output selector in order to enhance performance.
+That means, if e.g. the listings' ids and titles are needed, the granularity level has to be set to at least 'EbayGranularityLevel::COARSE' and
+the output selector should correspondingly be set to ['ItemID', 'Title', 'HasMoreItems', 'PageNumber'] while eBay's max of 200 entries per page can still work fine.
+But if e.g. all for this available details are needed, the detail level has to be set to 'EbayDetailLevel::ALL' and the output selector has to stay 'null'
+while the reduction of the entries per page should be adjusted very smart towards the lower end!</p>
+<p>Note: Despite of further filter options not shown here, unfortunately, NO level of this call's response details returns ALL details of a listing.
+Therefore, this function is used only once at the very first start to retrieve and store all ids of a seller's actual active listings,
+while the complete list of details for each listing will be retrieved by using eBay's 'GetItem' call.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$initialEbayFile</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">__DIR__ . &#039;/../../data/ebay/initial_active_ids.xml&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>File path where the initial eBay response will be stored for further processing (Default: <strong>DIR</strong> . '/../../data/ebay/initial_active_ids.xml').</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$endTimeFrom</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Starting time of the time window for retrieving a seller's listings filtered by their end time.
+If not provided, it will default to 'now'.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$endTimeTo</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>End time of the time window for retrieving a seller's listings filtered by their end time.
+If not provided, it will default to a calculated value of the <code class="prettyprint">endTimeFrom</code> parameter +120 days (format: UTC +0, no DST!).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$entriesPerPage</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optional number of items to be returned per page. Only used in case of provided detail or granularity level, if unset it defaults to 200 (eBay's max).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$setLevel</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/App-Enum-Ebay-EbayDetailLevel.html"><abbr title="\App\Enum\Ebay\EbayDetailLevel">EbayDetailLevel</abbr></a>|<a href="classes/App-Enum-Ebay-EbayGranularityLevel.html"><abbr title="\App\Enum\Ebay\EbayGranularityLevel">EbayGranularityLevel</abbr></a>|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optionally used to specify the detail or granularity level for the eBay API response (Default: 'null').</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$outputSelector</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Optionally specifies the fields to retrieve from the eBay API response (Default: 'null').</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Service-EbayApiService.html#method_storeSellerList#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If result could not be written to the file.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
             -protected
                                                         "
 >
@@ -584,7 +819,7 @@ Like this, the <code class="prettyprint">getTimestamp</code> method can utilize 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 
     </aside>
 
@@ -664,7 +899,7 @@ This programm requests the traditional 'Trading API' using XML data.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">74</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 
     </aside>
 
@@ -719,7 +954,7 @@ Further optional or mandatory headers may need to be added before executing the 
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Service/EbayApiService.php"><a href="files/src-service-ebayapiservice.html"><abbr title="src/Service/EbayApiService.php">EbayApiService.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
@@ -876,7 +1111,9 @@ Further optional or mandatory headers may need to be added before executing the 
                                                     <li><a href="classes/App-Service-EbayApiService.html#property_compatLevel">$compatLevel<a href="classes/App-Service-EbayApiService.html"></li>
                                                     <li><a href="classes/App-Service-EbayApiService.html#property_customCurl">$customCurl<a href="classes/App-Service-EbayApiService.html"></li>
                                                     <li><a href="classes/App-Service-EbayApiService.html#property_customLogger">$customLogger<a href="classes/App-Service-EbayApiService.html"></li>
+                                                    <li><a href="classes/App-Service-EbayApiService.html#property_dateUtils">$dateUtils<a href="classes/App-Service-EbayApiService.html"></li>
                                                     <li><a href="classes/App-Service-EbayApiService.html#property_siteId">$siteId<a href="classes/App-Service-EbayApiService.html"></li>
+                                                    <li><a href="classes/App-Service-EbayApiService.html#property_xmlUtils">$xmlUtils<a href="classes/App-Service-EbayApiService.html"></li>
                                             </ul>
                 </li>
             
@@ -885,6 +1122,7 @@ Further optional or mandatory headers may need to be added before executing the 
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Service-EbayApiService.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_getTimestamp">getTimestamp()</a></li>
+                                            <li><a href="classes/App-Service-EbayApiService.html#method_storeSellerList">storeSellerList()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_executeXmlApiCurl">executeXmlApiCurl()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_getBasicHeaders">getBasicHeaders()</a></li>
                                             <li><a href="classes/App-Service-EbayApiService.html#method_getBasicRequestXml">getBasicRequestXml()</a></li>

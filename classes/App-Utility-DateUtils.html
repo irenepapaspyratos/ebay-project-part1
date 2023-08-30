@@ -61,6 +61,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/app-enum.html" class="">Enum</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
                 
             </li>
@@ -172,12 +176,12 @@ specified quantity of time units from a given timestamp.</p>
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-DateUtils.html#method_calculateNewTimestamp">calculateNewTimestamp()</a>
+    <a href="classes/App-Utility-DateUtils.html#method_calculateNewUtcTimestamp">calculateNewUtcTimestamp()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>The &#039;calculateNewTimestamp&#039; method calculates a new timestamp by adding or subtracting a specified quantity
-of time units from a given timestamp.</dd>
+<dd>The &#039;calculateNewUtcTimestamp&#039; method calculates a new timestamp by adding or subtracting a specified quantity
+of time units from a given timestamp using the UTC+0 timezone without any DST transitions.</dd>
 
     </dl>
 
@@ -200,9 +204,9 @@ of time units from a given timestamp.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_calculateNewTimestamp">
-        calculateNewTimestamp()
-        <a href="classes/App-Utility-DateUtils.html#method_calculateNewTimestamp" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_calculateNewUtcTimestamp">
+        calculateNewUtcTimestamp()
+        <a href="classes/App-Utility-DateUtils.html#method_calculateNewUtcTimestamp" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
@@ -212,12 +216,12 @@ of time units from a given timestamp.</dd>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The &#039;calculateNewTimestamp&#039; method calculates a new timestamp by adding or subtracting a specified quantity
-of time units from a given timestamp.</p>
+        <p class="phpdocumentor-summary">The &#039;calculateNewUtcTimestamp&#039; method calculates a new timestamp by adding or subtracting a specified quantity
+of time units from a given timestamp using the UTC+0 timezone without any DST transitions.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">calculateNewTimestamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timestamp</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$quantity</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$unit</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$format</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Y-m-d\TH:i:s.v\Z&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">calculateNewUtcTimestamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timestamp</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$operator</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$quantity</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$unit</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$format</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Y-m-d\TH:i:s.v\Z&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -268,7 +272,7 @@ the 'DateTime' class and 'DateInterval' is used instead of simply calculating vi
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">&#039;Y-m-d\TH:i:s.v\Z&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Format in which the new is returned (by default: ISO8601 -&gt; 'Y-m-d\TH:i:s.u\Z').</p>
+                    <section class="phpdocumentor-description"><p>Format in which the new is returned (Default: ISO8601 -&gt; 'Y-m-d\TH:i:s.u\Z').</p>
 </section>
 
             </dd>
@@ -277,7 +281,7 @@ the 'DateTime' class and 'DateInterval' is used instead of simply calculating vi
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/App-Utility-DateUtils.html#method_calculateNewTimestamp#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Utility-DateUtils.html#method_calculateNewUtcTimestamp#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -416,7 +420,7 @@ the 'DateTime' class and 'DateInterval' is used instead of simply calculating vi
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Utility-DateUtils.html#method_calculateNewTimestamp">calculateNewTimestamp()</a></li>
+                                            <li><a href="classes/App-Utility-DateUtils.html#method_calculateNewUtcTimestamp">calculateNewUtcTimestamp()</a></li>
                                     </ul>
             </li>
                     </ul>

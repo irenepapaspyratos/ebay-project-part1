@@ -113,12 +113,42 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-utility.html">Utility</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -file">
-        <h2 class="phpdocumentor-content__title">EbayApiServiceTest.php</h2>
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    XmlUtils
 
-        
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">11</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">The &#039;AddElementsToXml&#039; class provides methods to deal with XML objects or strings.</p>
+
+    <section class="phpdocumentor-description"><p>The contained method allows to add nodes with or without children (only first generation) to a given XML object/string
+and returns the new XML typed the same as given as parameter.</p>
+</section>
 
 
 
@@ -126,38 +156,135 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="files/tests-unit-ebayapiservicetest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Utility-XmlUtils.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
 
 
-    <h4 id="toc-classes">
-        Classes
-        <a href="files/tests-unit-ebayapiservicetest.html#toc-classes" class="headerlink"><i class="fas fa-link"></i></a>
+
+
+
+
+
+
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/App-Utility-XmlUtils.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a>
+    <span>
+                                &nbsp;: string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>    </span>
+</dt>
+<dd>The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
+and adds the nodes to the XML.</dd>
+
+    </dl>
+
+
+
+
+        
+
+        
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/App-Utility-XmlUtils.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_addNodesToXml">
+        addNodesToXml()
+        <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
-    <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Tests-Unit-Service-EbayApiServiceTest.html"><abbr title="\Tests\Unit\Service\EbayApiServiceTest">EbayApiServiceTest</abbr></a></dt><dd>The `EbayApiServiceTest` is a unit test class of the &#039;EbayApiService` class</dd>    </dl>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
+    </aside>
 
+        <p class="phpdocumentor-summary">The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
+and adds the nodes to the XML.</p>
 
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">addNodesToXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$srcXml</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string|int|array&lt;string, string|int&gt;&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nodes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$srcXml</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>XML to receive new nodes.</p>
+</section>
 
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$nodes</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, string|int|array&lt;string, string|int&gt;&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>An associative array where the keys represent the names of the nodes to be added,
+and the values represent either the values of the nodes or an array with possible children (also as name =&gt; value).</p>
+</section>
 
+            </dd>
+            </dl>
 
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid XML string or child nodes are  given as input.</p>
+</section>
 
+                                    </dd>
+                                            </dl>
 
-        
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Depending on the input parameter type, either an XML string or object will returned.</p>
+</section>
 
-        
+            </section>
+
+</article>
+            </section>
+
         <div class="phpdocumentor-modal" id="source-view">
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/EbayApiServiceTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Utility/XmlUtils.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -248,7 +375,7 @@
     </article>
                                 </section>
                 <section class="phpdocumentor-on-this-page__sidebar">
-                            
+                                
     <section class="phpdocumentor-on-this-page__content">
         <strong class="phpdocumentor-on-this-page__title">On this page</strong>
 
@@ -256,11 +383,17 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                                        <li><a href="files/tests-unit-ebayapiservicetest.html#toc-classes">Classes</a></li>
-                                                                                                                    </ul>
+                                                                                <li><a href="classes/App-Utility-XmlUtils.html#toc-methods">Methods</a></li>
+                                    </ul>
             </li>
-
             
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li><a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a></li>
+                                    </ul>
+            </li>
                     </ul>
     </section>
 
@@ -278,7 +411,7 @@
     </section>
 </section>
         </div>
-        <a href="files/tests-unit-ebayapiservicetest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Utility-XmlUtils.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

@@ -61,6 +61,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/app-enum.html" class="">Enum</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
                 
             </li>
@@ -213,7 +217,7 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>The &#039;log&#039; method appends a formatted message with a timestamp to a specified file.</dd>
+<dd>The &#039;log&#039; method appends a formatted message with a UTC+0 timestamp in ISO8601 format to a specified file.</dd>
 
     </dl>
 
@@ -340,7 +344,7 @@ to the <code class="prettyprint">log</code> directory in the project's root dire
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">__DIR__ . &#039;/../../log/error.log&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>File path where the error messages will be logged.</p>
+                    <section class="phpdocumentor-description"><p>File path where the error messages will be logged (Default: <strong>DIR</strong> . '/../../log/error.log').</p>
 </section>
 
             </dd>
@@ -349,7 +353,7 @@ to the <code class="prettyprint">log</code> directory in the project's root dire
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                  = <span class="phpdocumentor-signature__argument__default-value">__DIR__ . &#039;/../../log/info.log&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>File path where informational messages will be logged.</p>
+                    <section class="phpdocumentor-description"><p>File path where informational messages will be logged (Default: <strong>DIR</strong> . '/../../log/info.log').</p>
 </section>
 
             </dd>
@@ -465,7 +469,7 @@ to the <code class="prettyprint">log</code> directory in the project's root dire
 
     </aside>
 
-        <p class="phpdocumentor-summary">The &#039;log&#039; method appends a formatted message with a timestamp to a specified file.</p>
+        <p class="phpdocumentor-summary">The &#039;log&#039; method appends a formatted message with a UTC+0 timestamp in ISO8601 format to a specified file.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
