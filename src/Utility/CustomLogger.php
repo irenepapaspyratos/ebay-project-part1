@@ -27,7 +27,7 @@ class CustomLogger {
     }
 
     /**
-     * The 'log' method appends a formatted message with a UTC+0 timestamp in ISO8601 format to a specified file.
+     * The 'log' method appends a formatted message with a UTC+0 timestamp in ISO 8601 format to a specified file.
      * 
      * @param string $message Message to be written to the log file.
      * @param string $filePath Path of the file where the message will be logged.

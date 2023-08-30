@@ -14,17 +14,17 @@ class DateUtils {
      * The 'calculateNewUtcTimestamp' method calculates a new timestamp by adding or subtracting a specified quantity 
      * of time units from a given timestamp using the UTC+0 timezone without any DST transitions.
      * 
-     * To be able to calculate with months and years, variable in lengths, 
+     * To be able to calculate with months and years variable in lengths, 
      * the 'DateTime' class and 'DateInterval' is used instead of simply calculating via strtotime(). 
      * 
      * @param string $timestamp Starting timestamp.
      * @param string $operator Specifies whether to add or subtract ('+' or '-').
      * @param string $quantity Positive integer as string specifying the amount of time to be added or subtracted.
      * @param string $unit Specifies wether to add/substract seconds, minutes, hours or days ('S', 'M', 'H' or 'D').
-     * @param string $format Format in which the new is returned (Default: ISO8601 -> 'Y-m-d\TH:i:s.u\Z'). 
+     * @param string $format Format in which the new is returned (Default: ISO 8601 -> 'Y-m-d\TH:i:s.u\Z'). 
      * 
-     * @return string New calculated timestamp in ISO8601 format.
-     * @throws \Exception If the operator, quantity or unit parameter is not valid.
+     * @return string New calculated timestamp in ISO 8601 format.
+     * @throws \Exception If operator, quantity or unit parameter is invalid.
      */
     public function calculateNewUtcTimestamp(
         string $timestamp,
@@ -35,7 +35,7 @@ class DateUtils {
     ): string {
 
         // Validate parameters
-        if (($operator !== '+' && $operator !== '-')
+        if ((!in_array($operator, ['+', '-']))
             || (!is_int($quantity))
             || (!in_array($unit, ['S', 'M', 'H', 'D']))
         ) throw new \Exception('Timestamp Calculation: Invalid parameter.');
