@@ -336,4 +336,75 @@ class EbayApiService {
             throw new \Exception("Failed 'GetItem': " . $e->getMessage());
         }
     }
+
+    /**
+     * The `getSellerEvents` method requests a seller's listing events based on specified parameters.
+     * 
+     * A sellers listings can be filtered for a time window using the start, end or modified time of the listings. 
+     * With the target in mind to auto-update a database with existing entries, the 'ModTime' with the 'NewItemFilter' are used. 
+     * However, the ending time of the time window is left 'null', because like this each call gets all modifications until 'now' anyway. 
+     * As all of an item's details are retrieved by 'GetItem', the detail level is set to 'null' 
+     * and only id and the listing status are selected to be returned.
+     * 
+     * @param string $modTimeFrom Starting time of the time window for retrieving a seller's events 
+     * filtered by the existence of modifications. Required format: ISO 8601. 
+     * @param string|null $modTimeTo Optional end time of the time window for retrieving a seller's events 
+     * filtered by the existence of modifications. Required format: ISO 8601. 
+     * If not provided, the API will automatically respond with all events until 'now'.
+     * @param bool $newItemFilter Optional flag indicating whether or not to filter the results to only include modified items. 
+     * If set to `false` or not provided, ALL items will be returned.
+     * @param EbayDetailLevel|null $detailLevel Optionally used to specify the detail level for the eBay API response (Default: 'null').
+     * @param array<string>|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: ['ItemID', 'ListingStatus']). 
+     * 
+     * @return string The XML string with the filtered items within the requested time window with minimal details.
+     * @throws \Exception If there is an error executing the cURL request.
+     */
+    function getSellerEvents(
+        string $modTimeFrom,
+        ?string $modTimeTo = null,
+        ?bool $newItemFilter = true,
+        ?EbayDetailLevel $detailLevel = null,
+        ?array $outputSelector = ['ItemID', 'ListingStatus'],
+    ): string {
+
+        // Set basic variables
+        $callName = 'GetSellerEvents';
+        $xmlRequest = $this->getBasicRequestXml($callName);
+        $headers = $this->getBasicHeaders($callName);
+        $xmlAddition = [];
+
+        // Create an array with all additional XML parameters necessary for this specific call
+        $xmlAddition['ModTimeFrom'] = $modTimeFrom;
+        $modTimeTo && $xmlAddition['ModTimeTo'] =  $modTimeTo;
+        $newItemFilter && $xmlAddition['NewItemFilter'] = 'true';
+        $detailLevel && $xmlAddition['DetailLevel'] = $detailLevel;
+
+        if (isset($outputSelector)) {
+
+            // Create comma separated string with desired output fields
+            $selectorStr = '';
+            foreach ($outputSelector ?? [] as $selector)
+                $selectorStr .= "$selector,";
+            $selectorStr = trim($selectorStr, ',');
+
+            // Add the created string as value of the array element for the output selector
+            $xmlAddition['OutputSelector'] = $selectorStr;
+        }
+
+        // Add the additional elements to the xml request string
+        $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
+
+        // Try to execute cURL request and return the response
+        try {
+
+            // Initialize curl with necessary options array set and return the response
+            return $this->executeXmlApiCurl($headers, $xmlRequest);
+        } catch (\Exception $e) {
+
+            // Log error
+            $this->customLogger->errorLog('Failed call of eBay GetSellerEvents ' . $e->getMessage());
+
+            throw new \Exception("Failed 'GetSellerEvents': " . $e->getMessage());
+        }
+    }
 }
