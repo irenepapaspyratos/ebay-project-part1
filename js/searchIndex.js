@@ -106,6 +106,11 @@ Search.appendIndex(
             "summary": "The\u0020\u0027getItemDetails\u0027\u0020method\u0020retrieves\u0020details\u0020of\u0020a\u0020listing\u0020from\u0020eBay\u0020by\u0020using\u0020the\u0020listings\u0020ID.",
             "url": "classes/App-Service-EbayApiService.html#method_getItemDetails"
         },                {
+            "fqsen": "\\App\\Service\\EbayApiService\u003A\u003AgetSellerEvents\u0028\u0029",
+            "name": "getSellerEvents",
+            "summary": "The\u0020\u0060getSellerEvents\u0060\u0020method\u0020requests\u0020a\u0020seller\u0027s\u0020listing\u0020events\u0020based\u0020on\u0020specified\u0020parameters.",
+            "url": "classes/App-Service-EbayApiService.html#method_getSellerEvents"
+        },                {
             "fqsen": "\\App\\Service\\EbayApiService\u003A\u003A\u0024xmlUtils",
             "name": "xmlUtils",
             "summary": "",
@@ -193,7 +198,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Utility\\CustomLogger\u003A\u003Alog\u0028\u0029",
             "name": "log",
-            "summary": "The\u0020\u0027log\u0027\u0020method\u0020appends\u0020a\u0020formatted\u0020message\u0020with\u0020a\u0020UTC\u002B0\u0020timestamp\u0020in\u0020ISO8601\u0020format\u0020to\u0020a\u0020specified\u0020file.",
+            "summary": "The\u0020\u0027log\u0027\u0020method\u0020appends\u0020a\u0020formatted\u0020message\u0020with\u0020a\u0020UTC\u002B0\u0020timestamp\u0020in\u0020ISO\u00208601\u0020format\u0020to\u0020a\u0020specified\u0020file.",
             "url": "classes/App-Utility-CustomLogger.html#method_log"
         },                {
             "fqsen": "\\App\\Utility\\CustomLogger\u003A\u003AerrorLog\u0028\u0029",
@@ -485,6 +490,16 @@ Search.appendIndex(
             "name": "testGetItemDetailsThrowsExceptionOnCurlError",
             "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsReturnsCorrectData\u0028\u0029",
+            "name": "testGetSellerEventsReturnsCorrectData",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020seller\u0020events\nwith\u0020mocked\u0020\u0027CustomLogger\u0027,\u0020\u0027CustomCurl\u0027\u0020and\u0020\u0027XmlUtils\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsReturnsCorrectData"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetSellerEventsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020an\u0020exception\u0020is\u0020thrown\u0020if\u0020there\u0020is\u0020a\u0020cURL\u0020error.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsThrowsExceptionOnCurlError"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
             "name": "tester",
