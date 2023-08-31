@@ -501,4 +501,53 @@ class EbayApiServiceTest extends Unit {
         // Act
         $this->ebayApiService->getItemDetails($itemId);
     }
+
+    /**
+     * Tests the `getSellerEvents` method of the `EbayApiService` class 
+     * wether it returns the XML string of the correct seller events
+     * with mocked 'CustomLogger', 'CustomCurl' and 'XmlUtils' classes. 
+     */
+    public function testGetSellerEventsReturnsCorrectData() {
+
+        // Arrange mock object for the 'CustomCurl' class returning a short XML string
+        $modTimeFrom = '2023-08-28T10:00:00Z';
+        $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
+            return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+            <GetSellerEventsResponse xmlns=\"urn:ebay:apis:eBLBaseComponents\">
+                <Ack>Success</Ack>
+                <Item><ItemID>111111111111</ItemID><SellingStatus><ListingStatus>Active</ListingStatus></SellingStatus></Item>
+            </GetSellerEventsResponse>";
+        }]);
+        $this->initializeEbayApiService();
+
+        // Act
+        $result = $this->ebayApiService->getSellerEvents($modTimeFrom);
+
+        // Assert that the correct string is returned
+        $this->assertIsString($result);
+        $this->assertStringContainsString('<GetSellerEventsResponse', $result);
+        $this->assertStringContainsString('ItemID', $result);
+        $this->assertStringContainsString('ListingStatus', $result);
+    }
+
+    /**
+     * Tests the `getSellerEvents` method of the `EbayApiService` class 
+     * wether an exception is thrown if there is a cURL error.
+     */
+    public function testGetSellerEventsThrowsExceptionOnCurlError() {
+
+        // Arrange mock object for the 'CustomCurl' class throwing an Exception
+        $modTimeFrom = '2023-08-28T10:00:00Z';
+        $this->customCurl = $this->make(CustomCurl::class, ['executeCurl' => function () {
+            throw new \Exception('Error Message');
+        }]);
+        $this->initializeEbayApiService();
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Failed 'GetSellerEvents': Error Message");
+
+        // Act
+        $this->ebayApiService->getSellerEvents($modTimeFrom);
+    }
 }

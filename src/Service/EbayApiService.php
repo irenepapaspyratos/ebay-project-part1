@@ -52,7 +52,7 @@ class EbayApiService {
     /**
      * The 'getBasicRequestXml' method returns a basic XML request string with the call name and API token for a specified eBay API call. 
      * 
-     * Each call will have to add it's own specific elements to this basic XML request.
+     * Each call might have to add it's own specific elements to this basic XML request.
      * 
      * @param string $callName Specifies the name of the eBay API call to dynamically generate the basic XML request.
      * 
@@ -80,7 +80,7 @@ class EbayApiService {
      * 
      * @param string $callName Specifies the name of the eBay API call performing the specific operation.
      * 
-     * @return array<string|int, mixed> Array of basic non-optional headers.
+     * @return array<string> Array of basic non-optional headers.
      */
     protected function getBasicHeaders(string $callName): array {
 
@@ -94,8 +94,8 @@ class EbayApiService {
     /**
      * The 'executeXmlApiCurl' method executes a cURL request with XML data and returns the XML response as string.
      * 
-     * @param array $headers        Array of headers to be included in the HTTP request. 
-     * @param string $postFields    Contains the data to be sent as body of the HTTP request. 
+     * @param array $headers Array of headers to be included in the HTTP request. 
+     * @param string $postFields Contains the data to be sent as body of the HTTP request. 
      * For the 'traditional' eBay APIs it has to include XML or SOAP data, the new APIs take JSON. 
      * This programm requests the traditional 'Trading API' using XML data.
      * 
@@ -150,11 +150,12 @@ class EbayApiService {
      * All active(!) listings of a seller can be retrieved by requesting all listings ending(!) in the time window from 'now' to 'now +120 days'. 
      * 
      * If no level of response details (Granularity Level or Detail Level) is set, the response will only contain id, starting and end time of each listing, 
-     * which could be reduced even further to only the id by setting the the output selector to ['ItemID']. 
+     * which could be reduced even further to only the id by setting the the output selector to ['ItemID']. Requesting other fields to return, e.g. 'Title', will simply be ignored.
+     * 
      * However, as soon as a level of response details is set, pagination is mandatory and the amount of data schould be reduced using the output selector in order to enhance performance. 
      * That means, if e.g. the listings' ids and titles are needed, the granularity level has to be set to at least 'EbayGranularityLevel::COARSE' and 
      * the output selector should correspondingly be set to ['ItemID', 'Title', 'HasMoreItems', 'PageNumber'] while eBay's max of 200 entries per page can still work fine. 
-     * But if e.g. all for this available details are needed, the detail level has to be set to 'EbayDetailLevel::ALL' and the output selector has to stay 'null' 
+     * But if e.g. all in this call available details are needed, the detail level has to be set to 'EbayDetailLevel::ALL' and the output selector has to stay 'null' 
      * while the reduction of the entries per page should be adjusted very smart towards the lower end!
      * 
      * Note: Despite of further filter options not shown here, unfortunately, NO level of this call's response details returns ALL details of a listing. 
@@ -163,12 +164,12 @@ class EbayApiService {
      * 
      * @param string $initialEbayFile File path where the initial eBay response will be stored for further processing (Default: __DIR__ . '/../../data/ebay/initial_active_ids.xml'). 
      * @param string|null $endTimeFrom Starting time of the time window for retrieving a seller's listings filtered by their end time.
-     * If not provided, it will default to 'now'. 
+     * Required format: ISO 8601. If not provided, it will default to 'now' by requesting and using eBay's timestamp. 
      * @param string|null $endTimeTo End time of the time window for retrieving a seller's listings filtered by their end time. 
-     * If not provided, it will default to a calculated value of the `endTimeFrom` parameter +120 days (format: UTC +0, no DST!). 
-     * @param int|null $entriesPerPage Optional number of items to be returned per page. Only used in case of provided detail or granularity level, if unset it defaults to 200 (eBay's max).
+     * Required format: ISO 8601. If not provided, it will default to a calculated value of the `endTimeFrom` parameter +120 days (format: UTC +0, no DST!). 
+     * @param int|null $entriesPerPage Optional/Mandatory number of items to be returned per page. Only to be used in case of provided detail or granularity level, if unset it defaults to 200, as this is eBay's max.
      * @param EbayDetailLevel|EbayGranularityLevel|null $setLevel Optionally used to specify the detail or granularity level for the eBay API response (Default: 'null').
-     * @param array[string]|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: 'null'). 
+     * @param array<string>|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: 'null'). 
      * 
      * @return bool Indicates the successful execution of the tasks.
      * @throws \Exception If result could not be written to the file.
@@ -186,40 +187,35 @@ class EbayApiService {
         $callName = 'GetSellerList';
         $xmlRequest = $this->getBasicRequestXml($callName);
         $headers = $this->getBasicHeaders($callName);
-        $endTimeFrom = $endTimeFrom !== null ?: $this->getTimestamp();
         $xmlAddition = [];
 
         // Create an array with all additional XML parameters necessary for this specific call
-        $xmlAddition['EndTimeFrom'] = $endTimeFrom;
+        $xmlAddition['EndTimeFrom'] = $endTimeFrom ?? $this->getTimestamp();
+        $endTimeTo ?? $xmlAddition['EndTimeTo'] = $this->dateUtils->calculateNewUtcTimestamp($xmlAddition['EndTimeFrom'], '+', '120', 'D');
 
-        if (!isset($endTimeTo))
-            $endTimeTo = $this->dateUtils->calculateNewUtcTimestamp($endTimeFrom, '+', '120', 'D');
-        $xmlAddition['EndTimeTo'] = $endTimeTo;
+        if (isset($setLevel)) {
 
-        if ($outputSelector || $setLevel) {
+            // Add array element for entries per page for the necessary pagination loop (default = eBay's max entries per page = 200)
+            $xmlAddition['Pagination'] = ['EntriesPerPage' => $entriesPerPage ?? 200];
 
             if ($setLevel instanceof EbayDetailLevel || $setLevel instanceof EbayGranularityLevel) {
-
-                //Create and add array element for entries per page for necessary pagination loop (max result per call = 200)
-                $entriesPerPage = $entriesPerPage !== null ? $entriesPerPage : 200;
-                $xmlAddition['Pagination'] = ['EntriesPerPage' => $entriesPerPage];
 
                 // Add array element for detail or granularity level
                 $name = $setLevel instanceof EbayDetailLevel ? 'DetailLevel' : 'GranularityLevel';
                 $xmlAddition[$name] = $setLevel->value;
             }
+        }
 
-            if ($outputSelector !== null) {
+        if (isset($outputSelector)) {
 
-                // Create comma separated string with desired output fields
-                $selectorStr = '';
-                foreach ($outputSelector ?? [] as $selector)
-                    $selectorStr .= "$selector,";
-                $selectorStr = trim($selectorStr, ',');
+            // Create comma separated string with desired output fields
+            $selectorStr = '';
+            foreach ($outputSelector ?? [] as $selector)
+                $selectorStr .= "$selector,";
+            $selectorStr = trim($selectorStr, ',');
 
-                // Add the created string as value of the array element for the output selector
-                $xmlAddition['OutputSelector'] = (string)$selectorStr;
-            }
+            // Add the created string as value of the array element for the output selector
+            $xmlAddition['OutputSelector'] = $selectorStr;
         }
 
         // Execute a cURL request (corresponding to the desired detail/granularity level) and save the result(s)
@@ -252,7 +248,6 @@ class EbayApiService {
             $hasMoreItems = false;
 
             do {
-
                 $page++;
 
                 // Add further pagination details to the array with additional XML nodes
@@ -299,8 +294,8 @@ class EbayApiService {
      * and the compatibility list, which is used e.g. to sell car parts.
      * 
      * @param string $itemId Unique identifier of the item you want to retrieve details for.
-     * @param bool $itemCompatibilityList Flag indicating whether or not to include the item compatibility list (Default: true). 
-     * @param bool $itemSpecifics Flag indicating whether or not to include the item specifics (Default: true). 
+     * @param bool $itemCompatibilityList Optional flag indicating whether or not to include the item compatibility list (Default: true). 
+     * @param bool $itemSpecifics Optional flag indicating whether or not to include the item specifics (Default: true). 
      * @param EbayDetailLevel $detailLevel Optional to specify the level of item details to be returned in the response (Default: 'ReturnAll'. 
      * 
      * @return string The XML string of the specified item with all requested details.
@@ -320,16 +315,15 @@ class EbayApiService {
         $xmlAddition = [];
 
         // Create an array with all additional XML parameters necessary for this specific call
-        $xmlAddition['ItemID'] = trim($itemId);
+        $xmlAddition['ItemID'] = trim((string)$itemId);
         $itemCompatibilityList && $xmlAddition['IncludeItemCompatibilityList'] = 'true';
         $itemSpecifics && $xmlAddition['IncludeItemSpecifics'] = 'true';
         $detailLevel && $xmlAddition['DetailLevel'] = $detailLevel->value;
 
         // Add the additional elements to the xml request string
         $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
-        echo $xmlRequest;
 
-        // Try to execute cURL request and store the response
+        // Try to execute cURL request and return the response
         try {
 
             // Initialize curl with necessary options array set and return the response
@@ -340,6 +334,77 @@ class EbayApiService {
             $this->customLogger->errorLog("Failed call of eBay GetItem (for ID: $itemId)" . $e->getMessage());
 
             throw new \Exception("Failed 'GetItem': " . $e->getMessage());
+        }
+    }
+
+    /**
+     * The `getSellerEvents` method requests a seller's listing events based on specified parameters.
+     * 
+     * A sellers listings can be filtered for a time window using the start, end or modified time of the listings. 
+     * With the target in mind to auto-update a database with existing entries, the 'ModTime' with the 'NewItemFilter' are used. 
+     * However, the ending time of the time window is left 'null', because like this each call gets all modifications until 'now' anyway. 
+     * As all of an item's details are retrieved by 'GetItem', the detail level is set to 'null' 
+     * and only id and the listing status are selected to be returned.
+     * 
+     * @param string $modTimeFrom Starting time of the time window for retrieving a seller's events 
+     * filtered by the existence of modifications. Required format: ISO 8601. 
+     * @param string|null $modTimeTo Optional end time of the time window for retrieving a seller's events 
+     * filtered by the existence of modifications. Required format: ISO 8601. 
+     * If not provided, the API will automatically respond with all events until 'now'.
+     * @param bool $newItemFilter Optional flag indicating whether or not to filter the results to only include modified items. 
+     * If set to `false` or not provided, ALL items will be returned.
+     * @param EbayDetailLevel|null $detailLevel Optionally used to specify the detail level for the eBay API response (Default: 'null').
+     * @param array<string>|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: ['ItemID', 'ListingStatus']). 
+     * 
+     * @return string The XML string with the filtered items within the requested time window with minimal details.
+     * @throws \Exception If there is an error executing the cURL request.
+     */
+    function getSellerEvents(
+        string $modTimeFrom,
+        ?string $modTimeTo = null,
+        ?bool $newItemFilter = true,
+        ?EbayDetailLevel $detailLevel = null,
+        ?array $outputSelector = ['ItemID', 'ListingStatus'],
+    ): string {
+
+        // Set basic variables
+        $callName = 'GetSellerEvents';
+        $xmlRequest = $this->getBasicRequestXml($callName);
+        $headers = $this->getBasicHeaders($callName);
+        $xmlAddition = [];
+
+        // Create an array with all additional XML parameters necessary for this specific call
+        $xmlAddition['ModTimeFrom'] = $modTimeFrom;
+        $modTimeTo && $xmlAddition['ModTimeTo'] =  $modTimeTo;
+        $newItemFilter && $xmlAddition['NewItemFilter'] = 'true';
+        $detailLevel && $xmlAddition['DetailLevel'] = $detailLevel;
+
+        if (isset($outputSelector)) {
+
+            // Create comma separated string with desired output fields
+            $selectorStr = '';
+            foreach ($outputSelector ?? [] as $selector)
+                $selectorStr .= "$selector,";
+            $selectorStr = trim($selectorStr, ',');
+
+            // Add the created string as value of the array element for the output selector
+            $xmlAddition['OutputSelector'] = $selectorStr;
+        }
+
+        // Add the additional elements to the xml request string
+        $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
+
+        // Try to execute cURL request and return the response
+        try {
+
+            // Initialize curl with necessary options array set and return the response
+            return $this->executeXmlApiCurl($headers, $xmlRequest);
+        } catch (\Exception $e) {
+
+            // Log error
+            $this->customLogger->errorLog('Failed call of eBay GetSellerEvents ' . $e->getMessage());
+
+            throw new \Exception("Failed 'GetSellerEvents': " . $e->getMessage());
         }
     }
 }

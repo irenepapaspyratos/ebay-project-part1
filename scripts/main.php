@@ -23,4 +23,3 @@ $ebayApiService = new EbayApiService($xmlUtils, $customLogger, $ebayCurl, $ebayD
 // Create only once the initial file with all ids of a seller's active item listings
 if (!glob(str_replace('.xml', '*.xml', $initialActiveIdsFile)))
     $ebayApiService->storeSellerList();
-print_r($ebayApiService->getItemDetails(234678384042));
