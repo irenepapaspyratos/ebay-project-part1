@@ -59,4 +59,44 @@ class XmlUtils {
 
         return is_string($srcXml) ? $xmlObj->asXML() : $xmlObj;
     }
+
+    /**
+     * The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
+     * returns an array of the first level child nodes and their assigned types.
+     * 
+     * A node having children will be assigned to the type 'JSON', otherwise 'string'.
+     * 
+     * @param string|\SimpleXMLElement $srcXml XML to extract nodes from.
+     * 
+     * @return array<string,string> Array of nodes extracted from the XML, where each node is represented by name => type.
+     * @throws \Exception If an invalid XML string is  given as input.
+     */
+    public function extractNodesFromXml(string|\SimpleXMLElement $srcXml): array {
+
+        $xmlObj = $srcXml;
+
+        // Convert string to valid object
+        if (is_string($srcXml)) {
+
+            try {
+
+                $xmlObj = simplexml_load_string($srcXml);
+            } catch (\Exception $e) {
+
+                throw new \Exception('Failed to access nodes of XML string: ' . $e->getMessage());
+            }
+        }
+
+        // Extract each node of the XML object and assign it to the corresponding type 
+        $nodes = [];
+        foreach ($xmlObj->Item as $item) {
+            foreach ($item->children() as $child) {
+                $name = $child->getName();
+                $type = (count($child->children()) > 0) ? 'JSON' : 'string';
+                $nodes[$name] = $type;
+            }
+        }
+
+        return $nodes;
+    }
 }
