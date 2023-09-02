@@ -159,7 +159,7 @@ class EbayApiService {
      * while the reduction of the entries per page should be adjusted very smart towards the lower end!
      * 
      * Note: Despite of further filter options not shown here, unfortunately, NO level of this call's response details returns ALL details of a listing. 
-     * Therefore, this function is used only once at the very first start to retrieve and store all ids of a seller's actual active listings, 
+     * Therefore, this function is used only once at the very first start to retrieve all ids of a seller's actual active listings, 
      * while the complete list of details for each listing will be retrieved by using eBay's 'GetItem' call.
      * 
      * @param string|null $endTimeFrom Starting time of the time window for retrieving a seller's listings filtered by their end time.
@@ -173,7 +173,7 @@ class EbayApiService {
      * @return array<string> Array of items with desired details.
      * @throws \Exception If result could not be written to the file.
      */
-    public function storeSellerList(
+    public function getSellerList(
         ?string $endTimeFrom = null,
         ?string $endTimeTo = null,
         ?int $entriesPerPage = null,
@@ -223,7 +223,7 @@ class EbayApiService {
             // Add the additional elements to the xml request string
             $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
-            // Try to execute cURL request and store the response
+            // Try to execute cURL request and fill the array
             try {
 
                 // Initialize curl with necessary options array set
@@ -254,10 +254,10 @@ class EbayApiService {
                 // Add the additional elements to the call-specific XML request string
                 $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
-                // Try to execute cURL request and store the response
+                // Try to execute cURL request and fill the array
                 try {
 
-                    // Initialize curl with necessary options array set and store structured XML string
+                    // Initialize curl with necessary options array set 
                     $response = $this->executeXmlApiCurl($headers, $xmlRequest);
                     $xmlResponse = simplexml_load_string(trim($response));
                     foreach ($xmlResponse->ItemArray->Item as $item) {

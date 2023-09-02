@@ -121,13 +121,13 @@ class EbayApiServiceTest extends Unit {
     }
 
     /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether the items of the XML response are successfully added to the returned array
      * with no other parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListReturnsArrayWithNoParamsSpecified() {
+    public function testGetSellerListReturnsArrayWithNoParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning one page with an XML string with one item
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -154,7 +154,7 @@ class EbayApiServiceTest extends Unit {
         $this->initializeEbayApiService();
 
         // Act
-        $result = $this->ebayApiService->storeSellerList();
+        $result = $this->ebayApiService->getSellerList();
 
         // Assert that a non-empty array is returned with the expected number of elements and the expected content.
         $this->assertIsArray($result);
@@ -164,13 +164,13 @@ class EbayApiServiceTest extends Unit {
     }
 
     /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether the items of the XML response are successfully added to the returned array
      * with all parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified() {
+    public function testGetSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning one page with an XML string with two items
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -204,7 +204,7 @@ class EbayApiServiceTest extends Unit {
         $this->initializeEbayApiService();
 
         // Act
-        $result = $this->ebayApiService->storeSellerList(
+        $result = $this->ebayApiService->getSellerList(
             '2023-08-28T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             50,
@@ -221,13 +221,13 @@ class EbayApiServiceTest extends Unit {
     }
 
     /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether the items of the XML response are successfully added to the returned array
      * with all parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified() {
+    public function testGetSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning an XML string for two pages with 3 and 2 items
         $pageCounter = 0;
@@ -304,7 +304,7 @@ class EbayApiServiceTest extends Unit {
         $this->initializeEbayApiService();
 
         // Act
-        $result = $this->ebayApiService->storeSellerList(
+        $result = $this->ebayApiService->getSellerList(
             '2023-08-15T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             3,
@@ -321,10 +321,10 @@ class EbayApiServiceTest extends Unit {
     }
 
     /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether it throws an '\Exception' with the correct message when it cannot reach the API.
      */
-    public function testStoreSellerListWithNoParamsThrowsExceptionOnCurlError() {
+    public function testGetSellerListWithNoParamsThrowsExceptionOnCurlError() {
 
         // Arrange mock object for the 'CustomCurl' class to simulate a connection error
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -337,14 +337,14 @@ class EbayApiServiceTest extends Unit {
         $this->expectExceptionMessage('Error Message');
 
         // Act
-        $this->ebayApiService->storeSellerList();
+        $this->ebayApiService->getSellerList();
     }
 
     /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether it throws an '\Exception' with the correct message when it cannot reach the API.
      */
-    public function testStoreSellerListWithAllParamsThrowsExceptionOnCurlError() {
+    public function testGetSellerListWithAllParamsThrowsExceptionOnCurlError() {
 
         // Arrange mock object for the 'CustomCurl' class to simulate a connection error
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -357,7 +357,7 @@ class EbayApiServiceTest extends Unit {
         $this->expectExceptionMessage('Error Message');
 
         // Act
-        $this->ebayApiService->storeSellerList(
+        $this->ebayApiService->getSellerList(
             '2023-08-15T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             3,
