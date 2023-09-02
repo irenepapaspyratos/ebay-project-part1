@@ -54,7 +54,7 @@ class CustomLoggerTest extends Unit {
     public function testErrorLogWritesToCorrectFile() {
 
         // Create a new 'CustomLogger' instance with test log files
-        $this->customLogger = new CustomLogger($this->errorLogPath, $this->infoLogPath);
+        $this->customLogger = new CustomLogger($this->infoLogPath, $this->errorLogPath);
 
         // Arrange
         $message = 'Test error message';
@@ -77,7 +77,7 @@ class CustomLoggerTest extends Unit {
     public function testErrorLogCannotWriteToFile() {
 
         // Create a new 'CustomLogger' instance with test log files
-        $this->customLogger = new CustomLogger($this->nonWritableLogPath, $this->infoLogPath);
+        $this->customLogger = new CustomLogger($this->infoLogPath, $this->nonWritableLogPath);
 
         // Arrange
         $message = 'Test error message';
@@ -97,7 +97,7 @@ class CustomLoggerTest extends Unit {
     public function testInfoLogWritesToCorrectFile() {
 
         // Create a new 'CustomLogger' instance with test log files
-        $this->customLogger = new CustomLogger($this->errorLogPath, $this->infoLogPath);
+        $this->customLogger = new CustomLogger($this->infoLogPath, $this->errorLogPath);
 
         // Arrange
         $message = 'Test info message';
@@ -120,7 +120,7 @@ class CustomLoggerTest extends Unit {
     public function testInfoLogCannotWriteToFile() {
 
         // Create a new 'CustomLogger' instance with test log files
-        $this->customLogger = new CustomLogger($this->errorLogPath, $this->nonWritableLogPath);
+        $this->customLogger = new CustomLogger($this->nonWritableLogPath, $this->errorLogPath);
 
         // Arrange
         $message = 'Test info message';

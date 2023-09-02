@@ -7,23 +7,22 @@ namespace App\Utility;
  */
 class CustomLogger {
 
-    private string $errorLogPath;
     private string $infoLogPath;
+    private string $errorLogPath;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
-     * The errorLogPath and infoLogPath are set 
-     * to the `log` directory in the project's root directory.
+     * The errorLogPath and infoLogPath are set to the provided paths.
      * 
-     * @param string $errorLogPath File path where the error messages will be logged (Default: __DIR__ . '/../../log/error.log').
-     * @param string $infoLogPath File path where informational messages will be logged (Default: __DIR__ . '/../../log/info.log'). 
+     * @param string $errorLogPath File path where the error messages will be logged.
+     * @param string $infoLogPath File path where informational messages will be logged. 
      * 
      * @return void
      */
-    public function __construct(string $errorLogPath = __DIR__ . '/../../log/error.log', string $infoLogPath = __DIR__ . '/../../log/info.log') {
-        $this->errorLogPath = $errorLogPath;
+    public function __construct(string $infoLogPath, string $errorLogPath) {
         $this->infoLogPath = $infoLogPath;
+        $this->errorLogPath = $errorLogPath;
     }
 
     /**
