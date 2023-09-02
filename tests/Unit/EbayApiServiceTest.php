@@ -24,7 +24,6 @@ class EbayApiServiceTest extends Unit {
     private $customCurl;
     private $customLogger;
     private $dateUtils;
-    private $initialActiveIdsPath;
     private $nonWritablePath;
     private $ebayApiService;
 
@@ -45,9 +44,6 @@ class EbayApiServiceTest extends Unit {
         $this->customLogger = $this->makeEmpty(CustomLogger::class);
         $this->customCurl = $this->makeEmpty(CustomCurl::class);
         $this->dateUtils = $this->makeEmpty(DateUtils::class);
-
-        // Define the temporary paths for writable test files
-        $this->initialActiveIdsPath = codecept_data_dir('initial_active_ids.xml');
 
         // Define the temporary path for a non-writable test log file and set permissions to read-only simulating a non-writable file
         $this->nonWritablePath = codecept_data_dir('non_writable.xml');
@@ -126,12 +122,12 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the 'storeSellerList' method of the 'EbayApiService' class 
-     * whether the XML response is successfully written to the correct file
+     * whether the items of the XML response are successfully added to the returned array
      * with no other parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified() {
+    public function testStoreSellerListReturnsArrayWithNoParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning one page with an XML string with one item
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -145,7 +141,7 @@ class EbayApiServiceTest extends Unit {
                     </PaginationResult>
                     <ItemArray>
                         <Item>
-                            <ItemID>11111111111</ItemID>
+                            <ItemID>111111111111</ItemID>
                             <ListingDetails>
                                 <StartTime>2022-06-29T05:04:15.000Z</StartTime>
                                 <EndTime>2023-08-29T05:04:15.000Z</EndTime>
@@ -158,25 +154,23 @@ class EbayApiServiceTest extends Unit {
         $this->initializeEbayApiService();
 
         // Act
-        $result = $this->ebayApiService->storeSellerList($this->initialActiveIdsPath);
-        $expectPath = $this->initialActiveIdsPath;
-        $expectContent = file_get_contents($expectPath);
+        $result = $this->ebayApiService->storeSellerList();
 
-        // Assert that true is returned and the expected file exists, is not empty and contains the correct content
-        $this->assertTrue($result);
-        $this->assertNotEmpty($expectPath);
-        $this->assertStringContainsString('<GetSellerListResponse ', $expectContent);
-        $this->assertStringContainsString('<ItemArray>', $expectContent);
+        // Assert that a non-empty array is returned with the expected number of elements and the expected content.
+        $this->assertIsArray($result);
+        $this->assertNotEmpty($result);
+        $this->assertCount(1, $result);
+        $this->assertArrayHasKey('111111111111', $result);
     }
 
     /**
      * Tests the 'storeSellerList' method of the 'EbayApiService' class 
-     * whether the XML response of only one page is successfully written to the correct file
+     * whether the items of the XML response are successfully added to the returned array
      * with all parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified() {
+    public function testStoreSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning one page with an XML string with two items
         $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
@@ -211,7 +205,6 @@ class EbayApiServiceTest extends Unit {
 
         // Act
         $result = $this->ebayApiService->storeSellerList(
-            $this->initialActiveIdsPath,
             '2023-08-28T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             50,
@@ -219,27 +212,22 @@ class EbayApiServiceTest extends Unit {
             ['ItemID', 'Title', 'HasMoreItems', 'PageNumber']
         );
 
-        $expectPath = str_replace('.xml', '001.xml', $this->initialActiveIdsPath);
-        $expectContent = file_get_contents($expectPath);
-
-        // Assert that true is returned and only the expected file was created, is not empty and contains the correct content
-        $this->assertTrue($result);
-        $this->assertNotEmpty($expectPath);
-        $this->assertFileNotExists(str_replace('.xml', '002.xml', $this->initialActiveIdsPath));
-        $this->assertStringContainsString('<GetSellerListResponse ', $expectContent);
-        $this->assertStringContainsString('<ItemArray>', $expectContent);
-        $this->assertStringContainsString('<Title>', $expectContent);
-        $this->assertStringContainsString('<HasMoreItems>false</HasMoreItems>', $expectContent);
+        // Assert that a non-empty array is returned with the expected number of elements and the expected content.
+        $this->assertIsArray($result);
+        $this->assertNotEmpty($result);
+        $this->assertCount(2, $result);
+        $this->assertArrayHasKey('111111111111', $result);
+        $this->assertArrayHasKey('222222222222', $result);
     }
 
     /**
      * Tests the 'storeSellerList' method of the 'EbayApiService' class 
-     * whether the XML responses of all pages are successfully written to the correct files
+     * whether the items of the XML response are successfully added to the returned array
      * with all parameters specified.
      * 
      * @template RealInstanceType of object (avoids type error of 'CustomCurl')
      */
-    public function testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified() {
+    public function testStoreSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified() {
 
         // Arrange mock objects for the 'CustomCurl' class returning an XML string for two pages with 3 and 2 items
         $pageCounter = 0;
@@ -317,7 +305,6 @@ class EbayApiServiceTest extends Unit {
 
         // Act
         $result = $this->ebayApiService->storeSellerList(
-            $this->initialActiveIdsPath,
             '2023-08-15T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             3,
@@ -325,79 +312,12 @@ class EbayApiServiceTest extends Unit {
             ['ItemID', 'Title', 'HasMoreItems', 'PageNumber']
         );
 
-        $expectPath1 = str_replace('.xml', '001.xml', $this->initialActiveIdsPath);
-        $expectPath2 = str_replace('.xml', '002.xml', $this->initialActiveIdsPath);
-        $expectContent1 = file_get_contents($expectPath1);
-        $expectContent2 = file_get_contents($expectPath2);
-        $countItemResult1 = substr_count($expectContent1, '<Item>');
-        $countItemResult2 = substr_count($expectContent2, '<Item>');
-        $countTitleResult1 = substr_count($expectContent1, '<Item>');
-        $countTitleResult2 = substr_count($expectContent2, '<Item>');
-
-        // Assert that true is returned, the expected file for the first page exists, contains the right content and <Item> as well as <Title> appears three times.
-        $this->assertTrue($result);
-
-        $this->assertFileExists($expectPath1);
-        $this->assertStringContainsString('<GetSellerListResponse ', $expectContent1);
-        $this->assertStringContainsString('<HasMoreItems>true</HasMoreItems>', $expectContent1);
-        $this->assertEquals(3, $countItemResult1);
-        $this->assertEquals(3, $countTitleResult1);
-
-        // Assert that the expected file for the second page exists and contains the right content and <Item>  as well as <Title> appears only once.
-        $this->assertFileExists($expectPath2);
-        $this->assertStringContainsString('<GetSellerListResponse ', $expectContent2);
-        $this->assertStringContainsString('<HasMoreItems>false</HasMoreItems>', $expectContent2);
-        $this->assertEquals(2, $countItemResult2);
-        $this->assertEquals(2, $countTitleResult2);
-    }
-
-    /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
-     * wether it handles very large XML responses correctly.
-     * 
-     * @template RealInstanceType of object (avoids type error of 'CustomCurl')
-     */
-    public function testStoreSellerListHandlesLargeResponses() {
-
-        // Arrange mock object for the 'CustomCurl' class returning a very large XML string
-        $number = 100000;
-        $largeXML = '<ItemArray>' . str_repeat('<Item><ItemID>111111111111</ItemID></Item>', $number) . '</ItemArray>';
-        $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () use ($largeXML) {
-            return $largeXML;
-        }]);
-        $this->initializeEbayApiService();
-
-        // Act
-        $result = $this->ebayApiService->storeSellerList($this->initialActiveIdsPath);
-
-        $expectPath = $this->initialActiveIdsPath;
-        $expectContent = file_get_contents($expectPath);
-        $countItemResult = substr_count($expectContent, '<Item>');
-
-        // Assert that true is returned, the expected file exists and <Item> appears 100000 times.
-        $this->assertTrue($result);
-        $this->assertFileExists($expectPath);
-        $this->assertEquals($number, $countItemResult);
-    }
-
-    /**
-     * Tests the 'storeSellerList' method of the 'EbayApiService' class 
-     * whether it throws an '\Exception' with the correct message when it cannot write to a log file.
-     */
-    public function testStoreSellerListCannotWriteToFile() {
-
-        // Arrange mock object for the 'CustomCurl' class returning a simple XML string
-        $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
-            return '<Item><ItemID>111111111111</ItemID></Item>';
-        }]);
-        $this->initializeEbayApiService();
-
-        // Assert that an exception is thrown with corresponding error message reporting the non writable file
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Failed 'GetSellerList': ");
-
-        // Act
-        $this->ebayApiService->storeSellerList($this->nonWritablePath);
+        // Assert that a non-empty array is returned with the expected number of elements and the expected content.
+        $this->assertIsArray($result);
+        $this->assertNotEmpty($result);
+        $this->assertCount(5, $result);
+        $this->assertArrayHasKey('111111111111', $result);
+        $this->assertArrayHasKey('555555555555', $result);
     }
 
     /**
@@ -417,7 +337,7 @@ class EbayApiServiceTest extends Unit {
         $this->expectExceptionMessage('Error Message');
 
         // Act
-        $this->ebayApiService->storeSellerList($this->initialActiveIdsPath);
+        $this->ebayApiService->storeSellerList();
     }
 
     /**
@@ -438,7 +358,6 @@ class EbayApiServiceTest extends Unit {
 
         // Act
         $this->ebayApiService->storeSellerList(
-            $this->initialActiveIdsPath,
             '2023-08-15T19:04:38.705Z',
             '2023-08-28T20:04:38.705Z',
             3,
