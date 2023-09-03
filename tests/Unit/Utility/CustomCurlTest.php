@@ -9,7 +9,7 @@ use donatj\MockWebServer\MockWebServer;
 /**
  * The 'CustomCurlTest' is a unit test class for testing the 'CustomCurl' class.
  * 
- * Tests the custom cURL functionality. as an external library is used, 
+ * Tests the custom cURL functionality. As an external library is used, 
  * only the presence of a response or an exception will be checked.
  */
 class CustomCurlTest extends Unit {
