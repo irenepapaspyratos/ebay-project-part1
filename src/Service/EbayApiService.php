@@ -52,7 +52,7 @@ class EbayApiService {
     /**
      * The 'getBasicRequestXml' method returns a basic XML request string with the call name and API token for a specified eBay API call. 
      * 
-     * Each call might have to add it's own specific elements to this basic XML request.
+     * Each call might have to add its own specific elements to this basic XML request.
      * 
      * @param string $callName Specifies the name of the eBay API call to dynamically generate the basic XML request.
      * 

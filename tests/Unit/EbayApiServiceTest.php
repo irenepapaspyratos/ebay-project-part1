@@ -32,7 +32,7 @@ class EbayApiServiceTest extends Unit {
      * defining paths for writable files, creating a non-writable test file
      * and initializing an empty mock for every class except the `EbayApiService` class.
      * 
-     * The `EbayApiService` class has it's own function, so that each test only needs to adjust the needed objects.
+     * The `EbayApiService` class has its own function, so that each test only needs to adjust the needed objects.
      */
     protected function _before() {
 
