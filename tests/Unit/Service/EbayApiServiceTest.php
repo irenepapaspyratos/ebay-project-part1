@@ -322,7 +322,8 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the 'getSellerList' method of the 'EbayApiService' class 
-     * whether it throws an '\Exception' with the correct message when it cannot reach the API.
+     * whether it throws an '\Exception' with the correct message 
+     * when it cannot reach the API without any parameters.
      */
     public function testGetSellerListWithNoParamsThrowsExceptionOnCurlError() {
 
@@ -342,7 +343,8 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the 'getSellerList' method of the 'EbayApiService' class 
-     * whether it throws an '\Exception' with the correct message when it cannot reach the API.
+     * whether it throws an '\Exception' with the correct message 
+     * when it cannot reach the API without item details parameters set.
      */
     public function testGetSellerListWithNoDetailParamsThrowsExceptionOnCurlError() {
 
@@ -368,7 +370,8 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the 'getSellerList' method of the 'EbayApiService' class 
-     * whether it throws an '\Exception' with the correct message when it cannot reach the API.
+     * whether it throws an '\Exception' with the correct message 
+     * when it cannot reach the API with all parameters set.
      */
     public function testGetSellerListWithAllParamsThrowsExceptionOnCurlError() {
 
