@@ -431,6 +431,11 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListWithNoParamsThrowsExceptionOnCurlError"
         },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListWithNoDetailParamsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetSellerListWithNoDetailParamsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListWithNoDetailParamsThrowsExceptionOnCurlError"
+        },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListWithAllParamsThrowsExceptionOnCurlError\u0028\u0029",
             "name": "testGetSellerListWithAllParamsThrowsExceptionOnCurlError",
             "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
