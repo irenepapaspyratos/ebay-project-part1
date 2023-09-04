@@ -3,9 +3,10 @@
 namespace App\Entity;
 
 /**
- * The interface 'EntityInterface' defines that any class that implements the `EntityInterface`
+ * The interface 'Entity' defines that any class that implements the `Entity`
  * must provide an implementation for the `toArray` method, which returns an array.
  */
-interface EntityInterface {
+interface Entity {
+
     public function toArray(): array;
 }
