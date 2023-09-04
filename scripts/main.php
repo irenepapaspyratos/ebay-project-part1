@@ -7,14 +7,15 @@ use App\Service\EbayApiService;
 use App\Utility as Utils;
 
 // Assign values
-$initialActiveIdsFile = __DIR__ . '/../data/ebay/initial_active_ids.xml';
+$logfileInfo = $config['path']['file_log_info'];
+$logfileError = $config['path']['file_log_error'];
 $ebayApiUrl = $config['ebay']['xml_api_production'];
-$ebayApiToken = $_ENV['EBAY_API_TOKEN'];
-$ebayCompatLevel = $config['ebay']['combatibility_level'];
 $ebaySiteId = $config['ebay']['site_id'];
+$ebayCompatLevel = $config['ebay']['combatibility_level'];
+$ebayApiToken = $_ENV['EBAY_API_TOKEN'];
 
 // Create instance of EbayApiService and necessary classes
-$customLogger = new Utils\CustomLogger();
+$customLogger = new Utils\CustomLogger($logfileInfo, $logfileError);
 $ebayCurl = new Utils\CustomCurl($ebayApiUrl);
 $ebayDateUtils = new Utils\DateUtils();
 $xmlUtils = new Utils\XmlUtils();
@@ -22,4 +23,4 @@ $ebayApiService = new EbayApiService($xmlUtils, $customLogger, $ebayCurl, $ebayD
 
 // Create only once the initial file with all ids of a seller's active item listings
 if (!glob(str_replace('.xml', '*.xml', $initialActiveIdsFile)))
-    $ebayApiService->storeSellerList();
+    print_r($ebayApiService->getSellerList());

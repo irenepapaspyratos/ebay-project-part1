@@ -52,7 +52,7 @@ class EbayApiService {
     /**
      * The 'getBasicRequestXml' method returns a basic XML request string with the call name and API token for a specified eBay API call. 
      * 
-     * Each call might have to add it's own specific elements to this basic XML request.
+     * Each call might have to add its own specific elements to this basic XML request.
      * 
      * @param string $callName Specifies the name of the eBay API call to dynamically generate the basic XML request.
      * 
@@ -144,7 +144,7 @@ class EbayApiService {
 
     /**
      * The `getSellerList` method retrieves a list of a seller's items from eBay based on specified parameters and 
-     * saves the results to a file. 
+     * returns an array of filtered items with details. 
      * 
      * A time window of max 120 days must be given to get all listings either starting OR ending in the specified window. 
      * All active(!) listings of a seller can be retrieved by requesting all listings ending(!) in the time window from 'now' to 'now +120 days'. 
@@ -159,10 +159,9 @@ class EbayApiService {
      * while the reduction of the entries per page should be adjusted very smart towards the lower end!
      * 
      * Note: Despite of further filter options not shown here, unfortunately, NO level of this call's response details returns ALL details of a listing. 
-     * Therefore, this function is used only once at the very first start to retrieve and store all ids of a seller's actual active listings, 
+     * Therefore, this function is used only once at the very first start to retrieve all ids of a seller's actual active listings, 
      * while the complete list of details for each listing will be retrieved by using eBay's 'GetItem' call.
      * 
-     * @param string $initialEbayFile File path where the initial eBay response will be stored for further processing (Default: __DIR__ . '/../../data/ebay/initial_active_ids.xml'). 
      * @param string|null $endTimeFrom Starting time of the time window for retrieving a seller's listings filtered by their end time.
      * Required format: ISO 8601. If not provided, it will default to 'now' by requesting and using eBay's timestamp. 
      * @param string|null $endTimeTo End time of the time window for retrieving a seller's listings filtered by their end time. 
@@ -171,17 +170,16 @@ class EbayApiService {
      * @param EbayDetailLevel|EbayGranularityLevel|null $setLevel Optionally used to specify the detail or granularity level for the eBay API response (Default: 'null').
      * @param array<string>|null $outputSelector Optionally specifies the fields to retrieve from the eBay API response (Default: 'null'). 
      * 
-     * @return bool Indicates the successful execution of the tasks.
+     * @return array<string> Array of items with desired details.
      * @throws \Exception If result could not be written to the file.
      */
-    public function storeSellerList(
-        string $initialEbayFile = __DIR__ . '/../../data/ebay/initial_active_ids.xml',
+    public function getSellerList(
         ?string $endTimeFrom = null,
         ?string $endTimeTo = null,
         ?int $entriesPerPage = null,
         EbayDetailLevel|EbayGranularityLevel|null $setLevel = null,
         ?array $outputSelector = null,
-    ): bool {
+    ): array {
 
         // Set basic variables
         $callName = 'GetSellerList';
@@ -218,22 +216,22 @@ class EbayApiService {
             $xmlAddition['OutputSelector'] = $selectorStr;
         }
 
-        // Execute a cURL request (corresponding to the desired detail/granularity level) and save the result(s)
+        // Execute a cURL request (corresponding to the desired detail/granularity level) and add the ids to an array
+        $itemArray = [];
         if (!isset($setLevel)) {
 
             // Add the additional elements to the xml request string
             $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
-            // Try to execute cURL request and store the response
+            // Try to execute cURL request and fill the array
             try {
 
-                $initialFileHandle = fopen($initialEbayFile, 'w');
-
-                // Initialize curl with necessary options array set and store structured XML string
+                // Initialize curl with necessary options array set
                 $response = $this->executeXmlApiCurl($headers, $xmlRequest);
-                fwrite($initialFileHandle, $response, strlen($response));
-
-                fclose($initialFileHandle);
+                $xmlResponse = simplexml_load_string($response);
+                foreach ($xmlResponse->ItemArray->Item as $item) {
+                    $itemArray[(string)$item->ItemID] = $item;
+                }
             } catch (\Exception $e) {
 
                 // Log error
@@ -256,19 +254,15 @@ class EbayApiService {
                 // Add the additional elements to the call-specific XML request string
                 $xmlRequest = $this->xmlUtils->addNodesToXml($xmlRequest, $xmlAddition);
 
-                // Try to execute cURL request and store the response
+                // Try to execute cURL request and fill the array
                 try {
 
-                    // Create corresponding filenames for the paginated response
-                    $inititialPaginatedEbayFile = str_replace('.xml', sprintf("%'.03d", $page) . '.xml', $initialEbayFile);
-                    $initialFileHandle = fopen($inititialPaginatedEbayFile, 'w');
-
-                    // Initialize curl with necessary options array set and store structured XML string
+                    // Initialize curl with necessary options array set 
                     $response = $this->executeXmlApiCurl($headers, $xmlRequest);
                     $xmlResponse = simplexml_load_string(trim($response));
-                    fwrite($initialFileHandle, $response, strlen($response));
-
-                    fclose($initialFileHandle);
+                    foreach ($xmlResponse->ItemArray->Item as $item) {
+                        $itemArray[(string)$item->ItemID] = $item;
+                    }
 
                     // Check if further pages/items to be called exist 
                     $hasMoreItems = strtolower((string)$xmlResponse->HasMoreItems) === 'true';
@@ -282,7 +276,7 @@ class EbayApiService {
             } while ($hasMoreItems);
         }
 
-        return true;
+        return $itemArray;
     }
 
     /**

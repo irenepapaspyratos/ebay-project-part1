@@ -37,7 +37,7 @@ Different use-cases for having/wishing to create a database of eBay listings may
 
 ### Database
 
-eBay provides lots of categories with different mandatory/optional item specifics as well as several other differences depending on the country of publishing. Because of it's performance and unique features, MariaDB has been chosen as local database for the items' details along with a simple online hosted space to act as datapool for images and original responses. Like this, the code can be kept generalized, reusable and as simple as possible while minimizing the local storage.
+eBay provides lots of categories with different mandatory/optional item specifics as well as several other differences depending on the country of publishing. Because of its performance and unique features, MariaDB has been chosen as local database for the items' details along with a simple online hosted space to act as datapool for images and original responses. Like this, the code can be kept generalized, reusable and as simple as possible while minimizing the local storage.
 
 ### Testing
 
