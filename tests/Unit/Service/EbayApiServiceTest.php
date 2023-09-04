@@ -344,6 +344,32 @@ class EbayApiServiceTest extends Unit {
      * Tests the 'getSellerList' method of the 'EbayApiService' class 
      * whether it throws an '\Exception' with the correct message when it cannot reach the API.
      */
+    public function testGetSellerListWithNoDetailParamsThrowsExceptionOnCurlError() {
+
+        // Arrange mock object for the 'CustomCurl' class to simulate a connection error
+        $this->customCurl = $this->makeEmpty(CustomCurl::class, ['executeCurl' => function () {
+            throw new \Exception('Error Message');  // Or whatever your customCurl's behavior is in case of a connection failure
+        }]);
+        $this->initializeEbayApiService();
+
+        // Assert that an exception is thrown with corresponding error message reporting the cURL failure
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Error Message');
+
+        // Act
+        $this->ebayApiService->getSellerList(
+            '2023-08-15T19:04:38.705Z',
+            '2023-08-28T20:04:38.705Z',
+            null,
+            null,
+            ['ItemID', 'Title', 'HasMoreItems', 'PageNumber']
+        );
+    }
+
+    /**
+     * Tests the 'getSellerList' method of the 'EbayApiService' class 
+     * whether it throws an '\Exception' with the correct message when it cannot reach the API.
+     */
     public function testGetSellerListWithAllParamsThrowsExceptionOnCurlError() {
 
         // Arrange mock object for the 'CustomCurl' class to simulate a connection error
