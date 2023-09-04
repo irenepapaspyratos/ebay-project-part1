@@ -117,14 +117,18 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-utility.html">Utility</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests.html">Tests</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit.html">Unit</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-entity.html">Entity</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    XmlUtils
+    CategoryTest
 
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\Codeception\Test\Unit">Unit</abbr>
+    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -142,16 +146,15 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;AddElementsToXml&#039; class provides methods to deal with XML objects or strings.</p>
+            <p class="phpdocumentor-summary">The &#039;CategoryTest&#039; is a unit test class for testing the &#039;Category&#039; class.</p>
 
-    <section class="phpdocumentor-description"><p>The contained method allows to add nodes with or without children (only first generation) to a given XML object/string
-and returns the new XML typed the same as given as parameter.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
 </section>
 
 
@@ -160,7 +163,7 @@ and returns the new XML typed the same as given as parameter.</p>
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/App-Utility-XmlUtils.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -172,28 +175,55 @@ and returns the new XML typed the same as given as parameter.</p>
 
 
 
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+    </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/App-Utility-XmlUtils.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation">testCategoryCreation()</a>
     <span>
-                                &nbsp;: string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>    </span>
+                                &nbsp;: mixed    </span>
 </dt>
-<dd>The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
-and adds the nodes to the XML.</dd>
+<dd>Tests wether the &#039;Category&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml">extractNodesFromXml()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithoutParents">testCategoryGettersReturnCorrectValuesWithoutParents()</a>
     <span>
-                                &nbsp;: array&lt;string, string&gt;    </span>
+                                &nbsp;: mixed    </span>
 </dt>
-<dd>The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
-returns an array of the first level child nodes and their assigned types.</dd>
+<dd>Tests wether the getters of the &#039;Category&#039; class return the correct values
+with no parent category provided.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithParents">testCategoryGettersReturnCorrectValuesWithParents()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests wether the getters of the &#039;Category&#039; class return correct values
+with a parent category privided.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests wether the setters in the &#039;Category&#039; class modify the properties correctly.</dd>
 
     </dl>
 
@@ -203,11 +233,51 @@ returns an array of the first level child nodes and their assigned types.</dd>
         
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Tests-Unit-Entity-CategoryTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_tester">
+        $tester
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">15</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$tester</span>
+    </code>
+
+    
+    
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/App-Utility-XmlUtils.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tests-Unit-Entity-CategoryTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -216,79 +286,31 @@ returns an array of the first level child nodes and their assigned types.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_addNodesToXml">
-        addNodesToXml()
-        <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreation">
+        testCategoryCreation()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
-and adds the nodes to the XML.</p>
+        <p class="phpdocumentor-summary">Tests wether the &#039;Category&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">addNodesToXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$srcXml</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string|int|array&lt;string, string|int&gt;&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nodes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryCreation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$srcXml</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>XML to receive new nodes.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$nodes</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string, string|int|array&lt;string, string|int&gt;&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>An associative array where the keys represent the names of the nodes to be added,
-and the values represent either the values of the nodes or an array with possible children (also as name =&gt; value).</p>
-</section>
-
-            </dd>
-            </dl>
+    
+    
 
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
-                                                            
-                                                 <section class="phpdocumentor-description"><p>If an invalid XML string or child nodes are  given as input.</p>
-</section>
-
-                                    </dd>
-                                            </dl>
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Depending on the input parameter type, either an XML string or object will returned.</p>
-</section>
-
-            </section>
-
 </article>
                     <article
         class="phpdocumentor-element
@@ -296,71 +318,97 @@ and the values represent either the values of the nodes or an array with possibl
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_extractNodesFromXml">
-        extractNodesFromXml()
-        <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersReturnCorrectValuesWithoutParents">
+        testCategoryGettersReturnCorrectValuesWithoutParents()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithoutParents" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">74</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
-returns an array of the first level child nodes and their assigned types.</p>
+        <p class="phpdocumentor-summary">Tests wether the getters of the &#039;Category&#039; class return the correct values
+with no parent category provided.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">extractNodesFromXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$srcXml</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryGettersReturnCorrectValuesWithoutParents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-        <section class="phpdocumentor-description"><p>A node having children will be assigned to the type 'JSON', otherwise 'string'.</p>
-</section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$srcXml</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>XML to extract nodes from.</p>
-</section>
-
-            </dd>
-            </dl>
+    
+    
+    
 
     
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersReturnCorrectValuesWithParents">
+        testCategoryGettersReturnCorrectValuesWithParents()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithParents" class="headerlink"><i class="fas fa-link"></i></a>
 
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
-                                                            
-                                                 <section class="phpdocumentor-description"><p>If an invalid XML string is  given as input.</p>
-</section>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
-                                    </dd>
-                                            </dl>
+    </aside>
 
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Array of nodes extracted from the XML, where each node is represented by name =&gt; type.</p>
-</section>
+        <p class="phpdocumentor-summary">Tests wether the getters of the &#039;Category&#039; class return correct values
+with a parent category privided.</p>
 
-            </section>
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCategoryGettersReturnCorrectValuesWithParents</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCategorySettersModifyProperties">
+        testCategorySettersModifyProperties()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests wether the setters in the &#039;Category&#039; class modify the properties correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCategorySettersModifyProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
 </article>
             </section>
 
@@ -368,7 +416,7 @@ returns an array of the first level child nodes and their assigned types.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Utility/XmlUtils.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Entity/CategoryTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -467,16 +515,25 @@ returns an array of the first level child nodes and their assigned types.</p>
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                <li><a href="classes/App-Utility-XmlUtils.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                            </ul>
+                </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a></li>
-                                            <li><a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml">extractNodesFromXml()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation">testCategoryCreation()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithoutParents">testCategoryGettersReturnCorrectValuesWithoutParents()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithParents">testCategoryGettersReturnCorrectValuesWithParents()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -496,7 +553,7 @@ returns an array of the first level child nodes and their assigned types.</p>
     </section>
 </section>
         </div>
-        <a href="classes/App-Utility-XmlUtils.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

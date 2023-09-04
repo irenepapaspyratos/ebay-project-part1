@@ -1,6 +1,96 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\App\\Entity\\Category",
+            "name": "Category",
+            "summary": "The\u0020\u0060Category\u0060\u0020class\u0020provides\u0020methods\u0020to\u0020deal\u0020with\u0020categories.",
+            "url": "classes/App-Entity-Category.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
+            "url": "classes/App-Entity-Category.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetFullPath\u0028\u0029",
+            "name": "getFullPath",
+            "summary": "Get\u0020the\u0020full\u0020\u0027named\u0020path\u0027\u0020of\u0020the\u0020category\u0020and\u0020its\u0020parents.",
+            "url": "classes/App-Entity-Category.html#method_getFullPath"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetCategoryId\u0028\u0029",
+            "name": "getCategoryId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_getCategoryId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_getName"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetParentId\u0028\u0029",
+            "name": "getParentId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_getParentId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetParentPath\u0028\u0029",
+            "name": "getParentPath",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_getParentPath"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetId\u0028\u0029",
+            "name": "setId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_setId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetCategoryId\u0028\u0029",
+            "name": "setCategoryId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_setCategoryId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_setName"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetParentId\u0028\u0029",
+            "name": "setParentId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_setParentId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetParentPath\u0028\u0029",
+            "name": "setParentPath",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#method_setParentPath"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024categoryId",
+            "name": "categoryId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_categoryId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_name"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024parentId",
+            "name": "parentId",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_parentId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024parentPath",
+            "name": "parentPath",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_parentPath"
+        },                {
             "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel",
             "name": "EbayDetailLevel",
             "summary": "The\u0020\u0060EbayDetailLevel\u0060\u0020class\u0020defines\u0020an\u0020enumeration.",
@@ -96,10 +186,10 @@ Search.appendIndex(
             "summary": "The\u0020\u0060getTimestamp\u0060\u0020method\u0020returns\u0020the\u0020current\u0020eBay\u0020timestamp\u0020and\u0020logs\u0020to\u0020error\u0020log\u0020on\u0020failure.",
             "url": "classes/App-Service-EbayApiService.html#method_getTimestamp"
         },                {
-            "fqsen": "\\App\\Service\\EbayApiService\u003A\u003AstoreSellerList\u0028\u0029",
-            "name": "storeSellerList",
-            "summary": "The\u0020\u0060getSellerList\u0060\u0020method\u0020retrieves\u0020a\u0020list\u0020of\u0020a\u0020seller\u0027s\u0020items\u0020from\u0020eBay\u0020based\u0020on\u0020specified\u0020parameters\u0020and\nsaves\u0020the\u0020results\u0020to\u0020a\u0020file.",
-            "url": "classes/App-Service-EbayApiService.html#method_storeSellerList"
+            "fqsen": "\\App\\Service\\EbayApiService\u003A\u003AgetSellerList\u0028\u0029",
+            "name": "getSellerList",
+            "summary": "The\u0020\u0060getSellerList\u0060\u0020method\u0020retrieves\u0020a\u0020list\u0020of\u0020a\u0020seller\u0027s\u0020items\u0020from\u0020eBay\u0020based\u0020on\u0020specified\u0020parameters\u0020and\nreturns\u0020an\u0020array\u0020of\u0020filtered\u0020items\u0020with\u0020details.",
+            "url": "classes/App-Service-EbayApiService.html#method_getSellerList"
         },                {
             "fqsen": "\\App\\Service\\EbayApiService\u003A\u003AgetItemDetails\u0028\u0029",
             "name": "getItemDetails",
@@ -211,15 +301,15 @@ Search.appendIndex(
             "summary": "The\u0020\u0027infoLog\u0027\u0020method\u0020logs\u0020an\u0020error\u0020message\u0020to\u0020a\u0020specified\u0020info\u0020log\u0020file.",
             "url": "classes/App-Utility-CustomLogger.html#method_infoLog"
         },                {
-            "fqsen": "\\App\\Utility\\CustomLogger\u003A\u003A\u0024errorLogPath",
-            "name": "errorLogPath",
-            "summary": "",
-            "url": "classes/App-Utility-CustomLogger.html#property_errorLogPath"
-        },                {
             "fqsen": "\\App\\Utility\\CustomLogger\u003A\u003A\u0024infoLogPath",
             "name": "infoLogPath",
             "summary": "",
             "url": "classes/App-Utility-CustomLogger.html#property_infoLogPath"
+        },                {
+            "fqsen": "\\App\\Utility\\CustomLogger\u003A\u003A\u0024errorLogPath",
+            "name": "errorLogPath",
+            "summary": "",
+            "url": "classes/App-Utility-CustomLogger.html#property_errorLogPath"
         },                {
             "fqsen": "\\App\\Utility\\DateUtils",
             "name": "DateUtils",
@@ -241,6 +331,11 @@ Search.appendIndex(
             "summary": "The\u0020\u0060addNodesToXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020object\u0020and\u0020an\u0020array\u0020of\u0020nodes\u0020\u0028with\u0020or\u0020without\u0020direct\u0020children\u0029,\nand\u0020adds\u0020the\u0020nodes\u0020to\u0020the\u0020XML.",
             "url": "classes/App-Utility-XmlUtils.html#method_addNodesToXml"
         },                {
+            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AextractNodesFromXml\u0028\u0029",
+            "name": "extractNodesFromXml",
+            "summary": "The\u0020\u0060extractNodesFromXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020a\u0020SimpleXMLElement\u0020object\u0020as\u0020input\u0020and\nreturns\u0020an\u0020array\u0020of\u0020the\u0020first\u0020level\u0020child\u0020nodes\u0020and\u0020their\u0020assigned\u0020types.",
+            "url": "classes/App-Utility-XmlUtils.html#method_extractNodesFromXml"
+        },                {
             "fqsen": "\\Tests\\Support\\AcceptanceTester",
             "name": "AcceptanceTester",
             "summary": "Inherited\u0020Methods",
@@ -255,6 +350,146 @@ Search.appendIndex(
             "name": "UnitTester",
             "summary": "Inherited\u0020Methods",
             "url": "classes/Tests-Support-UnitTester.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest",
+            "name": "CategoryTest",
+            "summary": "The\u0020\u0027CategoryTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027Category\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreation\u0028\u0029",
+            "name": "testCategoryCreation",
+            "summary": "Tests\u0020wether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersReturnCorrectValuesWithoutParents\u0028\u0029",
+            "name": "testCategoryGettersReturnCorrectValuesWithoutParents",
+            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020no\u0020parent\u0020category\u0020provided.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithoutParents"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersReturnCorrectValuesWithParents\u0028\u0029",
+            "name": "testCategoryGettersReturnCorrectValuesWithParents",
+            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020a\u0020parent\u0020category\u0020privided.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithParents"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySettersModifyProperties\u0028\u0029",
+            "name": "testCategorySettersModifyProperties",
+            "summary": "Tests\u0020wether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Category\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024tester",
+            "name": "tester",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest",
+            "name": "EbayApiServiceTest",
+            "summary": "The\u0020\u0060EbayApiServiceTest\u0060\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020of\u0020the\u0020\u0027EbayApiService\u0060\u0020class",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\u0020cleaning\u0020up\u0020the\u0020test\u0020directory,\ndefining\u0020paths\u0020for\u0020writable\u0020files,\u0020creating\u0020a\u0020non\u002Dwritable\u0020test\u0020file\nand\u0020initializing\u0020an\u0020empty\u0020mock\u0020for\u0020every\u0020class\u0020except\u0020the\u0020\u0060EbayApiService\u0060\u0020class.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method__before"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A_after\u0028\u0029",
+            "name": "_after",
+            "summary": "Cleans\u0020the\u0020codecept_data_dir\u0020directory\u0020after\u0020each\u0020test\u0020by\u0020deleting\u0020all\u0020files.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method__after"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AinitializeEbayApiService\u0028\u0029",
+            "name": "initializeEbayApiService",
+            "summary": "Initializes\u0020an\u0020instance\u0020of\u0020the\u0020EbayApiService\u0020class\u0020with\u0020mocked\u0020objects\u0020and\u0020random\nvalues\u0020for\u0020the\u0020other\u0020parameters\u0020to\u0020keep\u0020the\u0020tests\u0020readable.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_initializeEbayApiService"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampReturnsTimestamp\u0028\u0029",
+            "name": "testGetTimestampReturnsTimestamp",
+            "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020correct\u0020XML\u0020element\u0020\u0027Timestamp\u0027\u0020as\u0020string\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetTimestampThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListReturnsArrayWithNoParamsSpecified\u0028\u0029",
+            "name": "testGetSellerListReturnsArrayWithNoParamsSpecified",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020items\u0020of\u0020the\u0020XML\u0020response\u0020are\u0020successfully\u0020added\u0020to\u0020the\u0020returned\u0020array\nwith\u0020no\u0020other\u0020parameters\u0020specified.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListReturnsArrayWithNoParamsSpecified"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified\u0028\u0029",
+            "name": "testGetSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020items\u0020of\u0020the\u0020XML\u0020response\u0020are\u0020successfully\u0020added\u0020to\u0020the\u0020returned\u0020array\nwith\u0020all\u0020parameters\u0020specified.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListReturnsArrayOfOneResultPageWithAllParamsSpecified"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified\u0028\u0029",
+            "name": "testGetSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020items\u0020of\u0020the\u0020XML\u0020response\u0020are\u0020successfully\u0020added\u0020to\u0020the\u0020returned\u0020array\nwith\u0020all\u0020parameters\u0020specified.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListReturnsArrayOfMultiplePagesWithAllParamsSpecified"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListWithNoParamsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetSellerListWithNoParamsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListWithNoParamsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerListWithAllParamsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetSellerListWithAllParamsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0027getSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerListWithAllParamsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsReturnsAll\u0028\u0029",
+            "name": "testGetItemDetailsReturnsAll",
+            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020item\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetItemDetailsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsReturnsCorrectData\u0028\u0029",
+            "name": "testGetSellerEventsReturnsCorrectData",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020seller\u0020events\nwith\u0020mocked\u0020\u0027CustomLogger\u0027,\u0020\u0027CustomCurl\u0027\u0020and\u0020\u0027XmlUtils\u0027\u0020classes.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsReturnsCorrectData"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsThrowsExceptionOnCurlError\u0028\u0029",
+            "name": "testGetSellerEventsThrowsExceptionOnCurlError",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020an\u0020exception\u0020is\u0020thrown\u0020if\u0020there\u0020is\u0020a\u0020cURL\u0020error.",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsThrowsExceptionOnCurlError"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
+            "name": "tester",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024xmlUtils",
+            "name": "xmlUtils",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_xmlUtils"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customCurl",
+            "name": "customCurl",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customCurl"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customLogger",
+            "name": "customLogger",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customLogger"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024dateUtils",
+            "name": "dateUtils",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_dateUtils"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024nonWritablePath",
+            "name": "nonWritablePath",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_nonWritablePath"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024ebayApiService",
+            "name": "ebayApiService",
+            "summary": "",
+            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_ebayApiService"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest",
             "name": "CustomCurlTest",
@@ -416,131 +651,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#property_timestampStartLeap"
         },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest",
-            "name": "EbayApiServiceTest",
-            "summary": "The\u0020\u0060EbayApiServiceTest\u0060\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020of\u0020the\u0020\u0027EbayApiService\u0060\u0020class",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A_before\u0028\u0029",
-            "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\u0020cleaning\u0020up\u0020the\u0020test\u0020directory,\ndefining\u0020paths\u0020for\u0020writable\u0020files,\u0020creating\u0020a\u0020non\u002Dwritable\u0020test\u0020file\nand\u0020initializing\u0020an\u0020empty\u0020mock\u0020for\u0020every\u0020class\u0020except\u0020the\u0020\u0060EbayApiService\u0060\u0020class.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method__before"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A_after\u0028\u0029",
-            "name": "_after",
-            "summary": "Cleans\u0020the\u0020codecept_data_dir\u0020directory\u0020after\u0020each\u0020test\u0020by\u0020deleting\u0020all\u0020files.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method__after"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AinitializeEbayApiService\u0028\u0029",
-            "name": "initializeEbayApiService",
-            "summary": "Initializes\u0020an\u0020instance\u0020of\u0020the\u0020EbayApiService\u0020class\u0020with\u0020mocked\u0020objects\u0020and\u0020random\nvalues\u0020for\u0020the\u0020other\u0020parameters\u0020to\u0020keep\u0020the\u0020tests\u0020readable.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_initializeEbayApiService"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampReturnsTimestamp\u0028\u0029",
-            "name": "testGetTimestampReturnsTimestamp",
-            "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020correct\u0020XML\u0020element\u0020\u0027Timestamp\u0027\u0020as\u0020string\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampReturnsTimestamp"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetTimestampThrowsExceptionOnCurlError\u0028\u0029",
-            "name": "testGetTimestampThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0060getTimestamp\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetTimestampThrowsExceptionOnCurlError"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified\u0028\u0029",
-            "name": "testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020XML\u0020response\u0020is\u0020successfully\u0020written\u0020to\u0020the\u0020correct\u0020file\nwith\u0020no\u0020other\u0020parameters\u0020specified.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithNoParamsSpecified"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified\u0028\u0029",
-            "name": "testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020XML\u0020response\u0020of\u0020only\u0020one\u0020page\u0020is\u0020successfully\u0020written\u0020to\u0020the\u0020correct\u0020file\nwith\u0020all\u0020parameters\u0020specified.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesOnePageToCorrectFileWithAllParamsSpecified"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified\u0028\u0029",
-            "name": "testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020the\u0020XML\u0020responses\u0020of\u0020all\u0020pages\u0020are\u0020successfully\u0020written\u0020to\u0020the\u0020correct\u0020files\nwith\u0020all\u0020parameters\u0020specified.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWritesAllPagesToCorrectFilesWithAllParamsSpecified"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListHandlesLargeResponses\u0028\u0029",
-            "name": "testStoreSellerListHandlesLargeResponses",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwether\u0020it\u0020handles\u0020very\u0020large\u0020XML\u0020responses\u0020correctly.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListHandlesLargeResponses"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListCannotWriteToFile\u0028\u0029",
-            "name": "testStoreSellerListCannotWriteToFile",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020write\u0020to\u0020a\u0020log\u0020file.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListCannotWriteToFile"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWithNoParamsThrowsExceptionOnCurlError\u0028\u0029",
-            "name": "testStoreSellerListWithNoParamsThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithNoParamsThrowsExceptionOnCurlError"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestStoreSellerListWithAllParamsThrowsExceptionOnCurlError\u0028\u0029",
-            "name": "testStoreSellerListWithAllParamsThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0027storeSellerList\u0027\u0020method\u0020of\u0020the\u0020\u0027EbayApiService\u0027\u0020class\nwhether\u0020it\u0020throws\u0020an\u0020\u0027\\Exception\u0027\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020it\u0020cannot\u0020reach\u0020the\u0020API.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testStoreSellerListWithAllParamsThrowsExceptionOnCurlError"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsReturnsAll\u0028\u0029",
-            "name": "testGetItemDetailsReturnsAll",
-            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020item\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsReturnsAll"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetItemDetailsThrowsExceptionOnCurlError\u0028\u0029",
-            "name": "testGetItemDetailsThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0060getItemDetails\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020after\u0020a\u0020cURL\u0020error\u0020of\u0020the\u0020API\u0020call\nwith\u0020mocked\u0020\u0027CustomLogger\u0027\u0020and\u0020\u0027CustomCurl\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetItemDetailsThrowsExceptionOnCurlError"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsReturnsCorrectData\u0028\u0029",
-            "name": "testGetSellerEventsReturnsCorrectData",
-            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020seller\u0020events\nwith\u0020mocked\u0020\u0027CustomLogger\u0027,\u0020\u0027CustomCurl\u0027\u0020and\u0020\u0027XmlUtils\u0027\u0020classes.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsReturnsCorrectData"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsThrowsExceptionOnCurlError\u0028\u0029",
-            "name": "testGetSellerEventsThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020an\u0020exception\u0020is\u0020thrown\u0020if\u0020there\u0020is\u0020a\u0020cURL\u0020error.",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsThrowsExceptionOnCurlError"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
-            "name": "tester",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_tester"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024xmlUtils",
-            "name": "xmlUtils",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_xmlUtils"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customCurl",
-            "name": "customCurl",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customCurl"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024customLogger",
-            "name": "customLogger",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_customLogger"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024dateUtils",
-            "name": "dateUtils",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_dateUtils"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024initialActiveIdsPath",
-            "name": "initialActiveIdsPath",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_initialActiveIdsPath"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024nonWritablePath",
-            "name": "nonWritablePath",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_nonWritablePath"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024ebayApiService",
-            "name": "ebayApiService",
-            "summary": "",
-            "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#property_ebayApiService"
-        },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest",
             "name": "XmlUtilsTest",
             "summary": "The\u0020\u0027XmlUtilsTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027XmlUtils\u0027\u0020class.",
@@ -553,8 +663,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AinvalidNodesProvider\u0028\u0029",
             "name": "invalidNodesProvider",
-            "summary": "The\u0020\u0060invalidNodesProvider\u0060\u0020function\u0020returns\u0020an\u0020array\u0020of\u0020test\u0020cases\nfor\u0020invalid\u0020child\u0020nodes\u0020in\u0020a\u0020nested\u0020array\u0020structure.",
+            "summary": "The\u0020\u0060invalidNodesProvider\u0060\u0020function\u0020returns\u0020an\u0020array\u0020of\u0020test\u0020cases\nfor\u0020invalid\u0020child\u0020nodes\u0020in\u0020a\u0020nested\u0020array\u0020structure\u0020without\u0020giving\u0020the\u0020expected\u0020value\u0020to\u0020test.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_invalidNodesProvider"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AvalidXmlProvider\u0028\u0029",
+            "name": "validXmlProvider",
+            "summary": "The\u0020\u0060validXml\u0060\u0020function\u0020returns\u0020an\u0020array\u0020of\u0020test\u0020cases\nfor\u0020various\u0020valid\u0020XML\u0020structures\u0020and\u0020the\u0020expected\u0020extracted\u0020nodes.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_validXmlProvider"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlString\u0028\u0029",
             "name": "testAddNodesToXmlString",
@@ -568,13 +683,23 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlFailureByInvalidXmlInput\u0028\u0029",
             "name": "testAddNodesToXmlFailureByInvalidXmlInput",
-            "summary": "Tests\u0020wether\u0020an\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\nwhen\u0020an\u0020invalid\u0020XML\u0020string\u0020is\u0020given\u0020as\u0020input.",
+            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020XML\u0020string\u0020is\u0020given\u0020as\u0020input.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureByInvalidXmlInput"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlFailureByInvalidNodesInput\u0028\u0029",
             "name": "testAddNodesToXmlFailureByInvalidNodesInput",
-            "summary": "Tests\u0020wether\u0020an\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\nwhen\u0020an\u0020invalid\u0020node\u0020array\u0020is\u0020given\u0020as\u0020input.",
+            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020node\u0020array\u0020is\u0020given\u0020as\u0020input.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureByInvalidNodesInput"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestExtractNodesFromXml\u0028\u0029",
+            "name": "testExtractNodesFromXml",
+            "summary": "Tests\u0020the\u0020\u0027extractNodesFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020corresponding\u0020correct\u0020array\u0020is\u0020returned\u0020when\u0020valid\u0020XML\u0020is\u0020given\u0020as\u0020input.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestExtractNodesFromXmlFailureByInvalidXmlInput\u0028\u0029",
+            "name": "testExtractNodesFromXmlFailureByInvalidXmlInput",
+            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020XML\u0020string\u0020is\u0020given\u0020as\u0020input.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXmlFailureByInvalidXmlInput"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003A\u0024tester",
             "name": "tester",
@@ -596,6 +721,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#property_validXmlString"
         },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003A\u0024invalidXmlString",
+            "name": "invalidXmlString",
+            "summary": "",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#property_invalidXmlString"
+        },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003A\u0024validNodes",
             "name": "validNodes",
             "summary": "",
@@ -606,6 +736,16 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html"
         },                {
+            "fqsen": "\\App\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/app-entity.html"
+        },                {
+            "fqsen": "\\App",
+            "name": "App",
+            "summary": "",
+            "url": "namespaces/app.html"
+        },                {
             "fqsen": "\\App\\Enum\\Ebay",
             "name": "Ebay",
             "summary": "",
@@ -615,11 +755,6 @@ Search.appendIndex(
             "name": "Enum",
             "summary": "",
             "url": "namespaces/app-enum.html"
-        },                {
-            "fqsen": "\\App",
-            "name": "App",
-            "summary": "",
-            "url": "namespaces/app.html"
         },                {
             "fqsen": "\\App\\Service",
             "name": "Service",
@@ -641,10 +776,10 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/tests.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Utility",
-            "name": "Utility",
+            "fqsen": "\\Tests\\Unit\\Entity",
+            "name": "Entity",
             "summary": "",
-            "url": "namespaces/tests-unit-utility.html"
+            "url": "namespaces/tests-unit-entity.html"
         },                {
             "fqsen": "\\Tests\\Unit",
             "name": "Unit",
@@ -655,5 +790,10 @@ Search.appendIndex(
             "name": "Service",
             "summary": "",
             "url": "namespaces/tests-unit-service.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Utility",
+            "name": "Utility",
+            "summary": "",
+            "url": "namespaces/tests-unit-utility.html"
         }            ]
 );
