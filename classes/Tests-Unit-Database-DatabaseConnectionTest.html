@@ -123,12 +123,12 @@
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests.html">Tests</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit.html">Unit</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-entity.html">Entity</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-database.html">Database</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    CategoryTest
+    DatabaseConnectionTest
 
         <span class="phpdocumentor-element__extends">
         extends <abbr title="\Codeception\Test\Unit">Unit</abbr>
@@ -150,15 +150,16 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;CategoryTest&#039; is a unit test class for testing the &#039;Category&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;DatabaseConnectionTest&#039; is a unit test class for testing the &#039;DatabaseConnection&#039; class.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance of a PDO object
+and getting the connection to the required database.</p>
 </section>
 
 
@@ -167,7 +168,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -181,12 +182,18 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester</a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -195,62 +202,41 @@
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutParent">testCategoryCreationWithoutParent()</a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests wether the &#039;Category&#039; instance is created correctly.</dd>
+<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+returns a PDO instance when using PDO&#039;s own database.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithParent">testCategoryCreationWithParent()</a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests wether the &#039;Category&#039; instance is created correctly.</dd>
+<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+thorows a PDO exception with the correct message when using invalid parameters.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutParent">testCategoryGettersWithoutParent()</a>
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests wether the getters of the &#039;Category&#039; class return the correct values
-with no parent category provided.</dd>
+<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+throws a PDO exception with the correct message when using invalid parameters.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithParent">testCategoryGettersWithParent()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests wether the getters of the &#039;Category&#039; class return correct values
-with a parent category provided.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests wether the setters in the &#039;Category&#039; class modify the properties correctly.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutParent">testToArrayConversionWithoutParent()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class wether
-it converts a Category object to the correct array without a parent category.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithParent">testToArrayConversionWithParent()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class wether
-it converts a Category object to the correct array with a parent category.</dd>
+<dd>Sets up the necessary environment for running tests by
+creating a &#039;DatabaseConnection&#039; class.</dd>
 
     </dl>
 
@@ -263,7 +249,7 @@ it converts a Category object to the correct array with a parent category.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Tests-Unit-Entity-CategoryTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -275,15 +261,15 @@ it converts a Category object to the correct array with a parent category.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="property_tester">
         $tester
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -299,12 +285,45 @@ it converts a Category object to the correct array with a parent category.</dd>
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_databaseConnection">
+        $databaseConnection
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">19</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$databaseConnection</span>
+    </code>
+
+    
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Tests-Unit-Entity-CategoryTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -313,23 +332,24 @@ it converts a Category object to the correct array with a parent category.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreationWithoutParent">
-        testCategoryCreationWithoutParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionReturnsPdoInstance">
+        testGetConnectionReturnsPdoInstance()
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests wether the &#039;Category&#039; instance is created correctly.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+returns a PDO instance when using PDO&#039;s own database.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryCreationWithoutParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testGetConnectionReturnsPdoInstance</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -345,23 +365,24 @@ it converts a Category object to the correct array with a parent category.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreationWithParent">
-        testCategoryCreationWithParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnDSN">
+        testGetConnectionThrowsExceptionOnDSN()
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests wether the &#039;Category&#039; instance is created correctly.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+thorows a PDO exception with the correct message when using invalid parameters.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryCreationWithParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnDSN</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -377,24 +398,24 @@ it converts a Category object to the correct array with a parent category.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersWithoutParent">
-        testCategoryGettersWithoutParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnProperty">
+        testGetConnectionThrowsExceptionOnProperty()
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">45</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests wether the getters of the &#039;Category&#039; class return the correct values
-with no parent category provided.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
+throws a PDO exception with the correct message when using invalid parameters.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryGettersWithoutParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnProperty</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -407,125 +428,27 @@ with no parent category provided.</p>
                     <article
         class="phpdocumentor-element
             -method
-            -public
+            -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersWithParent">
-        testCategoryGettersWithParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method__before">
+        _before()
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests wether the getters of the &#039;Category&#039; class return correct values
-with a parent category provided.</p>
+        <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
+creating a &#039;DatabaseConnection&#039; class.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryGettersWithParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testCategorySettersModifyProperties">
-        testCategorySettersModifyProperties()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">76</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests wether the setters in the &#039;Category&#039; class modify the properties correctly.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategorySettersModifyProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithoutParent">
-        testToArrayConversionWithoutParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutParent" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">98</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class wether
-it converts a Category object to the correct array without a parent category.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithoutParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithParent">
-        testToArrayConversionWithParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithParent" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">113</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class wether
-it converts a Category object to the correct array with a parent category.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">_before</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -541,7 +464,7 @@ it converts a Category object to the correct array with a parent category.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Entity/CategoryTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Database/DatabaseConnectionTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -640,28 +563,26 @@ it converts a Category object to the correct array with a parent category.</p>
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutParent">testCategoryCreationWithoutParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithParent">testCategoryCreationWithParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutParent">testCategoryGettersWithoutParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithParent">testCategoryGettersWithParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutParent">testToArrayConversionWithoutParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithParent">testToArrayConversionWithParent()</a></li>
+                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a></li>
+                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a></li>
+                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a></li>
+                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -681,7 +602,7 @@ it converts a Category object to the correct array with a parent category.</p>
     </section>
 </section>
         </div>
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

@@ -61,6 +61,10 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
+                <a href="namespaces/app-database.html" class="">Database</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-entity.html" class="">Entity</a>
                 
             </li>
@@ -133,6 +137,9 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a>                    </span>
     
     </h2>
 
@@ -151,7 +158,7 @@
             <p class="phpdocumentor-summary">The `Category` class provides methods to deal with categories.</p>
 
     <section class="phpdocumentor-description"><p>The contained methods are getting/setting its properties
-and get/set the full path of the category name including its optional parent(s).</p>
+and convert them to an array.</p>
 </section>
 
 
@@ -166,6 +173,14 @@ and get/set the full path of the category name including its optional parent(s).
 
 
 
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="classes/App-Entity-Category.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
+must provide an implementation for the `toArray` method, which returns an array.</dd>    </dl>
 
 
 
@@ -202,12 +217,6 @@ and get/set the full path of the category name including its optional parent(s).
                         &nbsp;: mixed            </span>
 </dt>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Entity-Category.html#property_parentPath">$parentPath</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-
     </dl>
 
 <h4 id="toc-methods">
@@ -230,13 +239,6 @@ and get/set the full path of the category name including its optional parent(s).
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-Category.html#method_getFullPath">getFullPath()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-<dd>Get the full &#039;named path&#039; of the category and its parents.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Category.html#method_getId">getId()</a>
     <span>
                                 &nbsp;: int    </span>
@@ -251,13 +253,7 @@ and get/set the full path of the category name including its optional parent(s).
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-Category.html#method_getParentId">getParentId()</a>
     <span>
-                                &nbsp;: string|null    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-Category.html#method_getParentPath">getParentPath()</a>
-    <span>
-                                &nbsp;: string|null    </span>
+                                &nbsp;: int    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -285,10 +281,11 @@ and get/set the full path of the category name including its optional parent(s).
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-Category.html#method_setParentPath">setParentPath()</a>
+    <a href="classes/App-Entity-Category.html#method_toArray">toArray()</a>
     <span>
-                                &nbsp;: void    </span>
+                                &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
+<dd>The &#039;toArray&#039; method converts the object of the class to an array.</dd>
 
     </dl>
 
@@ -321,7 +318,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -354,7 +351,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
@@ -387,7 +384,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -420,39 +417,6 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$parentId</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_parentPath">
-        $parentPath
-        <a href="classes/App-Entity-Category.html#property_parentPath" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
-    :
     <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
@@ -461,7 +425,7 @@ and get/set the full path of the category name including its optional parent(s).
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$parentPath</span>
+    <span class="phpdocumentor-signature__name">$parentId</span>
     </code>
 
     
@@ -491,7 +455,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -499,7 +463,7 @@ and get/set the full path of the category name including its optional parent(s).
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentPath</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -510,10 +474,10 @@ and get/set the full path of the category name including its optional parent(s).
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Primary Key.</p>
+                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database.</p>
 </section>
 
             </dd>
@@ -522,7 +486,7 @@ and get/set the full path of the category name including its optional parent(s).
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Category's id.</p>
+                    <section class="phpdocumentor-description"><p>The portal's category id.</p>
 </section>
 
             </dd>
@@ -531,25 +495,16 @@ and get/set the full path of the category name including its optional parent(s).
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Category's name.</p>
+                    <section class="phpdocumentor-description"><p>(Sub)Category's name. If it is a subcategory, the whole path can be retrieved by recursively follow the parent ids.</p>
 </section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$parentId</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">0</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Optional: id of the parent category.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$parentPath</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Optional: full name path of the parent(s) separated with '&gt;'.</p>
+                    <section class="phpdocumentor-description"><p>Id of the possible parent category with 0 representing the category not being a subcategory.</p>
 </section>
 
             </dd>
@@ -573,7 +528,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -581,42 +536,6 @@ and get/set the full path of the category name including its optional parent(s).
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">getCategoryId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getFullPath">
-        getFullPath()
-        <a href="classes/App-Entity-Category.html#method_getFullPath" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">44</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Get the full &#039;named path&#039; of the category and its parents.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getFullPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -644,7 +563,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
@@ -679,7 +598,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -714,14 +633,14 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getParentId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
+                    <span class="phpdocumentor-signature__name">getParentId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -731,42 +650,7 @@ and get/set the full path of the category name including its optional parent(s).
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string|null</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getParentPath">
-        getParentPath()
-        <a href="classes/App-Entity-Category.html#method_getParentPath" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">67</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getParentPath</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string|null</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string|null</span>
+        <span class="phpdocumentor-signature__response_type">int</span>
             </section>
 
 </article>
@@ -784,7 +668,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
@@ -825,14 +709,14 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">73</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -841,7 +725,7 @@ and get/set the full path of the category name including its optional parent(s).
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -866,7 +750,7 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
@@ -907,14 +791,14 @@ and get/set the full path of the category name including its optional parent(s).
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">85</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setParentId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setParentId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -923,7 +807,7 @@ and get/set the full path of the category name including its optional parent(s).
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$parentId</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -940,40 +824,39 @@ and get/set the full path of the category name including its optional parent(s).
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setParentPath">
-        setParentPath()
-        <a href="classes/App-Entity-Category.html#method_setParentPath" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_toArray">
+        toArray()
+        <a href="classes/App-Entity-Category.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">89</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The &#039;toArray&#039; method converts the object of the class to an array.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setParentPath</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentPath</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$parentPath</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
+    
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array representation of the object.</p>
+</section>
+
+            </section>
+
 </article>
             </section>
 
@@ -1092,7 +975,6 @@ and get/set the full path of the category name including its optional parent(s).
                                                     <li><a href="classes/App-Entity-Category.html#property_id">$id<a href="classes/App-Entity-Category.html"></li>
                                                     <li><a href="classes/App-Entity-Category.html#property_name">$name<a href="classes/App-Entity-Category.html"></li>
                                                     <li><a href="classes/App-Entity-Category.html#property_parentId">$parentId<a href="classes/App-Entity-Category.html"></li>
-                                                    <li><a href="classes/App-Entity-Category.html#property_parentPath">$parentPath<a href="classes/App-Entity-Category.html"></li>
                                             </ul>
                 </li>
             
@@ -1101,16 +983,14 @@ and get/set the full path of the category name including its optional parent(s).
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Entity-Category.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_getCategoryId">getCategoryId()</a></li>
-                                            <li><a href="classes/App-Entity-Category.html#method_getFullPath">getFullPath()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_getId">getId()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_getName">getName()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_getParentId">getParentId()</a></li>
-                                            <li><a href="classes/App-Entity-Category.html#method_getParentPath">getParentPath()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setCategoryId">setCategoryId()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setId">setId()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setName">setName()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setParentId">setParentId()</a></li>
-                                            <li><a href="classes/App-Entity-Category.html#method_setParentPath">setParentPath()</a></li>
+                                            <li><a href="classes/App-Entity-Category.html#method_toArray">toArray()</a></li>
                                     </ul>
             </li>
                     </ul>

@@ -1,6 +1,51 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\App\\Database\\DatabaseConnection",
+            "name": "DatabaseConnection",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
+            "url": "classes/App-Database-DatabaseConnection.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003AgetConnection\u0028\u0029",
+            "name": "getConnection",
+            "summary": "The\u0020\u0027getConnection\u0027\u0020method\u0020returns\u0020a\u0020PDO\u0020object\u0020for\u0020connecting\u0020to\u0020a\u0020database.",
+            "url": "classes/App-Database-DatabaseConnection.html#method_getConnection"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024host",
+            "name": "host",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_host"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024dbname",
+            "name": "dbname",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_dbname"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024username",
+            "name": "username",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_username"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024password",
+            "name": "password",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_password"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024charset",
+            "name": "charset",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_charset"
+        },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024options",
+            "name": "options",
+            "summary": "",
+            "url": "classes/App-Database-DatabaseConnection.html#property_options"
+        },                {
             "fqsen": "\\App\\Entity\\Category",
             "name": "Category",
             "summary": "The\u0020\u0060Category\u0060\u0020class\u0020provides\u0020methods\u0020to\u0020deal\u0020with\u0020categories.",
@@ -10,11 +55,6 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-Category.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetFullPath\u0028\u0029",
-            "name": "getFullPath",
-            "summary": "Get\u0020the\u0020full\u0020\u0027named\u0020path\u0027\u0020of\u0020the\u0020category\u0020and\u0020its\u0020parents.",
-            "url": "classes/App-Entity-Category.html#method_getFullPath"
         },                {
             "fqsen": "\\App\\Entity\\Category\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
@@ -36,11 +76,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Category.html#method_getParentId"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003AgetParentPath\u0028\u0029",
-            "name": "getParentPath",
-            "summary": "",
-            "url": "classes/App-Entity-Category.html#method_getParentPath"
-        },                {
             "fqsen": "\\App\\Entity\\Category\u003A\u003AsetId\u0028\u0029",
             "name": "setId",
             "summary": "",
@@ -61,10 +96,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Category.html#method_setParentId"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003AsetParentPath\u0028\u0029",
-            "name": "setParentPath",
-            "summary": "",
-            "url": "classes/App-Entity-Category.html#method_setParentPath"
+            "fqsen": "\\App\\Entity\\Category\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
+            "url": "classes/App-Entity-Category.html#method_toArray"
         },                {
             "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024id",
             "name": "id",
@@ -86,10 +121,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Category.html#property_parentId"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024parentPath",
-            "name": "parentPath",
+            "fqsen": "\\App\\Entity\\Entity",
+            "name": "Entity",
+            "summary": "The\u0020interface\u0020\u0027Entity\u0027\u0020defines\u0020that\u0020any\u0020class\u0020that\u0020implements\u0020the\u0020\u0060Entity\u0060\nmust\u0020provide\u0020an\u0020implementation\u0020for\u0020the\u0020\u0060toArray\u0060\u0020method,\u0020which\u0020returns\u0020an\u0020array.",
+            "url": "classes/App-Entity-Entity.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Entity\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
             "summary": "",
-            "url": "classes/App-Entity-Category.html#property_parentPath"
+            "url": "classes/App-Entity-Entity.html#method_toArray"
         },                {
             "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel",
             "name": "EbayDetailLevel",
@@ -351,30 +391,80 @@ Search.appendIndex(
             "summary": "Inherited\u0020Methods",
             "url": "classes/Tests-Support-UnitTester.html"
         },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest",
+            "name": "DatabaseConnectionTest",
+            "summary": "The\u0020\u0027DatabaseConnectionTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020a\u0020\u0027DatabaseConnection\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionReturnsPdoInstance\u0028\u0029",
+            "name": "testGetConnectionReturnsPdoInstance",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nreturns\u0020a\u0020PDO\u0020instance\u0020when\u0020using\u0020PDO\u0027s\u0020own\u0020database.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionThrowsExceptionOnProperty\u0028\u0029",
+            "name": "testGetConnectionThrowsExceptionOnProperty",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nthrows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionThrowsExceptionOnDSN\u0028\u0029",
+            "name": "testGetConnectionThrowsExceptionOnDSN",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nthorows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A\u0024tester",
+            "name": "tester",
+            "summary": "",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A\u0024databaseConnection",
+            "name": "databaseConnection",
+            "summary": "",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest",
             "name": "CategoryTest",
             "summary": "The\u0020\u0027CategoryTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027Category\u0027\u0020class.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreation\u0028\u0029",
-            "name": "testCategoryCreation",
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithoutParent\u0028\u0029",
+            "name": "testCategoryCreationWithoutParent",
             "summary": "Tests\u0020wether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation"
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutParent"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersReturnCorrectValuesWithoutParents\u0028\u0029",
-            "name": "testCategoryGettersReturnCorrectValuesWithoutParents",
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithParent\u0028\u0029",
+            "name": "testCategoryCreationWithParent",
+            "summary": "Tests\u0020wether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithParent"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithoutParent\u0028\u0029",
+            "name": "testCategoryGettersWithoutParent",
             "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020no\u0020parent\u0020category\u0020provided.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithoutParents"
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutParent"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersReturnCorrectValuesWithParents\u0028\u0029",
-            "name": "testCategoryGettersReturnCorrectValuesWithParents",
-            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020a\u0020parent\u0020category\u0020privided.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersReturnCorrectValuesWithParents"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithParent\u0028\u0029",
+            "name": "testCategoryGettersWithParent",
+            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020a\u0020parent\u0020category\u0020provided.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySettersModifyProperties\u0028\u0029",
             "name": "testCategorySettersModifyProperties",
             "summary": "Tests\u0020wether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Category\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithoutParent\u0028\u0029",
+            "name": "testToArrayConversionWithoutParent",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020wether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020a\u0020parent\u0020category.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutParent"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithParent\u0028\u0029",
+            "name": "testToArrayConversionWithParent",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020wether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020a\u0020parent\u0020category.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024tester",
             "name": "tester",
@@ -741,15 +831,20 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\App\\Entity",
-            "name": "Entity",
+            "fqsen": "\\App\\Database",
+            "name": "Database",
             "summary": "",
-            "url": "namespaces/app-entity.html"
+            "url": "namespaces/app-database.html"
         },                {
             "fqsen": "\\App",
             "name": "App",
             "summary": "",
             "url": "namespaces/app.html"
+        },                {
+            "fqsen": "\\App\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/app-entity.html"
         },                {
             "fqsen": "\\App\\Enum\\Ebay",
             "name": "Ebay",
@@ -781,15 +876,20 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/tests.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity",
-            "name": "Entity",
+            "fqsen": "\\Tests\\Unit\\Database",
+            "name": "Database",
             "summary": "",
-            "url": "namespaces/tests-unit-entity.html"
+            "url": "namespaces/tests-unit-database.html"
         },                {
             "fqsen": "\\Tests\\Unit",
             "name": "Unit",
             "summary": "",
             "url": "namespaces/tests-unit.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/tests-unit-entity.html"
         },                {
             "fqsen": "\\Tests\\Unit\\Service",
             "name": "Service",
