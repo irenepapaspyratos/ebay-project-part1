@@ -6,45 +6,34 @@ namespace App\Entity;
  * The `Category` class provides methods to deal with categories.
  * 
  * The contained methods are getting/setting its properties
- * and get/set the full path of the category name including its optional parent(s).
+ * and convert them to an array.
  */
-class Category {
+class Category implements Entity {
+
     private $id;
     private $categoryId;
     private $name;
     private $parentId;
-    private $parentPath;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
      * A category can have parents and the parent path would look like this example for the category Silk: Fabric>Fine.
      * 
-     * @param int $id Primary Key.
-     * @param string $categoryId Category's id.
-     * @param string $name Category's name.
-     * @param string|null $parentId Optional: id of the parent category.
-     * @param string|null $parentPath Optional: full name path of the parent(s) separated with '>'.
+     * @param ?int $id Primary Key, possibly empty as coming from the database.
+     * @param string $categoryId The portal's category id.
+     * @param string $name (Sub)Category's name. If it is a subcategory, the whole path can be retrieved by recursively follow the parent ids.
+     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory.
      * 
      * @return void
      */
-    public function __construct(string $id, string $categoryId, string $name, ?string $parentId = null, ?string $parentPath = null) {
+    public function __construct(?int $id, string $categoryId, string $name, int $parentId = 0) {
         $this->id = $id;
         $this->categoryId = $categoryId;
         $this->name = $name;
         $this->parentId = $parentId;
-        $this->parentPath = $parentPath;
     }
 
-    /**
-     * Get the full 'named path' of the category and its parents.
-     *
-     * @return string
-     */
-    public function getFullPath(): string {
-        return ($this->parentPath === null || $this->parentPath === '') ?
-            $this->name : $this->parentPath . '>' . $this->name;
-    }
 
     // Getters
     public function getId(): int {
@@ -59,18 +48,13 @@ class Category {
         return $this->name;
     }
 
-    public function getParentId(): ?string {
-        return ($this->parentId === null || $this->parentId === '') ?
-            null : $this->parentId;
+    public function getParentId(): int {
+        return $this->parentId;
     }
 
-    public function getParentPath(): ?string {
-        return ($this->parentPath === null || $this->parentPath === '') ?
-            null : $this->parentPath;
-    }
 
     // Setters
-    public function setId(int $id): void {
+    public function setId(?int $id): void {
         $this->id = $id;
     }
 
@@ -82,11 +66,21 @@ class Category {
         $this->name = $name;
     }
 
-    public function setParentId(?string $parentId): void {
+    public function setParentId(int $parentId): void {
         $this->parentId = $parentId;
     }
 
-    public function setParentPath(?string $parentPath): void {
-        $this->parentPath = $parentPath;
+    /**
+     * The 'toArray' method converts the object of the class to an array.
+     * 
+     * @return array Array representation of the object.
+     */
+    public function toArray(): array {
+        return [
+            $this->getId(),
+            $this->getCategoryId(),
+            $this->getName(),
+            $this->getParentId(),
+        ];
     }
 }
