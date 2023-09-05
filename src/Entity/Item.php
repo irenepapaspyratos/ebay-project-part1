@@ -2,32 +2,69 @@
 
 namespace App\Entity;
 
+/**
+ * The `Item` class provides methods to deal with items and their details.
+ * 
+ * The contained methods are getting/setting its properties
+ * and convert them to an array.
+ */
 class Item implements Entity {
 
-    private $id;
-    private $itemId;
-    private $title;
-    private $currentPrice;
-    private $listingStatus;
-    private $quantity;
-    private $quantitySold;
-    private $conditionId;
-    private $categoryId;
-    private $storeCategoryId;
-    private $storeCategory2Id;
-    private $viewItemUrl;
-    private $pictures;
-    private $site;
-    private $country;
-    private $currency;
-    private $shipToLocations;
-    private $shippingOptions;
-    private $itemCompatibility;
-    private $itemSpecifics;
-    private $htmlDescription;
-    private $netPrice;
-    private $filetime;
+    private ?int $id;
+    private string $itemId;
+    private string $title;
+    private float $currentPrice;
+    private string $listingStatus;
+    private int $quantity;
+    private int $quantitySold;
+    private int $conditionId;
+    private int $categoryId;
+    private string $storeCategoryId;
+    private string $storeCategory2Id;
+    private string $viewItemUrl;
+    private string $jsonArrayPictures;
+    private int $site;
+    private string $country;
+    private string $currency;
+    private string $jsonArrayShipToLocations;
+    private string $jsonArrayShippingOptions;
+    private string $jsonArrayItemCompatibility;
+    private string $jsonArrayItemSpecifics;
+    private string $htmlDescription;
+    private float $netPrice;
+    private string $filetime;
 
+    /**
+     * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
+     * 
+     * This is just a general collection, as there are many other details of an item and its listing existing.
+     * 
+     * @param int|null $id Unique identifier of the item. Possibly null if no id is provided.
+     * @param string $itemId Portal's unique identifier of an item.
+     * @param string $title Item's title.
+     * @param float $currentPrice Item's price.
+     * @param string $listingStatus Item's listing status (like "Active", "Ended", etc.). 
+     * @param int $quantity Number of items available at start time of i's listing.
+     * @param int $quantitySold Number of items that have been sold already.
+     * @param int $conditionId Item's condition (like 1000 representing "New", etc.).
+     * @param int $categoryId Portal's unique identifier of a category.
+     * @param string $storeCategoryId Seller's unique identifier of a category.
+     * @param string $storeCategory2Id Seller's unique identifier of a second category.
+     * @param string $viewItemUrl Item's listing page url.
+     * @param string $jsonArrayPictures Stringified JSON array containing urls of the item's pictures.
+     * @param int $site Portal's unique identifier of a country related site the listing is published on.
+     * @param string $country Country where the item is located or being sold.
+     * @param string $currency Currency being used in the item's listing.
+     * @param string $jsonArrayShipToLocations Stringified JSON array containing the locations the item can be shipped to.
+     * @param string $jsonArrayShippingOptions Stringified JSON array containing shipping options for an item. 
+     * @param string $jsonArrayItemCompatibility Stringified JSON array containing the compatibility information for an item.
+     * @param string $jsonArrayItemSpecifics Stringified JSON array containing item specific attributes.
+     * @param string $htmlDescription Portal's html of the item's listing.
+     * @param float $netPrice Item's current price without VAT.
+     * @param string $filetime Time when the item's detail file was last modified (Format: "Y-m-d H:i:s").
+     * 
+     * @return void
+     */
     public function __construct(
         ?int $id,
         string $itemId,
@@ -41,14 +78,14 @@ class Item implements Entity {
         string $storeCategoryId,
         string $storeCategory2Id,
         string $viewItemUrl,
-        array $pictures,
+        string $jsonArrayPictures,
         int $site,
         string $country,
         string $currency,
-        array $shipToLocations,
-        array $shippingOptions,
-        array $itemCompatibility,
-        array $itemSpecifics,
+        string $jsonArrayShipToLocations,
+        string $jsonArrayShippingOptions,
+        string $jsonArrayItemCompatibility,
+        string $jsonArrayItemSpecifics,
         string $htmlDescription,
         float $netPrice,
         string $filetime
@@ -65,14 +102,14 @@ class Item implements Entity {
         $this->storeCategoryId = $storeCategoryId;
         $this->storeCategory2Id = $storeCategory2Id;
         $this->viewItemUrl = $viewItemUrl;
-        $this->pictures = $pictures;
+        $this->jsonArrayPictures = $jsonArrayPictures;
         $this->site = $site;
         $this->country = $country;
         $this->currency = $currency;
-        $this->shipToLocations = $shipToLocations;
-        $this->shippingOptions = $shippingOptions;
-        $this->itemCompatibility = $itemCompatibility;
-        $this->itemSpecifics = $itemSpecifics;
+        $this->jsonArrayShipToLocations = $jsonArrayShipToLocations;
+        $this->jsonArrayShippingOptions = $jsonArrayShippingOptions;
+        $this->jsonArrayItemCompatibility = $jsonArrayItemCompatibility;
+        $this->jsonArrayItemSpecifics = $jsonArrayItemSpecifics;
         $this->htmlDescription = $htmlDescription;
         $this->netPrice = $netPrice;
         $this->filetime = $filetime;
@@ -80,7 +117,7 @@ class Item implements Entity {
 
 
     // Getters
-    public function getId(): int {
+    public function getId(): int|null {
         return $this->id;
     }
 
@@ -128,8 +165,8 @@ class Item implements Entity {
         return $this->viewItemUrl;
     }
 
-    public function getPictures(): array {
-        return $this->pictures;
+    public function getPictures(): string {
+        return $this->jsonArrayPictures;
     }
 
     public function getSite(): int {
@@ -144,20 +181,20 @@ class Item implements Entity {
         return $this->currency;
     }
 
-    public function getShipToLocations(): array {
-        return $this->shipToLocations;
+    public function getShipToLocations(): string {
+        return $this->jsonArrayShipToLocations;
     }
 
-    public function getShippingOptions(): array {
-        return $this->shippingOptions;
+    public function getShippingOptions(): string {
+        return $this->jsonArrayShippingOptions;
     }
 
-    public function getItemCompatibility(): array {
-        return $this->itemCompatibility;
+    public function getItemCompatibility(): string {
+        return $this->jsonArrayItemCompatibility;
     }
 
-    public function getItemSpecifics(): array {
-        return $this->itemSpecifics;
+    public function getItemSpecifics(): string {
+        return $this->jsonArrayItemSpecifics;
     }
 
     public function getHtmlDescription(): string {
@@ -222,8 +259,8 @@ class Item implements Entity {
         $this->viewItemUrl = $viewItemUrl;
     }
 
-    public function setPictures(array $pictures): void {
-        $this->pictures = $pictures;
+    public function setPictures(string $jsonArrayPictures): void {
+        $this->jsonArrayPictures = $jsonArrayPictures;
     }
 
     public function setSite(int $site): void {
@@ -238,20 +275,20 @@ class Item implements Entity {
         $this->currency = $currency;
     }
 
-    public function setShipToLocations(array $shipToLocations): void {
-        $this->shipToLocations = $shipToLocations;
+    public function setShipToLocations(string $jsonArrayShipToLocations): void {
+        $this->jsonArrayShipToLocations = $jsonArrayShipToLocations;
     }
 
-    public function setShippingOptions(array $shippingOptions): void {
-        $this->shippingOptions = $shippingOptions;
+    public function setShippingOptions(string $jsonArrayShippingOptions): void {
+        $this->jsonArrayShippingOptions = $jsonArrayShippingOptions;
     }
 
-    public function setItemCompatibility(array $itemCompatibility): void {
-        $this->itemCompatibility = $itemCompatibility;
+    public function setItemCompatibility(string $jsonArrayItemCompatibility): void {
+        $this->jsonArrayItemCompatibility = $jsonArrayItemCompatibility;
     }
 
-    public function setItemSpecifics(array $itemSpecifics): void {
-        $this->itemSpecifics = $itemSpecifics;
+    public function setItemSpecifics(string $jsonArrayItemSpecifics): void {
+        $this->jsonArrayItemSpecifics = $jsonArrayItemSpecifics;
     }
 
     public function setHtmlDescription(string $htmlDescription): void {

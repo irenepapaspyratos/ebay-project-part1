@@ -10,15 +10,15 @@ namespace App\Entity;
  */
 class ListingStatus implements Entity {
 
-    private $id;
-    private $codeType;
-    private $description;
+    private ?int $id;
+    private string $codeType;
+    private string $description;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
      * @param ?int $id Primary Key, possibly empty as coming from the database.
-     * @param string $codeType Status code.
+     * @param string $codeType Status code of a listings (like "Active", etc.).
      * @param string $description Explanation of the status code.
      * 
      * @return void
@@ -32,7 +32,7 @@ class ListingStatus implements Entity {
 
 
     // Getters
-    public function getId(): int {
+    public function getId(): int|null {
         return $this->id;
     }
 

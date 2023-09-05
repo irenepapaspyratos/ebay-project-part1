@@ -10,10 +10,10 @@ namespace App\Entity;
  */
 class Category implements Entity {
 
-    private $id;
-    private $categoryId;
-    private $categoryName;
-    private $parentId;
+    private ?int $id;
+    private string $categoryId;
+    private string $categoryName;
+    private int $parentId;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
@@ -21,9 +21,9 @@ class Category implements Entity {
      * A category can have parents and the parent path would look like this example for the category Silk: Fabric>Fine.
      * 
      * @param ?int $id Primary Key, possibly empty as coming from the database.
-     * @param string $categoryId The portal's category id.
-     * @param string $name (Sub)Category's name. If it is a subcategory, the whole path can be retrieved by recursively follow the parent ids.
-     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory.
+     * @param string $categoryId Portal's unique identifier of a category.
+     * @param string $name Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.
+     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent.
      * 
      * @return void
      */
@@ -37,7 +37,7 @@ class Category implements Entity {
 
 
     // Getters
-    public function getId(): int {
+    public function getId(): int|null {
         return $this->id;
     }
 
@@ -78,6 +78,7 @@ class Category implements Entity {
      * @return array Array representation of the object.
      */
     public function toArray(): array {
+
         return [
             'id' => $this->getId(),
             'category_id' => $this->getCategoryId(),
