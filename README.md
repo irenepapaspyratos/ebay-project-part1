@@ -9,7 +9,7 @@
 <!-- prettier-ignore -->
 | Backend Testing: |
 | :-: |
-| [![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=main) |
+| [![Coverage Status](https://coveralls.io/repos/github/irenepapaspyratos/ebay-project-part1/badge.svg?branch=mainkill_cache=1)](https://coveralls.io/github/irenepapaspyratos/ebay-project-part1?branch=main) |
 
 </br>
 
