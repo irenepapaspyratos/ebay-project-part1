@@ -36,7 +36,7 @@ class CustomCurlTest extends Unit {
     }
 
     /**
-     * Tests wether an exception is thrown with the correct error
+     * Tests whether an exception is thrown with the correct error
      * message when the cURL request fails to resolve the host.
      */
     public function testExecuteCurlFailure() {
@@ -54,7 +54,7 @@ class CustomCurlTest extends Unit {
     }
 
     /**
-     * Tests wether the response is a string with expected content by
+     * Tests whether the response is a string with expected content by
      * setting up a mock response for a specific endpoint on a mock web server.
      */
     public function testExecuteCurlSuccess() {

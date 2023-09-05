@@ -30,7 +30,7 @@ class DateUtilsTest extends Unit {
     }
 
     /**
-     * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
+     * Tests whether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * adds the correct amount of time.
      */
     public function testCalculateUtcTimestampAddition() {
@@ -46,7 +46,7 @@ class DateUtilsTest extends Unit {
     }
 
     /**
-     * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
+     * Tests whether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * substracts the correct amount of time.
      */
     public function testCalculateUtcTimestampSubtraction() {
@@ -62,7 +62,7 @@ class DateUtilsTest extends Unit {
     }
 
     /**
-     * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
+     * Tests whether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * throws an exception with invalid operator provided.
      */
     public function testCalculateUtcTimestampInvalidOperator() {
@@ -76,7 +76,7 @@ class DateUtilsTest extends Unit {
     }
 
     /**
-     * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
+     * Tests whether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * throws an exception with invalid unit provided.
      */
     public function testCalculateUtcTimestampInvalidUnit() {
@@ -90,7 +90,7 @@ class DateUtilsTest extends Unit {
     }
 
     /**
-     * Tests wether the 'calculateNewTimestamp' method of the 'DateUtils' class
+     * Tests whether the 'calculateNewTimestamp' method of the 'DateUtils' class
      * calculates a new timestamp in a leap year correctly.
      */
     public function testCalculateUtcTimestampLeapYear() {
