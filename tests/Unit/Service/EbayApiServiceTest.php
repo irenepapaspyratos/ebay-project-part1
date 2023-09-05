@@ -452,7 +452,7 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the `getSellerEvents` method of the `EbayApiService` class 
-     * wether it returns the XML string of the correct seller events
+     * whether it returns the XML string of the correct seller events
      * with mocked 'CustomLogger', 'CustomCurl' and 'XmlUtils' classes. 
      */
     public function testGetSellerEventsReturnsCorrectData() {
@@ -480,7 +480,7 @@ class EbayApiServiceTest extends Unit {
 
     /**
      * Tests the `getSellerEvents` method of the `EbayApiService` class 
-     * wether an exception is thrown if there is a cURL error.
+     * whether an exception is thrown if there is a cURL error.
      */
     public function testGetSellerEventsThrowsExceptionOnCurlError() {
 
