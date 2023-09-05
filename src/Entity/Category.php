@@ -28,6 +28,7 @@ class Category implements Entity {
      * @return void
      */
     public function __construct(?int $id, string $categoryId, string $name, int $parentId = 0) {
+
         $this->id = $id;
         $this->categoryId = $categoryId;
         $this->name = $name;
@@ -76,6 +77,7 @@ class Category implements Entity {
      * @return array Array representation of the object.
      */
     public function toArray(): array {
+
         return [
             $this->getId(),
             $this->getCategoryId(),
