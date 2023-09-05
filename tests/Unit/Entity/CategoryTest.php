@@ -15,7 +15,7 @@ class CategoryTest extends Unit {
     protected $tester;
 
     /**
-     * Tests wether the 'Category' instance is created correctly.
+     * Tests whether the 'Category' instance is created correctly.
      */
     public function testCategoryCreationWithoutParent() {
 
@@ -27,7 +27,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests wether the 'Category' instance is created correctly.
+     * Tests whether the 'Category' instance is created correctly.
      */
     public function testCategoryCreationWithParent() {
 
@@ -39,7 +39,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests wether the getters of the 'Category' class return the correct values 
+     * Tests whether the getters of the 'Category' class return the correct values 
      * with no parent category provided.
      */
     public function testCategoryGettersWithoutParent() {
@@ -55,7 +55,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests wether the getters of the 'Category' class return correct values 
+     * Tests whether the getters of the 'Category' class return correct values 
      * with a parent category provided.
      */
     public function testCategoryGettersWithParent() {
@@ -71,7 +71,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests wether the setters in the 'Category' class modify the properties correctly.
+     * Tests whether the setters in the 'Category' class modify the properties correctly.
      */
     public function testCategorySettersModifyProperties() {
 
@@ -92,7 +92,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests the 'toArray' method of the 'Category' class wether
+     * Tests the 'toArray' method of the 'Category' class whether
      * it converts a Category object to the correct array without a parent category.
      */
     public function testToArrayConversionWithoutParent() {
@@ -112,7 +112,7 @@ class CategoryTest extends Unit {
     }
 
     /**
-     * Tests the 'toArray' method of the 'Category' class wether
+     * Tests the 'toArray' method of the 'Category' class whether
      * it converts a Category object to the correct array with a parent category.
      */
     public function testToArrayConversionWithParent() {
