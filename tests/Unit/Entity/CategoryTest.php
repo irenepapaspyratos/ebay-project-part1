@@ -50,7 +50,7 @@ class CategoryTest extends Unit {
         // Assert that the getters return the expected value
         $this->assertEquals(2, $category->getId());
         $this->assertEquals('111', $category->getCategoryId());
-        $this->assertEquals('Cotton', $category->getName());
+        $this->assertEquals('Cotton', $category->getCategoryName());
         $this->assertEquals(0, $category->getParentId());
     }
 
@@ -66,7 +66,7 @@ class CategoryTest extends Unit {
         // Assert that the getters return the expected value
         $this->assertEquals(2, $category->getId());
         $this->assertEquals('111', $category->getCategoryId());
-        $this->assertEquals('Cotton', $category->getName());
+        $this->assertEquals('Cotton', $category->getCategoryName());
         $this->assertEquals(1, $category->getParentId());
     }
 
@@ -81,13 +81,13 @@ class CategoryTest extends Unit {
         // Act 
         $category->setId(3);
         $category->setCategoryId('222');
-        $category->setName('Silk');
+        $category->setCategoryName('Silk');
         $category->setParentId(1);
 
         // Assert that the correct values of the changes are returned
         $this->assertEquals(3, $category->getId());
         $this->assertEquals('222', $category->getCategoryId());
-        $this->assertEquals('Silk', $category->getName());
+        $this->assertEquals('Silk', $category->getCategoryName());
         $this->assertEquals(1, $category->getParentId());
     }
 
@@ -100,7 +100,12 @@ class CategoryTest extends Unit {
         // Act
         $category = new Category(2, '111', 'Cotton');
 
-        $expectedArray = [2, '111', 'Cotton', 0];
+        $expectedArray = [
+            'id' => 2,
+            'category_id' => '111',
+            'category_name' => 'Cotton',
+            'parent_id' => 0
+        ];
 
         // Assert
         $this->assertEquals($expectedArray, $category->toArray());
@@ -115,7 +120,12 @@ class CategoryTest extends Unit {
         // Act
         $category = new Category(3, '222', 'Silk', 1);
 
-        $expectedArray = [3, '222', 'Silk', 1];
+        $expectedArray = [
+            'id' => 3,
+            'category_id' => '222',
+            'category_name' => 'Silk',
+            'parent_id' => 1
+        ];
 
         // Assert
         $this->assertEquals($expectedArray, $category->toArray());
