@@ -37,7 +37,7 @@ class Category implements Entity {
 
 
     // Getters
-    public function getId(): int {
+    public function getId(): int|null {
         return $this->id;
     }
 
@@ -78,6 +78,7 @@ class Category implements Entity {
      * @return array Array representation of the object.
      */
     public function toArray(): array {
+
         return [
             'id' => $this->getId(),
             'category_id' => $this->getCategoryId(),

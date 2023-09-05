@@ -15,21 +15,21 @@ class CategoryTest extends Unit {
     protected $tester;
 
     /**
-     * Tests whether the 'Category' instance is created correctly.
+     * Tests whether the 'Category' instance is created correctly without id and parent.
      */
-    public function testCategoryCreationWithoutParent() {
+    public function testCategoryCreationWithoutIdAndParent() {
 
         // Act
-        $category = new Category(2, '111', 'Cotton');
+        $category = new Category(null, '111', 'Cotton');
 
         // Assert that an instance of 'Category' was created
         $this->assertInstanceOf(Category::class, $category);
     }
 
     /**
-     * Tests whether the 'Category' instance is created correctly.
+     * Tests whether the 'Category' instance is created correctly with id and parent.
      */
-    public function testCategoryCreationWithParent() {
+    public function testCategoryCreationWithIdAndParent() {
 
         // Act
         $category = new Category(2, '111', 'Cotton', 1);
@@ -40,15 +40,15 @@ class CategoryTest extends Unit {
 
     /**
      * Tests whether the getters of the 'Category' class return the correct values 
-     * with no parent category provided.
+     * with no id or parent category provided.
      */
-    public function testCategoryGettersWithoutParent() {
+    public function testCategoryGettersWithoutIdAndParent() {
 
         // Act
-        $category = new Category(2, '111', 'Cotton');
+        $category = new Category(null, '111', 'Cotton');
 
         // Assert that the getters return the expected value
-        $this->assertEquals(2, $category->getId());
+        $this->assertEquals(null, $category->getId());
         $this->assertEquals('111', $category->getCategoryId());
         $this->assertEquals('Cotton', $category->getCategoryName());
         $this->assertEquals(0, $category->getParentId());
@@ -56,9 +56,9 @@ class CategoryTest extends Unit {
 
     /**
      * Tests whether the getters of the 'Category' class return correct values 
-     * with a parent category provided.
+     * with id and parent category provided.
      */
-    public function testCategoryGettersWithParent() {
+    public function testCategoryGettersWithIdAndParent() {
 
         // Act
         $category = new Category(2, '111', 'Cotton', 1);
@@ -93,15 +93,15 @@ class CategoryTest extends Unit {
 
     /**
      * Tests the 'toArray' method of the 'Category' class whether
-     * it converts a Category object to the correct array without a parent category.
+     * it converts a Category object to the correct array without id and parent category.
      */
-    public function testToArrayConversionWithoutParent() {
+    public function testToArrayConversionWithoutIdAndParent() {
 
         // Act
-        $category = new Category(2, '111', 'Cotton');
+        $category = new Category(null, '111', 'Cotton');
 
         $expectedArray = [
-            'id' => 2,
+            'id' => null,
             'category_id' => '111',
             'category_name' => 'Cotton',
             'parent_id' => 0
@@ -113,9 +113,9 @@ class CategoryTest extends Unit {
 
     /**
      * Tests the 'toArray' method of the 'Category' class whether
-     * it converts a Category object to the correct array with a parent category.
+     * it converts a Category object to the correct array with id and parent category.
      */
-    public function testToArrayConversionWithParent() {
+    public function testToArrayConversionWithIdAndParent() {
 
         // Act
         $category = new Category(3, '222', 'Silk', 1);

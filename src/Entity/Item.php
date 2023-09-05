@@ -80,7 +80,7 @@ class Item implements Entity {
 
 
     // Getters
-    public function getId(): int {
+    public function getId(): int|null {
         return $this->id;
     }
 
