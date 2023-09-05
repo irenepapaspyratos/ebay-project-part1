@@ -433,37 +433,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithoutParent\u0028\u0029",
             "name": "testCategoryCreationWithoutParent",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithParent\u0028\u0029",
             "name": "testCategoryCreationWithParent",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithoutParent\u0028\u0029",
             "name": "testCategoryGettersWithoutParent",
-            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020no\u0020parent\u0020category\u0020provided.",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020no\u0020parent\u0020category\u0020provided.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithParent\u0028\u0029",
             "name": "testCategoryGettersWithParent",
-            "summary": "Tests\u0020wether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020a\u0020parent\u0020category\u0020provided.",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020a\u0020parent\u0020category\u0020provided.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySettersModifyProperties\u0028\u0029",
             "name": "testCategorySettersModifyProperties",
-            "summary": "Tests\u0020wether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Category\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
+            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Category\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithoutParent\u0028\u0029",
             "name": "testToArrayConversionWithoutParent",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020wether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020a\u0020parent\u0020category.",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020a\u0020parent\u0020category.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithParent\u0028\u0029",
             "name": "testToArrayConversionWithParent",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020wether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020a\u0020parent\u0020category.",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020a\u0020parent\u0020category.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithParent"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024tester",
@@ -543,12 +543,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsReturnsCorrectData\u0028\u0029",
             "name": "testGetSellerEventsReturnsCorrectData",
-            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020seller\u0020events\nwith\u0020mocked\u0020\u0027CustomLogger\u0027,\u0020\u0027CustomCurl\u0027\u0020and\u0020\u0027XmlUtils\u0027\u0020classes.",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020it\u0020returns\u0020the\u0020XML\u0020string\u0020of\u0020the\u0020correct\u0020seller\u0020events\nwith\u0020mocked\u0020\u0027CustomLogger\u0027,\u0020\u0027CustomCurl\u0027\u0020and\u0020\u0027XmlUtils\u0027\u0020classes.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsReturnsCorrectData"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003AtestGetSellerEventsThrowsExceptionOnCurlError\u0028\u0029",
             "name": "testGetSellerEventsThrowsExceptionOnCurlError",
-            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwether\u0020an\u0020exception\u0020is\u0020thrown\u0020if\u0020there\u0020is\u0020a\u0020cURL\u0020error.",
+            "summary": "Tests\u0020the\u0020\u0060getSellerEvents\u0060\u0020method\u0020of\u0020the\u0020\u0060EbayApiService\u0060\u0020class\nwhether\u0020an\u0020exception\u0020is\u0020thrown\u0020if\u0020there\u0020is\u0020a\u0020cURL\u0020error.",
             "url": "classes/Tests-Unit-Service-EbayApiServiceTest.html#method_testGetSellerEventsThrowsExceptionOnCurlError"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest\u003A\u003A\u0024tester",
@@ -603,12 +603,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest\u003A\u003AtestExecuteCurlFailure\u0028\u0029",
             "name": "testExecuteCurlFailure",
-            "summary": "Tests\u0020wether\u0020an\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\nmessage\u0020when\u0020the\u0020cURL\u0020request\u0020fails\u0020to\u0020resolve\u0020the\u0020host.",
+            "summary": "Tests\u0020whether\u0020an\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\nmessage\u0020when\u0020the\u0020cURL\u0020request\u0020fails\u0020to\u0020resolve\u0020the\u0020host.",
             "url": "classes/Tests-Unit-Utility-CustomCurlTest.html#method_testExecuteCurlFailure"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest\u003A\u003AtestExecuteCurlSuccess\u0028\u0029",
             "name": "testExecuteCurlSuccess",
-            "summary": "Tests\u0020wether\u0020the\u0020response\u0020is\u0020a\u0020string\u0020with\u0020expected\u0020content\u0020by\nsetting\u0020up\u0020a\u0020mock\u0020response\u0020for\u0020a\u0020specific\u0020endpoint\u0020on\u0020a\u0020mock\u0020web\u0020server.",
+            "summary": "Tests\u0020whether\u0020the\u0020response\u0020is\u0020a\u0020string\u0020with\u0020expected\u0020content\u0020by\nsetting\u0020up\u0020a\u0020mock\u0020response\u0020for\u0020a\u0020specific\u0020endpoint\u0020on\u0020a\u0020mock\u0020web\u0020server.",
             "url": "classes/Tests-Unit-Utility-CustomCurlTest.html#method_testExecuteCurlSuccess"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest\u003A\u003A\u0024tester",
@@ -703,27 +703,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateUtcTimestampAddition\u0028\u0029",
             "name": "testCalculateUtcTimestampAddition",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nadds\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nadds\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateUtcTimestampAddition"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateUtcTimestampSubtraction\u0028\u0029",
             "name": "testCalculateUtcTimestampSubtraction",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nsubstracts\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nsubstracts\u0020the\u0020correct\u0020amount\u0020of\u0020time.",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateUtcTimestampSubtraction"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateUtcTimestampInvalidOperator\u0028\u0029",
             "name": "testCalculateUtcTimestampInvalidOperator",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020operator\u0020provided.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020operator\u0020provided.",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateUtcTimestampInvalidOperator"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateUtcTimestampInvalidUnit\u0028\u0029",
             "name": "testCalculateUtcTimestampInvalidUnit",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020unit\u0020provided.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\nthrows\u0020an\u0020exception\u0020with\u0020invalid\u0020unit\u0020provided.",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateUtcTimestampInvalidUnit"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003AtestCalculateUtcTimestampLeapYear\u0028\u0029",
             "name": "testCalculateUtcTimestampLeapYear",
-            "summary": "Tests\u0020wether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\ncalculates\u0020a\u0020new\u0020timestamp\u0020in\u0020a\u0020leap\u0020year\u0020correctly.",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027calculateNewTimestamp\u0027\u0020method\u0020of\u0020the\u0020\u0027DateUtils\u0027\u0020class\ncalculates\u0020a\u0020new\u0020timestamp\u0020in\u0020a\u0020leap\u0020year\u0020correctly.",
             "url": "classes/Tests-Unit-Utility-DateUtilsTest.html#method_testCalculateUtcTimestampLeapYear"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\DateUtilsTest\u003A\u003A\u0024tester",
