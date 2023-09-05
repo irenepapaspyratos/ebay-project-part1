@@ -1078,7 +1078,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\u0020cleaning\u0020up\u0020the\u0020test\u0020directory,\ndefining\u0020paths\u0020for\u0020writable\u0020test\u0020log\u0020files\u0020and\ncreating\u0020a\u0020non\u002Dwritable\u0020test\u0020log\u0020file.",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020different\u0020instances\u0020of\u0020\u0027Item\u0027.",
             "url": "classes/Tests-Unit-Entity-ItemTest.html#method__before"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemCreationWithoutId\u0028\u0029",
