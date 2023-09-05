@@ -12,7 +12,7 @@ class Category implements Entity {
 
     private $id;
     private $categoryId;
-    private $name;
+    private $categoryName;
     private $parentId;
 
     /**
@@ -27,11 +27,11 @@ class Category implements Entity {
      * 
      * @return void
      */
-    public function __construct(?int $id, string $categoryId, string $name, int $parentId = 0) {
+    public function __construct(?int $id, string $categoryId, string $categoryName, int $parentId = 0) {
 
         $this->id = $id;
         $this->categoryId = $categoryId;
-        $this->name = $name;
+        $this->categoryName = $categoryName;
         $this->parentId = $parentId;
     }
 
@@ -45,8 +45,8 @@ class Category implements Entity {
         return $this->categoryId;
     }
 
-    public function getName(): string {
-        return $this->name;
+    public function getCategoryName(): string {
+        return $this->categoryName;
     }
 
     public function getParentId(): int {
@@ -63,13 +63,14 @@ class Category implements Entity {
         $this->categoryId = $categoryId;
     }
 
-    public function setName(string $name): void {
-        $this->name = $name;
+    public function setCategoryName(string $categoryName): void {
+        $this->categoryName = $categoryName;
     }
 
     public function setParentId(int $parentId): void {
         $this->parentId = $parentId;
     }
+
 
     /**
      * The 'toArray' method converts the object of the class to an array.
@@ -79,10 +80,10 @@ class Category implements Entity {
     public function toArray(): array {
 
         return [
-            $this->getId(),
-            $this->getCategoryId(),
-            $this->getName(),
-            $this->getParentId(),
+            'id' => $this->getId(),
+            'category_id' => $this->getCategoryId(),
+            'category_name' => $this->getCategoryName(),
+            'parent_id' => $this->getParentId(),
         ];
     }
 }
