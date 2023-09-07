@@ -7,24 +7,24 @@ use PDOException;
 
 class DatabaseConnection {
 
-    private $host;
-    private $dbname;
-    private $username;
-    private $password;
-    private $charset;
-    private $options;
+    private string $host;
+    private string $dbname;
+    private string $username;
+    private string $password;
+    private string $charset;
+    private array $options;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
      * Initializes the properties for the database connection.
      *
-     * @param string $host     Address of the database server.
-     * @param string $dbname   Name of the database.
+     * @param string $host Address of the database server.
+     * @param string $dbname Name of the database.
      * @param string $username Database user.
      * @param string $password Database user password.
-     * @param string $charset  Character set for the connection. Default: 'utf8mb4'.
-     * @param array $options   PDO connection options.
+     * @param string $charset Character set for the connection. Default: 'utf8mb4'.
+     * @param array $options PDO connection options.
      * 
      * @return void
      */

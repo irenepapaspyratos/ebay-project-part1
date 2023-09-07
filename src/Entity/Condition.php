@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Enum\Ebay\Ebay;
+
 /**
  * The `Condition` class provides methods to deal with codes specifying a condition.
  * 
@@ -10,15 +12,15 @@ namespace App\Entity;
  */
 class Condition implements Entity {
 
-    private $id;
-    private $conditionId;
-    private $conditionDisplayName;
+    private ?int $id;
+    private string $conditionId;
+    private string $conditionDisplayName;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
      * @param ?int $id Primary Key, possibly empty as coming from the database.
-     * @param string $conditionId Represents the condition code.
+     * @param string $conditionId Unique identifier of a condition (like 1000 for "New", etc.).
      * @param string $conditionDisplayName States the typical meaning. However, values can differ per category.
      * 
      * @return void

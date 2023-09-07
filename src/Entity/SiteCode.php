@@ -10,16 +10,16 @@ namespace App\Entity;
  */
 class SiteCode implements Entity {
 
-    private $id;
-    private $siteId;
-    private $siteName;
-    private $globalId;
+    private ?int $id;
+    private int $siteId;
+    private string $siteName;
+    private string $globalId;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
      * @param ?int $id Primary Key, possibly empty as coming from the database.
-     * @param int $siteId Site code.
+     * @param int $siteId Unique identifier of a country related site the listing is published on.
      * @param string $siteName Represents the verbal site name.
      * @param string $globalId Represents the verbal code. 
      * 
