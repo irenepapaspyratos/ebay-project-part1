@@ -193,12 +193,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Entity\\Item",
             "name": "Item",
-            "summary": "",
+            "summary": "The\u0020\u0060Item\u0060\u0020class\u0020provides\u0020methods\u0020to\u0020deal\u0020with\u0020items\u0020and\u0020their\u0020details.",
             "url": "classes/App-Entity-Item.html"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-Item.html#method___construct"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003AgetId\u0028\u0029",
@@ -496,10 +496,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#property_viewItemUrl"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024pictures",
-            "name": "pictures",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024jsonArrayPictures",
+            "name": "jsonArrayPictures",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_pictures"
+            "url": "classes/App-Entity-Item.html#property_jsonArrayPictures"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024site",
             "name": "site",
@@ -516,25 +516,25 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#property_currency"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024shipToLocations",
-            "name": "shipToLocations",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024jsonArrayShipToLocations",
+            "name": "jsonArrayShipToLocations",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_shipToLocations"
+            "url": "classes/App-Entity-Item.html#property_jsonArrayShipToLocations"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024shippingOptions",
-            "name": "shippingOptions",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024jsonArrayShippingOptions",
+            "name": "jsonArrayShippingOptions",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_shippingOptions"
+            "url": "classes/App-Entity-Item.html#property_jsonArrayShippingOptions"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024itemCompatibility",
-            "name": "itemCompatibility",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024jsonArrayItemCompatibility",
+            "name": "jsonArrayItemCompatibility",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_itemCompatibility"
+            "url": "classes/App-Entity-Item.html#property_jsonArrayItemCompatibility"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024itemSpecifics",
-            "name": "itemSpecifics",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024jsonArrayItemSpecifics",
+            "name": "jsonArrayItemSpecifics",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_itemSpecifics"
+            "url": "classes/App-Entity-Item.html#property_jsonArrayItemSpecifics"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024htmlDescription",
             "name": "htmlDescription",

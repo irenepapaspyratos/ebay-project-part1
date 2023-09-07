@@ -196,25 +196,25 @@ must provide an implementation for the `toArray` method, which returns an array.
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Entity-Category.html#property_categoryId">$categoryId</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Entity-Category.html#property_categoryName">$categoryName</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Entity-Category.html#property_id">$id</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int|null            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Entity-Category.html#property_parentId">$parentId</a>
     <span>
-                        &nbsp;: mixed            </span>
+                        &nbsp;: int            </span>
 </dt>
 
     </dl>
@@ -325,7 +325,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$categoryId</span>
     </code>
 
@@ -358,7 +358,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$categoryName</span>
     </code>
 
@@ -391,7 +391,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int|null</span>
     <span class="phpdocumentor-signature__name">$id</span>
     </code>
 
@@ -424,7 +424,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
+        <span class="phpdocumentor-signature__type">int</span>
     <span class="phpdocumentor-signature__name">$parentId</span>
     </code>
 
@@ -486,7 +486,7 @@ must provide an implementation for the `toArray` method, which returns an array.
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The portal's category id.</p>
+                    <section class="phpdocumentor-description"><p>Portal's unique identifier of a category.</p>
 </section>
 
             </dd>
@@ -502,7 +502,7 @@ must provide an implementation for the `toArray` method, which returns an array.
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                  = <span class="phpdocumentor-signature__argument__default-value">0</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Id of the possible parent category with 0 representing the category not being a subcategory.</p>
+                    <section class="phpdocumentor-description"><p>Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent.</p>
 </section>
 
             </dd>
