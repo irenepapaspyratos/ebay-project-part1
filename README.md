@@ -49,6 +49,15 @@ GitHub Actions are used for continuous integration and deployment. Every push is
 
 </br>
 
+## Architecture / Design Principles
+
+One of the guiding principles behind the architecture of _The Ebay Project_ is ensuring consistency and comfort when making changes:
+
+-   #### Entities
+    Database related entities are closely tied with the configuration settings to make maintenance and future updates more streamlined and efficient. If changes are made to a table in the database, only the config.php and the prepared getters/setters of an entity have to be updated (and the tests, if used). This system acts as a safeguard, ensuring data integrity by alerting developers with thrown exceptions to potential issues or misconfigurations in real-time.
+
+</br>
+
 ## Technical Documentation
 
 The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay-project-part1/) is hosted on GitHub Pages with details about the codebase. It was generated using _phpDocumentor_ with the help of _Mintlify_ to create the necessary DocBlock styled comments.
@@ -106,7 +115,7 @@ The project's [Technical Documentation](https://irenepapaspyratos.github.io/ebay
 -   [phpDocumentor](https://www.phpdoc.org/) - PHP Document Creation Tool
 -   [DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) - Special Comment Style (to document code)
 -   [Mintlify](https://marketplace.visualstudio.com/items?itemName=mintlify.document) - VS Code Extension (assistance creating styled comments)
--   [Codeception] (https://codeception.com/) - PHP Testing Framework
+-   [Codeception](https://codeception.com/) - PHP Testing Framework
 -   [MariaDB](https://mariadb.org/documentation/) - SQL Database with NoSQL Capabilities
 -   [eBay Features Guide](https://developer.ebay.com/DevZone/guides/features-guide/default.html#features-guide-landing.html?TocPath=_____1) - General Guide for Traditional APIs (using XML or SOAP instead of REST)
 -   [Wikipedia: Cron](https://en.wikipedia.org/wiki/Cron) - Explanation/History of Cronjobs

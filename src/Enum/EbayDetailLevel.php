@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enum\Ebay;
+namespace App\Enum;
 
 /**
  * The `EbayDetailLevel` class defines an enumeration.

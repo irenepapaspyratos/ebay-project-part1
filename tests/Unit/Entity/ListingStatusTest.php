@@ -13,113 +13,102 @@ use Codeception\Test\Unit;
 class ListingStatusTest extends Unit {
 
     protected $tester;
+    private $keyArray;
+    private $listingStatus;
+    private $listingStatusWithout;
 
     /**
-     * Tests whether the 'ListingStatus' instance is created correctly without id.
+     * Sets up the necessary environment for running tests by 
+     * creating an array of keys and different instances of 'ListingStatus'.
      */
-    public function testListingStatusCreationWithoutId() {
+    protected function _before() {
 
-        // Act
-        $listingStatus = new ListingStatus(null, 'Completed', 'The listing has closed.');
+        $this->keyArray = ['id', 'status_code', 'status_description'];
+
+        $this->listingStatus = new ListingStatus($this->keyArray, 'Completed', 'The listing has closed.', 2);
+        $this->listingStatusWithout = new ListingStatus($this->keyArray, 'Active', 'The listing is open.', null);
+    }
+
+    /**
+     * Tests whether the 'ListingStatus' instance is created correctly with and without id.
+     */
+    public function testListingStatusCreation() {
 
         // Assert that an instance of 'ListingStatus' was created
-        $this->assertInstanceOf(ListingStatus::class, $listingStatus);
+        $this->assertInstanceOf(ListingStatus::class, $this->listingStatus);
+        $this->assertInstanceOf(ListingStatus::class, $this->listingStatusWithout);
     }
 
     /**
-     * Tests whether the 'ListingStatus' instance is created correctly with id.
+     * Tests whether the getters of the 'ListingStatus' class return the correct values with and without id.
      */
-    public function testListingStatusCreationWithId() {
-
-        // Act
-        $listingStatus = new ListingStatus(2, 'Completed', 'The listing has closed.');
-
-        // Assert that an instance of 'ListingStatus' was created
-        $this->assertInstanceOf(ListingStatus::class, $listingStatus);
-    }
-
-    /**
-     * Tests whether the getters of the 'ListingStatus' class return the correct values without id.
-     */
-    public function testListingStatusGettersWithoutId() {
-
-        // Act
-        $listingStatus = new ListingStatus(null, 'Completed', 'The listing has closed.');
+    public function testListingStatusGetters() {
 
         // Assert that the getters return the expected value
-        $this->assertEquals(null, $listingStatus->getId());
-        $this->assertEquals('Completed', $listingStatus->getCodeType());
-        $this->assertEquals('The listing has closed.', $listingStatus->getDescription());
-    }
+        $this->assertEquals(2, $this->listingStatus->getId());
+        $this->assertEquals('Completed', $this->listingStatus->getStatusCode());
+        $this->assertEquals('The listing has closed.', $this->listingStatus->getStatusDescription());
 
-    /**
-     * Tests whether the getters of the 'ListingStatus' class return the correct values with id.
-     */
-    public function testListingStatusGettersWithId() {
-
-        // Act
-        $listingStatus = new ListingStatus(2, 'Completed', 'The listing has closed.');
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(2, $listingStatus->getId());
-        $this->assertEquals('Completed', $listingStatus->getCodeType());
-        $this->assertEquals('The listing has closed.', $listingStatus->getDescription());
+        $this->assertEquals(null, $this->listingStatusWithout->getId());
+        $this->assertEquals('Active', $this->listingStatusWithout->getStatusCode());
+        $this->assertEquals('The listing is open.', $this->listingStatusWithout->getStatusDescription());
     }
 
     /**
      * Tests whether the setters in the 'ListingStatus' class modify the properties correctly.
      */
-    public function testListingStatusSettersModifyProperties() {
-
-        // Arrange
-        $listingStatus = new ListingStatus(2, 'Completed', 'The listing has closed.');
+    public function testListingStatusSetters() {
 
         // Act 
-        $listingStatus->setId(1);
-        $listingStatus->setCodeType('Active');
-        $listingStatus->setDescription('The listing is still active.');
+        $this->listingStatus->setId(1);
+        $this->listingStatus->setStatusCode('Active');
+        $this->listingStatus->setStatusDescription('The listing is open.');
 
         // Assert that the correct values of the changes are returned
-        $this->assertEquals(1, $listingStatus->getId());
-        $this->assertEquals('Active', $listingStatus->getCodeType());
-        $this->assertEquals('The listing is still active.', $listingStatus->getDescription());
+        $this->assertEquals(1, $this->listingStatus->getId());
+        $this->assertEquals('Active', $this->listingStatus->getStatusCode());
+        $this->assertEquals('The listing is open.', $this->listingStatus->getStatusDescription());
     }
 
     /**
      * Tests the 'toArray' method of the 'ListingStatus' class whether
-     * it converts a ListingStatus object to the correct array without id.
+     * it converts a ListingStatus object to the correct array with and without id.
      */
-    public function testToArrayConversionWithoutId() {
-
-        // Act
-        $listingStatus = new ListingStatus(null, 'Completed', 'The listing has closed.');
+    public function testListingStatusToArrayConversion() {
 
         $expectedArray = [
+            'id' => 2,
+            'status_code' => 'Completed',
+            'status_description' => 'The listing has closed.',
+        ];
+
+        $expectedArrayWithout = [
             'id' => null,
-            'code_type' => 'Completed',
-            'description' => 'The listing has closed.',
+            'status_code' => 'Active',
+            'status_description' => 'The listing is open.',
         ];
 
         // Assert
-        $this->assertEquals($expectedArray, $listingStatus->toArray());
+        $this->assertEquals($expectedArray, $this->listingStatus->toArray());
+        $this->assertEquals($expectedArrayWithout, $this->listingStatusWithout->toArray());
     }
 
     /**
      * Tests the 'toArray' method of the 'ListingStatus' class whether
-     * it converts a ListingStatus object to the correct array with id.
+     * an exception is thrown when trying to convert an object to an array
+     * with an invalid key.
      */
-    public function testToArrayConversionWithId() {
+    public function testListingStatusToArrayThrowsExceptionForInvalidKey() {
 
-        // Act
-        $listingStatus = new ListingStatus(1, 'Active', 'The listing is still active.');
-
-        $expectedArray = [
-            'id' => 1,
-            'code_type' => 'Active',
-            'description' => 'The listing is still active.',
-        ];
+        // Arrange: Add an invalid key to the keyArray
+        $invalidKeyArray = ['id', 'listing_status', 'status_description'];
+        $listingStatusWithInvalidKey = new ListingStatus($invalidKeyArray, '2000', 'New');
 
         // Assert
-        $this->assertEquals($expectedArray, $listingStatus->toArray());
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid Request: Getter for 'listing_status' does not exist in App\Entity\ListingStatus.");
+
+        // Act
+        $listingStatusWithInvalidKey->toArray();
     }
 }
