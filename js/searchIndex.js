@@ -96,11 +96,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Category.html#method_setParentId"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024keyArray",
-            "name": "keyArray",
-            "summary": "",
-            "url": "classes/App-Entity-Category.html#property_keyArray"
-        },                {
             "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -120,6 +115,11 @@ Search.appendIndex(
             "name": "parentId",
             "summary": "",
             "url": "classes/App-Entity-Category.html#property_parentId"
+        },                {
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\Condition",
             "name": "Condition",
@@ -161,11 +161,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Condition.html#method_setConditionDisplayName"
         },                {
-            "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024keyArray",
-            "name": "keyArray",
-            "summary": "",
-            "url": "classes/App-Entity-Condition.html#property_keyArray"
-        },                {
             "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -180,6 +175,11 @@ Search.appendIndex(
             "name": "conditionDisplayName",
             "summary": "",
             "url": "classes/App-Entity-Condition.html#property_conditionDisplayName"
+        },                {
+            "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Condition.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\Item",
             "name": "Item",
@@ -421,11 +421,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#method_setFiletime"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024keyArray",
-            "name": "keyArray",
-            "summary": "",
-            "url": "classes/App-Entity-Item.html#property_keyArray"
-        },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -541,6 +536,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#property_filetime"
         },                {
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Item.html#property_keyArray"
+        },                {
             "fqsen": "\\App\\Entity\\ListingStatus",
             "name": "ListingStatus",
             "summary": "The\u0020\u0060ListingStatus\u0060\u0020class\u0020provides\u0020methods\u0020to\u0020deal\u0020with\u0020codes\u0020specifying\u0020status\u0020types.",
@@ -581,11 +581,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-ListingStatus.html#method_setStatusDescription"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024keyArray",
-            "name": "keyArray",
-            "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#property_keyArray"
-        },                {
             "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -600,6 +595,11 @@ Search.appendIndex(
             "name": "description",
             "summary": "",
             "url": "classes/App-Entity-ListingStatus.html#property_description"
+        },                {
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-ListingStatus.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\SiteCode",
             "name": "SiteCode",
@@ -651,11 +651,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-SiteCode.html#method_setSiteGlobalId"
         },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024keyArray",
-            "name": "keyArray",
-            "summary": "",
-            "url": "classes/App-Entity-SiteCode.html#property_keyArray"
-        },                {
             "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
@@ -675,6 +670,11 @@ Search.appendIndex(
             "name": "globalId",
             "summary": "",
             "url": "classes/App-Entity-SiteCode.html#property_globalId"
+        },                {
+            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-SiteCode.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Enum\\EbayDetailLevel",
             "name": "EbayDetailLevel",
