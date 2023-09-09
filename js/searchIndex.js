@@ -96,10 +96,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Category.html#method_setParentId"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
-            "url": "classes/App-Entity-Category.html#method_toArray"
+            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Category.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024id",
             "name": "id",
@@ -161,10 +161,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Condition.html#method_setConditionDisplayName"
         },                {
-            "fqsen": "\\App\\Entity\\Condition\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
-            "url": "classes/App-Entity-Condition.html#method_toArray"
+            "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Condition.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024id",
             "name": "id",
@@ -180,16 +180,6 @@ Search.appendIndex(
             "name": "conditionDisplayName",
             "summary": "",
             "url": "classes/App-Entity-Condition.html#property_conditionDisplayName"
-        },                {
-            "fqsen": "\\App\\Entity\\Entity",
-            "name": "Entity",
-            "summary": "The\u0020interface\u0020\u0027Entity\u0027\u0020defines\u0020that\u0020any\u0020class\u0020that\u0020implements\u0020the\u0020\u0060Entity\u0060\nmust\u0020provide\u0020an\u0020implementation\u0020for\u0020the\u0020\u0060toArray\u0060\u0020method,\u0020which\u0020returns\u0020an\u0020array.",
-            "url": "classes/App-Entity-Entity.html"
-        },                {
-            "fqsen": "\\App\\Entity\\Entity\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "",
-            "url": "classes/App-Entity-Entity.html#method_toArray"
         },                {
             "fqsen": "\\App\\Entity\\Item",
             "name": "Item",
@@ -236,15 +226,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#method_getQuantitySold"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003AgetConditionId\u0028\u0029",
-            "name": "getConditionId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003AgetCondition\u0028\u0029",
+            "name": "getCondition",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#method_getConditionId"
+            "url": "classes/App-Entity-Item.html#method_getCondition"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003AgetCategoryId\u0028\u0029",
-            "name": "getCategoryId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003AgetCategory\u0028\u0029",
+            "name": "getCategory",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#method_getCategoryId"
+            "url": "classes/App-Entity-Item.html#method_getCategory"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003AgetStoreCategoryId\u0028\u0029",
             "name": "getStoreCategoryId",
@@ -351,15 +341,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#method_setQuantitySold"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003AsetConditionId\u0028\u0029",
-            "name": "setConditionId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003AsetCondition\u0028\u0029",
+            "name": "setCondition",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#method_setConditionId"
+            "url": "classes/App-Entity-Item.html#method_setCondition"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003AsetCategoryId\u0028\u0029",
-            "name": "setCategoryId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003AsetCategory\u0028\u0029",
+            "name": "setCategory",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#method_setCategoryId"
+            "url": "classes/App-Entity-Item.html#method_setCategory"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003AsetStoreCategoryId\u0028\u0029",
             "name": "setStoreCategoryId",
@@ -431,10 +421,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#method_setFiletime"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
-            "url": "classes/App-Entity-Item.html#method_toArray"
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-Item.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024id",
             "name": "id",
@@ -471,15 +461,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-Item.html#property_quantitySold"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024conditionId",
-            "name": "conditionId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024condition",
+            "name": "condition",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_conditionId"
+            "url": "classes/App-Entity-Item.html#property_condition"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024categoryId",
-            "name": "categoryId",
+            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024category",
+            "name": "category",
             "summary": "",
-            "url": "classes/App-Entity-Item.html#property_categoryId"
+            "url": "classes/App-Entity-Item.html#property_category"
         },                {
             "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024storeCategoryId",
             "name": "storeCategoryId",
@@ -566,45 +556,45 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-ListingStatus.html#method_getId"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AgetCodeType\u0028\u0029",
-            "name": "getCodeType",
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AgetStatusCode\u0028\u0029",
+            "name": "getStatusCode",
             "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#method_getCodeType"
+            "url": "classes/App-Entity-ListingStatus.html#method_getStatusCode"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AgetDescription\u0028\u0029",
-            "name": "getDescription",
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AgetStatusDescription\u0028\u0029",
+            "name": "getStatusDescription",
             "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#method_getDescription"
+            "url": "classes/App-Entity-ListingStatus.html#method_getStatusDescription"
         },                {
             "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AsetId\u0028\u0029",
             "name": "setId",
             "summary": "",
             "url": "classes/App-Entity-ListingStatus.html#method_setId"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AsetCodeType\u0028\u0029",
-            "name": "setCodeType",
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AsetStatusCode\u0028\u0029",
+            "name": "setStatusCode",
             "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#method_setCodeType"
+            "url": "classes/App-Entity-ListingStatus.html#method_setStatusCode"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AsetDescription\u0028\u0029",
-            "name": "setDescription",
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AsetStatusDescription\u0028\u0029",
+            "name": "setStatusDescription",
             "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#method_setDescription"
+            "url": "classes/App-Entity-ListingStatus.html#method_setStatusDescription"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
-            "url": "classes/App-Entity-ListingStatus.html#method_toArray"
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-ListingStatus.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024id",
             "name": "id",
             "summary": "",
             "url": "classes/App-Entity-ListingStatus.html#property_id"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024codeType",
-            "name": "codeType",
+            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024statusCode",
+            "name": "statusCode",
             "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#property_codeType"
+            "url": "classes/App-Entity-ListingStatus.html#property_statusCode"
         },                {
             "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024description",
             "name": "description",
@@ -636,10 +626,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-SiteCode.html#method_getSiteName"
         },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AgetGlobalId\u0028\u0029",
-            "name": "getGlobalId",
+            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AgetSiteGlobalId\u0028\u0029",
+            "name": "getSiteGlobalId",
             "summary": "",
-            "url": "classes/App-Entity-SiteCode.html#method_getGlobalId"
+            "url": "classes/App-Entity-SiteCode.html#method_getSiteGlobalId"
         },                {
             "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AsetId\u0028\u0029",
             "name": "setId",
@@ -656,15 +646,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-SiteCode.html#method_setSiteName"
         },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AsetGlobalId\u0028\u0029",
-            "name": "setGlobalId",
+            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AsetSiteGlobalId\u0028\u0029",
+            "name": "setSiteGlobalId",
             "summary": "",
-            "url": "classes/App-Entity-SiteCode.html#method_setGlobalId"
+            "url": "classes/App-Entity-SiteCode.html#method_setSiteGlobalId"
         },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020object\u0020of\u0020the\u0020class\u0020to\u0020an\u0020array.",
-            "url": "classes/App-Entity-SiteCode.html#method_toArray"
+            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/App-Entity-SiteCode.html#property_keyArray"
         },                {
             "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024id",
             "name": "id",
@@ -686,70 +676,80 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Entity-SiteCode.html#property_globalId"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel",
             "name": "EbayDetailLevel",
             "summary": "The\u0020\u0060EbayDetailLevel\u0060\u0020class\u0020defines\u0020an\u0020enumeration.",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html"
+            "url": "classes/App-Enum-EbayDetailLevel.html"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AALL",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AALL",
             "name": "ALL",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_ALL"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_ALL"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AITEM_ATTRIBUTES",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AITEM_ATTRIBUTES",
             "name": "ITEM_ATTRIBUTES",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_ITEM_ATTRIBUTES"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_ITEM_ATTRIBUTES"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AITEM_CATEGORIES",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AITEM_CATEGORIES",
             "name": "ITEM_CATEGORIES",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_ITEM_CATEGORIES"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_ITEM_CATEGORIES"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AITEM_DESCRIPTION",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AITEM_DESCRIPTION",
             "name": "ITEM_DESCRIPTION",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_ITEM_DESCRIPTION"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_ITEM_DESCRIPTION"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AHEADERS",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AHEADERS",
             "name": "HEADERS",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_HEADERS"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_HEADERS"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003AMESSAGES",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003AMESSAGES",
             "name": "MESSAGES",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_MESSAGES"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_MESSAGES"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayDetailLevel\u003A\u003ASUMMARY",
+            "fqsen": "\\App\\Enum\\EbayDetailLevel\u003A\u003ASUMMARY",
             "name": "SUMMARY",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayDetailLevel.html#enumcase_SUMMARY"
+            "url": "classes/App-Enum-EbayDetailLevel.html#enumcase_SUMMARY"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayGranularityLevel",
+            "fqsen": "\\App\\Enum\\EbayGranularityLevel",
             "name": "EbayGranularityLevel",
             "summary": "The\u0020\u0060EbayGranularityLevel\u0060\u0020class\u0020defines\u0020an\u0020enumeration.",
-            "url": "classes/App-Enum-Ebay-EbayGranularityLevel.html"
+            "url": "classes/App-Enum-EbayGranularityLevel.html"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayGranularityLevel\u003A\u003ACOARSE",
+            "fqsen": "\\App\\Enum\\EbayGranularityLevel\u003A\u003ACOARSE",
             "name": "COARSE",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayGranularityLevel.html#enumcase_COARSE"
+            "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_COARSE"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayGranularityLevel\u003A\u003AMEDIUM",
+            "fqsen": "\\App\\Enum\\EbayGranularityLevel\u003A\u003AMEDIUM",
             "name": "MEDIUM",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayGranularityLevel.html#enumcase_MEDIUM"
+            "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_MEDIUM"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayGranularityLevel\u003A\u003AFINE",
+            "fqsen": "\\App\\Enum\\EbayGranularityLevel\u003A\u003AFINE",
             "name": "FINE",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayGranularityLevel.html#enumcase_FINE"
+            "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_FINE"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay\\EbayGranularityLevel\u003A\u003ACUSTOM",
+            "fqsen": "\\App\\Enum\\EbayGranularityLevel\u003A\u003ACUSTOM",
             "name": "CUSTOM",
             "summary": "",
-            "url": "classes/App-Enum-Ebay-EbayGranularityLevel.html#enumcase_CUSTOM"
+            "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_CUSTOM"
+        },                {
+            "fqsen": "\\App\\Interface\\Entity",
+            "name": "Entity",
+            "summary": "The\u0020interface\u0020\u0027Entity\u0027\u0020defines\u0020that\u0020any\u0020class\u0020that\u0020implements\u0020the\u0020\u0060Entity\u0060\nmust\u0020provide\u0020an\u0020implementation\u0020for\u0020the\u0020\u0060toArray\u0060\u0020method,\u0020which\u0020returns\u0020an\u0020array.",
+            "url": "classes/App-Interface-Entity.html"
+        },                {
+            "fqsen": "\\App\\Interface\\Entity\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "",
+            "url": "classes/App-Interface-Entity.html#method_toArray"
         },                {
             "fqsen": "\\App\\Service\\EbayApiService",
             "name": "EbayApiService",
@@ -830,6 +830,16 @@ Search.appendIndex(
             "name": "siteId",
             "summary": "",
             "url": "classes/App-Service-EbayApiService.html#property_siteId"
+        },                {
+            "fqsen": "\\App\\Trait\\ToArrayTrait",
+            "name": "ToArrayTrait",
+            "summary": "The\u0020\u0027ToArrayTrait\u0027\u0020trait\u0020provides\u0020a\u0020functionality\u0020to\nconvert\u0020an\u0020object\u0020to\u0020an\u0020array\u0020representation\nbased\u0020on\u0020keys\u0020provided\u0020by\u0020\u0027\u0024this\u002D\u003EkeyArray\u0027.",
+            "url": "classes/App-Trait-ToArrayTrait.html"
+        },                {
+            "fqsen": "\\App\\Trait\\ToArrayTrait\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "Converts\u0020the\u0020object\u0020of\u0020the\u0020actual\u0020class\u0020to\u0020an\u0020array\nbased\u0020on\u0020given\u0020keys\u0020from\u0020\u0027\u0024this\u002D\u003EkeyArray\u0027\u0020created\u0020by\u0020the\u0020constructor.",
+            "url": "classes/App-Trait-ToArrayTrait.html#method_toArray"
         },                {
             "fqsen": "\\App\\Utility\\CustomCurl",
             "name": "CustomCurl",
@@ -986,90 +996,110 @@ Search.appendIndex(
             "summary": "The\u0020\u0027CategoryTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027Category\u0027\u0020class.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithoutIdAndParent\u0028\u0029",
-            "name": "testCategoryCreationWithoutIdAndParent",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020without\u0020id\u0020and\u0020parent.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutIdAndParent"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020array\u0020of\u0020keys\u0020and\u0020different\u0020instances\u0020of\u0020\u0027Category\u0027.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreationWithIdAndParent\u0028\u0029",
-            "name": "testCategoryCreationWithIdAndParent",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020id\u0020and\u0020parent.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithIdAndParent"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryCreation\u0028\u0029",
+            "name": "testCategoryCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027Category\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020and\u0020without\u0020id\u0020and\u0020parent.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithoutIdAndParent\u0028\u0029",
-            "name": "testCategoryGettersWithoutIdAndParent",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020no\u0020id\u0020or\u0020parent\u0020category\u0020provided.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutIdAndParent"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGetters\u0028\u0029",
+            "name": "testCategoryGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\nwith\u0020and\u0020without\u0020id\u0020and\u0020parent\u0020category\u0020provided.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryGettersWithIdAndParent\u0028\u0029",
-            "name": "testCategoryGettersWithIdAndParent",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020return\u0020correct\u0020values\nwith\u0020id\u0020and\u0020parent\u0020category\u0020provided.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithIdAndParent"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySettersModifyProperties\u0028\u0029",
-            "name": "testCategorySettersModifyProperties",
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySetters\u0028\u0029",
+            "name": "testCategorySetters",
             "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Category\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties"
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithoutIdAndParent\u0028\u0029",
-            "name": "testToArrayConversionWithoutIdAndParent",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020id\u0020and\u0020parent\u0020category.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutIdAndParent"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryToArrayConversion\u0028\u0029",
+            "name": "testCategoryToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020and\u0020without\u0020id\u0020and\u0020parent\u0020category.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestToArrayConversionWithIdAndParent\u0028\u0029",
-            "name": "testToArrayConversionWithIdAndParent",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020id\u0020and\u0020parent\u0020category.",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithIdAndParent"
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryToArrayThrowsExceptionForInvalidKey\u0028\u0029",
+            "name": "testCategoryToArrayThrowsExceptionForInvalidKey",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020when\u0020trying\u0020to\u0020convert\u0020an\u0020object\u0020to\u0020an\u0020array\nwith\u0020an\u0020invalid\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_tester"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024category",
+            "name": "category",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_category"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024categoryWithout",
+            "name": "categoryWithout",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest",
             "name": "ConditionTest",
             "summary": "The\u0020\u0027ConditionTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027Condition\u0027\u0020class.",
             "url": "classes/Tests-Unit-Entity-ConditionTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionCreationWithoutId\u0028\u0029",
-            "name": "testConditionCreationWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Condition\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020array\u0020of\u0020keys\u0020and\u0020different\u0020instances\u0020of\u0020\u0027Condition\u0027.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionCreationWithId\u0028\u0029",
-            "name": "testConditionCreationWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Condition\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionCreation\u0028\u0029",
+            "name": "testConditionCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027Condition\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionGettersWithoutId\u0028\u0029",
-            "name": "testConditionGettersWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionGetters\u0028\u0029",
+            "name": "testConditionGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionGettersWithId\u0028\u0029",
-            "name": "testConditionGettersWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithId"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionSettersModifyProperties\u0028\u0029",
-            "name": "testConditionSettersModifyProperties",
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionSetters\u0028\u0029",
+            "name": "testConditionSetters",
             "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Condition\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSettersModifyProperties"
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestToArrayConversionWithoutId\u0028\u0029",
-            "name": "testToArrayConversionWithoutId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Condition\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionToArrayConversion\u0028\u0029",
+            "name": "testConditionToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Condition\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestToArrayConversionWithId\u0028\u0029",
-            "name": "testToArrayConversionWithId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Condition\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionToArrayThrowsExceptionForInvalidKey\u0028\u0029",
+            "name": "testConditionToArrayThrowsExceptionForInvalidKey",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020when\u0020trying\u0020to\u0020convert\u0020an\u0020object\u0020to\u0020an\u0020array\nwith\u0020an\u0020invalid\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayThrowsExceptionForInvalidKey"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_keyArray"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024condition",
+            "name": "condition",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_condition"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024conditionWithout",
+            "name": "conditionWithout",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_conditionWithout"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest",
             "name": "ItemTest",
@@ -1078,153 +1108,163 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020different\u0020instances\u0020of\u0020\u0027Item\u0027.",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020array\u0020of\u0020keys\u0020and\u0020different\u0020instances\u0020of\u0020\u0027Item\u0027.",
             "url": "classes/Tests-Unit-Entity-ItemTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemCreationWithoutId\u0028\u0029",
-            "name": "testItemCreationWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Item\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemCreation\u0028\u0029",
+            "name": "testItemCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027Item\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemCreationWithId\u0028\u0029",
-            "name": "testItemCreationWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027Item\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemGetters\u0028\u0029",
+            "name": "testItemGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemGettersWithoutId\u0028\u0029",
-            "name": "testItemGettersWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithoutId"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemGettersWithId\u0028\u0029",
-            "name": "testItemGettersWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithId"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemSettersModifyProperties\u0028\u0029",
-            "name": "testItemSettersModifyProperties",
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemSetters\u0028\u0029",
+            "name": "testItemSetters",
             "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027Item\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersModifyProperties"
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestToArrayConversionWithoutId\u0028\u0029",
-            "name": "testToArrayConversionWithoutId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Item\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemToArrayConversion\u0028\u0029",
+            "name": "testItemToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Item\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestToArrayConversionWithId\u0028\u0029",
-            "name": "testToArrayConversionWithId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Item\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemToArrayThrowsExceptionForInvalidKey\u0028\u0029",
+            "name": "testItemToArrayThrowsExceptionForInvalidKey",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020when\u0020trying\u0020to\u0020convert\u0020an\u0020object\u0020to\u0020an\u0020array\nwith\u0020an\u0020invalid\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ItemTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024item01",
-            "name": "item01",
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_item01"
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_keyArray"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024item01WithoutId",
-            "name": "item01WithoutId",
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024item",
+            "name": "item",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_item01WithoutId"
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_item"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024item02",
-            "name": "item02",
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024itemWithout",
+            "name": "itemWithout",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_item02"
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest",
             "name": "ListingStatusTest",
             "summary": "The\u0020\u0027ListingStatusTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027ListingStatus\u0027\u0020class.",
             "url": "classes/Tests-Unit-Entity-ListingStatusTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusCreationWithoutId\u0028\u0029",
-            "name": "testListingStatusCreationWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027ListingStatus\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusCreationWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020array\u0020of\u0020keys\u0020and\u0020different\u0020instances\u0020of\u0020\u0027ListingStatus\u0027.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusCreationWithId\u0028\u0029",
-            "name": "testListingStatusCreationWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027ListingStatus\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusCreationWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusCreation\u0028\u0029",
+            "name": "testListingStatusCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027ListingStatus\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusGettersWithoutId\u0028\u0029",
-            "name": "testListingStatusGettersWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGettersWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusGetters\u0028\u0029",
+            "name": "testListingStatusGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusGettersWithId\u0028\u0029",
-            "name": "testListingStatusGettersWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGettersWithId"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusSettersModifyProperties\u0028\u0029",
-            "name": "testListingStatusSettersModifyProperties",
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusSetters\u0028\u0029",
+            "name": "testListingStatusSetters",
             "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSettersModifyProperties"
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestToArrayConversionWithoutId\u0028\u0029",
-            "name": "testToArrayConversionWithoutId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020ListingStatus\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testToArrayConversionWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusToArrayConversion\u0028\u0029",
+            "name": "testListingStatusToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020ListingStatus\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestToArrayConversionWithId\u0028\u0029",
-            "name": "testToArrayConversionWithId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020ListingStatus\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testToArrayConversionWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusToArrayThrowsExceptionForInvalidKey\u0028\u0029",
+            "name": "testListingStatusToArrayThrowsExceptionForInvalidKey",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020when\u0020trying\u0020to\u0020convert\u0020an\u0020object\u0020to\u0020an\u0020array\nwith\u0020an\u0020invalid\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayThrowsExceptionForInvalidKey"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_tester"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_keyArray"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024listingStatus",
+            "name": "listingStatus",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatus"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024listingStatusWithout",
+            "name": "listingStatusWithout",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatusWithout"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest",
             "name": "SiteCodeTest",
             "summary": "The\u0020\u0027SiteCodeTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027SiteCode\u0027\u0020class.",
             "url": "classes/Tests-Unit-Entity-SiteCodeTest.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeCreationWithoutId\u0028\u0029",
-            "name": "testSiteCodeCreationWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027SiteCode\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeCreationWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020array\u0020of\u0020keys\u0020and\u0020different\u0020instances\u0020of\u0020\u0027SiteCode\u0027.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeCreationWithId\u0028\u0029",
-            "name": "testSiteCodeCreationWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027SiteCode\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeCreationWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeCreation\u0028\u0029",
+            "name": "testSiteCodeCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027SiteCode\u0027\u0020instance\u0020is\u0020created\u0020correctly\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeGettersWithoutId\u0028\u0029",
-            "name": "testSiteCodeGettersWithoutId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGettersWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeGetters\u0028\u0029",
+            "name": "testSiteCodeGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeGettersWithId\u0028\u0029",
-            "name": "testSiteCodeGettersWithId",
-            "summary": "Tests\u0020whether\u0020the\u0020getters\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020return\u0020the\u0020correct\u0020values\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGettersWithId"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSettersModifyProperties\u0028\u0029",
-            "name": "testSiteCodeSettersModifyProperties",
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSetters\u0028\u0029",
+            "name": "testSiteCodeSetters",
             "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSettersModifyProperties"
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestToArrayConversionWithoutId\u0028\u0029",
-            "name": "testToArrayConversionWithoutId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020SiteCode\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020without\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testToArrayConversionWithoutId"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeToArrayConversion\u0028\u0029",
+            "name": "testSiteCodeToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020SiteCode\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020and\u0020without\u0020id.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestToArrayConversionWithId\u0028\u0029",
-            "name": "testToArrayConversionWithId",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020SiteCode\u0020object\u0020to\u0020the\u0020correct\u0020array\u0020with\u0020id.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testToArrayConversionWithId"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeToArrayThrowsExceptionForInvalidKey\u0028\u0029",
+            "name": "testSiteCodeToArrayThrowsExceptionForInvalidKey",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020when\u0020trying\u0020to\u0020convert\u0020an\u0020object\u0020to\u0020an\u0020array\nwith\u0020an\u0020invalid\u0020key.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayThrowsExceptionForInvalidKey"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
             "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024keyArray",
+            "name": "keyArray",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_keyArray"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024siteCode",
+            "name": "siteCode",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCode"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024siteCodeWithout",
+            "name": "siteCodeWithout",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCodeWithout"
         },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest",
             "name": "EbayApiServiceTest",
@@ -1601,20 +1641,25 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/app-entity.html"
         },                {
-            "fqsen": "\\App\\Enum\\Ebay",
-            "name": "Ebay",
-            "summary": "",
-            "url": "namespaces/app-enum-ebay.html"
-        },                {
             "fqsen": "\\App\\Enum",
             "name": "Enum",
             "summary": "",
             "url": "namespaces/app-enum.html"
         },                {
+            "fqsen": "\\App\\Interface",
+            "name": "Interface",
+            "summary": "",
+            "url": "namespaces/app-interface.html"
+        },                {
             "fqsen": "\\App\\Service",
             "name": "Service",
             "summary": "",
             "url": "namespaces/app-service.html"
+        },                {
+            "fqsen": "\\App\\Trait",
+            "name": "Trait",
+            "summary": "",
+            "url": "namespaces/app-trait.html"
         },                {
             "fqsen": "\\App\\Utility",
             "name": "Utility",

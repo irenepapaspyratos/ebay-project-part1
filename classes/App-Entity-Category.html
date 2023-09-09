@@ -73,7 +73,15 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -139,8 +147,11 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a>                    </span>
+                            <a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a>                    </span>
     
+            <span class="phpdocumentor-element__extends">
+            Uses
+                            <a href="classes/App-Trait-ToArrayTrait.html"><abbr title="\App\Trait\ToArrayTrait">ToArrayTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -151,14 +162,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
             <p class="phpdocumentor-summary">The `Category` class provides methods to deal with categories.</p>
 
     <section class="phpdocumentor-description"><p>The contained methods are getting/setting its properties
-and convert them to an array.</p>
+and convert them to an array using the 'ToArrayTrait'.</p>
 </section>
 
 
@@ -179,7 +190,7 @@ and convert them to an array.</p>
 
     </h4>
     <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
 must provide an implementation for the `toArray` method, which returns an array.</dd>    </dl>
 
 
@@ -209,6 +220,12 @@ must provide an implementation for the `toArray` method, which returns an array.
     <a href="classes/App-Entity-Category.html#property_id">$id</a>
     <span>
                         &nbsp;: int|null            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Entity-Category.html#property_keyArray">$keyArray</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
@@ -281,11 +298,12 @@ must provide an implementation for the `toArray` method, which returns an array.
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-Category.html#method_toArray">toArray()</a>
+    <a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>The &#039;toArray&#039; method converts the object of the class to an array.</dd>
+<dd>Converts the object of the actual class to an array
+based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</dd>
 
     </dl>
 
@@ -318,7 +336,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -351,7 +369,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
@@ -384,7 +402,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -393,6 +411,39 @@ must provide an implementation for the `toArray` method, which returns an array.
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int|null</span>
     <span class="phpdocumentor-signature__name">$id</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keyArray">
+        $keyArray
+        <a href="classes/App-Entity-Category.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$keyArray</span>
     </code>
 
     
@@ -417,7 +468,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -455,7 +506,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">33</span>
 
     </aside>
 
@@ -463,21 +514,19 @@ must provide an implementation for the `toArray` method, which returns an array.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryName</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyArray</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$categoryName</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentId</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-        <section class="phpdocumentor-description"><p>A category can have parents and the parent path would look like this example for the category Silk: Fabric&gt;Fine.</p>
-</section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                <span class="phpdocumentor-signature__argument__name">$keyArray</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database.</p>
+                    <section class="phpdocumentor-description"><p>Representing valid column names of the corresponding database table.</p>
 </section>
 
             </dd>
@@ -495,14 +544,25 @@ must provide an implementation for the `toArray` method, which returns an array.
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.</p>
+</section>
+
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$parentId</span>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                  = <span class="phpdocumentor-signature__argument__default-value">0</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent.</p>
+                    <section class="phpdocumentor-description"><p>Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent (Default = 0).</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database (Default = null).</p>
 </section>
 
             </dd>
@@ -526,7 +586,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -561,7 +621,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
     </aside>
 
@@ -596,7 +656,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">44</span>
 
     </aside>
 
@@ -631,7 +691,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
@@ -666,7 +726,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">66</span>
 
     </aside>
 
@@ -707,7 +767,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">66</span>
+    <span class="phpdocumentor-element-found-in__line">70</span>
 
     </aside>
 
@@ -748,14 +808,14 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
+    <span class="phpdocumentor-element-found-in__line">62</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -764,7 +824,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -789,7 +849,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
@@ -824,17 +884,18 @@ must provide an implementation for the `toArray` method, which returns an array.
 >
     <h4 class="phpdocumentor-element__name" id="method_toArray">
         toArray()
-        <a href="classes/App-Entity-Category.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Trait-ToArrayTrait.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/Category.php"><a href="files/src-entity-category.html"><abbr title="src/Entity/Category.php">Category.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Trait/ToArrayTrait.php"><a href="files/src-trait-toarraytrait.html"><abbr title="src/Trait/ToArrayTrait.php">ToArrayTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The &#039;toArray&#039; method converts the object of the class to an array.</p>
+        <p class="phpdocumentor-summary">Converts the object of the actual class to an array
+based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -972,6 +1033,7 @@ must provide an implementation for the `toArray` method, which returns an array.
                                                     <li><a href="classes/App-Entity-Category.html#property_categoryId">$categoryId<a href="classes/App-Entity-Category.html"></li>
                                                     <li><a href="classes/App-Entity-Category.html#property_categoryName">$categoryName<a href="classes/App-Entity-Category.html"></li>
                                                     <li><a href="classes/App-Entity-Category.html#property_id">$id<a href="classes/App-Entity-Category.html"></li>
+                                                    <li><a href="classes/App-Entity-Category.html#property_keyArray">$keyArray<a href="classes/App-Entity-Category.html"></li>
                                                     <li><a href="classes/App-Entity-Category.html#property_parentId">$parentId<a href="classes/App-Entity-Category.html"></li>
                                             </ul>
                 </li>
@@ -988,7 +1050,7 @@ must provide an implementation for the `toArray` method, which returns an array.
                                             <li><a href="classes/App-Entity-Category.html#method_setCategoryName">setCategoryName()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setId">setId()</a></li>
                                             <li><a href="classes/App-Entity-Category.html#method_setParentId">setParentId()</a></li>
-                                            <li><a href="classes/App-Entity-Category.html#method_toArray">toArray()</a></li>
+                                            <li><a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a></li>
                                     </ul>
             </li>
                     </ul>

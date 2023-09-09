@@ -73,7 +73,15 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -192,19 +200,19 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01">$item01</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item">$item</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01WithoutId">$item01WithoutId</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout">$itemWithout</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item02">$item02</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray">$keyArray</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -218,55 +226,42 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithId">testItemCreationWithId()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreation">testItemCreation()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Item&#039; instance is created correctly with id.</dd>
+<dd>Tests whether the &#039;Item&#039; instance is created correctly with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithoutId">testItemCreationWithoutId()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters">testItemGetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Item&#039; instance is created correctly without id.</dd>
+<dd>Tests whether the getters of the &#039;Item&#039; class return the correct values with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithId">testItemGettersWithId()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the getters of the &#039;Item&#039; class return the correct values with id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithoutId">testItemGettersWithoutId()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the getters of the &#039;Item&#039; class return the correct values without id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersModifyProperties">testItemSettersModifyProperties()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters">testItemSetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests whether the setters in the &#039;Item&#039; class modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithId">testToArrayConversionWithId()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion">testItemToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array with id.</dd>
+it converts a Item object to the correct array with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithoutId">testToArrayConversionWithoutId()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey">testItemToArrayThrowsExceptionForInvalidKey()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array without id.</dd>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Entity-ItemTest.html#method__before">_before()</a>
@@ -274,7 +269,7 @@ it converts a Item object to the correct array without id.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating different instances of &#039;Item&#039;.</dd>
+creating an array of keys and different instances of &#039;Item&#039;.</dd>
 
     </dl>
 
@@ -330,42 +325,9 @@ creating different instances of &#039;Item&#039;.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_item01">
-        $item01
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$item01</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_item01WithoutId">
-        $item01WithoutId
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01WithoutId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_item">
+        $item
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -381,7 +343,7 @@ creating different instances of &#039;Item&#039;.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$item01WithoutId</span>
+    <span class="phpdocumentor-signature__name">$item</span>
     </code>
 
     
@@ -396,9 +358,9 @@ creating different instances of &#039;Item&#039;.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_item02">
-        $item02
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_item02" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_itemWithout">
+        $itemWithout
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -414,7 +376,40 @@ creating different instances of &#039;Item&#039;.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$item02</span>
+    <span class="phpdocumentor-signature__name">$itemWithout</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keyArray">
+        $keyArray
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$keyArray</span>
     </code>
 
     
@@ -436,23 +431,23 @@ creating different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testItemCreationWithId">
-        testItemCreationWithId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemCreation">
+        testItemCreation()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreation" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Item&#039; instance is created correctly with id.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;Item&#039; instance is created correctly with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemCreationWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemCreation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -468,23 +463,23 @@ creating different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testItemCreationWithoutId">
-        testItemCreationWithoutId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemGetters">
+        testItemGetters()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">50</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Item&#039; instance is created correctly without id.</p>
+        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Item&#039; class return the correct values with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemCreationWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -500,79 +495,15 @@ creating different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testItemGettersWithId">
-        testItemGettersWithId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemSetters">
+        testItemSetters()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">83</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Item&#039; class return the correct values with id.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemGettersWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testItemGettersWithoutId">
-        testItemGettersWithoutId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">52</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Item&#039; class return the correct values without id.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemGettersWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testItemSettersModifyProperties">
-        testItemSettersModifyProperties()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersModifyProperties" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">114</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 
     </aside>
 
@@ -580,7 +511,7 @@ creating different instances of &#039;Item&#039;.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemSettersModifyProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemSetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -596,24 +527,24 @@ creating different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithId">
-        testToArrayConversionWithId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemToArrayConversion">
+        testItemToArrayConversion()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">208</span>
+    <span class="phpdocumentor-element-found-in__line">162</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array with id.</p>
+it converts a Item object to the correct array with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -629,24 +560,25 @@ it converts a Item object to the correct array with id.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithoutId">
-        testToArrayConversionWithoutId()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemToArrayThrowsExceptionForInvalidKey">
+        testItemToArrayThrowsExceptionForInvalidKey()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">171</span>
+    <span class="phpdocumentor-element-found-in__line">228</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array without id.</p>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -675,7 +607,7 @@ it converts a Item object to the correct array without id.</p>
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating different instances of &#039;Item&#039;.</p>
+creating an array of keys and different instances of &#039;Item&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -803,22 +735,20 @@ creating different instances of &#039;Item&#039;.</p>
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01">$item01<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_item01WithoutId">$item01WithoutId<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_item02">$item02<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_item">$item<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout">$itemWithout<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithId">testItemCreationWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreationWithoutId">testItemCreationWithoutId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithId">testItemGettersWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGettersWithoutId">testItemGettersWithoutId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersModifyProperties">testItemSettersModifyProperties()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithId">testToArrayConversionWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testToArrayConversionWithoutId">testToArrayConversionWithoutId()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreation">testItemCreation()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters">testItemGetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters">testItemSetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion">testItemToArrayConversion()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey">testItemToArrayThrowsExceptionForInvalidKey()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>

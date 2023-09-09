@@ -73,7 +73,15 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -191,6 +199,24 @@
                         &nbsp;: mixed            </span>
 </dt>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_condition">$condition</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_conditionWithout">$conditionWithout</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_keyArray">$keyArray</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
     </dl>
 
 <h4 id="toc-methods">
@@ -200,55 +226,50 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithId">testConditionCreationWithId()</a>
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreation">testConditionCreation()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Condition&#039; instance is created correctly with id.</dd>
+<dd>Tests whether the &#039;Condition&#039; instance is created correctly with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithoutId">testConditionCreationWithoutId()</a>
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGetters">testConditionGetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Condition&#039; instance is created correctly without id.</dd>
+<dd>Tests whether the getters of the &#039;Condition&#039; class return the correct values with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithId">testConditionGettersWithId()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the getters of the &#039;Condition&#039; class return the correct values with id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithoutId">testConditionGettersWithoutId()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the getters of the &#039;Condition&#039; class return the correct values without id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSettersModifyProperties">testConditionSettersModifyProperties()</a>
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSetters">testConditionSetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests whether the setters in the &#039;Condition&#039; class modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithId">testToArrayConversionWithId()</a>
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayConversion">testConditionToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Condition&#039; class whether
-it converts a Condition object to the correct array with id.</dd>
+it converts a Condition object to the correct array with and without id.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithoutId">testToArrayConversionWithoutId()</a>
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayThrowsExceptionForInvalidKey">testConditionToArrayThrowsExceptionForInvalidKey()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Condition&#039; class whether
-it converts a Condition object to the correct array without id.</dd>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Tests-Unit-Entity-ConditionTest.html#method__before">_before()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Sets up the necessary environment for running tests by
+creating an array of keys and different instances of &#039;Condition&#039;.</dd>
 
     </dl>
 
@@ -297,6 +318,105 @@ it converts a Condition object to the correct array without id.</dd>
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_condition">
+        $condition
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_condition" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$condition</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_conditionWithout">
+        $conditionWithout
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_conditionWithout" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$conditionWithout</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keyArray">
+        $keyArray
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$keyArray</span>
+    </code>
+
+    
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -311,23 +431,23 @@ it converts a Condition object to the correct array without id.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testConditionCreationWithId">
-        testConditionCreationWithId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testConditionCreation">
+        testConditionCreation()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreation" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Condition&#039; instance is created correctly with id.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;Condition&#039; instance is created correctly with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testConditionCreationWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testConditionCreation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -343,23 +463,23 @@ it converts a Condition object to the correct array without id.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testConditionCreationWithoutId">
-        testConditionCreationWithoutId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testConditionGetters">
+        testConditionGetters()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Condition&#039; instance is created correctly without id.</p>
+        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Condition&#039; class return the correct values with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testConditionCreationWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testConditionGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -375,79 +495,15 @@ it converts a Condition object to the correct array without id.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testConditionGettersWithId">
-        testConditionGettersWithId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testConditionSetters">
+        testConditionSetters()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">58</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Condition&#039; class return the correct values with id.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testConditionGettersWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testConditionGettersWithoutId">
-        testConditionGettersWithoutId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">44</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Condition&#039; class return the correct values without id.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testConditionGettersWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testConditionSettersModifyProperties">
-        testConditionSettersModifyProperties()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSettersModifyProperties" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">72</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
@@ -455,7 +511,7 @@ it converts a Condition object to the correct array without id.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testConditionSettersModifyProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testConditionSetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -471,24 +527,24 @@ it converts a Condition object to the correct array without id.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithId">
-        testToArrayConversionWithId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testConditionToArrayConversion">
+        testConditionToArrayConversion()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayConversion" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">111</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Condition&#039; class whether
-it converts a Condition object to the correct array with id.</p>
+it converts a Condition object to the correct array with and without id.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testConditionToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -504,24 +560,58 @@ it converts a Condition object to the correct array with id.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithoutId">
-        testToArrayConversionWithoutId()
-        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithoutId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testConditionToArrayThrowsExceptionForInvalidKey">
+        testConditionToArrayThrowsExceptionForInvalidKey()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">92</span>
+    <span class="phpdocumentor-element-found-in__line">103</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Condition&#039; class whether
-it converts a Condition object to the correct array without id.</p>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithoutId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testConditionToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method__before">
+        _before()
+        <a href="classes/Tests-Unit-Entity-ConditionTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ConditionTest.php"><a href="files/tests-unit-entity-conditiontest.html"><abbr title="tests/Unit/Entity/ConditionTest.php">ConditionTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
+creating an array of keys and different instances of &#039;Condition&#039;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">_before</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -645,19 +735,21 @@ it converts a Condition object to the correct array without id.</p>
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-ConditionTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#property_condition">$condition<a href="classes/Tests-Unit-Entity-ConditionTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#property_conditionWithout">$conditionWithout<a href="classes/Tests-Unit-Entity-ConditionTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-ConditionTest.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithId">testConditionCreationWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreationWithoutId">testConditionCreationWithoutId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithId">testConditionGettersWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGettersWithoutId">testConditionGettersWithoutId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSettersModifyProperties">testConditionSettersModifyProperties()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithId">testToArrayConversionWithId()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testToArrayConversionWithoutId">testToArrayConversionWithoutId()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionCreation">testConditionCreation()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionGetters">testConditionGetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionSetters">testConditionSetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayConversion">testConditionToArrayConversion()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayThrowsExceptionForInvalidKey">testConditionToArrayThrowsExceptionForInvalidKey()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ConditionTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>
                     </ul>

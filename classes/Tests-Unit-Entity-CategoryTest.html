@@ -73,7 +73,15 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -191,6 +199,24 @@
                         &nbsp;: mixed            </span>
 </dt>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_category">$category</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout">$categoryWithout</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray">$keyArray</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
     </dl>
 
 <h4 id="toc-methods">
@@ -200,57 +226,51 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithIdAndParent">testCategoryCreationWithIdAndParent()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation">testCategoryCreation()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Category&#039; instance is created correctly with id and parent.</dd>
+<dd>Tests whether the &#039;Category&#039; instance is created correctly with and without id and parent.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutIdAndParent">testCategoryCreationWithoutIdAndParent()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the &#039;Category&#039; instance is created correctly without id and parent.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithIdAndParent">testCategoryGettersWithIdAndParent()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests whether the getters of the &#039;Category&#039; class return correct values
-with id and parent category provided.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutIdAndParent">testCategoryGettersWithoutIdAndParent()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters">testCategoryGetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests whether the getters of the &#039;Category&#039; class return the correct values
-with no id or parent category provided.</dd>
+with and without id and parent category provided.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters">testCategorySetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests whether the setters in the &#039;Category&#039; class modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithIdAndParent">testToArrayConversionWithIdAndParent()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion">testCategoryToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array with id and parent category.</dd>
+it converts a Category object to the correct array with and without id and parent category.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutIdAndParent">testToArrayConversionWithoutIdAndParent()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey">testCategoryToArrayThrowsExceptionForInvalidKey()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array without id and parent category.</dd>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method__before">_before()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Sets up the necessary environment for running tests by
+creating an array of keys and different instances of &#039;Category&#039;.</dd>
 
     </dl>
 
@@ -299,6 +319,105 @@ it converts a Category object to the correct array without id and parent categor
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_category">
+        $category
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_category" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$category</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_categoryWithout">
+        $categoryWithout
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$categoryWithout</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keyArray">
+        $keyArray
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$keyArray</span>
+    </code>
+
+    
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -313,23 +432,23 @@ it converts a Category object to the correct array without id and parent categor
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreationWithIdAndParent">
-        testCategoryCreationWithIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreation">
+        testCategoryCreation()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Category&#039; instance is created correctly with id and parent.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;Category&#039; instance is created correctly with and without id and parent.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryCreationWithIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryCreation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -345,89 +464,24 @@ it converts a Category object to the correct array without id and parent categor
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryCreationWithoutIdAndParent">
-        testCategoryCreationWithoutIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryGetters">
+        testCategoryGetters()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the &#039;Category&#039; instance is created correctly without id and parent.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryCreationWithoutIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersWithIdAndParent">
-        testCategoryGettersWithIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">61</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Category&#039; class return correct values
-with id and parent category provided.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryGettersWithIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryGettersWithoutIdAndParent">
-        testCategoryGettersWithoutIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">46</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Category&#039; class return the correct values
-with no id or parent category provided.</p>
+with and without id and parent category provided.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryGettersWithoutIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -443,15 +497,15 @@ with no id or parent category provided.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategorySettersModifyProperties">
-        testCategorySettersModifyProperties()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategorySetters">
+        testCategorySetters()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -459,7 +513,7 @@ with no id or parent category provided.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategorySettersModifyProperties</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategorySetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -475,24 +529,24 @@ with no id or parent category provided.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithIdAndParent">
-        testToArrayConversionWithIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryToArrayConversion">
+        testCategoryToArrayConversion()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">118</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array with id and parent category.</p>
+it converts a Category object to the correct array with and without id and parent category.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -508,24 +562,58 @@ it converts a Category object to the correct array with id and parent category.<
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testToArrayConversionWithoutIdAndParent">
-        testToArrayConversionWithoutIdAndParent()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutIdAndParent" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryToArrayThrowsExceptionForInvalidKey">
+        testCategoryToArrayThrowsExceptionForInvalidKey()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">98</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array without id and parent category.</p>
+an exception is thrown when trying to convert an object to an array
+with an invalid key.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testToArrayConversionWithoutIdAndParent</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method__before">
+        _before()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
+creating an array of keys and different instances of &#039;Category&#039;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">_before</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -649,19 +737,21 @@ it converts a Category object to the correct array without id and parent categor
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_category">$category<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout">$categoryWithout<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithIdAndParent">testCategoryCreationWithIdAndParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreationWithoutIdAndParent">testCategoryCreationWithoutIdAndParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithIdAndParent">testCategoryGettersWithIdAndParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGettersWithoutIdAndParent">testCategoryGettersWithoutIdAndParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersModifyProperties">testCategorySettersModifyProperties()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithIdAndParent">testToArrayConversionWithIdAndParent()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testToArrayConversionWithoutIdAndParent">testToArrayConversionWithoutIdAndParent()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation">testCategoryCreation()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters">testCategoryGetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters">testCategorySetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion">testCategoryToArrayConversion()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey">testCategoryToArrayThrowsExceptionForInvalidKey()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>
                     </ul>

@@ -73,7 +73,15 @@
                 
             </li>
                     <li>
+                <a href="namespaces/app-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -139,8 +147,11 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a>                    </span>
+                            <a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a>                    </span>
     
+            <span class="phpdocumentor-element__extends">
+            Uses
+                            <a href="classes/App-Trait-ToArrayTrait.html"><abbr title="\App\Trait\ToArrayTrait">ToArrayTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -151,14 +162,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
             <p class="phpdocumentor-summary">The `SiteCode` class provides methods to deal with codes specifying country related sites.</p>
 
     <section class="phpdocumentor-description"><p>The contained methods are getting/setting its properties
-and convert them to an array.</p>
+and convert them to an array using the 'ToArrayTrait'.</p>
 </section>
 
 
@@ -179,7 +190,7 @@ and convert them to an array.</p>
 
     </h4>
     <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Entity-Entity.html"><abbr title="\App\Entity\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
 must provide an implementation for the `toArray` method, which returns an array.</dd>    </dl>
 
 
@@ -203,6 +214,12 @@ must provide an implementation for the `toArray` method, which returns an array.
     <a href="classes/App-Entity-SiteCode.html#property_id">$id</a>
     <span>
                         &nbsp;: int|null            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Entity-SiteCode.html#property_keyArray">$keyArray</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
@@ -233,15 +250,15 @@ must provide an implementation for the `toArray` method, which returns an array.
 <dd>The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-SiteCode.html#method_getGlobalId">getGlobalId()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Entity-SiteCode.html#method_getId">getId()</a>
     <span>
                                 &nbsp;: int|null    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Entity-SiteCode.html#method_getSiteGlobalId">getSiteGlobalId()</a>
+    <span>
+                                &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -257,13 +274,13 @@ must provide an implementation for the `toArray` method, which returns an array.
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-SiteCode.html#method_setGlobalId">setGlobalId()</a>
+    <a href="classes/App-Entity-SiteCode.html#method_setId">setId()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-SiteCode.html#method_setId">setId()</a>
+    <a href="classes/App-Entity-SiteCode.html#method_setSiteGlobalId">setSiteGlobalId()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
@@ -281,11 +298,12 @@ must provide an implementation for the `toArray` method, which returns an array.
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-SiteCode.html#method_toArray">toArray()</a>
+    <a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>The &#039;toArray&#039; method converts the object of the class to an array.</dd>
+<dd>Converts the object of the actual class to an array
+based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</dd>
 
     </dl>
 
@@ -318,7 +336,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -351,7 +369,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -360,6 +378,39 @@ must provide an implementation for the `toArray` method, which returns an array.
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">int|null</span>
     <span class="phpdocumentor-signature__name">$id</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_keyArray">
+        $keyArray
+        <a href="classes/App-Entity-SiteCode.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$keyArray</span>
     </code>
 
     
@@ -384,7 +435,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
@@ -417,7 +468,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
@@ -455,7 +506,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">32</span>
 
     </aside>
 
@@ -463,7 +514,7 @@ must provide an implementation for the `toArray` method, which returns an array.
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$globalId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyArray</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$siteName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$globalId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -471,13 +522,11 @@ must provide an implementation for the `toArray` method, which returns an array.
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                <span class="phpdocumentor-signature__argument__name">$keyArray</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database.</p>
-</section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$siteId</span>
@@ -506,46 +555,20 @@ must provide an implementation for the `toArray` method, which returns an array.
 </section>
 
             </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database (Default = null).</p>
+</section>
+
+            </dd>
             </dl>
 
     
 
     
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getGlobalId">
-        getGlobalId()
-        <a href="classes/App-Entity-SiteCode.html#method_getGlobalId" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">50</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getGlobalId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
 </article>
                     <article
         class="phpdocumentor-element
@@ -561,7 +584,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -588,6 +611,41 @@ must provide an implementation for the `toArray` method, which returns an array.
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getSiteGlobalId">
+        getSiteGlobalId()
+        <a href="classes/App-Entity-SiteCode.html#method_getSiteGlobalId" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">55</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getSiteGlobalId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getSiteId">
         getSiteId()
         <a href="classes/App-Entity-SiteCode.html#method_getSiteId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -596,7 +654,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">47</span>
 
     </aside>
 
@@ -631,7 +689,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
@@ -658,22 +716,63 @@ must provide an implementation for the `toArray` method, which returns an array.
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setGlobalId">
-        setGlobalId()
-        <a href="classes/App-Entity-SiteCode.html#method_setGlobalId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setId">
+        setId()
+        <a href="classes/App-Entity-SiteCode.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setGlobalId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$globalId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$id</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setSiteGlobalId">
+        setSiteGlobalId()
+        <a href="classes/App-Entity-SiteCode.html#method_setSiteGlobalId" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">73</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setSiteGlobalId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$globalId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -699,47 +798,6 @@ must provide an implementation for the `toArray` method, which returns an array.
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setId">
-        setId()
-        <a href="classes/App-Entity-SiteCode.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">56</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_setSiteId">
         setSiteId()
         <a href="classes/App-Entity-SiteCode.html#method_setSiteId" class="headerlink"><i class="fas fa-link"></i></a>
@@ -748,7 +806,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
@@ -789,7 +847,7 @@ must provide an implementation for the `toArray` method, which returns an array.
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">69</span>
 
     </aside>
 
@@ -824,17 +882,18 @@ must provide an implementation for the `toArray` method, which returns an array.
 >
     <h4 class="phpdocumentor-element__name" id="method_toArray">
         toArray()
-        <a href="classes/App-Entity-SiteCode.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Trait-ToArrayTrait.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/SiteCode.php"><a href="files/src-entity-sitecode.html"><abbr title="src/Entity/SiteCode.php">SiteCode.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Trait/ToArrayTrait.php"><a href="files/src-trait-toarraytrait.html"><abbr title="src/Trait/ToArrayTrait.php">ToArrayTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">78</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The &#039;toArray&#039; method converts the object of the class to an array.</p>
+        <p class="phpdocumentor-summary">Converts the object of the actual class to an array
+based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -971,6 +1030,7 @@ must provide an implementation for the `toArray` method, which returns an array.
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/App-Entity-SiteCode.html#property_globalId">$globalId<a href="classes/App-Entity-SiteCode.html"></li>
                                                     <li><a href="classes/App-Entity-SiteCode.html#property_id">$id<a href="classes/App-Entity-SiteCode.html"></li>
+                                                    <li><a href="classes/App-Entity-SiteCode.html#property_keyArray">$keyArray<a href="classes/App-Entity-SiteCode.html"></li>
                                                     <li><a href="classes/App-Entity-SiteCode.html#property_siteId">$siteId<a href="classes/App-Entity-SiteCode.html"></li>
                                                     <li><a href="classes/App-Entity-SiteCode.html#property_siteName">$siteName<a href="classes/App-Entity-SiteCode.html"></li>
                                             </ul>
@@ -980,15 +1040,15 @@ must provide an implementation for the `toArray` method, which returns an array.
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Entity-SiteCode.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/App-Entity-SiteCode.html#method_getGlobalId">getGlobalId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_getId">getId()</a></li>
+                                            <li><a href="classes/App-Entity-SiteCode.html#method_getSiteGlobalId">getSiteGlobalId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_getSiteId">getSiteId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_getSiteName">getSiteName()</a></li>
-                                            <li><a href="classes/App-Entity-SiteCode.html#method_setGlobalId">setGlobalId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_setId">setId()</a></li>
+                                            <li><a href="classes/App-Entity-SiteCode.html#method_setSiteGlobalId">setSiteGlobalId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_setSiteId">setSiteId()</a></li>
                                             <li><a href="classes/App-Entity-SiteCode.html#method_setSiteName">setSiteName()</a></li>
-                                            <li><a href="classes/App-Entity-SiteCode.html#method_toArray">toArray()</a></li>
+                                            <li><a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a></li>
                                     </ul>
             </li>
                     </ul>
