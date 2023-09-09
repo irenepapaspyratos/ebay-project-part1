@@ -6,8 +6,8 @@ use App\Utility\XmlUtils;
 use App\Utility\CustomCurl;
 use App\Utility\CustomLogger;
 use App\Utility\DateUtils;
-use App\Enum\Ebay\EbayDetailLevel;
-use App\Enum\Ebay\EbayGranularityLevel;
+use App\Enum\EbayDetailLevel;
+use App\Enum\EbayGranularityLevel;
 
 /**
  * The `EbayApiService` class provides methods for making API calls to eBay.

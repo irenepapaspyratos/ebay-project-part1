@@ -13,173 +13,164 @@ use Codeception\Test\Unit;
 class ItemTest extends Unit {
 
     protected $tester;
-    private $item01;
-    private $item01WithoutId;
-    private $item02;
+    private $keyArray;
+    private $item;
+    private $itemWithout;
 
     /**
      * Sets up the necessary environment for running tests by 
-     * creating different instances of 'Item'.
+     * creating an array of keys and different instances of 'Item'.
      */
     protected function _before() {
 
-        $this->item01WithoutId = new Item(null, '111111111111', 'Silk Scarf', 10.89, 'Active', 5, 3, 1000, 25894, '444', '', 'silk-scarf.com', '["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', 77, 'Germany', '€', '["Europe"]', '["DHL", "PickUp"]', '["compatibility1", "compatibility2"]', '["specifics1", "specifics2"]', '<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', 9.0, 'filetimeString');
-        $this->item01 = new Item(1, '111111111111', 'Silk Scarf', 10.89, 'Active', 5, 3, 1000, 25894, '444', '', 'silk-scarf.com', '["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', 77, 'Germany', '€', '["Europe"]', '["DHL", "PickUp"]', '["compatibility1", "compatibility2"]', '["specifics1", "specifics2"]', '<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', 9.0, 'filetimeString');
-        $this->item02 = new Item(2, '222222222222', 'Woolen Hat', 14.99, 'Ended', 10, 0, 1500, 38954, '555', '777', 'woolen-hat.com', '["galleryPic.com", "hatPic1.com", "hatPic2.com"]', 88, 'France', '€', '["Asia"]', '["FedEx", "SelfPickup"]', '["hatCompatibility1", "hatCompatibility2"]', '["hatSpecifics1", "hatSpecifics2"]', '<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>', 13.5, 'differentFiletimeString');
+        $this->keyArray = [
+            'id', 'item_id', 'title', 'current_price', 'listing_status', 'quantity', 'quantity_sold', 'condition',
+            'category', 'store_category_id', 'store_category_2_id', 'view_item_url', 'pictures',
+            'site', 'country', 'currency', 'ship_to_locations', 'shipping_options',
+            'item_compatibility', 'item_specifics', 'html_description', 'net_price', 'filetime'
+        ];
+
+        $this->item = new Item($this->keyArray, '111111111111', 'Silk Scarf', 10.89, 'Active', 5, 3, 1000, 25894, '444', '', 'silk-scarf.com', '["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', 77, 'Germany', '€', '["Europe"]', '["DHL", "PickUp"]', '["compatibility1", "compatibility2"]', '["specifics1", "specifics2"]', '<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', 9.0, 'filetimeString', 2);
+        $this->itemWithout = new Item($this->keyArray, '222222222222', 'Woolen Hat', 14.99, 'Ended', 10, 0, 1500, 38954, '555', '777', 'woolen-hat.com', '["galleryPic.com", "hatPic1.com", "hatPic2.com"]', 88, 'France', '€', '["Asia"]', '["FedEx", "SelfPickup"]', '["hatCompatibility1", "hatCompatibility2"]', '["hatSpecifics1", "hatSpecifics2"]', '<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>', 13.5, 'differentFiletimeString', null);
     }
 
     /**
-     * Tests whether the 'Item' instance is created correctly without id.
+     * Tests whether the 'Item' instance is created correctly with and without id.
      */
-    public function testItemCreationWithoutId() {
+    public function testItemCreation() {
 
         // Assert that an instance of 'Item' was created
-        $this->assertInstanceOf(Item::class, $this->item01WithoutId);
+        $this->assertInstanceOf(Item::class, $this->item);
+        $this->assertInstanceOf(Item::class, $this->itemWithout);
     }
 
     /**
-     * Tests whether the 'Item' instance is created correctly with id.
+     * Tests whether the getters of the 'Item' class return the correct values with and without id.
      */
-    public function testItemCreationWithId() {
-
-        // Assert that an instance of 'Item' was created
-        $this->assertInstanceOf(Item::class, $this->item01);
-    }
-
-    /**
-     * Tests whether the getters of the 'Item' class return the correct values without id.
-     */
-    public function testItemGettersWithoutId() {
+    public function testItemGetters() {
 
         // Assert that the getters return the expected value
-        $this->assertEquals(null, $this->item01WithoutId->getId());
-        $this->assertEquals('111111111111', $this->item01WithoutId->getItemId());
-        $this->assertEquals('Silk Scarf', $this->item01WithoutId->getTitle());
-        $this->assertEquals(10.89, $this->item01WithoutId->getCurrentPrice());
-        $this->assertEquals('Active', $this->item01WithoutId->getListingStatus());
-        $this->assertEquals(5, $this->item01WithoutId->getQuantity());
-        $this->assertEquals(3, $this->item01WithoutId->getQuantitySold());
-        $this->assertEquals(1000, $this->item01->getConditionId());
-        $this->assertEquals(25894, $this->item01WithoutId->getCategoryId());
-        $this->assertEquals('444', $this->item01WithoutId->getStoreCategoryId());
-        $this->assertEquals('', $this->item01WithoutId->getStoreCategory2Id());
-        $this->assertEquals('silk-scarf.com', $this->item01WithoutId->getViewItemUrl());
-        $this->assertEquals('["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', $this->item01WithoutId->getPictures());
-        $this->assertEquals(77, $this->item01WithoutId->getSite());
-        $this->assertEquals('Germany', $this->item01WithoutId->getCountry());
-        $this->assertEquals('€', $this->item01WithoutId->getCurrency());
-        $this->assertEquals('["Europe"]', $this->item01WithoutId->getShipToLocations());
-        $this->assertEquals('["DHL", "PickUp"]', $this->item01WithoutId->getShippingOptions());
-        $this->assertEquals('["compatibility1", "compatibility2"]', $this->item01WithoutId->getItemCompatibility());
-        $this->assertEquals('["specifics1", "specifics2"]', $this->item01WithoutId->getItemSpecifics());
-        $this->assertEquals('<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', $this->item01WithoutId->getHtmlDescription());
-        $this->assertEquals(9.0, $this->item01WithoutId->getNetPrice());
-        $this->assertEquals('filetimeString', $this->item01WithoutId->getFiletime());
-    }
+        $this->assertEquals(2, $this->item->getId());
+        $this->assertEquals('111111111111', $this->item->getItemId());
+        $this->assertEquals('Silk Scarf', $this->item->getTitle());
+        $this->assertEquals(10.89, $this->item->getCurrentPrice());
+        $this->assertEquals('Active', $this->item->getListingStatus());
+        $this->assertEquals(5, $this->item->getQuantity());
+        $this->assertEquals(3, $this->item->getQuantitySold());
+        $this->assertEquals(1000, $this->item->getCondition());
+        $this->assertEquals(25894, $this->item->getCategory());
+        $this->assertEquals('444', $this->item->getStoreCategoryId());
+        $this->assertEquals('', $this->item->getStoreCategory2Id());
+        $this->assertEquals('silk-scarf.com', $this->item->getViewItemUrl());
+        $this->assertEquals('["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', $this->item->getPictures());
+        $this->assertEquals(77, $this->item->getSite());
+        $this->assertEquals('Germany', $this->item->getCountry());
+        $this->assertEquals('€', $this->item->getCurrency());
+        $this->assertEquals('["Europe"]', $this->item->getShipToLocations());
+        $this->assertEquals('["DHL", "PickUp"]', $this->item->getShippingOptions());
+        $this->assertEquals('["compatibility1", "compatibility2"]', $this->item->getItemCompatibility());
+        $this->assertEquals('["specifics1", "specifics2"]', $this->item->getItemSpecifics());
+        $this->assertEquals('<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', $this->item->getHtmlDescription());
+        $this->assertEquals(9.0, $this->item->getNetPrice());
+        $this->assertEquals('filetimeString', $this->item->getFiletime());
 
-    /**
-     * Tests whether the getters of the 'Item' class return the correct values with id.
-     */
-    public function testItemGettersWithId() {
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(1, $this->item01->getId());
-        $this->assertEquals('111111111111', $this->item01->getItemId());
-        $this->assertEquals('Silk Scarf', $this->item01->getTitle());
-        $this->assertEquals(10.89, $this->item01->getCurrentPrice());
-        $this->assertEquals('Active', $this->item01->getListingStatus());
-        $this->assertEquals(5, $this->item01->getQuantity());
-        $this->assertEquals(3, $this->item01->getQuantitySold());
-        $this->assertEquals(1000, $this->item01->getConditionId());
-        $this->assertEquals(25894, $this->item01->getCategoryId());
-        $this->assertEquals('444', $this->item01->getStoreCategoryId());
-        $this->assertEquals('', $this->item01->getStoreCategory2Id());
-        $this->assertEquals('silk-scarf.com', $this->item01->getViewItemUrl());
-        $this->assertEquals('["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', $this->item01->getPictures());
-        $this->assertEquals(77, $this->item01->getSite());
-        $this->assertEquals('Germany', $this->item01->getCountry());
-        $this->assertEquals('€', $this->item01->getCurrency());
-        $this->assertEquals('["Europe"]', $this->item01->getShipToLocations());
-        $this->assertEquals('["DHL", "PickUp"]', $this->item01->getShippingOptions());
-        $this->assertEquals('["compatibility1", "compatibility2"]', $this->item01->getItemCompatibility());
-        $this->assertEquals('["specifics1", "specifics2"]', $this->item01->getItemSpecifics());
-        $this->assertEquals('<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', $this->item01->getHtmlDescription());
-        $this->assertEquals(9.0, $this->item01->getNetPrice());
-        $this->assertEquals('filetimeString', $this->item01->getFiletime());
+        $this->assertEquals(null, $this->itemWithout->getId());
+        $this->assertEquals('222222222222', $this->itemWithout->getItemId());
+        $this->assertEquals('Woolen Hat', $this->itemWithout->getTitle());
+        $this->assertEquals(14.99, $this->itemWithout->getCurrentPrice());
+        $this->assertEquals('Ended', $this->itemWithout->getListingStatus());
+        $this->assertEquals(10, $this->itemWithout->getQuantity());
+        $this->assertEquals(0, $this->itemWithout->getQuantitySold());
+        $this->assertEquals(1500, $this->itemWithout->getCondition());
+        $this->assertEquals(38954, $this->itemWithout->getCategory());
+        $this->assertEquals('555', $this->itemWithout->getStoreCategoryId());
+        $this->assertEquals('777', $this->itemWithout->getStoreCategory2Id());
+        $this->assertEquals('woolen-hat.com', $this->itemWithout->getViewItemUrl());
+        $this->assertEquals('["galleryPic.com", "hatPic1.com", "hatPic2.com"]', $this->itemWithout->getPictures());
+        $this->assertEquals(88, $this->itemWithout->getSite());
+        $this->assertEquals('France', $this->itemWithout->getCountry());
+        $this->assertEquals('€', $this->itemWithout->getCurrency());
+        $this->assertEquals('["Asia"]', $this->itemWithout->getShipToLocations());
+        $this->assertEquals('["FedEx", "SelfPickup"]', $this->itemWithout->getShippingOptions());
+        $this->assertEquals('["hatCompatibility1", "hatCompatibility2"]', $this->itemWithout->getItemCompatibility());
+        $this->assertEquals('["hatSpecifics1", "hatSpecifics2"]', $this->itemWithout->getItemSpecifics());
+        $this->assertEquals('<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>', $this->itemWithout->getHtmlDescription());
+        $this->assertEquals(13.5, $this->itemWithout->getNetPrice());
+        $this->assertEquals('differentFiletimeString', $this->itemWithout->getFiletime());
     }
 
     /**
      * Tests whether the setters in the 'Item' class modify the properties correctly.
      */
-    public function testItemSettersModifyProperties() {
+    public function testItemSetters() {
 
         // Act 
-        $this->item01->setId(2);
-        $this->item01->setItemId('222222222222');
-        $this->item01->setTitle('Woolen Hat');
-        $this->item01->setCurrentPrice(14.99);
-        $this->item01->setListingStatus('Ended');
-        $this->item01->setQuantity(10);
-        $this->item01->setQuantitySold(0);
-        $this->item01->setConditionId(1500);
-        $this->item01->setCategoryId(38954);
-        $this->item01->setStoreCategoryId('555');
-        $this->item01->setStoreCategory2Id('777');
-        $this->item01->setViewItemUrl('woolen-hat.com');
-        $this->item01->setPictures('["galleryPic.com", "hatPic1.com", "hatPic2.com"]');
-        $this->item01->setSite(88);
-        $this->item01->setCountry('France');
-        $this->item01->setCurrency('€');
-        $this->item01->setShipToLocations('["Asia"]');
-        $this->item01->setShippingOptions('["FedEx", "SelfPickup"]');
-        $this->item01->setItemCompatibility('["hatCompatibility1", "hatCompatibility2"]');
-        $this->item01->setItemSpecifics('["hatSpecifics1", "hatSpecifics2"]');
-        $this->item01->setHtmlDescription('<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>');
-        $this->item01->setNetPrice(13.5);
-        $this->item01->setFiletime('differentFiletimeString');
+        $this->item->setId(2);
+        $this->item->setItemId('222222222222');
+        $this->item->setTitle('Woolen Hat');
+        $this->item->setCurrentPrice(14.99);
+        $this->item->setListingStatus('Ended');
+        $this->item->setQuantity(10);
+        $this->item->setQuantitySold(0);
+        $this->item->setCondition(1500);
+        $this->item->setCategory(38954);
+        $this->item->setStoreCategoryId('555');
+        $this->item->setStoreCategory2Id('777');
+        $this->item->setViewItemUrl('woolen-hat.com');
+        $this->item->setPictures('["galleryPic.com", "hatPic1.com", "hatPic2.com"]');
+        $this->item->setSite(88);
+        $this->item->setCountry('France');
+        $this->item->setCurrency('€');
+        $this->item->setShipToLocations('["Asia"]');
+        $this->item->setShippingOptions('["FedEx", "SelfPickup"]');
+        $this->item->setItemCompatibility('["hatCompatibility1", "hatCompatibility2"]');
+        $this->item->setItemSpecifics('["hatSpecifics1", "hatSpecifics2"]');
+        $this->item->setHtmlDescription('<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>');
+        $this->item->setNetPrice(13.5);
+        $this->item->setFiletime('differentFiletimeString');
 
         // Assert
-        $this->assertEquals(2, $this->item01->getId());
-        $this->assertEquals('222222222222', $this->item01->getItemId());
-        $this->assertEquals('Woolen Hat', $this->item01->getTitle());
-        $this->assertEquals(14.99, $this->item01->getCurrentPrice());
-        $this->assertEquals('Ended', $this->item01->getListingStatus());
-        $this->assertEquals(10, $this->item01->getQuantity());
-        $this->assertEquals(0, $this->item01->getQuantitySold());
-        $this->assertEquals(1500, $this->item01->getConditionId());
-        $this->assertEquals(38954, $this->item01->getCategoryId());
-        $this->assertEquals('555', $this->item01->getStoreCategoryId());
-        $this->assertEquals('777', $this->item01->getStoreCategory2Id());
-        $this->assertEquals('woolen-hat.com', $this->item01->getViewItemUrl());
-        $this->assertEquals('["galleryPic.com", "hatPic1.com", "hatPic2.com"]', $this->item01->getPictures());
-        $this->assertEquals(88, $this->item01->getSite());
-        $this->assertEquals('France', $this->item01->getCountry());
-        $this->assertEquals('€', $this->item01->getCurrency());
-        $this->assertEquals('["Asia"]', $this->item01->getShipToLocations());
-        $this->assertEquals('["FedEx", "SelfPickup"]', $this->item01->getShippingOptions());
-        $this->assertEquals('["hatCompatibility1", "hatCompatibility2"]', $this->item01->getItemCompatibility());
-        $this->assertEquals('["hatSpecifics1", "hatSpecifics2"]', $this->item01->getItemSpecifics());
-        $this->assertEquals('<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>', $this->item01->getHtmlDescription());
-        $this->assertEquals(13.5, $this->item01->getNetPrice());
-        $this->assertEquals('differentFiletimeString', $this->item01->getFiletime());
+        $this->assertEquals(2, $this->item->getId());
+        $this->assertEquals('222222222222', $this->item->getItemId());
+        $this->assertEquals('Woolen Hat', $this->item->getTitle());
+        $this->assertEquals(14.99, $this->item->getCurrentPrice());
+        $this->assertEquals('Ended', $this->item->getListingStatus());
+        $this->assertEquals(10, $this->item->getQuantity());
+        $this->assertEquals(0, $this->item->getQuantitySold());
+        $this->assertEquals(1500, $this->item->getCondition());
+        $this->assertEquals(38954, $this->item->getCategory());
+        $this->assertEquals('555', $this->item->getStoreCategoryId());
+        $this->assertEquals('777', $this->item->getStoreCategory2Id());
+        $this->assertEquals('woolen-hat.com', $this->item->getViewItemUrl());
+        $this->assertEquals('["galleryPic.com", "hatPic1.com", "hatPic2.com"]', $this->item->getPictures());
+        $this->assertEquals(88, $this->item->getSite());
+        $this->assertEquals('France', $this->item->getCountry());
+        $this->assertEquals('€', $this->item->getCurrency());
+        $this->assertEquals('["Asia"]', $this->item->getShipToLocations());
+        $this->assertEquals('["FedEx", "SelfPickup"]', $this->item->getShippingOptions());
+        $this->assertEquals('["hatCompatibility1", "hatCompatibility2"]', $this->item->getItemCompatibility());
+        $this->assertEquals('["hatSpecifics1", "hatSpecifics2"]', $this->item->getItemSpecifics());
+        $this->assertEquals('<!DOCTYPE html><html><body><h1>Woolen Hat</h1><p>Comfortable for winters.</p></body></html>', $this->item->getHtmlDescription());
+        $this->assertEquals(13.5, $this->item->getNetPrice());
+        $this->assertEquals('differentFiletimeString', $this->item->getFiletime());
     }
 
     /**
      * Tests the 'toArray' method of the 'Item' class whether
-     * it converts a Item object to the correct array without id.
+     * it converts a Item object to the correct array with and without id.
      */
-    public function testToArrayConversionWithoutId() {
+    public function testItemToArrayConversion() {
 
         $expectedArray = [
-            'id' => null,
+            'id' => 2,
             'item_id' => '111111111111',
             'title' => 'Silk Scarf',
             'current_price' => 10.89,
             'listing_status' => 'Active',
             'quantity' => 5,
             'quantity_sold' => 3,
-            'condition_id' => 1000,
-            'category_id' => 25894,
+            'condition' => 1000,
+            'category' => 25894,
             'store_category_id' => '444',
             'store_category_2_id' => '',
             'view_item_url' => 'silk-scarf.com',
@@ -196,27 +187,16 @@ class ItemTest extends Unit {
             'filetime' => 'filetimeString'
         ];
 
-
-        // Assert
-        $this->assertEquals($expectedArray, $this->item01WithoutId->toArray());
-    }
-
-    /**
-     * Tests the 'toArray' method of the 'Item' class whether
-     * it converts a Item object to the correct array with id.
-     */
-    public function testToArrayConversionWithId() {
-
-        $expectedArray = [
-            'id' => 2,
+        $expectedArrayWithout = [
+            'id' => null,
             'item_id' => '222222222222',
             'title' => 'Woolen Hat',
             'current_price' => 14.99,
             'listing_status' => 'Ended',
             'quantity' => 10,
             'quantity_sold' => 0,
-            'condition_id' => 1500,
-            'category_id' => 38954,
+            'condition' => 1500,
+            'category' => 38954,
             'store_category_id' => '555',
             'store_category_2_id' => '777',
             'view_item_url' => 'woolen-hat.com',
@@ -233,7 +213,35 @@ class ItemTest extends Unit {
             'filetime' => 'differentFiletimeString'
         ];
 
+
+
         // Assert
-        $this->assertEquals($expectedArray, $this->item02->toArray());
+        $this->assertEquals($expectedArray, $this->item->toArray());
+        $this->assertEquals($expectedArrayWithout, $this->itemWithout->toArray());
+    }
+
+    /**
+     * Tests the 'toArray' method of the 'Item' class whether
+     * an exception is thrown when trying to convert an object to an array
+     * with an invalid key.
+     */
+    public function testItemToArrayThrowsExceptionForInvalidKey() {
+
+        // Arrange: Add an invalid key to the keyArray
+        $invalidKeyArray = [
+            'id', 'item_id', 'item_title', 'current_price', 'listing_status', 'quantity', 'quantity_sold', 'condition',
+            'category', 'store_category_id', 'store_category_2_id', 'view_item_url', 'pictures',
+            'site', 'country', 'currency', 'ship_to_locations', 'shipping_options',
+            'item_compatibility', 'item_specifics', 'html_description', 'net_price', 'filetime'
+        ];
+        $itemWithInvalidKey = new Item($invalidKeyArray, '111111111111', 'Silk Scarf', 10.89, 'Active', 5, 3, 1000, 25894, '444', '', 'silk-scarf.com', '["galleryPic.com", "scarfPic1.com", "scarfPic2.com"]', 77, 'Germany', '€', '["Europe"]', '["DHL", "PickUp"]', '["compatibility1", "compatibility2"]', '["specifics1", "specifics2"]', '<!DOCTYPE html><html><body><h1>Silk Scarf</h1><p>Comfortable for summers.</p></body></html>', 9.0, 'filetimeString', 2);
+
+
+        // Assert
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid Request: Getter for 'item_title' does not exist in App\Entity\Item.");
+
+        // Act
+        $itemWithInvalidKey->toArray();
     }
 }
