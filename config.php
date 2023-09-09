@@ -20,18 +20,18 @@ return [
                 'columns' => ['id', 'category_id', 'category_name', 'parent_id']
             ],
             'ebay_listing_status' => [
-                'columns' => ['id', 'code_type', 'description']
+                'columns' => ['id', 'status_code', 'status_description']
             ],
             'ebay_condition' => [
                 'columns' => ['id', 'condition_id', 'condition_display_name']
             ],
             'ebay_site_code' => [
-                'columns' => ['id', 'site_id', 'site_name', 'global_id']
+                'columns' => ['id', 'site_id', 'site_name', 'site_global_id']
             ],
-            'ebay_items_active' => [
+            'ebay_active_items' => [
                 'columns' => [
-                    'id', 'item_id', 'title', 'current_price', 'listing_status', 'quantity', 'quantity_sold', 'condition_id',
-                    'category_id', 'store_category_id', 'store_category_2_id', 'view_item_url', 'pictures',
+                    'id', 'item_id', 'title', 'current_price', 'listing_status', 'quantity', 'quantity_sold', 'condition',
+                    'category', 'store_category_id', 'store_category_2_id', 'view_item_url', 'pictures',
                     'site', 'country', 'currency', 'ship_to_locations', 'shipping_options',
                     'item_compatibility', 'item_specifics', 'html_description', 'net_price', 'filetime'
                 ]

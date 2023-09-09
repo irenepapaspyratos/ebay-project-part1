@@ -2,23 +2,26 @@
 
 namespace App\Entity;
 
+use App\Interface\Entity;
+use App\Trait\ToArrayTrait;
+
 /**
  * The `Item` class provides methods to deal with items and their details.
  * 
  * The contained methods are getting/setting its properties
- * and convert them to an array.
+ * and convert them to an array using the 'ToArrayTrait'.
  */
 class Item implements Entity {
 
-    private ?int $id;
+    private int|null $id;
     private string $itemId;
     private string $title;
     private float $currentPrice;
     private string $listingStatus;
     private int $quantity;
     private int $quantitySold;
-    private int $conditionId;
-    private int $categoryId;
+    private int $condition;
+    private int $category;
     private string $storeCategoryId;
     private string $storeCategory2Id;
     private string $viewItemUrl;
@@ -33,21 +36,23 @@ class Item implements Entity {
     private string $htmlDescription;
     private float $netPrice;
     private string $filetime;
+    private array $keyArray;
+
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
      * This is just a general collection, as there are many other details of an item and its listing existing.
      * 
-     * @param int|null $id Unique identifier of the item. Possibly null if no id is provided.
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $itemId Portal's unique identifier of an item.
      * @param string $title Item's title.
      * @param float $currentPrice Item's price.
      * @param string $listingStatus Item's listing status (like "Active", "Ended", etc.). 
      * @param int $quantity Number of items available at start time of i's listing.
      * @param int $quantitySold Number of items that have been sold already.
-     * @param int $conditionId Item's condition (like 1000 representing "New", etc.).
-     * @param int $categoryId Portal's unique identifier of a category.
+     * @param int $condition Item's condition (like 1000 representing "New", etc.).
+     * @param int $category Portal's unique identifier of a category.
      * @param string $storeCategoryId Seller's unique identifier of a category.
      * @param string $storeCategory2Id Seller's unique identifier of a second category.
      * @param string $viewItemUrl Item's listing page url.
@@ -62,19 +67,20 @@ class Item implements Entity {
      * @param string $htmlDescription Portal's html of the item's listing.
      * @param float $netPrice Item's current price without VAT.
      * @param string $filetime Time when the item's detail file was last modified (Format: "Y-m-d H:i:s").
+     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
      * 
      * @return void
      */
     public function __construct(
-        ?int $id,
+        array $keyArray,
         string $itemId,
         string $title,
         float $currentPrice,
         string $listingStatus,
         int $quantity,
         int $quantitySold,
-        int $conditionId,
-        int $categoryId,
+        int $condition,
+        int $category,
         string $storeCategoryId,
         string $storeCategory2Id,
         string $viewItemUrl,
@@ -88,7 +94,8 @@ class Item implements Entity {
         string $jsonArrayItemSpecifics,
         string $htmlDescription,
         float $netPrice,
-        string $filetime
+        string $filetime,
+        int|null $id = null,
     ) {
         $this->id = $id;
         $this->itemId = $itemId;
@@ -97,8 +104,8 @@ class Item implements Entity {
         $this->listingStatus = $listingStatus;
         $this->quantity = $quantity;
         $this->quantitySold = $quantitySold;
-        $this->conditionId = $conditionId;
-        $this->categoryId = $categoryId;
+        $this->condition = $condition;
+        $this->category = $category;
         $this->storeCategoryId = $storeCategoryId;
         $this->storeCategory2Id = $storeCategory2Id;
         $this->viewItemUrl = $viewItemUrl;
@@ -113,6 +120,7 @@ class Item implements Entity {
         $this->htmlDescription = $htmlDescription;
         $this->netPrice = $netPrice;
         $this->filetime = $filetime;
+        $this->keyArray = $keyArray;
     }
 
 
@@ -145,12 +153,12 @@ class Item implements Entity {
         return $this->quantitySold;
     }
 
-    public function getConditionId(): int {
-        return $this->conditionId;
+    public function getCondition(): int {
+        return $this->condition;
     }
 
-    public function getCategoryId(): int {
-        return $this->categoryId;
+    public function getCategory(): int {
+        return $this->category;
     }
 
     public function getStoreCategoryId(): string {
@@ -211,7 +219,7 @@ class Item implements Entity {
 
 
     // Setters
-    public function setId(?int $id): void {
+    public function setId(int $id): void {
         $this->id = $id;
     }
 
@@ -239,12 +247,12 @@ class Item implements Entity {
         $this->quantitySold = $quantitySold;
     }
 
-    public function setConditionId(int $conditionId): void {
-        $this->conditionId = $conditionId;
+    public function setCondition(int $condition): void {
+        $this->condition = $condition;
     }
 
-    public function setCategoryId(int $categoryId): void {
-        $this->categoryId = $categoryId;
+    public function setCategory(int $category): void {
+        $this->category = $category;
     }
 
     public function setStoreCategoryId(string $storeCategoryId): void {
@@ -304,37 +312,6 @@ class Item implements Entity {
     }
 
 
-    /**
-     * The 'toArray' method converts the object of the class to an array.
-     * 
-     * @return array Array representation of the object.
-     */
-    public function toArray(): array {
-
-        return [
-            'id' => $this->getId(),
-            'item_id' => $this->getItemId(),
-            'title' => $this->getTitle(),
-            'current_price' => $this->getCurrentPrice(),
-            'listing_status' => $this->getListingStatus(),
-            'quantity' => $this->getQuantity(),
-            'quantity_sold' => $this->getQuantitySold(),
-            'condition_id' => $this->getConditionId(),
-            'category_id' => $this->getCategoryId(),
-            'store_category_id' => $this->getStoreCategoryId(),
-            'store_category_2_id' => $this->getStoreCategory2Id(),
-            'view_item_url' => $this->getViewItemUrl(),
-            'pictures' => $this->getPictures(),
-            'site' => $this->getSite(),
-            'country' => $this->getCountry(),
-            'currency' => $this->getCurrency(),
-            'ship_to_locations' => $this->getShipToLocations(),
-            'shipping_options' => $this->getShippingOptions(),
-            'item_compatibility' => $this->getItemCompatibility(),
-            'item_specifics' => $this->getItemSpecifics(),
-            'html_description' => $this->getHtmlDescription(),
-            'net_price' => $this->getNetPrice(),
-            'filetime' => $this->getFiletime()
-        ];
-    }
+    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
+    use ToArrayTrait;
 }

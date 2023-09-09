@@ -2,37 +2,41 @@
 
 namespace App\Entity;
 
+use App\Interface\Entity;
+use App\Trait\ToArrayTrait;
+
 /**
  * The `Category` class provides methods to deal with categories.
  * 
  * The contained methods are getting/setting its properties
- * and convert them to an array.
+ * and convert them to an array using the 'ToArrayTrait'.
  */
 class Category implements Entity {
 
-    private ?int $id;
+    private int|null $id;
     private string $categoryId;
     private string $categoryName;
     private int $parentId;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
-     * A category can have parents and the parent path would look like this example for the category Silk: Fabric>Fine.
-     * 
-     * @param ?int $id Primary Key, possibly empty as coming from the database.
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $categoryId Portal's unique identifier of a category.
-     * @param string $name Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.
-     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent.
+     * @param string $categoryName Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.
+     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent (Default = 0).
+     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
      * 
      * @return void
      */
-    public function __construct(?int $id, string $categoryId, string $categoryName, int $parentId = 0) {
+    public function __construct(array $keyArray, string $categoryId, string $categoryName, int $parentId = 0, int|null $id = null) {
 
         $this->id = $id;
         $this->categoryId = $categoryId;
         $this->categoryName = $categoryName;
         $this->parentId = $parentId;
+        $this->keyArray = $keyArray;
     }
 
 
@@ -55,7 +59,7 @@ class Category implements Entity {
 
 
     // Setters
-    public function setId(?int $id): void {
+    public function setId(int $id): void {
         $this->id = $id;
     }
 
@@ -72,18 +76,6 @@ class Category implements Entity {
     }
 
 
-    /**
-     * The 'toArray' method converts the object of the class to an array.
-     * 
-     * @return array Array representation of the object.
-     */
-    public function toArray(): array {
-
-        return [
-            'id' => $this->getId(),
-            'category_id' => $this->getCategoryId(),
-            'category_name' => $this->getCategoryName(),
-            'parent_id' => $this->getParentId(),
-        ];
-    }
+    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
+    use ToArrayTrait;
 }

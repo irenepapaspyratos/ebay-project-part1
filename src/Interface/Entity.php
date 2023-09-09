@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Interface;
 
 /**
  * The interface 'Entity' defines that any class that implements the `Entity`

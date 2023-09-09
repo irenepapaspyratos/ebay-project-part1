@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enum\Ebay;
+namespace App\Enum;
 
 /**
  * The `EbayGranularityLevel` class defines an enumeration.

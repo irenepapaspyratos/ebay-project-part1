@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Service;
 
-use App\Enum\Ebay\EbayGranularityLevel;
+use App\Enum\EbayGranularityLevel;
 use App\Service\EbayApiService;
 use App\Utility\CustomCurl;
 use App\Utility\CustomLogger;

@@ -2,32 +2,38 @@
 
 namespace App\Entity;
 
+use App\Interface\Entity;
+use App\Trait\ToArrayTrait;
+
 /**
  * The `ListingStatus` class provides methods to deal with codes specifying status types.
  * 
  * The contained methods are getting/setting its properties
- * and convert them to an array.
+ * and convert them to an array using the 'ToArrayTrait'.
  */
 class ListingStatus implements Entity {
 
-    private ?int $id;
-    private string $codeType;
+    private int|null $id;
+    private string $statusCode;
     private string $description;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
-     * @param ?int $id Primary Key, possibly empty as coming from the database.
-     * @param string $codeType Status code of a listings (like "Active", etc.).
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
+     * @param string $statusCode Status code of a listings (like "Active", etc.).
      * @param string $description Explanation of the status code.
+     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
      * 
      * @return void
      */
-    public function __construct(?int $id, string $codeType, string $description) {
+    public function __construct(array $keyArray, string $statusCode, string $description, int|null $id = null) {
 
         $this->id = $id;
-        $this->codeType = $codeType;
+        $this->statusCode = $statusCode;
         $this->description = $description;
+        $this->keyArray = $keyArray;
     }
 
 
@@ -36,40 +42,29 @@ class ListingStatus implements Entity {
         return $this->id;
     }
 
-    public function getCodeType(): string {
-        return $this->codeType;
+    public function getStatusCode(): string {
+        return $this->statusCode;
     }
 
-    public function getDescription(): string {
+    public function getStatusDescription(): string {
         return $this->description;
     }
 
 
     // Setters
-    public function setId(?int $id): void {
+    public function setId(int $id): void {
         $this->id = $id;
     }
 
-    public function setCodeType(string $codeType): void {
-        $this->codeType = $codeType;
+    public function setStatusCode(string $statusCode): void {
+        $this->statusCode = $statusCode;
     }
 
-    public function setDescription(string $description): void {
+    public function setStatusDescription(string $description): void {
         $this->description = $description;
     }
 
 
-    /**
-     * The 'toArray' method converts the object of the class to an array.
-     * 
-     * @return array Array representation of the object.
-     */
-    public function toArray(): array {
-
-        return [
-            'id' => $this->getId(),
-            'code_type' => $this->getCodeType(),
-            'description' => $this->getDescription(),
-        ];
-    }
+    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
+    use ToArrayTrait;
 }

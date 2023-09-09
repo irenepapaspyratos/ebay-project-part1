@@ -2,34 +2,38 @@
 
 namespace App\Entity;
 
-use App\Enum\Ebay\Ebay;
+use App\Interface\Entity;
+use App\Trait\ToArrayTrait;
 
 /**
  * The `Condition` class provides methods to deal with codes specifying a condition.
  * 
  * The contained methods are getting/setting its properties
- * and convert them to an array.
+ * and convert them to an array using the 'ToArrayTrait'.
  */
 class Condition implements Entity {
 
-    private ?int $id;
+    private int|null $id;
     private string $conditionId;
     private string $conditionDisplayName;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
-     * @param ?int $id Primary Key, possibly empty as coming from the database.
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $conditionId Unique identifier of a condition (like 1000 for "New", etc.).
      * @param string $conditionDisplayName States the typical meaning. However, values can differ per category.
+     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
      * 
      * @return void
      */
-    public function __construct(?int $id, int $conditionId, string $conditionDisplayName) {
+    public function __construct(array $keyArray, int $conditionId, string $conditionDisplayName, int|null $id = null) {
 
         $this->id = $id;
         $this->conditionId = $conditionId;
         $this->conditionDisplayName = $conditionDisplayName;
+        $this->keyArray = $keyArray;
     }
 
 
@@ -48,7 +52,7 @@ class Condition implements Entity {
 
 
     // Setters
-    public function setId(?int $id): void {
+    public function setId(int $id): void {
         $this->id = $id;
     }
 
@@ -61,17 +65,6 @@ class Condition implements Entity {
     }
 
 
-    /**
-     * The 'toArray' method converts the object of the class to an array.
-     * 
-     * @return array Array representation of the object.
-     */
-    public function toArray(): array {
-
-        return [
-            'id' => $this->getId(),
-            'condition_id' => $this->getConditionId(),
-            'condition_display_name' => $this->getConditionDisplayName(),
-        ];
-    }
+    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
+    use ToArrayTrait;
 }
