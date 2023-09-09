@@ -13,16 +13,16 @@ use App\Trait\ToArrayTrait;
  */
 class Category implements Entity {
 
-    private array $keyArray;
     private int|null $id;
     private string $categoryId;
     private string $categoryName;
     private int $parentId;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
-     * @param array<string> $keyArray Representing valid column names of the corresponding database table.
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $categoryId Portal's unique identifier of a category.
      * @param string $categoryName Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.
      * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent (Default = 0).

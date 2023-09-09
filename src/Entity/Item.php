@@ -13,7 +13,6 @@ use App\Trait\ToArrayTrait;
  */
 class Item implements Entity {
 
-    private array $keyArray;
     private int|null $id;
     private string $itemId;
     private string $title;
@@ -37,12 +36,15 @@ class Item implements Entity {
     private string $htmlDescription;
     private float $netPrice;
     private string $filetime;
+    private array $keyArray;
+
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
      * This is just a general collection, as there are many other details of an item and its listing existing.
      * 
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $itemId Portal's unique identifier of an item.
      * @param string $title Item's title.
      * @param float $currentPrice Item's price.

@@ -13,14 +13,15 @@ use App\Trait\ToArrayTrait;
  */
 class ListingStatus implements Entity {
 
-    private array $keyArray;
     private int|null $id;
     private string $statusCode;
     private string $description;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $statusCode Status code of a listings (like "Active", etc.).
      * @param string $description Explanation of the status code.
      * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).

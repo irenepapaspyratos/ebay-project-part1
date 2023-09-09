@@ -13,14 +13,15 @@ use App\Trait\ToArrayTrait;
  */
 class Condition implements Entity {
 
-    private array $keyArray;
     private int|null $id;
     private string $conditionId;
     private string $conditionDisplayName;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      *
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param string $conditionId Unique identifier of a condition (like 1000 for "New", etc.).
      * @param string $conditionDisplayName States the typical meaning. However, values can differ per category.
      * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).

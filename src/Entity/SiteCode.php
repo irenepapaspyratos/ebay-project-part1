@@ -13,15 +13,16 @@ use App\Trait\ToArrayTrait;
  */
 class SiteCode implements Entity {
 
-    private array $keyArray;
     private int|null $id;
     private int $siteId;
     private string $siteName;
     private string $globalId;
+    private array $keyArray;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
+     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
      * @param int $siteId Unique identifier of a country related site the listing is published on.
      * @param string $siteName Represents the verbal site name.
      * @param string $globalId Represents the verbal code. 

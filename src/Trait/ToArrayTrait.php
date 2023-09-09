@@ -13,7 +13,7 @@ trait ToArrayTrait {
      * Converts the object of the actual class to an array 
      * based on given keys from '$this->keyArray' created by the constructor.
      * 
-     * @return array Array representation of the object.
+     * @return array<string,mixed> Array representation of the object.
      */
     public function toArray(): array {
 
