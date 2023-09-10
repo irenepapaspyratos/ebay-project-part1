@@ -2,80 +2,44 @@
 
 namespace App\Entity;
 
-use App\Interface\Entity;
-use App\Trait\ToArrayTrait;
-
 /**
- * The `Category` class provides methods to deal with categories.
+ * The 'Category' class extends the 'BaseEntity' class ensuring correct data types.
  * 
- * The contained methods are getting/setting its properties
- * and convert them to an array using the 'ToArrayTrait'.
+ * Provides methods for setting and getting property values, 
+ * as well as converting the object to an array representation.
  */
-class Category implements Entity {
-
-    private int|null $id;
-    private string $categoryId;
-    private string $categoryName;
-    private int $parentId;
-    private array $keyArray;
+class Category extends BaseEntity {
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
-     *
-     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
-     * @param string $categoryId Portal's unique identifier of a category.
-     * @param string $categoryName Portal's (sub)category's name. If it is a subcategory, the whole path can be retrieved by recursively following the parent ids.
-     * @param int $parentId Id of the possible parent category with 0 representing the category not being a subcategory and therefore not having a parent (Default = 0).
-     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
+     * 
+     * Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor. 
+     *     
+     * @param string $prefix Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).
      * 
      * @return void
      */
-    public function __construct(array $keyArray, string $categoryId, string $categoryName, int $parentId = 0, int|null $id = null) {
+    public function __construct(string $prefix, int $categoryId) {
 
-        $this->id = $id;
-        $this->categoryId = $categoryId;
-        $this->categoryName = $categoryName;
-        $this->parentId = $parentId;
-        $this->keyArray = $keyArray;
+        parent::__construct($prefix);
+
+        if (empty($categoryId))
+            throw new \InvalidArgumentException("Value for category_id is mandatory and cannot be empty.");
+
+        $this->category_id = $categoryId;
     }
 
+    /**
+     * The '__set' method sets the value for a property.
+     * 
+     * @param string $name Property to be set.
+     * @param int|string $value Value to be set for the given property. 
+     * 
+     * @return void
+     * @throws \Exception If an invalid property is tried to be set.
+     */
+    public function __set(string $name, int|string $value): void {
 
-    // Getters
-    public function getId(): int|null {
-        return $this->id;
+        parent::__set($name, $value);
     }
-
-    public function getCategoryId(): string {
-        return $this->categoryId;
-    }
-
-    public function getCategoryName(): string {
-        return $this->categoryName;
-    }
-
-    public function getParentId(): int {
-        return $this->parentId;
-    }
-
-
-    // Setters
-    public function setId(int $id): void {
-        $this->id = $id;
-    }
-
-    public function setCategoryId(string $categoryId): void {
-        $this->categoryId = $categoryId;
-    }
-
-    public function setCategoryName(string $categoryName): void {
-        $this->categoryName = $categoryName;
-    }
-
-    public function setParentId(int $parentId): void {
-        $this->parentId = $parentId;
-    }
-
-
-    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
-    use ToArrayTrait;
 }

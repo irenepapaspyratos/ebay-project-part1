@@ -2,69 +2,44 @@
 
 namespace App\Entity;
 
-use App\Interface\Entity;
-use App\Trait\ToArrayTrait;
-
 /**
- * The `Condition` class provides methods to deal with codes specifying a condition.
+ * The 'Condition' class extends the 'BaseEntity' class ensuring correct data types.
  * 
- * The contained methods are getting/setting its properties
- * and convert them to an array using the 'ToArrayTrait'.
+ * Provides methods for setting and getting property values, 
+ * as well as converting the object to an array representation.
  */
-class Condition implements Entity {
-
-    private int|null $id;
-    private string $conditionId;
-    private string $conditionDisplayName;
-    private array $keyArray;
+class Condition extends BaseEntity {
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
-     *
-     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
-     * @param string $conditionId Unique identifier of a condition (like 1000 for "New", etc.).
-     * @param string $conditionDisplayName States the typical meaning. However, values can differ per category.
-     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
+     * 
+     * Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor. 
+     *     
+     * @param string $prefix Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).
      * 
      * @return void
      */
-    public function __construct(array $keyArray, int $conditionId, string $conditionDisplayName, int|null $id = null) {
+    public function __construct(string $prefix, int $conditionId) {
 
-        $this->id = $id;
-        $this->conditionId = $conditionId;
-        $this->conditionDisplayName = $conditionDisplayName;
-        $this->keyArray = $keyArray;
+        parent::__construct($prefix);
+
+        if (empty($conditionId))
+            throw new \InvalidArgumentException("Value for condition_id is mandatory and cannot be empty.");
+
+        $this->condition_id = $conditionId;
     }
 
+    /**
+     * The '__set' method sets the value for a property.
+     * 
+     * @param string $name Property to be set.
+     * @param int|string $value Value to be set for the given property. 
+     * 
+     * @return void
+     * @throws \Exception If an invalid property is tried to be set.
+     */
+    public function __set(string $name, int|string $value): void {
 
-    // Getters
-    public function getId(): int|null {
-        return $this->id;
+        parent::__set($name, $value);
     }
-
-    public function getConditionId(): int {
-        return $this->conditionId;
-    }
-
-    public function getConditionDisplayName(): string {
-        return $this->conditionDisplayName;
-    }
-
-
-    // Setters
-    public function setId(int $id): void {
-        $this->id = $id;
-    }
-
-    public function setConditionId(int $conditionId): void {
-        $this->conditionId = $conditionId;
-    }
-
-    public function setConditionDisplayName(string $conditionDisplayName): void {
-        $this->conditionDisplayName = $conditionDisplayName;
-    }
-
-
-    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
-    use ToArrayTrait;
 }

@@ -2,69 +2,44 @@
 
 namespace App\Entity;
 
-use App\Interface\Entity;
-use App\Trait\ToArrayTrait;
-
 /**
- * The `ListingStatus` class provides methods to deal with codes specifying status types.
+ * The 'ListingStatus' class extends the 'BaseEntity' class ensuring correct data types.
  * 
- * The contained methods are getting/setting its properties
- * and convert them to an array using the 'ToArrayTrait'.
+ * Provides methods for setting and getting property values, 
+ * as well as converting the object to an array representation.
  */
-class ListingStatus implements Entity {
-
-    private int|null $id;
-    private string $statusCode;
-    private string $description;
-    private array $keyArray;
+class ListingStatus extends BaseEntity {
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
-     *
-     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
-     * @param string $statusCode Status code of a listings (like "Active", etc.).
-     * @param string $description Explanation of the status code.
-     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
+     * 
+     * Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor. 
+     *     
+     * @param string $prefix Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).
      * 
      * @return void
      */
-    public function __construct(array $keyArray, string $statusCode, string $description, int|null $id = null) {
+    public function __construct(string $prefix, string $listingStatus) {
 
-        $this->id = $id;
-        $this->statusCode = $statusCode;
-        $this->description = $description;
-        $this->keyArray = $keyArray;
+        parent::__construct($prefix);
+
+        if (empty($listingStatus))
+            throw new \InvalidArgumentException("Value for listing_status is mandatory and cannot be empty.");
+
+        $this->listing_status = $listingStatus;
     }
 
+    /**
+     * The '__set' method sets the value for a property.
+     * 
+     * @param string $name Property to be set.
+     * @param string $value Value to be set for the given property. 
+     * 
+     * @return void
+     * @throws \Exception If an invalid property is tried to be set.
+     */
+    public function __set(string $name, string $value): void {
 
-    // Getters
-    public function getId(): int|null {
-        return $this->id;
+        parent::__set($name, $value);
     }
-
-    public function getStatusCode(): string {
-        return $this->statusCode;
-    }
-
-    public function getStatusDescription(): string {
-        return $this->description;
-    }
-
-
-    // Setters
-    public function setId(int $id): void {
-        $this->id = $id;
-    }
-
-    public function setStatusCode(string $statusCode): void {
-        $this->statusCode = $statusCode;
-    }
-
-    public function setStatusDescription(string $description): void {
-        $this->description = $description;
-    }
-
-
-    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
-    use ToArrayTrait;
 }
