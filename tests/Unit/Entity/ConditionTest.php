@@ -13,104 +13,117 @@ use Codeception\Test\Unit;
 class ConditionTest extends Unit {
 
     protected $tester;
-    private $keyArray;
     private $condition;
-    private $conditionWithout;
+    private $prefix = 'ebay_';
 
     /**
      * Sets up the necessary environment for running tests by 
-     * creating an array of keys and different instances of 'Condition'.
+     * creating an instance of 'Condition'.
      */
     protected function _before() {
 
-        $this->keyArray = ['id', 'condition_id', 'condition_display_name'];
-
-        $this->condition = new Condition($this->keyArray, '3000', 'Used', 2);
-        $this->conditionWithout = new Condition($this->keyArray, '1000', 'New');
+        $this->condition = new Condition($this->prefix);
     }
 
-
     /**
-     * Tests whether the 'Condition' instance is created correctly with and without id.
+     * Tests whether the 'Condition' instance is created correctly.
      */
     public function testConditionCreation() {
 
         // Assert that an instance of 'Condition' was created
         $this->assertInstanceOf(Condition::class, $this->condition);
-        $this->assertInstanceOf(Condition::class, $this->conditionWithout);
-    }
-
-    /**
-     * Tests whether the getters of the 'Condition' class return the correct values with and without id.
-     */
-    public function testConditionGetters() {
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(2, $this->condition->getId());
-        $this->assertEquals(3000, $this->condition->getConditionId());
-        $this->assertEquals('Used', $this->condition->getConditionDisplayName());
-
-        $this->assertEquals(null, $this->conditionWithout->getId());
-        $this->assertEquals(1000, $this->conditionWithout->getConditionId());
-        $this->assertEquals('New', $this->conditionWithout->getConditionDisplayName());
     }
 
     /**
      * Tests whether the setters in the 'Condition' class modify the properties correctly.
      */
-    public function testConditionSetters() {
+    public function testConditionSettersAndGetters() {
 
         // Act 
-        $this->condition->setId(5);
-        $this->condition->setConditionId(3000);
-        $this->condition->setConditionDisplayName('Refurbished');
+        $this->condition->id = 5;
+        $this->condition->condition_id = 333;
+        $this->condition->condition_display_name = 'New';
 
         // Assert that the correct values of the changes are returned
-        $this->assertEquals(5, $this->condition->getId());
-        $this->assertEquals(3000, $this->condition->getConditionId());
-        $this->assertEquals('Refurbished', $this->condition->getConditionDisplayName());
+        $this->assertEquals(5, $this->condition->id);
+        $this->assertEquals(333, $this->condition->condition_id);
+        $this->assertEquals('New', $this->condition->condition_display_name);
     }
 
     /**
      * Tests the 'toArray' method of the 'Condition' class whether
-     * it converts a Condition object to the correct array with and without id.
+     * it converts a Condition object to the correct array.
      */
     public function testConditionToArrayConversion() {
 
+        // Act
+        $this->condition->id = 1;
+        $this->condition->condition_id = 222;
+        $this->condition->condition_display_name = 'Used';
 
         $expectedArray = [
-            'id' => 2,
-            'condition_id' => 3000,
-            'condition_display_name' => 'Used',
+            'id' => 1,
+            'condition_id' => 222,
+            'condition_display_name' => 'Used'
         ];
 
-        $expectedArrayWithout = [
-            'id' => null,
-            'condition_id' => 1000,
-            'condition_display_name' => 'New',
-        ];
-
-        // Assert
+        // Assert that the correct array is returned
         $this->assertEquals($expectedArray, $this->condition->toArray());
-        $this->assertEquals($expectedArrayWithout, $this->conditionWithout->toArray());
     }
 
     /**
-     * Tests the 'toArray' method of the 'Condition' class whether
-     * an exception is thrown when trying to convert an object to an array
-     * with an invalid key.
+     * Tests the getter of the 'Condition' class whether
+     * it throws an exception on a missing table key.
      */
-    public function testConditionToArrayThrowsExceptionForInvalidKey() {
+    public function testConditionMissingTableKeyException() {
 
-        // Arrange: Add an invalid key to the keyArray
-        $invalidKeyArray = ['id', 'condition_id', 'name'];
-        $conditionWithInvalidKey = new Condition($invalidKeyArray, '2000', 'New');
-
-        // Assert
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Invalid Request: Getter for 'name' does not exist in App\Entity\Condition.");
+        $this->expectExceptionMessage("Columns for table 'wrongprefix_condition' not found.");
 
         // Act
-        $conditionWithInvalidKey->toArray();
+        $condition = new Condition('wrongprefix_');
+    }
+
+    /**
+     * Tests the setter of the 'Condition' class whether
+     * it throws an exception on an invalid property.
+     */
+    public function testConditionSetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid property: invalid_property");
+
+        // Act
+        $this->condition->invalid_property = 'test';
+    }
+
+    /**
+     * Tests the setter of the 'Condition' class whether
+     * it throws an exception on an invalid property type.
+     */
+    public function testConditionSetterInvalidTypeException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid type for 'condition_id'. Expected integer, got string");
+
+        // Act
+        $this->condition->condition_id = '5';
+    }
+
+    /**
+     * Tests the getter of the 'Condition' class whether
+     * it throws an exception on an invalid property.
+     */
+    public function testConditionGetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Property 'invalid_property' not existing");
+
+        // Act
+        $value = $this->condition->invalid_property;
     }
 }

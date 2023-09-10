@@ -3,12 +3,12 @@
 namespace App\Entity;
 
 /**
- * The 'SiteCode' class extends the 'BaseEntity' class ensuring correct data types.
+ * The 'CountryCode' class extends the 'BaseEntity' class ensuring correct data types.
  * 
  * Provides methods for setting and getting property values, 
  * as well as converting the object to an array representation.
  */
-class SiteCode extends BaseEntity {
+class CountryCode extends BaseEntity {
 
     private $prefix;
 

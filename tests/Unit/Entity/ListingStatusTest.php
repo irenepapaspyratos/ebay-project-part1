@@ -6,109 +6,124 @@ use App\Entity\ListingStatus;
 use Codeception\Test\Unit;
 
 /**
- * The 'ListingStatusTest' is a unit test class for testing the 'ListingStatus' class.
+ * The 'ListingStatusTest' is a unit test class for testing the 'ListingStatus' entity.
  * 
- * Tests the functionality of creating an instance and getting/setting the class-related properties.
+ * Tests the functionality of creating an instance and getting/setting the entity-related properties.
  */
 class ListingStatusTest extends Unit {
 
     protected $tester;
-    private $keyArray;
     private $listingStatus;
-    private $listingStatusWithout;
+    private $prefix = 'ebay_';
 
     /**
      * Sets up the necessary environment for running tests by 
-     * creating an array of keys and different instances of 'ListingStatus'.
+     * creating an instance of 'ListingStatus'.
      */
     protected function _before() {
 
-        $this->keyArray = ['id', 'status_code', 'status_description'];
-
-        $this->listingStatus = new ListingStatus($this->keyArray, 'Completed', 'The listing has closed.', 2);
-        $this->listingStatusWithout = new ListingStatus($this->keyArray, 'Active', 'The listing is open.', null);
+        $this->listingStatus = new ListingStatus($this->prefix);
     }
 
     /**
-     * Tests whether the 'ListingStatus' instance is created correctly with and without id.
+     * Tests whether the 'ListingStatus' instance is created correctly.
      */
     public function testListingStatusCreation() {
 
         // Assert that an instance of 'ListingStatus' was created
         $this->assertInstanceOf(ListingStatus::class, $this->listingStatus);
-        $this->assertInstanceOf(ListingStatus::class, $this->listingStatusWithout);
     }
 
     /**
-     * Tests whether the getters of the 'ListingStatus' class return the correct values with and without id.
+     * Tests whether the setters in the 'ListingStatus' entity modify the properties correctly.
      */
-    public function testListingStatusGetters() {
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(2, $this->listingStatus->getId());
-        $this->assertEquals('Completed', $this->listingStatus->getStatusCode());
-        $this->assertEquals('The listing has closed.', $this->listingStatus->getStatusDescription());
-
-        $this->assertEquals(null, $this->listingStatusWithout->getId());
-        $this->assertEquals('Active', $this->listingStatusWithout->getStatusCode());
-        $this->assertEquals('The listing is open.', $this->listingStatusWithout->getStatusDescription());
-    }
-
-    /**
-     * Tests whether the setters in the 'ListingStatus' class modify the properties correctly.
-     */
-    public function testListingStatusSetters() {
+    public function testListingStatusSettersAndGetters() {
 
         // Act 
-        $this->listingStatus->setId(1);
-        $this->listingStatus->setStatusCode('Active');
-        $this->listingStatus->setStatusDescription('The listing is open.');
+        $this->listingStatus->id = 5;
+        $this->listingStatus->status_code = 'Active';
+        $this->listingStatus->status_description = 'Active Listing';
 
         // Assert that the correct values of the changes are returned
-        $this->assertEquals(1, $this->listingStatus->getId());
-        $this->assertEquals('Active', $this->listingStatus->getStatusCode());
-        $this->assertEquals('The listing is open.', $this->listingStatus->getStatusDescription());
+        $this->assertEquals(5, $this->listingStatus->id);
+        $this->assertEquals('Active', $this->listingStatus->status_code);
+        $this->assertEquals('Active Listing', $this->listingStatus->status_description);
     }
 
     /**
-     * Tests the 'toArray' method of the 'ListingStatus' class whether
-     * it converts a ListingStatus object to the correct array with and without id.
+     * Tests the 'toArray' method of the 'ListingStatus' entity whether
+     * it converts a ListingStatus object to the correct array.
      */
     public function testListingStatusToArrayConversion() {
 
+        // Act
+        $this->listingStatus->id = 1;
+        $this->listingStatus->status_code = 'Ended';
+        $this->listingStatus->status_description = 'Ended Listing';
+
         $expectedArray = [
-            'id' => 2,
-            'status_code' => 'Completed',
-            'status_description' => 'The listing has closed.',
+            'id' => 1,
+            'status_code' => 'Ended',
+            'status_description' => 'Ended Listing',
         ];
 
-        $expectedArrayWithout = [
-            'id' => null,
-            'status_code' => 'Active',
-            'status_description' => 'The listing is open.',
-        ];
-
-        // Assert
+        // Assert that the correct array is returned
         $this->assertEquals($expectedArray, $this->listingStatus->toArray());
-        $this->assertEquals($expectedArrayWithout, $this->listingStatusWithout->toArray());
     }
 
     /**
-     * Tests the 'toArray' method of the 'ListingStatus' class whether
-     * an exception is thrown when trying to convert an object to an array
-     * with an invalid key.
+     * Tests the getter of the 'ListingStatus' class whether
+     * it throws an exception on a missing table key.
      */
-    public function testListingStatusToArrayThrowsExceptionForInvalidKey() {
+    public function testListingStatusMissingTableKeyException() {
 
-        // Arrange: Add an invalid key to the keyArray
-        $invalidKeyArray = ['id', 'listing_status', 'status_description'];
-        $listingStatusWithInvalidKey = new ListingStatus($invalidKeyArray, '2000', 'New');
-
-        // Assert
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Invalid Request: Getter for 'listing_status' does not exist in App\Entity\ListingStatus.");
+        $this->expectExceptionMessage("Columns for table 'wrongprefix_listing_status' not found.");
 
         // Act
-        $listingStatusWithInvalidKey->toArray();
+        $listingStatus = new ListingStatus('wrongprefix_');
+    }
+
+    /**
+     * Tests the setter of the 'ListingStatus' entity whether
+     * it throws an exception on an invalid property.
+     */
+    public function testListingStatusSetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid property: invalid_property");
+
+        // Act
+        $this->listingStatus->invalid_property = 'test';
+    }
+
+    /**
+     * Tests the setter of the 'ListingStatus' entity whether
+     * it throws an exception on an invalid property type.
+     */
+    public function testListingStatusSetterInvalidTypeException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid type for 'status_code'. Expected string, got integer");
+
+        // Act
+        $this->listingStatus->status_code = 5;
+    }
+
+    /**
+     * Tests the getter of the 'ListingStatus' entity whether
+     * it throws an exception on an invalid property.
+     */
+    public function testListingStatusGetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Property 'invalid_property' not existing");
+
+        // Act
+        $value = $this->listingStatus->invalid_property;
     }
 }
