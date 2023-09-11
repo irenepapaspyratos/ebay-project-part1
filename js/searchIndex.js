@@ -511,6 +511,11 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Category\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategoryMissingTableKeyException\u0028\u0029",
+            "name": "testCategoryMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryMissingTableKeyException"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003AtestCategorySetterInvalidPropertyException\u0028\u0029",
             "name": "testCategorySetterInvalidPropertyException",
             "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027Category\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
@@ -565,6 +570,11 @@ Search.appendIndex(
             "name": "testConditionToArrayConversion",
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020Condition\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionToArrayConversion"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionMissingTableKeyException\u0028\u0029",
+            "name": "testConditionMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027Condition\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#method_testConditionMissingTableKeyException"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003AtestConditionSetterInvalidPropertyException\u0028\u0029",
             "name": "testConditionSetterInvalidPropertyException",
@@ -621,6 +631,11 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020CountryCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeToArrayConversion"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeMissingTableKeyException\u0028\u0029",
+            "name": "testCountryCodeMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeMissingTableKeyException"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeSetterInvalidPropertyException\u0028\u0029",
             "name": "testCountryCodeSetterInvalidPropertyException",
             "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
@@ -676,6 +691,11 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020CurrencyCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeToArrayConversion"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeMissingTableKeyException\u0028\u0029",
+            "name": "testCurrencyCodeMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeMissingTableKeyException"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeSetterInvalidPropertyException\u0028\u0029",
             "name": "testCurrencyCodeSetterInvalidPropertyException",
             "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
@@ -730,6 +750,11 @@ Search.appendIndex(
             "name": "testItemToArrayConversion",
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027Item\u0027\u0020entity\u0020whether\nit\u0020converts\u0020an\u0020Item\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemMissingTableKeyException\u0028\u0029",
+            "name": "testItemMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027Item\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#method_testItemMissingTableKeyException"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003AtestItemSetterInvalidPropertyException\u0028\u0029",
             "name": "testItemSetterInvalidPropertyException",
@@ -791,6 +816,11 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020ListingStatus\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayConversion"
         },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusMissingTableKeyException\u0028\u0029",
+            "name": "testListingStatusMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusMissingTableKeyException"
+        },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003AtestListingStatusSetterInvalidPropertyException\u0028\u0029",
             "name": "testListingStatusSetterInvalidPropertyException",
             "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027ListingStatus\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
@@ -845,6 +875,11 @@ Search.appendIndex(
             "name": "testSiteCodeToArrayConversion",
             "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020SiteCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
             "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayConversion"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeMissingTableKeyException\u0028\u0029",
+            "name": "testSiteCodeMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeMissingTableKeyException"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSetterInvalidPropertyException\u0028\u0029",
             "name": "testSiteCodeSetterInvalidPropertyException",
