@@ -1,5 +1,34 @@
 <?php
 
+// Used details of eBay items with type to store (fk_ = foreign key)
+$ebayItemColumns = [
+    'columns' => [
+        'id' => 'integer',
+        'item_id' => 'integer',
+        'title' => 'string',
+        'current_price' => 'float',
+        'fk_status' => 'integer',
+        'quantity' => 'integer',
+        'quantity_sold' => 'integer',
+        'fk_condition' => 'integer',
+        'fk_category' => 'integer',
+        'store_category_id' => 'string',
+        'store_category_2_id' => 'string',
+        'view_item_url' => 'string',
+        'pictures' => 'JSON',
+        'fk_site' => 'integer',
+        'fk_country' => 'integer',
+        'fk_currency' => 'integer',
+        'ship_to_locations' => 'JSON',
+        'shipping_options' => 'JSON',
+        'item_compatibility' => 'JSON',
+        'item_specifics' => 'JSON',
+        'html_description' => 'string',
+        'net_price' => 'float',
+        'filetime' => 'string'
+    ]
+];
+
 // Set global configurations
 return [
     'ebay' => [
@@ -17,25 +46,53 @@ return [
     'database' => [
         'tables' => [
             'ebay_category' => [
-                'columns' => ['id', 'category_id', 'category_name', 'parent_id']
-            ],
-            'ebay_listing_status' => [
-                'columns' => ['id', 'status_code', 'status_description']
-            ],
-            'ebay_condition' => [
-                'columns' => ['id', 'condition_id', 'condition_display_name']
-            ],
-            'ebay_site_code' => [
-                'columns' => ['id', 'site_id', 'site_name', 'site_global_id']
-            ],
-            'ebay_active_items' => [
                 'columns' => [
-                    'id', 'item_id', 'title', 'current_price', 'listing_status', 'quantity', 'quantity_sold', 'condition',
-                    'category', 'store_category_id', 'store_category_2_id', 'view_item_url', 'pictures',
-                    'site', 'country', 'currency', 'ship_to_locations', 'shipping_options',
-                    'item_compatibility', 'item_specifics', 'html_description', 'net_price', 'filetime'
+                    'id' => 'integer',
+                    'category_id' => 'integer',
+                    'category_name' => 'string',
+                    'parent_id' => 'integer'
                 ]
             ],
+            'ebay_listing_status' => [
+                'columns' => [
+                    'id' => 'integer',
+                    'status_code' => 'string',
+                    'status_description' => 'string'
+                ]
+            ],
+            'ebay_condition' => [
+                'columns' => [
+                    'id' => 'integer',
+                    'condition_id' => 'integer',
+                    'condition_display_name' => 'string'
+                ]
+            ],
+            'ebay_site_code' => [
+                'columns' => [
+                    'id' => 'integer',
+                    'site_id' => 'integer',
+                    'site_name' => 'string',
+                    'site_global_id' => 'string'
+                ],
+            ],
+            'ebay_country_code' => [
+                'columns' => [
+                    'id' => 'integer',
+                    'country_code' => 'string',
+                    'country_description' => 'string',
+                    'fk_default_currency' => 'integer'
+                ],
+            ],
+            'ebay_currency_code' => [
+                'columns' => [
+                    'id' => 'integer',
+                    'currency_code' => 'string',
+                    'currency_description' => 'string',
+                ],
+            ],
+            'ebay_item' => $ebayItemColumns,
+            'ebay_item_active' => $ebayItemColumns,
+            'ebay_item_archive' => $ebayItemColumns,
         ]
-    ],
+    ]
 ];

@@ -13,109 +13,121 @@ use Codeception\Test\Unit;
 class CategoryTest extends Unit {
 
     protected $tester;
-    private $keyArray;
     private $category;
-    private $categoryWithout;
+    private $prefix = 'ebay_';
 
     /**
      * Sets up the necessary environment for running tests by 
-     * creating an array of keys and different instances of 'Category'.
+     * creating an instance of 'Category'.
      */
     protected function _before() {
 
-        $this->keyArray = ['id', 'category_id', 'category_name', 'parent_id'];
-
-        $this->category = new Category($this->keyArray, '222', 'Silk', 1, 3);
-        $this->categoryWithout = new Category($this->keyArray, '111', 'Cotton');
+        $this->category = new Category($this->prefix);
     }
 
     /**
-     * Tests whether the 'Category' instance is created correctly with and without id and parent.
+     * Tests whether the 'Category' instance is created correctly.
      */
     public function testCategoryCreation() {
 
         // Assert that an instance of 'Category' was created
         $this->assertInstanceOf(Category::class, $this->category);
-        $this->assertInstanceOf(Category::class, $this->categoryWithout);
-    }
-
-    /**
-     * Tests whether the getters of the 'Category' class return the correct values 
-     * with and without id and parent category provided.
-     */
-    public function testCategoryGetters() {
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(3, $this->category->getId());
-        $this->assertEquals('222', $this->category->getCategoryId());
-        $this->assertEquals('Silk', $this->category->getCategoryName());
-        $this->assertEquals(1, $this->category->getParentId());
-
-        $this->assertEquals(null, $this->categoryWithout->getId());
-        $this->assertEquals('111', $this->categoryWithout->getCategoryId());
-        $this->assertEquals('Cotton', $this->categoryWithout->getCategoryName());
-        $this->assertEquals(0, $this->categoryWithout->getParentId());
     }
 
     /**
      * Tests whether the setters in the 'Category' class modify the properties correctly.
      */
-    public function testCategorySetters() {
+    public function testCategorySettersAndGetters() {
 
         // Act 
-        $this->categoryWithout->setId(3);
-        $this->categoryWithout->setCategoryId('222');
-        $this->categoryWithout->setCategoryName('Silk');
-        $this->categoryWithout->setParentId(1);
+        $this->category->id = 5;
+        $this->category->category_id = 333;
+        $this->category->category_name = 'Cotton';
+        $this->category->parent_id = 4;
 
         // Assert that the correct values of the changes are returned
-        $this->assertEquals(3, $this->categoryWithout->getId());
-        $this->assertEquals('222', $this->categoryWithout->getCategoryId());
-        $this->assertEquals('Silk', $this->categoryWithout->getCategoryName());
-        $this->assertEquals(1, $this->categoryWithout->getParentId());
+        $this->assertEquals(5, $this->category->id);
+        $this->assertEquals(333, $this->category->category_id);
+        $this->assertEquals('Cotton', $this->category->category_name);
+        $this->assertEquals(4, $this->category->parent_id);
     }
 
     /**
      * Tests the 'toArray' method of the 'Category' class whether
-     * it converts a Category object to the correct array with and without id and parent category.
+     * it converts a Category object to the correct array.
      */
     public function testCategoryToArrayConversion() {
 
+        // Act
+        $this->category->id = 1;
+        $this->category->category_id = 222;
+        $this->category->category_name = 'Silk';
+        $this->category->parent_id = 3;
+
         $expectedArray = [
-            'id' => 3,
-            'category_id' => '222',
+            'id' => 1,
+            'category_id' => 222,
             'category_name' => 'Silk',
-            'parent_id' => 1
+            'parent_id' => 3
         ];
 
-        $expectedArrayWithout = [
-            'id' => null,
-            'category_id' => '111',
-            'category_name' => 'Cotton',
-            'parent_id' => 0
-        ];
-
-        // Assert
+        // Assert that the correct array is returned
         $this->assertEquals($expectedArray, $this->category->toArray());
-        $this->assertEquals($expectedArrayWithout, $this->categoryWithout->toArray());
     }
 
     /**
-     * Tests the 'toArray' method of the 'Category' class whether
-     * an exception is thrown when trying to convert an object to an array
-     * with an invalid key.
+     * Tests the getter of the 'Category' class whether
+     * it throws an exception on a missing table key.
      */
-    public function testCategoryToArrayThrowsExceptionForInvalidKey() {
+    public function testCategoryMissingTableKeyException() {
 
-        // Arrange: Add an invalid key to the keyArray
-        $invalidKeyArray = ['id', 'category_id', 'category_name', 'parent'];
-        $categoryWithInvalidKey = new Category($invalidKeyArray, '222', 'Silk', 1, 3);
-
-        // Assert
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Invalid Request: Getter for 'parent' does not exist in App\Entity\Category.");
+        $this->expectExceptionMessage("Columns for table 'wrongprefix_category' not found.");
 
         // Act
-        $categoryWithInvalidKey->toArray();
+        $category = new Category('wrongprefix_');
+    }
+
+    /**
+     * Tests the setter of the 'Category' class whether
+     * it throws an exception on an invalid property.
+     */
+    public function testCategorySetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid property: invalid_property");
+
+        // Act
+        $this->category->invalid_property = 'test';
+    }
+
+    /**
+     * Tests the setter of the 'Category' class whether
+     * it throws an exception on an invalid property type.
+     */
+    public function testCategorySetterInvalidTypeException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid type for 'category_id'. Expected integer, got string");
+
+        // Act
+        $this->category->category_id = '5';
+    }
+
+    /**
+     * Tests the getter of the 'Category' class whether
+     * it throws an exception on an invalid property.
+     */
+    public function testCategoryGetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Property 'invalid_property' not existing");
+
+        // Act
+        $value = $this->category->invalid_property;
     }
 }

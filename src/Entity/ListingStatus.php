@@ -2,69 +2,28 @@
 
 namespace App\Entity;
 
-use App\Interface\Entity;
-use App\Trait\ToArrayTrait;
-
 /**
- * The `ListingStatus` class provides methods to deal with codes specifying status types.
+ * The 'ListingStatus' class extends the 'BaseEntity' class ensuring correct data types.
  * 
- * The contained methods are getting/setting its properties
- * and convert them to an array using the 'ToArrayTrait'.
+ * Provides methods for setting and getting property values, 
+ * as well as converting the object to an array representation.
  */
-class ListingStatus implements Entity {
+class ListingStatus extends BaseEntity {
 
-    private int|null $id;
-    private string $statusCode;
-    private string $description;
-    private array $keyArray;
+    private $prefix;
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
-     *
-     * @param array<int,string> $keyArray Representing valid column names of the corresponding database table.
-     * @param string $statusCode Status code of a listings (like "Active", etc.).
-     * @param string $description Explanation of the status code.
-     * @param int|null $id Primary Key, possibly empty as coming from the database (Default = null).
      * 
+     * Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor. 
+     *     
+     * @param string $prefix Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).
+     *  
      * @return void
      */
-    public function __construct(array $keyArray, string $statusCode, string $description, int|null $id = null) {
+    public function __construct(string $prefix) {
 
-        $this->id = $id;
-        $this->statusCode = $statusCode;
-        $this->description = $description;
-        $this->keyArray = $keyArray;
+        $this->prefix = $prefix;
+        parent::__construct($this->prefix);
     }
-
-
-    // Getters
-    public function getId(): int|null {
-        return $this->id;
-    }
-
-    public function getStatusCode(): string {
-        return $this->statusCode;
-    }
-
-    public function getStatusDescription(): string {
-        return $this->description;
-    }
-
-
-    // Setters
-    public function setId(int $id): void {
-        $this->id = $id;
-    }
-
-    public function setStatusCode(string $statusCode): void {
-        $this->statusCode = $statusCode;
-    }
-
-    public function setStatusDescription(string $description): void {
-        $this->description = $description;
-    }
-
-
-    // Import and use the 'toArray' method of the `ToArrayTrait` trait.
-    use ToArrayTrait;
 }

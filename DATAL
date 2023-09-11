@@ -1,0 +1,20 @@
+if (empty($categoryId) || empty($categoryName))
+throw new \InvalidArgumentException("Values for category_id and category_name are mandatory and cannot be empty.");
+
+if (empty($conditionId))
+throw new \InvalidArgumentException("Value for condition_id is mandatory and cannot be empty.");
+
+if (empty($countryCode))
+throw new \InvalidArgumentException("Value for country_code is mandatory and cannot be empty.");
+
+if (empty($currencyCode))
+throw new \InvalidArgumentException("Value for currency_code is mandatory and cannot be empty.");
+
+if (empty($itemId) || empty($status))
+throw new \InvalidArgumentException("Values for item_id and status are mandatory and cannot be empty.");
+
+if (empty($statusCode))
+throw new \InvalidArgumentException("Value for status_code is mandatory and cannot be empty.");
+
+if (empty($siteId))
+throw new \InvalidArgumentException("Value for site_id is mandatory and cannot be empty.");

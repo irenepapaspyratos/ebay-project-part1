@@ -6,116 +6,128 @@ use App\Entity\SiteCode;
 use Codeception\Test\Unit;
 
 /**
- * The 'SiteCodeTest' is a unit test class for testing the 'SiteCode' class.
+ * The 'SiteCodeTest' is a unit test class for testing the 'SiteCode' entity.
  * 
- * Tests the functionality of creating an instance and getting/setting the class-related properties.
+ * Tests the functionality of creating an instance and getting/setting the entity-related properties.
  */
 class SiteCodeTest extends Unit {
 
     protected $tester;
-    private $keyArray;
     private $siteCode;
-    private $siteCodeWithout;
+    private $prefix = 'ebay_';
 
     /**
      * Sets up the necessary environment for running tests by 
-     * creating an array of keys and different instances of 'SiteCode'.
+     * creating an instance of 'SiteCode'.
      */
     protected function _before() {
 
-        $this->keyArray = ['id', 'site_id', 'site_name', 'site_global_id'];
-
-        $this->siteCode = new SiteCode($this->keyArray, 77, 'eBay Germany', 'EBAY-DE', 2);
-        $this->siteCodeWithout = new SiteCode($this->keyArray, 0, 'eBay United States', 'EBAY-US');
+        $this->siteCode = new SiteCode($this->prefix);
     }
 
     /**
-     * Tests whether the 'SiteCode' instance is created correctly with and without id.
+     * Tests whether the 'SiteCode' instance is created correctly.
      */
     public function testSiteCodeCreation() {
 
         // Assert that an instance of 'SiteCode' was created
         $this->assertInstanceOf(SiteCode::class, $this->siteCode);
-        $this->assertInstanceOf(SiteCode::class, $this->siteCodeWithout);
     }
 
     /**
-     * Tests whether the getters of the 'SiteCode' class return the correct values with and without id.
+     * Tests whether the setters in the 'SiteCode' entity modify the properties correctly.
      */
-    public function testSiteCodeGetters() {
-
-        // Assert that the getters return the expected value
-        $this->assertEquals(2, $this->siteCode->getId());
-        $this->assertEquals(77, $this->siteCode->getSiteId());
-        $this->assertEquals('eBay Germany', $this->siteCode->getSiteName());
-        $this->assertEquals('EBAY-DE', $this->siteCode->getSiteGlobalId());
-
-        $this->assertEquals(null, $this->siteCodeWithout->getId());
-        $this->assertEquals(0, $this->siteCodeWithout->getSiteId());
-        $this->assertEquals('eBay United States', $this->siteCodeWithout->getSiteName());
-        $this->assertEquals('EBAY-US', $this->siteCodeWithout->getSiteGlobalId());
-    }
-
-    /**
-     * Tests whether the setters in the 'SiteCode' class modify the properties correctly.
-     */
-    public function testSiteCodeSetters() {
+    public function testSiteCodeSettersAndGetters() {
 
         // Act 
-        $this->siteCode->setId(1);
-        $this->siteCode->setSiteId(0);
-        $this->siteCode->setSiteName('eBay United States');
-        $this->siteCode->setSiteGlobalId('EBAY-US');
+        $this->siteCode->id = 5;
+        $this->siteCode->site_id = 200;
+        $this->siteCode->site_name = 'eBay US';
+        $this->siteCode->site_global_id = 'EBAY-US';
 
         // Assert that the correct values of the changes are returned
-        $this->assertEquals(1, $this->siteCode->getId());
-        $this->assertEquals(0, $this->siteCode->getSiteId());
-        $this->assertEquals('eBay United States', $this->siteCode->getSiteName());
-        $this->assertEquals('EBAY-US', $this->siteCode->getSiteGlobalId());
+        $this->assertEquals(5, $this->siteCode->id);
+        $this->assertEquals(200, $this->siteCode->site_id);
+        $this->assertEquals('eBay US', $this->siteCode->site_name);
+        $this->assertEquals('EBAY-US', $this->siteCode->site_global_id);
     }
 
     /**
-     * Tests the 'toArray' method of the 'SiteCode' class whether
-     * it converts a SiteCode object to the correct array with and without id.
+     * Tests the 'toArray' method of the 'SiteCode' entity whether
+     * it converts a SiteCode object to the correct array.
      */
     public function testSiteCodeToArrayConversion() {
 
+        // Act
+        $this->siteCode->id = 1;
+        $this->siteCode->site_id = 100;
+        $this->siteCode->site_name = 'eBay UK';
+        $this->siteCode->site_global_id = 'EBAY-UK';
+
         $expectedArray = [
-            'id' => 2,
-            'site_id' => 77,
-            'site_name' => 'eBay Germany',
-            'site_global_id' => 'EBAY-DE'
+            'id' => 1,
+            'site_id' => 100,
+            'site_name' => 'eBay UK',
+            'site_global_id' => 'EBAY-UK',
         ];
 
-        $expectedArrayWithout = [
-            'id' => null,
-            'site_id' => 0,
-            'site_name' => 'eBay United States',
-            'site_global_id' => 'EBAY-US'
-        ];
-
-
-        // Assert
+        // Assert that the correct array is returned
         $this->assertEquals($expectedArray, $this->siteCode->toArray());
-        $this->assertEquals($expectedArrayWithout, $this->siteCodeWithout->toArray());
     }
 
     /**
-     * Tests the 'toArray' method of the 'SiteCode' class whether
-     * an exception is thrown when trying to convert an object to an array
-     * with an invalid key.
+     * Tests the getter of the 'SiteCode' class whether
+     * it throws an exception on a missing table key.
      */
-    public function testSiteCodeToArrayThrowsExceptionForInvalidKey() {
+    public function testSiteCodeMissingTableKeyException() {
 
-        // Arrange: Add an invalid key to the keyArray
-        $invalidKeyArray = ['id', 'side_id', 'site_name', 'site_global_id'];
-        $siteCodeWithInvalidKey = new SiteCode($invalidKeyArray, '88', 'eBay Spain', 'EBAY-ES');
-
-        // Assert
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Invalid Request: Getter for 'side_id' does not exist in App\Entity\SiteCode.");
+        $this->expectExceptionMessage("Columns for table 'wrongprefix_site_code' not found.");
 
         // Act
-        $siteCodeWithInvalidKey->toArray();
+        $siteCode = new SiteCode('wrongprefix_');
+    }
+
+    /**
+     * Tests the setter of the 'SiteCode' entity whether
+     * it throws an exception on an invalid property.
+     */
+    public function testSiteCodeSetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Invalid property: invalid_property");
+
+        // Act
+        $this->siteCode->invalid_property = 'test';
+    }
+
+    /**
+     * Tests the setter of the 'SiteCode' entity whether
+     * it throws an exception on an invalid property type.
+     */
+    public function testSiteCodeSetterInvalidTypeException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid type for 'site_id'. Expected integer, got string");
+
+        // Act
+        $this->siteCode->site_id = '300';
+    }
+
+    /**
+     * Tests the getter of the 'SiteCode' entity whether
+     * it throws an exception on an invalid property.
+     */
+    public function testSiteCodeGetterInvalidPropertyException() {
+
+        // Assert that an exception of type `\Exception` is thrown containing the correct message 
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage("Property 'invalid_property' not existing");
+
+        // Act
+        $value = $this->siteCode->invalid_property;
     }
 }
