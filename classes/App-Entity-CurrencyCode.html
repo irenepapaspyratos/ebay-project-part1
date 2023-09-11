@@ -121,17 +121,16 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests.html">Tests</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit.html">Unit</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-database.html">Database</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-entity.html">Entity</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    DatabaseConnectionTest
+    CurrencyCode
 
         <span class="phpdocumentor-element__extends">
-        extends <abbr title="\Codeception\Test\Unit">Unit</abbr>
+        extends <a href="classes/App-Entity-BaseEntity.html"><abbr title="\App\Entity\BaseEntity">BaseEntity</abbr></a>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -150,16 +149,16 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/CurrencyCode.php"><a href="files/src-entity-currencycode.html"><abbr title="src/Entity/CurrencyCode.php">CurrencyCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;DatabaseConnectionTest&#039; is a unit test class for testing the &#039;DatabaseConnection&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;CurrencyCode&#039; class extends the &#039;BaseEntity&#039; class ensuring correct data types.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance of a PDO object
-and getting the connection to the required database.</p>
+    <section class="phpdocumentor-description"><p>Provides methods for setting and getting property values,
+as well as converting the object to an array representation.</p>
 </section>
 
 
@@ -168,7 +167,7 @@ and getting the connection to the required database.</p>
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Entity-CurrencyCode.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -182,18 +181,24 @@ and getting the connection to the required database.</p>
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Entity-CurrencyCode.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Entity-BaseEntity.html#property_data">$data</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection</a>
+    <a href="classes/App-Entity-CurrencyCode.html#property_prefix">$prefix</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Entity-BaseEntity.html#property_validColumns">$validColumns</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -202,41 +207,38 @@ and getting the connection to the required database.</p>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Entity-CurrencyCode.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a>
+    <a href="classes/App-Entity-CurrencyCode.html#method___construct">__construct()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-returns a PDO instance when using PDO&#039;s own database.</dd>
+<dd>The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a>
+    <a href="classes/App-Entity-BaseEntity.html#method___get">__get()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: int|string|float|null    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-thorows a PDO exception with the correct message when using invalid parameters.</dd>
+<dd>The &#039;__get&#039; method gets the value of a property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a>
+    <a href="classes/App-Entity-BaseEntity.html#method___set">__set()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: void    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-throws a PDO exception with the correct message when using invalid parameters.</dd>
+<dd>The &#039;__set&#039; method sets the value for a property after checking its correct type.</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a>
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Entity-BaseEntity.html#method_toArray">toArray()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: array&lt;string, int|string|float|null&gt;    </span>
 </dt>
-<dd>Sets up the necessary environment for running tests by
-creating a &#039;DatabaseConnection&#039; class.</dd>
+<dd>The &#039;toArray&#039; method converts the data object to an array
+with all keys based on the list of valid columns (value of non-set property: null).</dd>
 
     </dl>
 
@@ -249,35 +251,68 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Entity-CurrencyCode.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
         class="
             phpdocumentor-element
             -property
-            -protected
+            -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_tester">
-        $tester
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_data">
+        $data
+        <a href="classes/App-Entity-BaseEntity.html#property_data" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$tester</span>
+    <span class="phpdocumentor-signature__name">$data</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/App-Entity-CurrencyCode.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/CurrencyCode.php"><a href="files/src-entity-currencycode.html"><abbr title="src/Entity/CurrencyCode.php">CurrencyCode.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">13</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$prefix</span>
     </code>
 
     
@@ -292,17 +327,17 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_databaseConnection">
-        $databaseConnection
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_validColumns">
+        $validColumns
+        <a href="classes/App-Entity-BaseEntity.html#property_validColumns" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
@@ -310,8 +345,8 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$databaseConnection</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$validColumns</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
     
     
@@ -323,7 +358,7 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Entity-CurrencyCode.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -332,29 +367,42 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionReturnsPdoInstance">
-        testGetConnectionReturnsPdoInstance()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/App-Entity-CurrencyCode.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/CurrencyCode.php"><a href="files/src-entity-currencycode.html"><abbr title="src/Entity/CurrencyCode.php">CurrencyCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-returns a PDO instance when using PDO&#039;s own database.</p>
+        <p class="phpdocumentor-summary">The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionReturnsPdoInstance</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
-    
+        <section class="phpdocumentor-description"><p>Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$prefix</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).</p>
+</section>
+
+            </dd>
+            </dl>
+
     
 
     
@@ -365,30 +413,136 @@ returns a PDO instance when using PDO&#039;s own database.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnDSN">
-        testGetConnectionThrowsExceptionOnDSN()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method___get">
+        __get()
+        <a href="classes/App-Entity-BaseEntity.html#method___get" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">96</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-thorows a PDO exception with the correct message when using invalid parameters.</p>
+        <p class="phpdocumentor-summary">The &#039;__get&#039; method gets the value of a property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnDSN</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__get</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|string|float|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Property to get the value for.</p>
+</section>
+
+            </dd>
+            </dl>
+
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-BaseEntity.html#method___get#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid property is requested.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">int|string|float|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Value of the requested property, defaults to null for non-set properties.</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___set">
+        __set()
+        <a href="classes/App-Entity-BaseEntity.html#method___set" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">60</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;__set&#039; method sets the value for a property after checking its correct type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">__set</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|string|float|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
     
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Property to be set.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|string|float|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Value to be set for the given property.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-BaseEntity.html#method___set#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid property is tried to be set.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
 </article>
@@ -398,24 +552,24 @@ thorows a PDO exception with the correct message when using invalid parameters.<
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnProperty">
-        testGetConnectionThrowsExceptionOnProperty()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_toArray">
+        toArray()
+        <a href="classes/App-Entity-BaseEntity.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-throws a PDO exception with the correct message when using invalid parameters.</p>
+        <p class="phpdocumentor-summary">The &#039;toArray&#039; method converts the data object to an array
+with all keys based on the list of valid columns (value of non-set property: null).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnProperty</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, int|string|float|null&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -423,40 +577,15 @@ throws a PDO exception with the correct message when using invalid parameters.</
     
     
 
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method__before">
-        _before()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">array&lt;string, int|string|float|null&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Array representation of the object.</p>
+</section>
 
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+            </section>
 
-    </aside>
-
-        <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating a &#039;DatabaseConnection&#039; class.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">_before</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
 </article>
             </section>
 
@@ -464,7 +593,7 @@ creating a &#039;DatabaseConnection&#039; class.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Database/DatabaseConnectionTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Entity/CurrencyCode.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -563,26 +692,27 @@ creating a &#039;DatabaseConnection&#039; class.</p>
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/App-Entity-CurrencyCode.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/App-Entity-CurrencyCode.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
+                                                    <li><a href="classes/App-Entity-BaseEntity.html#property_data">$data<a href="classes/App-Entity-CurrencyCode.html"></li>
+                                                    <li><a href="classes/App-Entity-CurrencyCode.html#property_prefix">$prefix<a href="classes/App-Entity-CurrencyCode.html"></li>
+                                                    <li><a href="classes/App-Entity-BaseEntity.html#property_validColumns">$validColumns<a href="classes/App-Entity-CurrencyCode.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a></li>
+                                            <li><a href="classes/App-Entity-CurrencyCode.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method___get">__get()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method___set">__set()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method_toArray">toArray()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -602,7 +732,7 @@ creating a &#039;DatabaseConnection&#039; class.</p>
     </section>
 </section>
         </div>
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Entity-CurrencyCode.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

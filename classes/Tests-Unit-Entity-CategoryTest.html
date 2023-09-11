@@ -73,15 +73,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-interface.html" class="">Interface</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -206,13 +198,7 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout">$categoryWithout</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray">$keyArray</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_prefix">$prefix</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -230,18 +216,34 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Category&#039; instance is created correctly with and without id and parent.</dd>
+<dd>Tests whether the &#039;Category&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters">testCategoryGetters()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetterInvalidPropertyException">testCategoryGetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the getters of the &#039;Category&#039; class return the correct values
-with and without id and parent category provided.</dd>
+<dd>Tests the getter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters">testCategorySetters()</a>
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidPropertyException">testCategorySetterInvalidPropertyException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidTypeException">testCategorySetterInvalidTypeException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersAndGetters">testCategorySettersAndGetters()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -253,16 +255,7 @@ with and without id and parent category provided.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array with and without id and parent category.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey">testCategoryToArrayThrowsExceptionForInvalidKey()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</dd>
+it converts a Category object to the correct array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Entity-CategoryTest.html#method__before">_before()</a>
@@ -270,7 +263,7 @@ with an invalid key.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;Category&#039;.</dd>
+creating an instance of &#039;Category&#039;.</dd>
 
     </dl>
 
@@ -336,7 +329,7 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -359,9 +352,9 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_categoryWithout">
-        $categoryWithout
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -369,7 +362,7 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -377,41 +370,8 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$categoryWithout</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_keyArray">
-        $keyArray
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$keyArray</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$prefix</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;ebay_&#039;</span></code>
 
     
     
@@ -440,11 +400,11 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Category&#039; instance is created correctly with and without id and parent.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;Category&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -464,24 +424,24 @@ creating an array of keys and different instances of &#039;Category&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryGetters">
-        testCategoryGetters()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategoryGetterInvalidPropertyException">
+        testCategoryGetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Category&#039; class return the correct values
-with and without id and parent category provided.</p>
+        <p class="phpdocumentor-summary">Tests the getter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategoryGetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -497,15 +457,81 @@ with and without id and parent category provided.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testCategorySetters">
-        testCategorySetters()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCategorySetterInvalidPropertyException">
+        testCategorySetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCategorySetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCategorySetterInvalidTypeException">
+        testCategorySetterInvalidTypeException()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidTypeException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">96</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;Category&#039; class whether
+it throws an exception on an invalid property type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCategorySetterInvalidTypeException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCategorySettersAndGetters">
+        testCategorySettersAndGetters()
+        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersAndGetters" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
 
     </aside>
 
@@ -513,7 +539,7 @@ with and without id and parent category provided.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategorySetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCategorySettersAndGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -537,50 +563,16 @@ with and without id and parent category provided.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">82</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-it converts a Category object to the correct array with and without id and parent category.</p>
+it converts a Category object to the correct array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">testCategoryToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testCategoryToArrayThrowsExceptionForInvalidKey">
-        testCategoryToArrayThrowsExceptionForInvalidKey()
-        <a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">108</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Category&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testCategoryToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -604,12 +596,12 @@ with an invalid key.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CategoryTest.php"><a href="files/tests-unit-entity-categorytest.html"><abbr title="tests/Unit/Entity/CategoryTest.php">CategoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;Category&#039;.</p>
+creating an instance of &#039;Category&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -738,8 +730,7 @@ creating an array of keys and different instances of &#039;Category&#039;.</p>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_category">$category<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_categoryWithout">$categoryWithout<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#property_prefix">$prefix<a href="classes/Tests-Unit-Entity-CategoryTest.html"></li>
                                             </ul>
                 </li>
             
@@ -747,10 +738,11 @@ creating an array of keys and different instances of &#039;Category&#039;.</p>
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryCreation">testCategoryCreation()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetters">testCategoryGetters()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetters">testCategorySetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryGetterInvalidPropertyException">testCategoryGetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidPropertyException">testCategorySetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySetterInvalidTypeException">testCategorySetterInvalidTypeException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategorySettersAndGetters">testCategorySettersAndGetters()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayConversion">testCategoryToArrayConversion()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method_testCategoryToArrayThrowsExceptionForInvalidKey">testCategoryToArrayThrowsExceptionForInvalidKey()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-CategoryTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>

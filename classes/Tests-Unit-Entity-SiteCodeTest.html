@@ -73,15 +73,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-interface.html" class="">Interface</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -164,9 +156,9 @@
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;SiteCodeTest&#039; is a unit test class for testing the &#039;SiteCode&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;SiteCodeTest&#039; is a unit test class for testing the &#039;SiteCode&#039; entity.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the entity-related properties.</p>
 </section>
 
 
@@ -200,19 +192,13 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_keyArray">$keyArray</a>
+    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_prefix">$prefix</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCode">$siteCode</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCodeWithout">$siteCodeWithout</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -230,38 +216,46 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;SiteCode&#039; instance is created correctly with and without id.</dd>
+<dd>Tests whether the &#039;SiteCode&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetters">testSiteCodeGetters()</a>
+    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetterInvalidPropertyException">testSiteCodeGetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the getters of the &#039;SiteCode&#039; class return the correct values with and without id.</dd>
+<dd>Tests the getter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetters">testSiteCodeSetters()</a>
+    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidPropertyException">testSiteCodeSetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the setters in the &#039;SiteCode&#039; class modify the properties correctly.</dd>
+<dd>Tests the setter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidTypeException">testSiteCodeSetterInvalidTypeException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSettersAndGetters">testSiteCodeSettersAndGetters()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests whether the setters in the &#039;SiteCode&#039; entity modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayConversion">testSiteCodeToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; class whether
-it converts a SiteCode object to the correct array with and without id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayThrowsExceptionForInvalidKey">testSiteCodeToArrayThrowsExceptionForInvalidKey()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</dd>
+<dd>Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; entity whether
+it converts a SiteCode object to the correct array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method__before">_before()</a>
@@ -269,7 +263,7 @@ with an invalid key.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
+creating an instance of &#039;SiteCode&#039;.</dd>
 
     </dl>
 
@@ -325,9 +319,9 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_keyArray">
-        $keyArray
-        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -335,7 +329,7 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -343,8 +337,8 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$keyArray</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$prefix</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;ebay_&#039;</span></code>
 
     
     
@@ -368,7 +362,7 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -377,39 +371,6 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
     <span class="phpdocumentor-signature__name">$siteCode</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_siteCodeWithout">
-        $siteCodeWithout
-        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCodeWithout" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">18</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$siteCodeWithout</span>
     </code>
 
     
@@ -439,11 +400,11 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;SiteCode&#039; instance is created correctly with and without id.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;SiteCode&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -463,23 +424,24 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeGetters">
-        testSiteCodeGetters()
-        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeGetterInvalidPropertyException">
+        testSiteCodeGetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;SiteCode&#039; class return the correct values with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the getter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testSiteCodeGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testSiteCodeGetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -495,23 +457,89 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeSetters">
-        testSiteCodeSetters()
-        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeSetterInvalidPropertyException">
+        testSiteCodeSetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">82</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;SiteCode&#039; class modify the properties correctly.</p>
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testSiteCodeSetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testSiteCodeSetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeSetterInvalidTypeException">
+        testSiteCodeSetterInvalidTypeException()
+        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidTypeException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">96</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;SiteCode&#039; entity whether
+it throws an exception on an invalid property type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testSiteCodeSetterInvalidTypeException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeSettersAndGetters">
+        testSiteCodeSettersAndGetters()
+        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSettersAndGetters" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;SiteCode&#039; entity modify the properties correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testSiteCodeSettersAndGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -535,50 +563,16 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; class whether
-it converts a SiteCode object to the correct array with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; entity whether
+it converts a SiteCode object to the correct array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">testSiteCodeToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testSiteCodeToArrayThrowsExceptionForInvalidKey">
-        testSiteCodeToArrayThrowsExceptionForInvalidKey()
-        <a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">108</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;SiteCode&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testSiteCodeToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -602,12 +596,12 @@ with an invalid key.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/SiteCodeTest.php"><a href="files/tests-unit-entity-sitecodetest.html"><abbr title="tests/Unit/Entity/SiteCodeTest.php">SiteCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;SiteCode&#039;.</p>
+creating an instance of &#039;SiteCode&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -735,9 +729,8 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</p>
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-SiteCodeTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-SiteCodeTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_prefix">$prefix<a href="classes/Tests-Unit-Entity-SiteCodeTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCode">$siteCode<a href="classes/Tests-Unit-Entity-SiteCodeTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCodeWithout">$siteCodeWithout<a href="classes/Tests-Unit-Entity-SiteCodeTest.html"></li>
                                             </ul>
                 </li>
             
@@ -745,10 +738,11 @@ creating an array of keys and different instances of &#039;SiteCode&#039;.</p>
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeCreation">testSiteCodeCreation()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetters">testSiteCodeGetters()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetters">testSiteCodeSetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetterInvalidPropertyException">testSiteCodeGetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidPropertyException">testSiteCodeSetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidTypeException">testSiteCodeSetterInvalidTypeException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSettersAndGetters">testSiteCodeSettersAndGetters()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayConversion">testSiteCodeToArrayConversion()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayThrowsExceptionForInvalidKey">testSiteCodeToArrayThrowsExceptionForInvalidKey()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-SiteCodeTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>

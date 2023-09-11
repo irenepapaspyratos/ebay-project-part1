@@ -73,15 +73,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-interface.html" class="">Interface</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -137,6 +129,9 @@
         <h2 class="phpdocumentor-content__title">
     ListingStatus
 
+        <span class="phpdocumentor-element__extends">
+        extends <a href="classes/App-Entity-BaseEntity.html"><abbr title="\App\Entity\BaseEntity">BaseEntity</abbr></a>
+    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -145,13 +140,7 @@
                             </ul>
         </div>
     
-            <span class="phpdocumentor-element__implements">
-            implements
-                            <a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a>                    </span>
     
-            <span class="phpdocumentor-element__extends">
-            Uses
-                            <a href="classes/App-Trait-ToArrayTrait.html"><abbr title="\App\Trait\ToArrayTrait">ToArrayTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -162,14 +151,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The `ListingStatus` class provides methods to deal with codes specifying status types.</p>
+            <p class="phpdocumentor-summary">The &#039;ListingStatus&#039; class extends the &#039;BaseEntity&#039; class ensuring correct data types.</p>
 
-    <section class="phpdocumentor-description"><p>The contained methods are getting/setting its properties
-and convert them to an array using the 'ToArrayTrait'.</p>
+    <section class="phpdocumentor-description"><p>Provides methods for setting and getting property values,
+as well as converting the object to an array representation.</p>
 </section>
 
 
@@ -184,14 +173,6 @@ and convert them to an array using the 'ToArrayTrait'.</p>
 
 
 
-    <h4 id="toc-interfaces">
-        Interfaces
-        <a href="classes/App-Entity-ListingStatus.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/App-Interface-Entity.html"><abbr title="\App\Interface\Entity">Entity</abbr></a></dt><dd>The interface &#039;Entity&#039; defines that any class that implements the `Entity`
-must provide an implementation for the `toArray` method, which returns an array.</dd>    </dl>
 
 
 
@@ -205,27 +186,21 @@ must provide an implementation for the `toArray` method, which returns an array.
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Entity-ListingStatus.html#property_description">$description</a>
+    <a href="classes/App-Entity-BaseEntity.html#property_data">$data</a>
     <span>
-                        &nbsp;: string            </span>
+                        &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Entity-ListingStatus.html#property_id">$id</a>
+    <a href="classes/App-Entity-ListingStatus.html#property_prefix">$prefix</a>
     <span>
-                        &nbsp;: int|null            </span>
+                        &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Entity-ListingStatus.html#property_keyArray">$keyArray</a>
+    <a href="classes/App-Entity-BaseEntity.html#property_validColumns">$validColumns</a>
     <span>
-                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Entity-ListingStatus.html#property_statusCode">$statusCode</a>
-    <span>
-                        &nbsp;: string            </span>
+                        &nbsp;: mixed            </span>
 </dt>
 
     </dl>
@@ -244,48 +219,26 @@ must provide an implementation for the `toArray` method, which returns an array.
 <dd>The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_getId">getId()</a>
+    <a href="classes/App-Entity-BaseEntity.html#method___get">__get()</a>
     <span>
-                                &nbsp;: int|null    </span>
+                                &nbsp;: int|string|float|null    </span>
 </dt>
+<dd>The &#039;__get&#039; method gets the value of a property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_getStatusCode">getStatusCode()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_getStatusDescription">getStatusDescription()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_setId">setId()</a>
+    <a href="classes/App-Entity-BaseEntity.html#method___set">__set()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>The &#039;__set&#039; method sets the value for a property after checking its correct type.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_setStatusCode">setStatusCode()</a>
+    <a href="classes/App-Entity-BaseEntity.html#method_toArray">toArray()</a>
     <span>
-                                &nbsp;: void    </span>
+                                &nbsp;: array&lt;string, int|string|float|null&gt;    </span>
 </dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Entity-ListingStatus.html#method_setStatusDescription">setStatusDescription()</a>
-    <span>
-                                &nbsp;: void    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a>
-    <span>
-                                &nbsp;: array&lt;string, mixed&gt;    </span>
-</dt>
-<dd>Converts the object of the actual class to an array
-based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</dd>
+<dd>The &#039;toArray&#039; method converts the data object to an array
+with all keys based on the list of valid columns (value of non-set property: null).</dd>
 
     </dl>
 
@@ -308,9 +261,42 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_description">
-        $description
-        <a href="classes/App-Entity-ListingStatus.html#property_description" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_data">
+        $data
+        <a href="classes/App-Entity-BaseEntity.html#property_data" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">15</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$data</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/App-Entity-ListingStatus.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -318,15 +304,15 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$description</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$prefix</span>
     </code>
 
     
@@ -341,92 +327,26 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_id">
-        $id
-        <a href="classes/App-Entity-ListingStatus.html#property_id" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_validColumns">
+        $validColumns
+        <a href="classes/App-Entity-BaseEntity.html#property_validColumns" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int|null</span>
-    <span class="phpdocumentor-signature__name">$id</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_keyArray">
-        $keyArray
-        <a href="classes/App-Entity-ListingStatus.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">19</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
-    <span class="phpdocumentor-signature__name">$keyArray</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_statusCode">
-        $statusCode
-        <a href="classes/App-Entity-ListingStatus.html#property_statusCode" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">17</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$statusCode</span>
-    </code>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$validColumns</span>
+     = <span class="phpdocumentor-signature__default-value">[]</span></code>
 
     
     
@@ -455,7 +375,7 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -463,46 +383,21 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyArray</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$statusCode</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$description</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>Creates an array with valid columns/keys using the table array of the configuration file and the parent constructor.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$keyArray</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;int, string&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Representing valid column names of the corresponding database table.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$statusCode</span>
+                <span class="phpdocumentor-signature__argument__name">$prefix</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Status code of a listings (like &quot;Active&quot;, etc.).</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$description</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Explanation of the status code.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Primary Key, possibly empty as coming from the database (Default = null).</p>
+                    <section class="phpdocumentor-description"><p>Prefix for the table key in the configuration file (e.g. ebay_ for an ebay table).</p>
 </section>
 
             </dd>
@@ -518,32 +413,66 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getId">
-        getId()
-        <a href="classes/App-Entity-ListingStatus.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method___get">
+        __get()
+        <a href="classes/App-Entity-BaseEntity.html#method___get" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">96</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The &#039;__get&#039; method gets the value of a property.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|null</span></code>
+                    <span class="phpdocumentor-signature__name">__get</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|string|float|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$name</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Property to get the value for.</p>
+</section>
+
+            </dd>
+            </dl>
+
     
-    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-BaseEntity.html#method___get#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid property is requested.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">int|null</span>
+        <span class="phpdocumentor-signature__response_type">int|string|float|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Value of the requested property, defaults to null for non-set properties.</p>
+</section>
+
             </section>
 
 </article>
@@ -553,92 +482,23 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getStatusCode">
-        getStatusCode()
-        <a href="classes/App-Entity-ListingStatus.html#method_getStatusCode" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method___set">
+        __set()
+        <a href="classes/App-Entity-BaseEntity.html#method___set" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">60</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The &#039;__set&#039; method sets the value for a property after checking its correct type.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getStatusCode</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getStatusDescription">
-        getStatusDescription()
-        <a href="classes/App-Entity-ListingStatus.html#method_getStatusDescription" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">49</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getStatusDescription</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setId">
-        setId()
-        <a href="classes/App-Entity-ListingStatus.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">55</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__set</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int|string|float|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -646,97 +506,43 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-            </dl>
-
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setStatusCode">
-        setStatusCode()
-        <a href="classes/App-Entity-ListingStatus.html#method_setStatusCode" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">59</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setStatusCode</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$statusCode</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$statusCode</span>
+                <span class="phpdocumentor-signature__argument__name">$name</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Property to be set.</p>
+</section>
+
             </dd>
-            </dl>
-
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_setStatusDescription">
-        setStatusDescription()
-        <a href="classes/App-Entity-ListingStatus.html#method_setStatusDescription" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/ListingStatus.php"><a href="files/src-entity-listingstatus.html"><abbr title="src/Entity/ListingStatus.php">ListingStatus.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">63</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setStatusDescription</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$description</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$description</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|string|float|null</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>Value to be set for the given property.</p>
+</section>
+
             </dd>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Entity-BaseEntity.html#method___set#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid property is tried to be set.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
     
 </article>
@@ -748,22 +554,22 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
 >
     <h4 class="phpdocumentor-element__name" id="method_toArray">
         toArray()
-        <a href="classes/App-Trait-ToArrayTrait.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Entity-BaseEntity.html#method_toArray" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Trait/ToArrayTrait.php"><a href="files/src-trait-toarraytrait.html"><abbr title="src/Trait/ToArrayTrait.php">ToArrayTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Entity/BaseEntity.php"><a href="files/src-entity-baseentity.html"><abbr title="src/Entity/BaseEntity.php">BaseEntity.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Converts the object of the actual class to an array
-based on given keys from &#039;$this-&gt;keyArray&#039; created by the constructor.</p>
+        <p class="phpdocumentor-summary">The &#039;toArray&#039; method converts the data object to an array
+with all keys based on the list of valid columns (value of non-set property: null).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">toArray</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, int|string|float|null&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -773,7 +579,7 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">array&lt;string, mixed&gt;</span>
+        <span class="phpdocumentor-signature__response_type">array&lt;string, int|string|float|null&gt;</span>
                     &mdash;
                 <section class="phpdocumentor-description"><p>Array representation of the object.</p>
 </section>
@@ -894,10 +700,9 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/App-Entity-ListingStatus.html#property_description">$description<a href="classes/App-Entity-ListingStatus.html"></li>
-                                                    <li><a href="classes/App-Entity-ListingStatus.html#property_id">$id<a href="classes/App-Entity-ListingStatus.html"></li>
-                                                    <li><a href="classes/App-Entity-ListingStatus.html#property_keyArray">$keyArray<a href="classes/App-Entity-ListingStatus.html"></li>
-                                                    <li><a href="classes/App-Entity-ListingStatus.html#property_statusCode">$statusCode<a href="classes/App-Entity-ListingStatus.html"></li>
+                                                    <li><a href="classes/App-Entity-BaseEntity.html#property_data">$data<a href="classes/App-Entity-ListingStatus.html"></li>
+                                                    <li><a href="classes/App-Entity-ListingStatus.html#property_prefix">$prefix<a href="classes/App-Entity-ListingStatus.html"></li>
+                                                    <li><a href="classes/App-Entity-BaseEntity.html#property_validColumns">$validColumns<a href="classes/App-Entity-ListingStatus.html"></li>
                                             </ul>
                 </li>
             
@@ -905,13 +710,9 @@ based on given keys from &#039;$this-&gt;keyArray&#039; created by the construct
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Entity-ListingStatus.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_getId">getId()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_getStatusCode">getStatusCode()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_getStatusDescription">getStatusDescription()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_setId">setId()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_setStatusCode">setStatusCode()</a></li>
-                                            <li><a href="classes/App-Entity-ListingStatus.html#method_setStatusDescription">setStatusDescription()</a></li>
-                                            <li><a href="classes/App-Trait-ToArrayTrait.html#method_toArray">toArray()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method___get">__get()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method___set">__set()</a></li>
+                                            <li><a href="classes/App-Entity-BaseEntity.html#method_toArray">toArray()</a></li>
                                     </ul>
             </li>
                     </ul>

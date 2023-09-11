@@ -73,15 +73,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-interface.html" class="">Interface</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -164,9 +156,9 @@
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;ItemTest&#039; is a unit test class for testing the &#039;Item&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;ItemTest&#039; is a unit test class for testing the &#039;Item&#039; entity.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the entity-related properties.</p>
 </section>
 
 
@@ -206,13 +198,7 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout">$itemWithout</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray">$keyArray</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#property_prefix">$prefix</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -230,38 +216,54 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;Item&#039; instance is created correctly with and without id.</dd>
+<dd>Tests whether the &#039;Item&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters">testItemGetters()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetterInvalidPropertyException">testItemGetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the getters of the &#039;Item&#039; class return the correct values with and without id.</dd>
+<dd>Tests the getter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters">testItemSetters()</a>
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidJsonException">testItemSetterInvalidJsonException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the setters in the &#039;Item&#039; class modify the properties correctly.</dd>
+<dd>Tests the setter of the &#039;Item&#039; class whether
+it throws an exception on an invalid JSON string.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidPropertyException">testItemSetterInvalidPropertyException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidTypeException">testItemSetterInvalidTypeException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersAndGetters">testItemSettersAndGetters()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests whether the setters in the &#039;Item&#039; entity modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion">testItemToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array with and without id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey">testItemToArrayThrowsExceptionForInvalidKey()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</dd>
+<dd>Tests the &#039;toArray&#039; method of the &#039;Item&#039; entity whether
+it converts an Item object to the correct array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Entity-ItemTest.html#method__before">_before()</a>
@@ -269,7 +271,7 @@ with an invalid key.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;Item&#039;.</dd>
+creating an instance of &#039;Item&#039;.</dd>
 
     </dl>
 
@@ -335,7 +337,7 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -358,9 +360,9 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_itemWithout">
-        $itemWithout
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -368,7 +370,7 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -376,41 +378,8 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$itemWithout</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_keyArray">
-        $keyArray
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$keyArray</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$prefix</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;ebay_&#039;</span></code>
 
     
     
@@ -439,11 +408,11 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;Item&#039; instance is created correctly with and without id.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;Item&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -463,23 +432,24 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testItemGetters">
-        testItemGetters()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemGetterInvalidPropertyException">
+        testItemGetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;Item&#039; class return the correct values with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the getter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemGetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -495,23 +465,122 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testItemSetters">
-        testItemSetters()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testItemSetterInvalidJsonException">
+        testItemSetterInvalidJsonException()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidJsonException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">105</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;Item&#039; class modify the properties correctly.</p>
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;Item&#039; class whether
+it throws an exception on an invalid JSON string.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemSetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testItemSetterInvalidJsonException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testItemSetterInvalidPropertyException">
+        testItemSetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">140</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testItemSetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testItemSetterInvalidTypeException">
+        testItemSetterInvalidTypeException()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidTypeException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">154</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;Item&#039; entity whether
+it throws an exception on an invalid property type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testItemSetterInvalidTypeException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testItemSettersAndGetters">
+        testItemSettersAndGetters()
+        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersAndGetters" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;Item&#039; entity modify the properties correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testItemSettersAndGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -535,50 +604,16 @@ creating an array of keys and different instances of &#039;Item&#039;.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">162</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-it converts a Item object to the correct array with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Item&#039; entity whether
+it converts an Item object to the correct array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">testItemToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testItemToArrayThrowsExceptionForInvalidKey">
-        testItemToArrayThrowsExceptionForInvalidKey()
-        <a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">228</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;Item&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testItemToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -602,12 +637,12 @@ with an invalid key.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ItemTest.php"><a href="files/tests-unit-entity-itemtest.html"><abbr title="tests/Unit/Entity/ItemTest.php">ItemTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;Item&#039;.</p>
+creating an instance of &#039;Item&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -736,8 +771,7 @@ creating an array of keys and different instances of &#039;Item&#039;.</p>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_item">$item<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_itemWithout">$itemWithout<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ItemTest.html#property_prefix">$prefix<a href="classes/Tests-Unit-Entity-ItemTest.html"></li>
                                             </ul>
                 </li>
             
@@ -745,10 +779,12 @@ creating an array of keys and different instances of &#039;Item&#039;.</p>
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemCreation">testItemCreation()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetters">testItemGetters()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetters">testItemSetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemGetterInvalidPropertyException">testItemGetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidJsonException">testItemSetterInvalidJsonException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidPropertyException">testItemSetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSetterInvalidTypeException">testItemSetterInvalidTypeException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemSettersAndGetters">testItemSettersAndGetters()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayConversion">testItemToArrayConversion()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method_testItemToArrayThrowsExceptionForInvalidKey">testItemToArrayThrowsExceptionForInvalidKey()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-ItemTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>

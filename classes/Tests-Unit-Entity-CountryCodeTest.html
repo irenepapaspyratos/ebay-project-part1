@@ -123,12 +123,12 @@
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests.html">Tests</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit.html">Unit</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-database.html">Database</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/tests-unit-entity.html">Entity</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    DatabaseConnectionTest
+    CountryCodeTest
 
         <span class="phpdocumentor-element__extends">
         extends <abbr title="\Codeception\Test\Unit">Unit</abbr>
@@ -150,16 +150,15 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;DatabaseConnectionTest&#039; is a unit test class for testing the &#039;DatabaseConnection&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;CountryCodeTest&#039; is a unit test class for testing the &#039;CountryCode&#039; class.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance of a PDO object
-and getting the connection to the required database.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
 </section>
 
 
@@ -168,7 +167,7 @@ and getting the connection to the required database.</p>
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -182,18 +181,24 @@ and getting the connection to the required database.</p>
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_tester">$tester</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_countryCode">$countryCode</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_prefix">$prefix</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -202,41 +207,63 @@ and getting the connection to the required database.</p>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeCreation">testCountryCodeCreation()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-returns a PDO instance when using PDO&#039;s own database.</dd>
+<dd>Tests whether the &#039;CountryCode&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeGetterInvalidPropertyException">testCountryCodeGetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-thorows a PDO exception with the correct message when using invalid parameters.</dd>
+<dd>Tests the getter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidPropertyException">testCountryCodeSetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-throws a PDO exception with the correct message when using invalid parameters.</dd>
+<dd>Tests the setter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidTypeException">testCountryCodeSetterInvalidTypeException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSettersAndGetters">testCountryCodeSettersAndGetters()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests whether the setters in the &#039;CountryCode&#039; class modify the properties correctly.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeToArrayConversion">testCountryCodeToArrayConversion()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;toArray&#039; method of the &#039;CountryCode&#039; class whether
+it converts a CountryCode object to the correct array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a>
+    <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method__before">_before()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating a &#039;DatabaseConnection&#039; class.</dd>
+creating an instance of &#039;CountryCode&#039;.</dd>
 
     </dl>
 
@@ -249,7 +276,7 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -261,15 +288,15 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="property_tester">
         $tester
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_tester" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -292,17 +319,17 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_databaseConnection">
-        $databaseConnection
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_countryCode">
+        $countryCode
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_countryCode" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -310,8 +337,41 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$databaseConnection</span>
+    <span class="phpdocumentor-signature__name">$countryCode</span>
     </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$prefix</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;ebay_&#039;</span></code>
 
     
     
@@ -323,7 +383,7 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -332,24 +392,23 @@ creating a &#039;DatabaseConnection&#039; class.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionReturnsPdoInstance">
-        testGetConnectionReturnsPdoInstance()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeCreation">
+        testCountryCodeCreation()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeCreation" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-returns a PDO instance when using PDO&#039;s own database.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;CountryCode&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionReturnsPdoInstance</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCountryCodeCreation</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -365,57 +424,155 @@ returns a PDO instance when using PDO&#039;s own database.</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnDSN">
-        testGetConnectionThrowsExceptionOnDSN()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeGetterInvalidPropertyException">
+        testCountryCodeGetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeGetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">110</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the getter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCountryCodeGetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeSetterInvalidPropertyException">
+        testCountryCodeSetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCountryCodeSetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeSetterInvalidTypeException">
+        testCountryCodeSetterInvalidTypeException()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidTypeException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">96</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;CountryCode&#039; class whether
+it throws an exception on an invalid property type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCountryCodeSetterInvalidTypeException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeSettersAndGetters">
+        testCountryCodeSettersAndGetters()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSettersAndGetters" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;CountryCode&#039; class modify the properties correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testCountryCodeSettersAndGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testCountryCodeToArrayConversion">
+        testCountryCodeToArrayConversion()
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeToArrayConversion" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
     <span class="phpdocumentor-element-found-in__line">59</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-thorows a PDO exception with the correct message when using invalid parameters.</p>
+        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;CountryCode&#039; class whether
+it converts a CountryCode object to the correct array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnDSN</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testGetConnectionThrowsExceptionOnProperty">
-        testGetConnectionThrowsExceptionOnProperty()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">45</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests whether the &#039;getConnection&#039; method of the &#039;DatabaseConnection&#039; class
-throws a PDO exception with the correct message when using invalid parameters.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testGetConnectionThrowsExceptionOnProperty</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testCountryCodeToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -433,18 +590,18 @@ throws a PDO exception with the correct message when using invalid parameters.</
 >
     <h4 class="phpdocumentor-element__name" id="method__before">
         _before()
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method__before" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Database/DatabaseConnectionTest.php"><a href="files/tests-unit-database-databaseconnectiontest.html"><abbr title="tests/Unit/Database/DatabaseConnectionTest.php">DatabaseConnectionTest.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/CountryCodeTest.php"><a href="files/tests-unit-entity-countrycodetest.html"><abbr title="tests/Unit/Entity/CountryCodeTest.php">CountryCodeTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating a &#039;DatabaseConnection&#039; class.</p>
+creating an instance of &#039;CountryCode&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -464,7 +621,7 @@ creating a &#039;DatabaseConnection&#039; class.</p>
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Database/DatabaseConnectionTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/tests/Unit/Entity/CountryCodeTest.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -563,26 +720,30 @@ creating a &#039;DatabaseConnection&#039; class.</p>
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester">$tester<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection">$databaseConnection<a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-CountryCodeTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_countryCode">$countryCode<a href="classes/Tests-Unit-Entity-CountryCodeTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#property_prefix">$prefix<a href="classes/Tests-Unit-Entity-CountryCodeTest.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance">testGetConnectionReturnsPdoInstance()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN">testGetConnectionThrowsExceptionOnDSN()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty">testGetConnectionThrowsExceptionOnProperty()</a></li>
-                                            <li><a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before">_before()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeCreation">testCountryCodeCreation()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeGetterInvalidPropertyException">testCountryCodeGetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidPropertyException">testCountryCodeSetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidTypeException">testCountryCodeSetterInvalidTypeException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSettersAndGetters">testCountryCodeSettersAndGetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeToArrayConversion">testCountryCodeToArrayConversion()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-CountryCodeTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -602,7 +763,7 @@ creating a &#039;DatabaseConnection&#039; class.</p>
     </section>
 </section>
         </div>
-        <a href="classes/Tests-Unit-Database-DatabaseConnectionTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Tests-Unit-Entity-CountryCodeTest.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

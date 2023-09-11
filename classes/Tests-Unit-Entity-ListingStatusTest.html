@@ -73,15 +73,7 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-interface.html" class="">Interface</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-service.html" class="">Service</a>
-                
-            </li>
-                    <li>
-                <a href="namespaces/app-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -164,9 +156,9 @@
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;ListingStatusTest&#039; is a unit test class for testing the &#039;ListingStatus&#039; class.</p>
+            <p class="phpdocumentor-summary">The &#039;ListingStatusTest&#039; is a unit test class for testing the &#039;ListingStatus&#039; entity.</p>
 
-    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the class-related properties.</p>
+    <section class="phpdocumentor-description"><p>Tests the functionality of creating an instance and getting/setting the entity-related properties.</p>
 </section>
 
 
@@ -200,19 +192,13 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_keyArray">$keyArray</a>
-    <span>
-                        &nbsp;: mixed            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatus">$listingStatus</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatusWithout">$listingStatusWithout</a>
+    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_prefix">$prefix</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -230,38 +216,46 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the &#039;ListingStatus&#039; instance is created correctly with and without id.</dd>
+<dd>Tests whether the &#039;ListingStatus&#039; instance is created correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetters">testListingStatusGetters()</a>
+    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetterInvalidPropertyException">testListingStatusGetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the getters of the &#039;ListingStatus&#039; class return the correct values with and without id.</dd>
+<dd>Tests the getter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetters">testListingStatusSetters()</a>
+    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidPropertyException">testListingStatusSetterInvalidPropertyException()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests whether the setters in the &#039;ListingStatus&#039; class modify the properties correctly.</dd>
+<dd>Tests the setter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidTypeException">testListingStatusSetterInvalidTypeException()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the setter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property type.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSettersAndGetters">testListingStatusSettersAndGetters()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests whether the setters in the &#039;ListingStatus&#039; entity modify the properties correctly.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayConversion">testListingStatusToArrayConversion()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; class whether
-it converts a ListingStatus object to the correct array with and without id.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayThrowsExceptionForInvalidKey">testListingStatusToArrayThrowsExceptionForInvalidKey()</a>
-    <span>
-                                &nbsp;: mixed    </span>
-</dt>
-<dd>Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</dd>
+<dd>Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; entity whether
+it converts a ListingStatus object to the correct array.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method__before">_before()</a>
@@ -269,7 +263,7 @@ with an invalid key.</dd>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;ListingStatus&#039;.</dd>
+creating an instance of &#039;ListingStatus&#039;.</dd>
 
     </dl>
 
@@ -325,39 +319,6 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_keyArray">
-        $keyArray
-        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_keyArray" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">16</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$keyArray</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="property_listingStatus">
         $listingStatus
         <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatus" class="headerlink"><i class="fas fa-link"></i></a>
@@ -368,7 +329,7 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -391,9 +352,9 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_listingStatusWithout">
-        $listingStatusWithout
-        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatusWithout" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_prefix">
+        $prefix
+        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -401,7 +362,7 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">17</span>
 
     </aside>
 
@@ -409,8 +370,8 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$listingStatusWithout</span>
-    </code>
+    <span class="phpdocumentor-signature__name">$prefix</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;ebay_&#039;</span></code>
 
     
     
@@ -439,11 +400,11 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the &#039;ListingStatus&#039; instance is created correctly with and without id.</p>
+        <p class="phpdocumentor-summary">Tests whether the &#039;ListingStatus&#039; instance is created correctly.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -463,23 +424,24 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testListingStatusGetters">
-        testListingStatusGetters()
-        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testListingStatusGetterInvalidPropertyException">
+        testListingStatusGetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">106</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the getters of the &#039;ListingStatus&#039; class return the correct values with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the getter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testListingStatusGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testListingStatusGetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -495,23 +457,89 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testListingStatusSetters">
-        testListingStatusSetters()
-        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetters" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testListingStatusSetterInvalidPropertyException">
+        testListingStatusSetterInvalidPropertyException()
+        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidPropertyException" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">60</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;ListingStatus&#039; class modify the properties correctly.</p>
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testListingStatusSetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testListingStatusSetterInvalidPropertyException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testListingStatusSetterInvalidTypeException">
+        testListingStatusSetterInvalidTypeException()
+        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidTypeException" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">92</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the setter of the &#039;ListingStatus&#039; entity whether
+it throws an exception on an invalid property type.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testListingStatusSetterInvalidTypeException</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testListingStatusSettersAndGetters">
+        testListingStatusSettersAndGetters()
+        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSettersAndGetters" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests whether the setters in the &#039;ListingStatus&#039; entity modify the properties correctly.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testListingStatusSettersAndGetters</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -535,50 +563,16 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">77</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; class whether
-it converts a ListingStatus object to the correct array with and without id.</p>
+        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; entity whether
+it converts a ListingStatus object to the correct array.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">testListingStatusToArrayConversion</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_testListingStatusToArrayThrowsExceptionForInvalidKey">
-        testListingStatusToArrayThrowsExceptionForInvalidKey()
-        <a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayThrowsExceptionForInvalidKey" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">101</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Tests the &#039;toArray&#039; method of the &#039;ListingStatus&#039; class whether
-an exception is thrown when trying to convert an object to an array
-with an invalid key.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testListingStatusToArrayThrowsExceptionForInvalidKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -602,12 +596,12 @@ with an invalid key.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Entity/ListingStatusTest.php"><a href="files/tests-unit-entity-listingstatustest.html"><abbr title="tests/Unit/Entity/ListingStatusTest.php">ListingStatusTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
         <p class="phpdocumentor-summary">Sets up the necessary environment for running tests by
-creating an array of keys and different instances of &#039;ListingStatus&#039;.</p>
+creating an instance of &#039;ListingStatus&#039;.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -735,9 +729,8 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
                 <li>
                     <ul class="phpdocumentor-list -clean">
                                                     <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_tester">$tester<a href="classes/Tests-Unit-Entity-ListingStatusTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_keyArray">$keyArray<a href="classes/Tests-Unit-Entity-ListingStatusTest.html"></li>
                                                     <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatus">$listingStatus<a href="classes/Tests-Unit-Entity-ListingStatusTest.html"></li>
-                                                    <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatusWithout">$listingStatusWithout<a href="classes/Tests-Unit-Entity-ListingStatusTest.html"></li>
+                                                    <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#property_prefix">$prefix<a href="classes/Tests-Unit-Entity-ListingStatusTest.html"></li>
                                             </ul>
                 </li>
             
@@ -745,10 +738,11 @@ creating an array of keys and different instances of &#039;ListingStatus&#039;.<
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusCreation">testListingStatusCreation()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetters">testListingStatusGetters()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetters">testListingStatusSetters()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusGetterInvalidPropertyException">testListingStatusGetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidPropertyException">testListingStatusSetterInvalidPropertyException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSetterInvalidTypeException">testListingStatusSetterInvalidTypeException()</a></li>
+                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusSettersAndGetters">testListingStatusSettersAndGetters()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayConversion">testListingStatusToArrayConversion()</a></li>
-                                            <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method_testListingStatusToArrayThrowsExceptionForInvalidKey">testListingStatusToArrayThrowsExceptionForInvalidKey()</a></li>
                                             <li><a href="classes/Tests-Unit-Entity-ListingStatusTest.html#method__before">_before()</a></li>
                                     </ul>
             </li>
