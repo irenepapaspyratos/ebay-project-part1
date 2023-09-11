@@ -256,61 +256,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_CUSTOM"
         },                {
-            "fqsen": "\\App\\Repository\\BaseRepository",
-            "name": "BaseRepository",
-            "summary": "The\u0020\u0060BaseRepository\u0060\u0020class\u0020provides\u0020methods\u0020for\u0020interacting\u0020with\u0020a\u0020database.",
-            "url": "classes/App-Repository-BaseRepository.html"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
-            "url": "classes/App-Repository-BaseRepository.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003AfindAll\u0028\u0029",
-            "name": "findAll",
-            "summary": "The\u0020\u0020\u0060findAll\u0060\u0020method\u0020retrieves\u0020all\u0020rows\u0020from\u0020a\u0020database\u0020table\u0020and\u0020returns\u0020them\u0020as\u0020an\nassociative\u0020array.",
-            "url": "classes/App-Repository-BaseRepository.html#method_findAll"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003AfindByColumnValue\u0028\u0029",
-            "name": "findByColumnValue",
-            "summary": "The\u0020\u0027findByColumnValue\u0027\u0020method\u0020searches\u0020for\u0020rows\u0020in\u0020a\u0020database\u0020table\u0020where\u0020a\u0020specific\u0020column\nmatches\u0020a\u0020given\u0020value.",
-            "url": "classes/App-Repository-BaseRepository.html#method_findByColumnValue"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003Ainsert\u0028\u0029",
-            "name": "insert",
-            "summary": "The\u0020\u0027insert\u0027\u0020method\u0020inserts\u0020data\u0020from\u0020an\u0020entity\u0020object\u0020into\u0020a\u0020database\u0020table\u0020using\u0020prepared\u0020statements.",
-            "url": "classes/App-Repository-BaseRepository.html#method_insert"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003Aupdate\u0028\u0029",
-            "name": "update",
-            "summary": "The\u0020\u0027update\u0027\u0020method\u0020updates\u0020a\u0020record\u0020in\u0020a\u0020database\u0020table\u0020with\u0020the\u0020given\u0020entity\u0020data.",
-            "url": "classes/App-Repository-BaseRepository.html#method_update"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003Adelete\u0028\u0029",
-            "name": "delete",
-            "summary": "The\u0020\u0027delete\u0027\u0020method\u0020deletes\u0020a\u0020record\u0020from\u0020a\u0020database\u0020table\u0020based\u0020on\u0020the\u0020provided\u0020id.",
-            "url": "classes/App-Repository-BaseRepository.html#method_delete"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003A\u0024dbConnection",
-            "name": "dbConnection",
-            "summary": "",
-            "url": "classes/App-Repository-BaseRepository.html#property_dbConnection"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003A\u0024table",
-            "name": "table",
-            "summary": "",
-            "url": "classes/App-Repository-BaseRepository.html#property_table"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003A\u0024validation",
-            "name": "validation",
-            "summary": "",
-            "url": "classes/App-Repository-BaseRepository.html#property_validation"
-        },                {
-            "fqsen": "\\App\\Repository\\BaseRepository\u003A\u003A\u0024validColumns",
-            "name": "validColumns",
-            "summary": "",
-            "url": "classes/App-Repository-BaseRepository.html#property_validColumns"
-        },                {
             "fqsen": "\\App\\Service\\EbayApiService",
             "name": "EbayApiService",
             "summary": "The\u0020\u0060EbayApiService\u0060\u0020class\u0020provides\u0020methods\u0020for\u0020making\u0020API\u0020calls\u0020to\u0020eBay.",
@@ -1345,11 +1290,6 @@ Search.appendIndex(
             "name": "Enum",
             "summary": "",
             "url": "namespaces/app-enum.html"
-        },                {
-            "fqsen": "\\App\\Repository",
-            "name": "Repository",
-            "summary": "",
-            "url": "namespaces/app-repository.html"
         },                {
             "fqsen": "\\App\\Service",
             "name": "Service",
