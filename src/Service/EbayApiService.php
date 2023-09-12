@@ -58,7 +58,7 @@ class EbayApiService {
      * 
      * @return string XML document string.
      */
-    protected function getBasicRequestXml(string $callName): string {
+    private function getBasicRequestXml(string $callName): string {
 
         return <<<XML
         <?xml version="1.0" encoding="utf-8"?>
@@ -82,7 +82,7 @@ class EbayApiService {
      * 
      * @return array<string> Array of basic non-optional headers.
      */
-    protected function getBasicHeaders(string $callName): array {
+    private function getBasicHeaders(string $callName): array {
 
         return [
             'X-EBAY-API-COMPATIBILITY-LEVEL: ' . $this->compatLevel,
@@ -102,7 +102,7 @@ class EbayApiService {
      * @return string XML string as response of the cURL request.
      * @throws \Exception If there is an error executing the cURL request.
      */
-    protected function executeXmlApiCurl(array $headers, string $postFields): string {
+    private function executeXmlApiCurl(array $headers, string $postFields): string {
 
         return $this->customCurl->executeCurl($headers, $postFields);
     }
@@ -353,7 +353,7 @@ class EbayApiService {
      * @return string The XML string with the filtered items within the requested time window with minimal details.
      * @throws \Exception If there is an error executing the cURL request.
      */
-    function getSellerEvents(
+    public function getSellerEvents(
         string $modTimeFrom,
         ?string $modTimeTo = null,
         ?bool $newItemFilter = true,
