@@ -35,9 +35,9 @@ class DatabaseConnection {
         string $password,
         string $charset = 'utf8mb4',
         array $options = [
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES   => false,
+            PDO::ATTR_EMULATE_PREPARES => false,
         ],
     ) {
         $this->host = $host;
@@ -46,6 +46,14 @@ class DatabaseConnection {
         $this->password = $password;
         $this->charset = $charset;
         $this->options = $options;
+    }
+
+    /**
+     * The 'getDatabaseName' method returns the name of the database for the actual connection.
+     */
+    public function getDatabaseName() {
+
+        return $this->dbname;
     }
 
     /**

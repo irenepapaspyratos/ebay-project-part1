@@ -27,6 +27,15 @@ class DatabaseConnectionTest extends Unit {
         $this->databaseConnection = new DatabaseConnection('host', 'database', 'user', 'password');
     }
 
+    /**
+     * Tests whether the 'getConnection' method of the 'DatabaseConnection' class 
+     * returns the correct name.
+     */
+    public function testDatabaseNameIsCorrect() {
+
+        // Assert that the returned string equals the expected one.
+        $this->assertEquals('database', $this->databaseConnection->getDatabaseName());
+    }
 
     /**
      * Tests whether the 'getConnection' method of the 'DatabaseConnection' class 
