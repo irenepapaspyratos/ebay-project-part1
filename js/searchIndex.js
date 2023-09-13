@@ -11,6 +11,11 @@ Search.appendIndex(
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Database-DatabaseConnection.html#method___construct"
         },                {
+            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003AgetDatabaseName\u0028\u0029",
+            "name": "getDatabaseName",
+            "summary": "The\u0020\u0027getDatabaseName\u0027\u0020method\u0020returns\u0020the\u0020name\u0020of\u0020the\u0020database\u0020for\u0020the\u0020actual\u0020connection.",
+            "url": "classes/App-Database-DatabaseConnection.html#method_getDatabaseName"
+        },                {
             "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003AgetConnection\u0028\u0029",
             "name": "getConnection",
             "summary": "The\u0020\u0027getConnection\u0027\u0020method\u0020returns\u0020a\u0020PDO\u0020object\u0020for\u0020connecting\u0020to\u0020a\u0020database.",
@@ -460,6 +465,11 @@ Search.appendIndex(
             "name": "_before",
             "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020a\u0020\u0027DatabaseConnection\u0027\u0020class.",
             "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestDatabaseNameIsCorrect\u0028\u0029",
+            "name": "testDatabaseNameIsCorrect",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nreturns\u0020the\u0020correct\u0020name.",
+            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testDatabaseNameIsCorrect"
         },                {
             "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionReturnsPdoInstance\u0028\u0029",
             "name": "testGetConnectionReturnsPdoInstance",
