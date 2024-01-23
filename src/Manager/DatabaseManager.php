@@ -1,11 +1,16 @@
 <?php
 
-namespace App\Database;
+namespace App\Manager;
 
 use PDO;
 use PDOException;
 
-class DatabaseConnection {
+/**
+ * The `DatabaseManager` class provides methods to manage the connection to a database using PDO.
+ * 
+ * The contained methods return the name of the connected database and a PDO object representing the connection to it.
+ */
+class DatabaseManager {
 
     private string $host;
     private string $dbname;
