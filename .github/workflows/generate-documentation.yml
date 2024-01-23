@@ -25,7 +25,7 @@ jobs:
               run: composer install
 
             - name: Download phpDocumentor PHAR
-              run: wget https://phpdoc.org/phpDocumentor.phar
+              run: wget https://github.com/phpDocumentor/phpDocumentor/releases/download/v3.4.1/phpDocumentor.phar
 
             - name: Make phpDocumentor executable
               run: chmod +x ./phpDocumentor.phar
