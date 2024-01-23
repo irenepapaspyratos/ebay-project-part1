@@ -31,7 +31,7 @@ jobs:
               run: chmod +x ./phpDocumentor.phar
 
             - name: Generate Documentation
-              run: ./phpDocumentor.phar -d src,tests -t docs
+              run: ./phpDocumentor.phar -d "./src,./tests" -t docs
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
