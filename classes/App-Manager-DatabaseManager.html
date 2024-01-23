@@ -122,12 +122,12 @@
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-utility.html">Utility</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-manager.html">Manager</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    CustomCurl
+    DatabaseManager
 
     
             <div class="phpdocumentor-element__package">
@@ -146,14 +146,16 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">The &#039;CustomCurl&#039; class allows to conveniently execute cURL requests with particular customizable options.</p>
+            <p class="phpdocumentor-summary">The `DatabaseManager` class provides methods to manage the connection to a database using PDO.</p>
 
+    <section class="phpdocumentor-description"><p>The contained methods return the name of the connected database and a PDO object representing the connection to it.</p>
+</section>
 
 
 
@@ -161,7 +163,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/App-Utility-CustomCurl.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Manager-DatabaseManager.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -175,62 +177,74 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/App-Utility-CustomCurl.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Manager-DatabaseManager.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Utility-CustomCurl.html#property_apiUrl">$apiUrl</a>
+    <a href="classes/App-Manager-DatabaseManager.html#property_charset">$charset</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Utility-CustomCurl.html#property_post">$post</a>
+    <a href="classes/App-Manager-DatabaseManager.html#property_dbname">$dbname</a>
     <span>
-                        &nbsp;: int            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Utility-CustomCurl.html#property_returnTransfer">$returnTransfer</a>
+    <a href="classes/App-Manager-DatabaseManager.html#property_host">$host</a>
     <span>
-                        &nbsp;: int            </span>
+                        &nbsp;: string            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Utility-CustomCurl.html#property_verifyHost">$verifyHost</a>
+    <a href="classes/App-Manager-DatabaseManager.html#property_options">$options</a>
     <span>
-                        &nbsp;: int            </span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Utility-CustomCurl.html#property_verifyPeer">$verifyPeer</a>
+    <a href="classes/App-Manager-DatabaseManager.html#property_password">$password</a>
     <span>
-                        &nbsp;: int            </span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/App-Manager-DatabaseManager.html#property_username">$username</a>
+    <span>
+                        &nbsp;: string            </span>
 </dt>
 
     </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/App-Utility-CustomCurl.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Manager-DatabaseManager.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-CustomCurl.html#method___construct">__construct()</a>
+    <a href="classes/App-Manager-DatabaseManager.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>The &#039;__construct&#039; method initializes properties with corresponding values, either defaults or passed as arguments.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-CustomCurl.html#method_executeCurl">executeCurl()</a>
+    <a href="classes/App-Manager-DatabaseManager.html#method_getConnection">getConnection()</a>
     <span>
-                                &nbsp;: string    </span>
+                                &nbsp;: <abbr title="\PDO">PDO</abbr>    </span>
 </dt>
-<dd>The &#039;executeCurl&#039; method executes a cURL request with specified headers &amp; post fields and returns the
-response.</dd>
+<dd>The &#039;getConnection&#039; method returns a PDO object for connecting to a database.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Manager-DatabaseManager.html#method_getDatabaseName">getDatabaseName()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>The &#039;getDatabaseName&#039; method returns the name of the database for the actual connection.</dd>
 
     </dl>
 
@@ -243,7 +257,7 @@ response.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/App-Utility-CustomCurl.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Manager-DatabaseManager.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -253,17 +267,17 @@ response.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_apiUrl">
-        $apiUrl
-        <a href="classes/App-Utility-CustomCurl.html#property_apiUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_charset">
+        $charset
+        <a href="classes/App-Manager-DatabaseManager.html#property_charset" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
@@ -271,7 +285,7 @@ response.</dd>
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$apiUrl</span>
+    <span class="phpdocumentor-signature__name">$charset</span>
     </code>
 
     
@@ -286,25 +300,25 @@ response.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_post">
-        $post
-        <a href="classes/App-Utility-CustomCurl.html#property_post" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_dbname">
+        $dbname
+        <a href="classes/App-Manager-DatabaseManager.html#property_dbname" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$post</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$dbname</span>
     </code>
 
     
@@ -319,25 +333,25 @@ response.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_returnTransfer">
-        $returnTransfer
-        <a href="classes/App-Utility-CustomCurl.html#property_returnTransfer" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_host">
+        $host
+        <a href="classes/App-Manager-DatabaseManager.html#property_host" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$returnTransfer</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$host</span>
     </code>
 
     
@@ -352,25 +366,25 @@ response.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_verifyHost">
-        $verifyHost
-        <a href="classes/App-Utility-CustomCurl.html#property_verifyHost" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_options">
+        $options
+        <a href="classes/App-Manager-DatabaseManager.html#property_options" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$verifyHost</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$options</span>
     </code>
 
     
@@ -385,25 +399,58 @@ response.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_verifyPeer">
-        $verifyPeer
-        <a href="classes/App-Utility-CustomCurl.html#property_verifyPeer" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_password">
+        $password
+        <a href="classes/App-Manager-DatabaseManager.html#property_password" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">int</span>
-    <span class="phpdocumentor-signature__name">$verifyPeer</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$password</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_username">
+        $username
+        <a href="classes/App-Manager-DatabaseManager.html#property_username" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$username</span>
     </code>
 
     
@@ -416,7 +463,7 @@ response.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/App-Utility-CustomCurl.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Manager-DatabaseManager.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -427,13 +474,13 @@ response.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/App-Utility-CustomCurl.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Manager-DatabaseManager.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -441,59 +488,66 @@ response.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$apiUrl</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$verifyPeer</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$verifyHost</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$post</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$returnTransfer</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$host</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dbname</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$username</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$password</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$charset</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf8mb4&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES =&gt; false]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>Initializes the properties for the database connection.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$apiUrl</span>
+                <span class="phpdocumentor-signature__argument__name">$host</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>URL of the API to connect to.</p>
+                    <section class="phpdocumentor-description"><p>Address of the database server.</p>
 </section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$verifyPeer</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">0</span>            </dt>
+                <span class="phpdocumentor-signature__argument__name">$dbname</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Specifies (0 or 1) whether to verify the SSL
-certificate of the remote server when making a request. (Default = 0, No verification)</p>
+                    <section class="phpdocumentor-description"><p>Name of the database.</p>
 </section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$verifyHost</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">0</span>            </dt>
+                <span class="phpdocumentor-signature__argument__name">$username</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Specifies (0 or 1) whether to verify the SSL
-certificate's hostname. (Default = 0, No verification)</p>
+                    <section class="phpdocumentor-description"><p>Database user.</p>
 </section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$post</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">1</span>            </dt>
+                <span class="phpdocumentor-signature__argument__name">$password</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Specifies (0 or 1) whether the request should be sent as a POST
-request. (Default = 1, Send as POST)</p>
+                    <section class="phpdocumentor-description"><p>Database user password.</p>
 </section>
 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$returnTransfer</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">1</span>            </dt>
+                <span class="phpdocumentor-signature__argument__name">$charset</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;utf8mb4&#039;</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Specifies (0 or 1) whether the response from the
-API request should be returned as a string or not at all. (Default = 1, Send as string)</p>
+                    <section class="phpdocumentor-description"><p>Character set for the connection. Default: 'utf8mb4'.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES =&gt; false]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>PDO connection options.</p>
 </section>
 
             </dd>
@@ -509,24 +563,23 @@ API request should be returned as a string or not at all. (Default = 1, Send as 
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_executeCurl">
-        executeCurl()
-        <a href="classes/App-Utility-CustomCurl.html#method_executeCurl" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getConnection">
+        getConnection()
+        <a href="classes/App-Manager-DatabaseManager.html#method_getConnection" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/CustomCurl.php"><a href="files/src-utility-customcurl.html"><abbr title="src/Utility/CustomCurl.php">CustomCurl.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The &#039;executeCurl&#039; method executes a cURL request with specified headers &amp; post fields and returns the
-response.</p>
+        <p class="phpdocumentor-summary">The &#039;getConnection&#039; method returns a PDO object for connecting to a database.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">executeCurl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$headers</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$postFields</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getConnection</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$dsn</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\PDO">PDO</abbr></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -534,19 +587,13 @@ response.</p>
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$headers</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$postFields</span>
+                <span class="phpdocumentor-signature__argument__name">$dsn</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Contains the data to be sent in the HTTP POST request.
-Although the content can generally be in various formats, for this eBay API an XML string is used.</p>
+                    <section class="phpdocumentor-description"><p>Includes information about the protocol, host, database name and charset.
+If not set, it defaults to the protocol for a MySQL or MariaDB database
+with the given properties 'host', 'dbName' and 'charset'.</p>
 </section>
 
             </dd>
@@ -555,7 +602,7 @@ Although the content can generally be in various formats, for this eBay API an X
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/App-Utility-CustomCurl.html#method_executeCurl#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Manager-DatabaseManager.html#method_getConnection#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -563,9 +610,9 @@ Although the content can generally be in various formats, for this eBay API an X
                     <span class="phpdocumentor-tag__name">throws</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\PDOException">PDOException</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"><p>If a cURL error occurs.</p>
+                                                 <section class="phpdocumentor-description"><p>When unable to connect to the database.</p>
 </section>
 
                                     </dd>
@@ -573,13 +620,45 @@ Although the content can generally be in various formats, for this eBay API an X
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\PDO">PDO</abbr></span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>The response from the cURL request.</p>
+                <section class="phpdocumentor-description"><p>Represents the connection to a database.</p>
 </section>
 
             </section>
 
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getDatabaseName">
+        getDatabaseName()
+        <a href="classes/App-Manager-DatabaseManager.html#method_getDatabaseName" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Manager/DatabaseManager.php"><a href="files/src-manager-databasemanager.html"><abbr title="src/Manager/DatabaseManager.php">DatabaseManager.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">59</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;getDatabaseName&#039; method returns the name of the database for the actual connection.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">getDatabaseName</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
 </article>
             </section>
 
@@ -587,7 +666,7 @@ Although the content can generally be in various formats, for this eBay API an X
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Utility/CustomCurl.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Manager/DatabaseManager.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -686,27 +765,29 @@ Although the content can generally be in various formats, for this eBay API an X
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/App-Utility-CustomCurl.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/App-Utility-CustomCurl.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/App-Manager-DatabaseManager.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/App-Manager-DatabaseManager.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/App-Utility-CustomCurl.html#property_apiUrl">$apiUrl<a href="classes/App-Utility-CustomCurl.html"></li>
-                                                    <li><a href="classes/App-Utility-CustomCurl.html#property_post">$post<a href="classes/App-Utility-CustomCurl.html"></li>
-                                                    <li><a href="classes/App-Utility-CustomCurl.html#property_returnTransfer">$returnTransfer<a href="classes/App-Utility-CustomCurl.html"></li>
-                                                    <li><a href="classes/App-Utility-CustomCurl.html#property_verifyHost">$verifyHost<a href="classes/App-Utility-CustomCurl.html"></li>
-                                                    <li><a href="classes/App-Utility-CustomCurl.html#property_verifyPeer">$verifyPeer<a href="classes/App-Utility-CustomCurl.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_charset">$charset<a href="classes/App-Manager-DatabaseManager.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_dbname">$dbname<a href="classes/App-Manager-DatabaseManager.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_host">$host<a href="classes/App-Manager-DatabaseManager.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_options">$options<a href="classes/App-Manager-DatabaseManager.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_password">$password<a href="classes/App-Manager-DatabaseManager.html"></li>
+                                                    <li><a href="classes/App-Manager-DatabaseManager.html#property_username">$username<a href="classes/App-Manager-DatabaseManager.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Utility-CustomCurl.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/App-Utility-CustomCurl.html#method_executeCurl">executeCurl()</a></li>
+                                            <li><a href="classes/App-Manager-DatabaseManager.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/App-Manager-DatabaseManager.html#method_getConnection">getConnection()</a></li>
+                                            <li><a href="classes/App-Manager-DatabaseManager.html#method_getDatabaseName">getDatabaseName()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -726,7 +807,7 @@ Although the content can generally be in various formats, for this eBay API an X
     </section>
 </section>
         </div>
-        <a href="classes/App-Utility-CustomCurl.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Manager-DatabaseManager.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

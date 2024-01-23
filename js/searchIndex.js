@@ -1,56 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\App\\Database\\DatabaseConnection",
-            "name": "DatabaseConnection",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
-            "url": "classes/App-Database-DatabaseConnection.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003AgetDatabaseName\u0028\u0029",
-            "name": "getDatabaseName",
-            "summary": "The\u0020\u0027getDatabaseName\u0027\u0020method\u0020returns\u0020the\u0020name\u0020of\u0020the\u0020database\u0020for\u0020the\u0020actual\u0020connection.",
-            "url": "classes/App-Database-DatabaseConnection.html#method_getDatabaseName"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003AgetConnection\u0028\u0029",
-            "name": "getConnection",
-            "summary": "The\u0020\u0027getConnection\u0027\u0020method\u0020returns\u0020a\u0020PDO\u0020object\u0020for\u0020connecting\u0020to\u0020a\u0020database.",
-            "url": "classes/App-Database-DatabaseConnection.html#method_getConnection"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024host",
-            "name": "host",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_host"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024dbname",
-            "name": "dbname",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_dbname"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024username",
-            "name": "username",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_username"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024password",
-            "name": "password",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_password"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024charset",
-            "name": "charset",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_charset"
-        },                {
-            "fqsen": "\\App\\Database\\DatabaseConnection\u003A\u003A\u0024options",
-            "name": "options",
-            "summary": "",
-            "url": "classes/App-Database-DatabaseConnection.html#property_options"
-        },                {
             "fqsen": "\\App\\Entity\\BaseEntity",
             "name": "BaseEntity",
             "summary": "The\u0020\u0027BaseEntity\u0027\u0020class\u0020is\u0020an\u0020abstract\u0020base\u0020class.",
@@ -261,6 +211,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Enum-EbayGranularityLevel.html#enumcase_CUSTOM"
         },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager",
+            "name": "DatabaseManager",
+            "summary": "The\u0020\u0060DatabaseManager\u0060\u0020class\u0020provides\u0020methods\u0020to\u0020manage\u0020the\u0020connection\u0020to\u0020a\u0020database\u0020using\u0020PDO.",
+            "url": "classes/App-Manager-DatabaseManager.html"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
+            "url": "classes/App-Manager-DatabaseManager.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003AgetDatabaseName\u0028\u0029",
+            "name": "getDatabaseName",
+            "summary": "The\u0020\u0027getDatabaseName\u0027\u0020method\u0020returns\u0020the\u0020name\u0020of\u0020the\u0020database\u0020for\u0020the\u0020actual\u0020connection.",
+            "url": "classes/App-Manager-DatabaseManager.html#method_getDatabaseName"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003AgetConnection\u0028\u0029",
+            "name": "getConnection",
+            "summary": "The\u0020\u0027getConnection\u0027\u0020method\u0020returns\u0020a\u0020PDO\u0020object\u0020for\u0020connecting\u0020to\u0020a\u0020database.",
+            "url": "classes/App-Manager-DatabaseManager.html#method_getConnection"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024host",
+            "name": "host",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_host"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024dbname",
+            "name": "dbname",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_dbname"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024username",
+            "name": "username",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_username"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024password",
+            "name": "password",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_password"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024charset",
+            "name": "charset",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_charset"
+        },                {
+            "fqsen": "\\App\\Manager\\DatabaseManager\u003A\u003A\u0024options",
+            "name": "options",
+            "summary": "",
+            "url": "classes/App-Manager-DatabaseManager.html#property_options"
+        },                {
             "fqsen": "\\App\\Service\\EbayApiService",
             "name": "EbayApiService",
             "summary": "The\u0020\u0060EbayApiService\u0060\u0020class\u0020provides\u0020methods\u0020for\u0020making\u0020API\u0020calls\u0020to\u0020eBay.",
@@ -455,46 +455,6 @@ Search.appendIndex(
             "name": "UnitTester",
             "summary": "Inherited\u0020Methods",
             "url": "classes/Tests-Support-UnitTester.html"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest",
-            "name": "DatabaseConnectionTest",
-            "summary": "The\u0020\u0027DatabaseConnectionTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A_before\u0028\u0029",
-            "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020a\u0020\u0027DatabaseConnection\u0027\u0020class.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method__before"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestDatabaseNameIsCorrect\u0028\u0029",
-            "name": "testDatabaseNameIsCorrect",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nreturns\u0020the\u0020correct\u0020name.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testDatabaseNameIsCorrect"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionReturnsPdoInstance\u0028\u0029",
-            "name": "testGetConnectionReturnsPdoInstance",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nreturns\u0020a\u0020PDO\u0020instance\u0020when\u0020using\u0020PDO\u0027s\u0020own\u0020database.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionReturnsPdoInstance"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionThrowsExceptionOnProperty\u0028\u0029",
-            "name": "testGetConnectionThrowsExceptionOnProperty",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nthrows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnProperty"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003AtestGetConnectionThrowsExceptionOnDSN\u0028\u0029",
-            "name": "testGetConnectionThrowsExceptionOnDSN",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseConnection\u0027\u0020class\nthorows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#method_testGetConnectionThrowsExceptionOnDSN"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A\u0024tester",
-            "name": "tester",
-            "summary": "",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_tester"
-        },                {
-            "fqsen": "\\Tests\\Unit\\Database\\DatabaseConnectionTest\u003A\u003A\u0024databaseConnection",
-            "name": "databaseConnection",
-            "summary": "",
-            "url": "classes/Tests-Unit-Database-DatabaseConnectionTest.html#property_databaseConnection"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest",
             "name": "CategoryTest",
@@ -921,6 +881,46 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_prefix"
         },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest",
+            "name": "DatabaseManagerTest",
+            "summary": "The\u0020\u0027DatabaseManagerTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027DatabaseManager\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003A_before\u0028\u0029",
+            "name": "_before",
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020a\u0020\u0027DatabaseManager\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#method__before"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003AtestDatabaseNameIsCorrect\u0028\u0029",
+            "name": "testDatabaseNameIsCorrect",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseManager\u0027\u0020class\nreturns\u0020the\u0020correct\u0020name.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#method_testDatabaseNameIsCorrect"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003AtestGetConnectionReturnsPdoInstance\u0028\u0029",
+            "name": "testGetConnectionReturnsPdoInstance",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseManager\u0027\u0020class\nreturns\u0020a\u0020PDO\u0020instance\u0020when\u0020using\u0020PDO\u0027s\u0020own\u0020database.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#method_testGetConnectionReturnsPdoInstance"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003AtestGetConnectionThrowsExceptionOnProperty\u0028\u0029",
+            "name": "testGetConnectionThrowsExceptionOnProperty",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseManager\u0027\u0020class\nthrows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#method_testGetConnectionThrowsExceptionOnProperty"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003AtestGetConnectionThrowsExceptionOnDSN\u0028\u0029",
+            "name": "testGetConnectionThrowsExceptionOnDSN",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027getConnection\u0027\u0020method\u0020of\u0020the\u0020\u0027DatabaseManager\u0027\u0020class\nthorows\u0020a\u0020PDO\u0020exception\u0020with\u0020the\u0020correct\u0020message\u0020when\u0020using\u0020invalid\u0020parameters.",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#method_testGetConnectionThrowsExceptionOnDSN"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003A\u0024tester",
+            "name": "tester",
+            "summary": "",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#property_tester"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest\u003A\u003A\u0024dbManager",
+            "name": "dbManager",
+            "summary": "",
+            "url": "classes/Tests-Unit-Manager-DatabaseManagerTest.html#property_dbManager"
+        },                {
             "fqsen": "\\Tests\\Unit\\Service\\EbayApiServiceTest",
             "name": "EbayApiServiceTest",
             "summary": "The\u0020\u0060EbayApiServiceTest\u0060\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020of\u0020the\u0020\u0027EbayApiService\u0060\u0020class",
@@ -1281,25 +1281,25 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html"
         },                {
-            "fqsen": "\\App\\Database",
-            "name": "Database",
+            "fqsen": "\\App\\Entity",
+            "name": "Entity",
             "summary": "",
-            "url": "namespaces/app-database.html"
+            "url": "namespaces/app-entity.html"
         },                {
             "fqsen": "\\App",
             "name": "App",
             "summary": "",
             "url": "namespaces/app.html"
         },                {
-            "fqsen": "\\App\\Entity",
-            "name": "Entity",
-            "summary": "",
-            "url": "namespaces/app-entity.html"
-        },                {
             "fqsen": "\\App\\Enum",
             "name": "Enum",
             "summary": "",
             "url": "namespaces/app-enum.html"
+        },                {
+            "fqsen": "\\App\\Manager",
+            "name": "Manager",
+            "summary": "",
+            "url": "namespaces/app-manager.html"
         },                {
             "fqsen": "\\App\\Service",
             "name": "Service",
@@ -1321,20 +1321,20 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/tests.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Database",
-            "name": "Database",
+            "fqsen": "\\Tests\\Unit\\Entity",
+            "name": "Entity",
             "summary": "",
-            "url": "namespaces/tests-unit-database.html"
+            "url": "namespaces/tests-unit-entity.html"
         },                {
             "fqsen": "\\Tests\\Unit",
             "name": "Unit",
             "summary": "",
             "url": "namespaces/tests-unit.html"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity",
-            "name": "Entity",
+            "fqsen": "\\Tests\\Unit\\Manager",
+            "name": "Manager",
             "summary": "",
-            "url": "namespaces/tests-unit-entity.html"
+            "url": "namespaces/tests-unit-manager.html"
         },                {
             "fqsen": "\\Tests\\Unit\\Service",
             "name": "Service",
