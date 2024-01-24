@@ -14,7 +14,20 @@ class CategoryTest extends Unit {
 
     protected $tester;
     private $category;
-    private $prefix = 'ebay_';
+    private $table = 'ebay_category';
+    private $tables = [
+        'ebay_category' => [
+            'columns' => [
+                'id' => 'integer',
+                'category_id' => 'integer',
+                'category_level' => 'integer',
+                'category_name' => 'string',
+                'leaf_category' => 'boolean',
+                'parent_category_id' => 'integer',
+                'fk_parent_id' => 'integer',
+            ]
+        ],
+    ];
 
     /**
      * Sets up the necessary environment for running tests by 
@@ -22,7 +35,7 @@ class CategoryTest extends Unit {
      */
     protected function _before() {
 
-        $this->category = new Category($this->prefix);
+        $this->category = new Category($this->table, $this->tables);
     }
 
     /**
@@ -42,14 +55,21 @@ class CategoryTest extends Unit {
         // Act 
         $this->category->id = 5;
         $this->category->category_id = 333;
+        $this->category->category_level = 2;
         $this->category->category_name = 'Cotton';
-        $this->category->parent_id = 4;
+        $this->category->leaf_category = true;
+        $this->category->parent_category_id = 4;
+        $this->category->fk_parent_id = 4;
 
         // Assert that the correct values of the changes are returned
+        $this->assertTrue(is_int($this->category->id));
         $this->assertEquals(5, $this->category->id);
         $this->assertEquals(333, $this->category->category_id);
+        $this->assertEquals(2, $this->category->category_level);
         $this->assertEquals('Cotton', $this->category->category_name);
-        $this->assertEquals(4, $this->category->parent_id);
+        $this->assertEquals(true, $this->category->leaf_category);
+        $this->assertEquals(4, $this->category->parent_category_id);
+        $this->assertEquals(4, $this->category->fk_parent_id);
     }
 
     /**
@@ -61,14 +81,20 @@ class CategoryTest extends Unit {
         // Act
         $this->category->id = 1;
         $this->category->category_id = 222;
+        $this->category->category_level = 2;
         $this->category->category_name = 'Silk';
-        $this->category->parent_id = 3;
+        $this->category->leaf_category = false;
+        $this->category->parent_category_id = 3;
+        $this->category->fk_parent_id = 3;
 
         $expectedArray = [
             'id' => 1,
             'category_id' => 222,
+            'category_level' => 2,
             'category_name' => 'Silk',
-            'parent_id' => 3
+            'leaf_category' => false,
+            'parent_category_id' => 3,
+            'fk_parent_id' => 3
         ];
 
         // Assert that the correct array is returned
@@ -83,10 +109,10 @@ class CategoryTest extends Unit {
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Columns for table 'wrongprefix_category' not found.");
+        $this->expectExceptionMessage("Columns for table 'wrongtable' not found.");
 
         // Act
-        $category = new Category('wrongprefix_');
+        $category = new Category('wrongtable', $this->tables);
     }
 
     /**

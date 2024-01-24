@@ -14,7 +14,16 @@ class ListingStatusTest extends Unit {
 
     protected $tester;
     private $listingStatus;
-    private $prefix = 'ebay_';
+    private $table = 'ebay_listing_status';
+    private $tables = [
+        'ebay_listing_status' => [
+            'columns' => [
+                'id' => 'integer',
+                'status_code' => 'string',
+                'status_description' => 'string'
+            ]
+        ],
+    ];
 
     /**
      * Sets up the necessary environment for running tests by 
@@ -22,7 +31,7 @@ class ListingStatusTest extends Unit {
      */
     protected function _before() {
 
-        $this->listingStatus = new ListingStatus($this->prefix);
+        $this->listingStatus = new ListingStatus($this->table, $this->tables);
     }
 
     /**
@@ -45,6 +54,7 @@ class ListingStatusTest extends Unit {
         $this->listingStatus->status_description = 'Active Listing';
 
         // Assert that the correct values of the changes are returned
+        $this->assertTrue(is_int($this->listingStatus->id));
         $this->assertEquals(5, $this->listingStatus->id);
         $this->assertEquals('Active', $this->listingStatus->status_code);
         $this->assertEquals('Active Listing', $this->listingStatus->status_description);
@@ -79,10 +89,10 @@ class ListingStatusTest extends Unit {
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Columns for table 'wrongprefix_listing_status' not found.");
+        $this->expectExceptionMessage("Columns for table 'wrongtable' not found.");
 
         // Act
-        $listingStatus = new ListingStatus('wrongprefix_');
+        $listingStatus = new ListingStatus('wrongtable', $this->tables);
     }
 
     /**
