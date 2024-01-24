@@ -26,10 +26,15 @@ Search.appendIndex(
             "summary": "The\u0020\u0027toArray\u0027\u0020method\u0020converts\u0020the\u0020data\u0020object\u0020to\u0020an\u0020array\nwith\u0020all\u0020keys\u0020based\u0020on\u0020the\u0020list\u0020of\u0020valid\u0020columns\u0020\u0028value\u0020of\u0020non\u002Dset\u0020property\u003A\u0020null\u0029.",
             "url": "classes/App-Entity-BaseEntity.html#method_toArray"
         },                {
-            "fqsen": "\\App\\Entity\\BaseEntity\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\App\\Entity\\BaseEntity\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/App-Entity-BaseEntity.html#property_prefix"
+            "url": "classes/App-Entity-BaseEntity.html#property_table"
+        },                {
+            "fqsen": "\\App\\Entity\\BaseEntity\u003A\u003A\u0024validTables",
+            "name": "validTables",
+            "summary": "",
+            "url": "classes/App-Entity-BaseEntity.html#property_validTables"
         },                {
             "fqsen": "\\App\\Entity\\BaseEntity\u003A\u003A\u0024validColumns",
             "name": "validColumns",
@@ -51,11 +56,6 @@ Search.appendIndex(
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-Category.html#method___construct"
         },                {
-            "fqsen": "\\App\\Entity\\Category\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-Category.html#property_prefix"
-        },                {
             "fqsen": "\\App\\Entity\\Condition",
             "name": "Condition",
             "summary": "The\u0020\u0027Condition\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
@@ -66,40 +66,25 @@ Search.appendIndex(
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-Condition.html#method___construct"
         },                {
-            "fqsen": "\\App\\Entity\\Condition\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-Condition.html#property_prefix"
+            "fqsen": "\\App\\Entity\\CountryDetail",
+            "name": "CountryDetail",
+            "summary": "The\u0020\u0027CountryDetail\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
+            "url": "classes/App-Entity-CountryDetail.html"
         },                {
-            "fqsen": "\\App\\Entity\\CountryCode",
-            "name": "CountryCode",
-            "summary": "The\u0020\u0027CountryCode\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
-            "url": "classes/App-Entity-CountryCode.html"
-        },                {
-            "fqsen": "\\App\\Entity\\CountryCode\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\App\\Entity\\CountryDetail\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
-            "url": "classes/App-Entity-CountryCode.html#method___construct"
+            "url": "classes/App-Entity-CountryDetail.html#method___construct"
         },                {
-            "fqsen": "\\App\\Entity\\CountryCode\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-CountryCode.html#property_prefix"
+            "fqsen": "\\App\\Entity\\CurrencyDetail",
+            "name": "CurrencyDetail",
+            "summary": "The\u0020\u0027CurrencyDetail\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
+            "url": "classes/App-Entity-CurrencyDetail.html"
         },                {
-            "fqsen": "\\App\\Entity\\CurrencyCode",
-            "name": "CurrencyCode",
-            "summary": "The\u0020\u0027CurrencyCode\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
-            "url": "classes/App-Entity-CurrencyCode.html"
-        },                {
-            "fqsen": "\\App\\Entity\\CurrencyCode\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\App\\Entity\\CurrencyDetail\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
-            "url": "classes/App-Entity-CurrencyCode.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Entity\\CurrencyCode\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-CurrencyCode.html#property_prefix"
+            "url": "classes/App-Entity-CurrencyDetail.html#method___construct"
         },                {
             "fqsen": "\\App\\Entity\\Item",
             "name": "Item",
@@ -111,11 +96,6 @@ Search.appendIndex(
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-Item.html#method___construct"
         },                {
-            "fqsen": "\\App\\Entity\\Item\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-Item.html#property_prefix"
-        },                {
             "fqsen": "\\App\\Entity\\ListingStatus",
             "name": "ListingStatus",
             "summary": "The\u0020\u0027ListingStatus\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
@@ -126,25 +106,15 @@ Search.appendIndex(
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
             "url": "classes/App-Entity-ListingStatus.html#method___construct"
         },                {
-            "fqsen": "\\App\\Entity\\ListingStatus\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-ListingStatus.html#property_prefix"
+            "fqsen": "\\App\\Entity\\SiteDetail",
+            "name": "SiteDetail",
+            "summary": "The\u0020\u0027SiteDetail\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
+            "url": "classes/App-Entity-SiteDetail.html"
         },                {
-            "fqsen": "\\App\\Entity\\SiteCode",
-            "name": "SiteCode",
-            "summary": "The\u0020\u0027SiteCode\u0027\u0020class\u0020extends\u0020the\u0020\u0027BaseEntity\u0027\u0020class\u0020ensuring\u0020correct\u0020data\u0020types.",
-            "url": "classes/App-Entity-SiteCode.html"
-        },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A__construct\u0028\u0029",
+            "fqsen": "\\App\\Entity\\SiteDetail\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "The\u0020\u0027__construct\u0027\u0020method\u0020initializes\u0020properties\u0020with\u0020corresponding\u0020values,\u0020either\u0020defaults\u0020or\u0020passed\u0020as\u0020arguments.",
-            "url": "classes/App-Entity-SiteCode.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Entity\\SiteCode\u003A\u003A\u0024prefix",
-            "name": "prefix",
-            "summary": "",
-            "url": "classes/App-Entity-SiteCode.html#property_prefix"
+            "url": "classes/App-Entity-SiteDetail.html#method___construct"
         },                {
             "fqsen": "\\App\\Enum\\EbayDetailLevel",
             "name": "EbayDetailLevel",
@@ -511,10 +481,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_category"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_table"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CategoryTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CategoryTest.html#property_tables"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest",
             "name": "ConditionTest",
@@ -571,130 +546,145 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_condition"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_table"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest",
-            "name": "CountryCodeTest",
-            "summary": "The\u0020\u0027CountryCodeTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027CountryCode\u0027\u0020class.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html"
+            "fqsen": "\\Tests\\Unit\\Entity\\ConditionTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ConditionTest.html#property_tables"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest",
+            "name": "CountryDetailTest",
+            "summary": "The\u0020\u0027CountryDetailTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027CountryDetail\u0027\u0020class.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027CountryCode\u0027.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method__before"
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027CountryDetail\u0027.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeCreation\u0028\u0029",
-            "name": "testCountryCodeCreation",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027CountryCode\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeCreation"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailCreation\u0028\u0029",
+            "name": "testCountryDetailCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027CountryDetail\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeSettersAndGetters\u0028\u0029",
-            "name": "testCountryCodeSettersAndGetters",
-            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSettersAndGetters"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailSettersAndGetters\u0028\u0029",
+            "name": "testCountryDetailSettersAndGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020modify\u0020the\u0020properties\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailSettersAndGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeToArrayConversion\u0028\u0029",
-            "name": "testCountryCodeToArrayConversion",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020CountryCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeToArrayConversion"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailToArrayConversion\u0028\u0029",
+            "name": "testCountryDetailToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020whether\nit\u0020converts\u0020a\u0020CountryDetail\u0020object\u0020to\u0020the\u0020correct\u0020array.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeMissingTableKeyException\u0028\u0029",
-            "name": "testCountryCodeMissingTableKeyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeMissingTableKeyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailMissingTableKeyException\u0028\u0029",
+            "name": "testCountryDetailMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailMissingTableKeyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeSetterInvalidPropertyException\u0028\u0029",
-            "name": "testCountryCodeSetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailSetterInvalidPropertyException\u0028\u0029",
+            "name": "testCountryDetailSetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailSetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeSetterInvalidTypeException\u0028\u0029",
-            "name": "testCountryCodeSetterInvalidTypeException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeSetterInvalidTypeException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailSetterInvalidTypeException\u0028\u0029",
+            "name": "testCountryDetailSetterInvalidTypeException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailSetterInvalidTypeException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003AtestCountryCodeGetterInvalidPropertyException\u0028\u0029",
-            "name": "testCountryCodeGetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CountryCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#method_testCountryCodeGetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003AtestCountryDetailGetterInvalidPropertyException\u0028\u0029",
+            "name": "testCountryDetailGetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CountryDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#method_testCountryDetailGetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#property_tester"
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003A\u0024countryCode",
-            "name": "countryCode",
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003A\u0024countryDetail",
+            "name": "countryDetail",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#property_countryCode"
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#property_countryDetail"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CountryCodeTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CountryCodeTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#property_table"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest",
-            "name": "CurrencyCodeTest",
-            "summary": "The\u0020\u0027CurrencyCodeTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html"
+            "fqsen": "\\Tests\\Unit\\Entity\\CountryDetailTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CountryDetailTest.html#property_tables"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest",
+            "name": "CurrencyDetailTest",
+            "summary": "The\u0020\u0027CurrencyDetailTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027CurrencyCode\u0027.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method__before"
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027CurrencyDetail\u0027.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeCreation\u0028\u0029",
-            "name": "testCurrencyCodeCreation",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027CurrencyCode\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeCreation"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailCreation\u0028\u0029",
+            "name": "testCurrencyDetailCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027CurrencyDetail\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeSettersAndGetters\u0028\u0029",
-            "name": "testCurrencyCodeSettersAndGetters",
-            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeSettersAndGetters"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailSettersAndGetters\u0028\u0029",
+            "name": "testCurrencyDetailSettersAndGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity\u0020modify\u0020the\u0020properties\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailSettersAndGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeToArrayConversion\u0028\u0029",
-            "name": "testCurrencyCodeToArrayConversion",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020CurrencyCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeToArrayConversion"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailToArrayConversion\u0028\u0029",
+            "name": "testCurrencyDetailToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020CurrencyDetail\u0020object\u0020to\u0020the\u0020correct\u0020array.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeMissingTableKeyException\u0028\u0029",
-            "name": "testCurrencyCodeMissingTableKeyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeMissingTableKeyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailMissingTableKeyException\u0028\u0029",
+            "name": "testCurrencyDetailMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CurrencyDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailMissingTableKeyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeSetterInvalidPropertyException\u0028\u0029",
-            "name": "testCurrencyCodeSetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeSetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailSetterInvalidPropertyException\u0028\u0029",
+            "name": "testCurrencyDetailSetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailSetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeSetterInvalidTypeException\u0028\u0029",
-            "name": "testCurrencyCodeSetterInvalidTypeException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeSetterInvalidTypeException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailSetterInvalidTypeException\u0028\u0029",
+            "name": "testCurrencyDetailSetterInvalidTypeException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailSetterInvalidTypeException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003AtestCurrencyCodeGetterInvalidPropertyException\u0028\u0029",
-            "name": "testCurrencyCodeGetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CurrencyCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#method_testCurrencyCodeGetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003AtestCurrencyDetailGetterInvalidPropertyException\u0028\u0029",
+            "name": "testCurrencyDetailGetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027CurrencyDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#method_testCurrencyDetailGetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#property_tester"
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003A\u0024currencyCode",
-            "name": "currencyCode",
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003A\u0024currencyDetail",
+            "name": "currencyDetail",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#property_currencyCode"
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#property_currencyDetail"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyCodeTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-CurrencyCodeTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#property_table"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\CurrencyDetailTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-CurrencyDetailTest.html#property_tables"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ItemTest",
             "name": "ItemTest",
@@ -756,10 +746,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ItemTest.html#property_item"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_table"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\ItemTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ItemTest.html#property_tables"
         },                {
             "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest",
             "name": "ListingStatusTest",
@@ -816,70 +811,80 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_listingStatus"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_table"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest",
-            "name": "SiteCodeTest",
-            "summary": "The\u0020\u0027SiteCodeTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027SiteCode\u0027\u0020entity.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html"
+            "fqsen": "\\Tests\\Unit\\Entity\\ListingStatusTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-ListingStatusTest.html#property_tables"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A_before\u0028\u0029",
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest",
+            "name": "SiteDetailTest",
+            "summary": "The\u0020\u0027SiteDetailTest\u0027\u0020is\u0020a\u0020unit\u0020test\u0020class\u0020for\u0020testing\u0020the\u0020\u0027SiteDetail\u0027\u0020entity.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003A_before\u0028\u0029",
             "name": "_before",
-            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027SiteCode\u0027.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method__before"
+            "summary": "Sets\u0020up\u0020the\u0020necessary\u0020environment\u0020for\u0020running\u0020tests\u0020by\ncreating\u0020an\u0020instance\u0020of\u0020\u0027SiteDetail\u0027.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method__before"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeCreation\u0028\u0029",
-            "name": "testSiteCodeCreation",
-            "summary": "Tests\u0020whether\u0020the\u0020\u0027SiteCode\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeCreation"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailCreation\u0028\u0029",
+            "name": "testSiteDetailCreation",
+            "summary": "Tests\u0020whether\u0020the\u0020\u0027SiteDetail\u0027\u0020instance\u0020is\u0020created\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailCreation"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSettersAndGetters\u0028\u0029",
-            "name": "testSiteCodeSettersAndGetters",
-            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020modify\u0020the\u0020properties\u0020correctly.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSettersAndGetters"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailSettersAndGetters\u0028\u0029",
+            "name": "testSiteDetailSettersAndGetters",
+            "summary": "Tests\u0020whether\u0020the\u0020setters\u0020in\u0020the\u0020\u0027SiteDetail\u0027\u0020entity\u0020modify\u0020the\u0020properties\u0020correctly.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailSettersAndGetters"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeToArrayConversion\u0028\u0029",
-            "name": "testSiteCodeToArrayConversion",
-            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020SiteCode\u0020object\u0020to\u0020the\u0020correct\u0020array.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeToArrayConversion"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailToArrayConversion\u0028\u0029",
+            "name": "testSiteDetailToArrayConversion",
+            "summary": "Tests\u0020the\u0020\u0027toArray\u0027\u0020method\u0020of\u0020the\u0020\u0027SiteDetail\u0027\u0020entity\u0020whether\nit\u0020converts\u0020a\u0020SiteDetail\u0020object\u0020to\u0020the\u0020correct\u0020array.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailToArrayConversion"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeMissingTableKeyException\u0028\u0029",
-            "name": "testSiteCodeMissingTableKeyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeMissingTableKeyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailMissingTableKeyException\u0028\u0029",
+            "name": "testSiteDetailMissingTableKeyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027SiteDetail\u0027\u0020class\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020a\u0020missing\u0020table\u0020key.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailMissingTableKeyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSetterInvalidPropertyException\u0028\u0029",
-            "name": "testSiteCodeSetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailSetterInvalidPropertyException\u0028\u0029",
+            "name": "testSiteDetailSetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027SiteDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailSetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeSetterInvalidTypeException\u0028\u0029",
-            "name": "testSiteCodeSetterInvalidTypeException",
-            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeSetterInvalidTypeException"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailSetterInvalidTypeException\u0028\u0029",
+            "name": "testSiteDetailSetterInvalidTypeException",
+            "summary": "Tests\u0020the\u0020setter\u0020of\u0020the\u0020\u0027SiteDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property\u0020type.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailSetterInvalidTypeException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003AtestSiteCodeGetterInvalidPropertyException\u0028\u0029",
-            "name": "testSiteCodeGetterInvalidPropertyException",
-            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027SiteCode\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#method_testSiteCodeGetterInvalidPropertyException"
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003AtestSiteDetailGetterInvalidPropertyException\u0028\u0029",
+            "name": "testSiteDetailGetterInvalidPropertyException",
+            "summary": "Tests\u0020the\u0020getter\u0020of\u0020the\u0020\u0027SiteDetail\u0027\u0020entity\u0020whether\nit\u0020throws\u0020an\u0020exception\u0020on\u0020an\u0020invalid\u0020property.",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#method_testSiteDetailGetterInvalidPropertyException"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024tester",
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_tester"
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#property_tester"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024siteCode",
-            "name": "siteCode",
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003A\u0024siteDetail",
+            "name": "siteDetail",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_siteCode"
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#property_siteDetail"
         },                {
-            "fqsen": "\\Tests\\Unit\\Entity\\SiteCodeTest\u003A\u003A\u0024prefix",
-            "name": "prefix",
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003A\u0024table",
+            "name": "table",
             "summary": "",
-            "url": "classes/Tests-Unit-Entity-SiteCodeTest.html#property_prefix"
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#property_table"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Entity\\SiteDetailTest\u003A\u003A\u0024tables",
+            "name": "tables",
+            "summary": "",
+            "url": "classes/Tests-Unit-Entity-SiteDetailTest.html#property_tables"
         },                {
             "fqsen": "\\Tests\\Unit\\Manager\\DatabaseManagerTest",
             "name": "DatabaseManagerTest",
