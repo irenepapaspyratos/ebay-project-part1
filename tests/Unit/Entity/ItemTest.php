@@ -14,7 +14,41 @@ class ItemTest extends Unit {
 
     protected $tester;
     private $item;
-    private $prefix = 'ebay_';
+    private $table = 'ebay_item';
+    private $tables = [
+        'ebay_item' =>
+        [
+            'columns' => [
+                'id' => 'integer',
+                'item_id' => 'integer',
+                'title' => 'string',
+                'subtitle' => 'string',
+                'current_price' => 'float',
+                'fk_status' => 'integer',
+                'start_time_utc' => 'DateTime',
+                'end_time_utc' => 'DateTime',
+                'quantity' => 'integer',
+                'quantity_sold' => 'integer',
+                'fk_condition' => 'integer',
+                'fk_category' => 'integer',
+                'fk_second_category' => 'integer',
+                'store_category_id' => 'string',
+                'store_category_2_id' => 'string',
+                'view_item_url' => 'string',
+                'pictures' => 'JSON',
+                'fk_site' => 'integer',
+                'fk_country' => 'integer',
+                'fk_currency' => 'integer',
+                'ship_to_locations' => 'JSON',
+                'shipping_options' => 'JSON',
+                'item_compatibility' => 'JSON',
+                'item_specifics' => 'JSON',
+                'html_description' => 'string',
+                'net_price' => 'float',
+                'last_update_utc' => 'DateTime'
+            ],
+        ],
+    ];
 
     /**
      * Sets up the necessary environment for running tests by 
@@ -22,7 +56,7 @@ class ItemTest extends Unit {
      */
     protected function _before() {
 
-        $this->item = new Item($this->prefix);
+        $this->item = new Item($this->table, $this->tables);
     }
 
     /**
@@ -45,6 +79,8 @@ class ItemTest extends Unit {
         $this->item->title = 'Sample Item';
         $this->item->current_price = 25.50;
         $this->item->fk_status = 1;
+        $this->item->start_time_utc = new \DateTime('2020-01-05T06:59:20.000Z');
+        $this->item->end_time_utc = new \DateTime('2020-07-10T06:59:20.000Z');
         $this->item->quantity = 10;
         $this->item->quantity_sold = 2;
         $this->item->fk_condition = 1;
@@ -62,14 +98,21 @@ class ItemTest extends Unit {
         $this->item->item_specifics = json_encode(['Color' => 'Red', 'Size' => 'M']);
         $this->item->html_description = '<p>Sample description</p>';
         $this->item->net_price = 20.50;
-        $this->item->filetime = '2023-09-10 10:00:00';
+        $this->item->last_update_utc = new \DateTime('2023-09-10 10:00:00');
 
         // Assert that the correct values of the changes are returned
+        $this->assertInstanceOf(\DateTime::class, $this->item->start_time_utc);
+        $this->assertInstanceOf(\DateTime::class, $this->item->end_time_utc);
+        $this->assertInstanceOf(\DateTime::class, $this->item->last_update_utc);
+
+        $this->assertTrue(is_int($this->item->id));
         $this->assertEquals(5, $this->item->id);
         $this->assertEquals(123456, $this->item->item_id);
         $this->assertEquals('Sample Item', $this->item->title);
         $this->assertEquals(25.50, $this->item->current_price);
         $this->assertEquals(1, $this->item->fk_status);
+        $this->assertEquals('2020-01-05 06:59:20', $this->item->start_time_utc->format('Y-m-d\ H:i:s'));
+        $this->assertEquals('2020-07-10 06:59:20', $this->item->end_time_utc->format('Y-m-d\ H:i:s'));
         $this->assertEquals(10, $this->item->quantity);
         $this->assertEquals(2, $this->item->quantity_sold);
         $this->assertEquals(1, $this->item->fk_condition);
@@ -87,7 +130,7 @@ class ItemTest extends Unit {
         $this->assertEquals(['Color' => 'Red', 'Size' => 'M'], json_decode($this->item->item_specifics, true));
         $this->assertEquals('<p>Sample description</p>', $this->item->html_description);
         $this->assertEquals(20.50, $this->item->net_price);
-        $this->assertEquals('2023-09-10 10:00:00', $this->item->filetime);
+        $this->assertEquals('2023-09-10 10:00:00', $this->item->last_update_utc->format('Y-m-d\ H:i:s'));
     }
 
     /**
@@ -96,37 +139,64 @@ class ItemTest extends Unit {
      */
     public function testItemToArrayConversion() {
 
-        // Act
-        $this->item->id = 1;
-        $this->item->item_id = 654321;
-        $this->item->title = 'Another Item';
-        $this->item->current_price = 15.50;
-        // ... (similarly set other properties)
+        // Act 
+        $this->item->id = 5;
+        $this->item->item_id = 123456;
+        $this->item->title = 'Sample Item';
+        $this->item->subtitle = 'Sample Sub Item';
+        $this->item->current_price = 25.50;
+        $this->item->fk_status = 1;
+        $this->item->start_time_utc = new \DateTime('2020-01-05T06:59:20.000Z');
+        $this->item->end_time_utc = new \DateTime('2020-07-10T06:59:20.000Z');
+        $this->item->quantity = 10;
+        $this->item->quantity_sold = 2;
+        $this->item->fk_condition = 1;
+        $this->item->fk_category = 101;
+        $this->item->store_category_id = 'store_123';
+        $this->item->store_category_2_id = 'store_456';
+        $this->item->view_item_url = 'http://example.com/item/123456';
+        $this->item->pictures = json_encode(['pic1.jpg', 'pic2.jpg']);
+        $this->item->fk_site = 1;
+        $this->item->fk_country = 1;
+        $this->item->fk_currency = 1;
+        $this->item->ship_to_locations = json_encode(['US', 'UK']);
+        $this->item->html_description = '<p>Sample description</p>';
+        $this->item->net_price = 20.50;
+        $this->item->last_update_utc = new \DateTime('2023-09-10 10:00:00');
+
+        // Assert that the correct types are returned
+        $this->assertInstanceOf(\DateTime::class, $this->item->start_time_utc);
+        $this->assertInstanceOf(\DateTime::class, $this->item->end_time_utc);
+        $this->assertInstanceOf(\DateTime::class, $this->item->last_update_utc);
 
         $expectedArray = [
-            'id' => 1,
-            'item_id' => 654321,
-            'title' => 'Another Item',
-            'current_price' => 15.50,
-            'fk_status' => null,
-            'quantity' => null,
-            'quantity_sold' => null,
-            'fk_condition' => null,
-            'fk_category' => null,
-            'store_category_id' => null,
-            'store_category_2_id' => null,
-            'view_item_url' => null,
-            'pictures' => null,
-            'fk_site' => null,
-            'fk_country' => null,
-            'fk_currency' => null,
-            'ship_to_locations' => null,
+            'id' => 5,
+            'item_id' => 123456,
+            'title' => 'Sample Item',
+            'subtitle' => 'Sample Sub Item',
+            'current_price' => 25.50,
+            'fk_status' => 1,
+            'start_time_utc' => (new \DateTime('2020-01-05 06:59:20', new \DateTimeZone('UTC')))->format('Y-m-d H:i:s'),
+            'end_time_utc' => (new \DateTime('2020-07-10 06:59:20', new \DateTimeZone('UTC')))->format('Y-m-d H:i:s'),
+            'quantity' => 10,
+            'quantity_sold' => 2,
+            'fk_condition' => 1,
+            'fk_category' => 101,
+            'fk_second_category' => null,
+            'store_category_id' => 'store_123',
+            'store_category_2_id' => 'store_456',
+            'view_item_url' => 'http://example.com/item/123456',
+            'pictures' => '["pic1.jpg","pic2.jpg"]',
+            'fk_site' => 1,
+            'fk_country' => 1,
+            'fk_currency' => 1,
+            'ship_to_locations' => '["US","UK"]',
             'shipping_options' => null,
             'item_compatibility' => null,
             'item_specifics' => null,
-            'html_description' => null,
-            'net_price' => null,
-            'filetime' => null
+            'html_description' => '<p>Sample description</p>',
+            'net_price' => 20.50,
+            'last_update_utc' => (new \DateTime('2023-09-10 10:00:00', new \DateTimeZone('UTC')))->format('Y-m-d H:i:s'),
         ];
 
         // Assert that the correct array is returned
@@ -141,10 +211,10 @@ class ItemTest extends Unit {
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Columns for table 'wrongprefix_item' not found.");
+        $this->expectExceptionMessage("Columns for table 'wrongtable' not found.");
 
         // Act
-        $item = new Item('wrongprefix_');
+        $item = new Item('wrongtable', $this->tables);
     }
 
     /**

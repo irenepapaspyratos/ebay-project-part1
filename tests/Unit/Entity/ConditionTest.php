@@ -14,7 +14,16 @@ class ConditionTest extends Unit {
 
     protected $tester;
     private $condition;
-    private $prefix = 'ebay_';
+    private $table = 'ebay_condition';
+    private $tables = [
+        'ebay_condition' => [
+            'columns' => [
+                'id' => 'integer',
+                'condition_id' => 'integer',
+                'condition_display_name' => 'string'
+            ]
+        ],
+    ];
 
     /**
      * Sets up the necessary environment for running tests by 
@@ -22,7 +31,7 @@ class ConditionTest extends Unit {
      */
     protected function _before() {
 
-        $this->condition = new Condition($this->prefix);
+        $this->condition = new Condition($this->table, $this->tables);
     }
 
     /**
@@ -45,6 +54,7 @@ class ConditionTest extends Unit {
         $this->condition->condition_display_name = 'New';
 
         // Assert that the correct values of the changes are returned
+        $this->assertTrue(is_int($this->condition->id));
         $this->assertEquals(5, $this->condition->id);
         $this->assertEquals(333, $this->condition->condition_id);
         $this->assertEquals('New', $this->condition->condition_display_name);
@@ -79,10 +89,10 @@ class ConditionTest extends Unit {
 
         // Assert that an exception of type `\Exception` is thrown containing the correct message 
         $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("Columns for table 'wrongprefix_condition' not found.");
+        $this->expectExceptionMessage("Columns for table 'wrongtable' not found.");
 
         // Act
-        $condition = new Condition('wrongprefix_');
+        $condition = new Condition('wrongtable', $this->tables);
     }
 
     /**
