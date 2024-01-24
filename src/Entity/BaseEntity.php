@@ -7,6 +7,7 @@ namespace App\Entity;
  * 
  * Provides functionality for 'magically' setting and getting properties, 
  * as well as converting the object to an array with keys taken from the configuration file. 
+ * Auto-converts DateTime to UTC Timezone!
  */
 abstract class BaseEntity {
 
