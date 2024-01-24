@@ -44,7 +44,7 @@ return [
         'file_log_error' => __DIR__ . '/log/error.log',
     ],
     'database' => [
-        'tables' => [
+        'table' => [
             'ebay_category' => [
                 'columns' => [
                     'id' => 'integer',

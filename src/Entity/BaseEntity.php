@@ -42,10 +42,10 @@ abstract class BaseEntity {
         $tableKey = $this->prefix . $tableName;
 
         // Extract the valid columns from the configuration
-        if (!isset($config['database']['tables'][$tableKey]['columns']))
+        if (!isset($config['database']['table'][$tableKey]['columns']))
             throw new \Exception("Columns for table '$tableKey' not found.");
 
-        $this->validColumns = $config['database']['tables'][$tableKey]['columns'];
+        $this->validColumns = $config['database']['table'][$tableKey]['columns'];
     }
 
     /**
