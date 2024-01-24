@@ -10,42 +10,32 @@ namespace App\Entity;
  */
 abstract class BaseEntity {
 
-    private $prefix;
-    private $validColumns = [];
-    private $data = [];
+    protected string $table;
+    protected array $validTables;
+    protected array $validColumns = [];
+    protected array $data = [];
 
     /**
      * The '__construct' method initializes properties with corresponding values, either defaults or passed as arguments.
      * 
      * Automatically creates an array with valid columns/keys for each class that extends this 'BaseEntity'. 
-     * To achieve this, the class name combined with the provided prefix must correspond with a table key in the configuration file. 
+     * To achieve this, the class name must correspond with a table key in the configuration file. 
      * 
-     * For instance, an entity for eBay categories would require the prefix 'ebay_' and needs to be named 'Category' 
-     * if the corresponding table key in the configuration file is set as 'ebay_category' (corresponding to the related table in the database).
-     *     
-     * @param string $prefix Prefix for the table key in the configuration file.
+     * @param string $table Represents the table name for which the valid column array has to be created.
+     * @param array $validTables Each table as key contains the corresponding valid columns (a.o.) as value.
      * 
      * @return void
      */
-    public function __construct(string $prefix) {
+    public function __construct(string $table, array $validTables) {
 
-        $this->prefix = $prefix;
-
-        // Load the configuration file
-        $config = include __DIR__ . '/../../config.php';
-
-        // Get the class name 
-        $className = (new \ReflectionClass($this))->getShortName();
-
-        // Convert camel case to snake case and create the key for the table array in the configuration file
-        $tableName = strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $className));
-        $tableKey = $this->prefix . $tableName;
+        $this->table = $table;
+        $this->validTables = $validTables;
 
         // Extract the valid columns from the configuration
-        if (!isset($config['database']['table'][$tableKey]['columns']))
-            throw new \Exception("Columns for table '$tableKey' not found.");
+        if (!isset($validTables[$this->table]['columns']))
+            throw new \Exception("Columns for table '{$this->table}' not found.");
 
-        $this->validColumns = $config['database']['table'][$tableKey]['columns'];
+        $this->validColumns = $validTables[$this->table]['columns'];
     }
 
     /**
@@ -55,30 +45,52 @@ abstract class BaseEntity {
      * @param int|string|float|null $value Value to be set for the given property. 
      * 
      * @return void
-     * @throws \Exception If an invalid property is tried to be set.
+     * @throws \Exception If an invalid property or type is tried to be set.
      */
-    public function __set(string $name, int|string|float|null $value): void {
+    public function __set(string $name, int|string|float|\DateTime|null $value): void {
 
+        // Validate property
         if (!array_key_exists($name, $this->validColumns))
             throw new \Exception("Invalid property: $name");
 
         $expectedType = $this->validColumns[$name];
         $actualType = gettype($value);
 
-        // Special cases as 'gettype' returns 'double' for float and 'string' for JSON
-        if ($actualType === 'double')
-            $actualType = 'float';
+        // Validate special cases
+        if ($actualType === 'NULL') {
+            $expectedType = 'NULL';
+        } else {
 
-        if ($expectedType === 'JSON') {
+            switch ($expectedType) {
 
-            $expectedType = 'string';
+                case 'DateTime':
 
-            // Validate JSON
-            if (json_decode($value) === null && json_last_error() !== JSON_ERROR_NONE) {
-                throw new \InvalidArgumentException("Invalid JSON data for '$name'");
+                    // Validate DateTime and set UTC timezone
+                    if ($actualType === 'object' && $value instanceof \DateTime) {
+                        $expectedType = 'object';
+                        $value->setTimezone(new \DateTimeZone('UTC'));
+                    }
+                    break;
+
+                case 'float':
+                    $expectedType = 'double';
+                    break;
+
+                case 'boolean':
+                    $expectedType = 'integer';
+                    break;
+
+                case 'JSON':
+                    $expectedType = 'string';
+
+                    // Validate JSON
+                    if (json_decode($value) === null && json_last_error() !== JSON_ERROR_NONE)
+                        throw new \InvalidArgumentException("Invalid JSON data for '$name'");
+                    break;
             }
         }
 
+        // Validate type
         if ($actualType !== $expectedType)
             throw new \InvalidArgumentException("Invalid type for '$name'. Expected $expectedType, got $actualType");
 
@@ -93,7 +105,7 @@ abstract class BaseEntity {
      * @return int|string|float|null Value of the requested property, defaults to null for non-set properties. 
      * @throws \Exception If an invalid property is requested.
      */
-    public function __get(string $name): int|string|float|null {
+    public function __get(string $name): int|string|float|\DateTime|null {
 
         if (!array_key_exists($name, $this->validColumns))
             throw new \Exception("Property '$name' not existing");
@@ -111,7 +123,7 @@ abstract class BaseEntity {
 
         $output = [];
         foreach (array_keys($this->validColumns) as $key)
-            $output[$key] = $this->$key;
+            $output[$key] = $this->$key instanceof \DateTime ? $this->$key->format('Y-m-d H:i:s') : $this->$key;
 
         return $output;
     }
