@@ -8,7 +8,8 @@ use Codeception\Test\Unit;
 /**
  * The 'XmlUtilsTest' is a unit test class for testing the 'XmlUtils' class.
  * 
- * Tests the functionality of adding nodes to existing XML data given in different types.
+ * Tests the functionality of adding nodes to existing XML data given in different types 
+ * and the process of assigning declared types to each first level node of an XML object/string.
  */
 class XmlUtilsTest extends Unit {
 
@@ -33,7 +34,14 @@ class XmlUtilsTest extends Unit {
             'Color' => 'blue',
             'Description' => [
                 'Size' => 'M'
-            ]
+            ],
+            'NonSafe' => [
+                'amp' => 'blue & green',
+                'less' => '1 < 2',
+                'more' => '2 > 1',
+                'singleQ' => 'say \'Heya!\'',
+                'doubleQ' => 'say "Heya!"',
+            ],
         ];
     }
 
@@ -145,14 +153,14 @@ class XmlUtilsTest extends Unit {
 
     /**
      * Tests the 'addNodesToXml' method of the 'XmlUtils' class whether 
-     * the the addition of nodes to an XML object regarding
-     * the correct output type (depending on the input file) with the expected values.
+     * the addition of nodes to an XML object works correct regarding
+     * the correct output type (depending on the input file) with the expected values (depending on special characters).
      */
     public function testAddNodesToXmlString() {
 
         // Arrange
         $expect = '<?xml version="1.0"?>' . "\n"
-            . '<Item><ItemId>111111111111</ItemId><Color>blue</Color><Description><Size>M</Size></Description></Item>' . "\n";
+            . '<Item><ItemId>111111111111</ItemId><Color>blue</Color><Description><Size>M</Size></Description><NonSafe><amp><![CDATA[blue & green]]></amp><less><![CDATA[1 < 2]]></less><more><![CDATA[2 > 1]]></more><singleQ><![CDATA[say \'Heya!\']]></singleQ><doubleQ><![CDATA[say "Heya!"]]></doubleQ></NonSafe></Item>' . "\n";
 
         // Act
         $result = $this->xmlUtils->addNodesToXml($this->validXmlString, $this->validNodes);
@@ -164,22 +172,23 @@ class XmlUtilsTest extends Unit {
 
     /**
      * Tests the 'addNodesToXml' method of the 'XmlUtils' class whether 
-     * the the addition of nodes to an XML object regarding
-     * the correct output type (depending on the input file) with the expected values.
+     * the the addition of nodes to an XML object works correct regarding
+     * the correct output type (depending on the input file) with the expected values (depending on special characters).
      */
     public function testAddNodesToXmlObject() {
-
-        // Arrange
-        $expectItemValue = 'blue';
-        $expectChildValue = 'M';
 
         // Act
         $result = $this->xmlUtils->addNodesToXml($this->xmlObj, $this->validNodes);
 
         // Assert that the result is an instance of SimpleXMLElement and equals the expected values
         $this->assertInstanceOf(\SimpleXMLElement::class, $result);
-        $this->assertEquals($expectItemValue, $result->Color->__toString());
-        $this->assertEquals($expectChildValue, $result->Description->Size->__toString());
+        $this->assertEquals('blue', $result->Color->__toString());
+        $this->assertEquals('M', $result->Description->Size->__toString());
+        $this->assertEquals('blue & green', $result->NonSafe->amp->__toString());
+        $this->assertEquals('1 < 2', $result->NonSafe->less->__toString());
+        $this->assertEquals('2 > 1', $result->NonSafe->more->__toString());
+        $this->assertEquals('say \'Heya!\'', $result->NonSafe->singleQ->__toString());
+        $this->assertEquals('say "Heya!"', $result->NonSafe->doubleQ->__toString());
     }
 
     /**
@@ -212,6 +221,20 @@ class XmlUtilsTest extends Unit {
 
         // Act
         $this->xmlUtils->addNodesToXml($this->validXmlString, $invalidNodes);
+    }
+
+    /**
+     * Tests the 'extendedSimpleXmlAddChild' method of the 'XmlUtils' class whether 
+     * an exception is thrown with the correct error message when an invalid parent node is given.
+     */
+    public function testExtendedSimpleXmlAddChildFailureByInvalidXmlString() {
+
+        // Assert invalid parent node
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Failed to add nodes to XML');
+
+        //Act
+        $this->xmlUtils->extendedSimpleXmlAddChild($this->invalidXmlString, 'Color', 'Blue');
     }
 
     /**
