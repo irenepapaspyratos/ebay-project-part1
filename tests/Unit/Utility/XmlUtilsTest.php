@@ -79,13 +79,12 @@ class XmlUtilsTest extends Unit {
      * The `validXml` function returns an array of test cases 
      * for various valid XML structures and the expected extracted nodes.
      * 
-     * I is used for testing the 'extractNodesFromXml' method of the 'XmlUtils' class.
+     * It is used for testing the 'getNodesFromXml' method of the 'XmlUtils' class.
      * 
      * @return array An array of test cases will be returned, 
      * where each test case is an array with XML input (as string or as SimpleXMLElement) 
      * and the expected nodes output.
      */
-
     public function validXmlProvider(): array {
 
         $xmlSimple = '<ItemArray><Item><Title>ABC</Title><Price>123</Price></Item></ItemArray>';
@@ -95,6 +94,7 @@ class XmlUtilsTest extends Unit {
         return [
             'Simple XML structure - string' => [
                 $xmlSimple,
+                'Item',
                 [
                     'Title' => 'string',
                     'Price' => 'string'
@@ -102,6 +102,7 @@ class XmlUtilsTest extends Unit {
             ],
             'Simple XML structure - SimpleXMLElement' => [
                 simplexml_load_string($xmlSimple),
+                'Item',
                 [
                     'Title' => 'string',
                     'Price' => 'string'
@@ -109,18 +110,21 @@ class XmlUtilsTest extends Unit {
             ],
             'Nested XML structure - string' => [
                 $xmlNested,
+                'Item',
                 [
                     'Description' => 'JSON'
                 ]
             ],
             'Nested XML structure - SimpleXMLElement' => [
                 simplexml_load_string($xmlNested),
+                'Item',
                 [
                     'Description' => 'JSON'
                 ]
             ],
             'Mixed XML structure - string' => [
                 $xmlMixed,
+                'Item',
                 [
                     'Title' => 'string',
                     'Price' => 'string',
@@ -129,6 +133,7 @@ class XmlUtilsTest extends Unit {
             ],
             'Mixed XML structure - SimpleXMLElement' => [
                 simplexml_load_string($xmlMixed),
+                'Item',
                 [
                     'Title' => 'string',
                     'Price' => 'string',
@@ -210,33 +215,47 @@ class XmlUtilsTest extends Unit {
     }
 
     /**
-     * Tests the 'extractNodesFromXml' method of the 'XmlUtils' class whether 
+     * Tests the 'setFirstLevelNodeTypeFromXml' method of the 'XmlUtils' class whether 
      * the corresponding correct array is returned when valid XML is given as input.
      * 
      * An array of test cases will be passed and tested individually by using DataProvider.
      * 
      * @dataProvider validXMLProvider 
      */
-    public function testExtractNodesFromXml($xmlInput, array $expectedArray) {
+    public function testSetFirstLevelNodeTypeFromXml($xmlInput, string $rootNode, array $expectedArray) {
 
         // Act
-        $resultArray = $this->xmlUtils->extractNodesFromXml($xmlInput);
+        $resultArray = $this->xmlUtils->setFirstLevelNodeTypeFromXml($xmlInput, $rootNode);
 
         // Assert
         $this->assertEquals($expectedArray, $resultArray);
     }
 
     /**
-     * Tests the 'addNodesToXml' method of the 'XmlUtils' class whether
+     * Tests the 'setFirstLevelNodeTypeFromXml' method of the 'XmlUtils' class whether
      * an exception is thrown with the correct error message when an invalid XML string is given as input.
      */
-    public function testExtractNodesFromXmlFailureByInvalidXmlInput() {
+    public function testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput() {
 
         // Assert invalid xml string
         $this->expectException(\Exception::class);
         $this->expectExceptionMessageMatches('/Failed to access nodes of XML string: simplexml_load_string\(\):/');
 
         // Act
-        $this->xmlUtils->extractNodesFromXml($this->invalidXmlString, $this->validNodes);
+        $this->xmlUtils->setFirstLevelNodeTypeFromXml($this->invalidXmlString, 'NotUsedNode');
+    }
+
+    /**
+     * Tests the 'setFirstLevelNodeTypeFromXml' method of the 'XmlUtils' class whether
+     * an exception is thrown with the correct error message when a non-existent root node is given as input.
+     */
+    public function testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode() {
+
+        // Assert invalid root node
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('The specified root node \'NotExistingNode\' not existing in the XML.');
+
+        // Act
+        $this->xmlUtils->setFirstLevelNodeTypeFromXml($this->validXmlString, 'NotExistingNode');
     }
 }

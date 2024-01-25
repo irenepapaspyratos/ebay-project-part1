@@ -61,17 +61,18 @@ class XmlUtils {
     }
 
     /**
-     * The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
-     * returns an array of the first level child nodes and their assigned types.
+     * The `setFirstLevelNodeTypeFromXml` method takes an XML string or a SimpleXMLElement object as input and
+     * returns an array of the first level child nodes and their assigned types starting from the specified root node.
      * 
      * A node having children will be assigned to the type 'JSON', otherwise 'string'.
      * 
      * @param string|\SimpleXMLElement $srcXml XML to extract nodes from.
+     * @param string $rootNode The root node from which to start extracting child nodes.
      * 
      * @return array<string,string> Array of nodes extracted from the XML, where each node is represented by name => type.
-     * @throws \Exception If an invalid XML string is  given as input.
+     * @throws \Exception If an invalid XML string or root node is  given as input.
      */
-    public function extractNodesFromXml(string|\SimpleXMLElement $srcXml): array {
+    public function setFirstLevelNodeTypeFromXml(string|\SimpleXMLElement $srcXml, string $rootNode): array {
 
         $xmlObj = $srcXml;
 
@@ -87,10 +88,16 @@ class XmlUtils {
             }
         }
 
-        // Extract each node of the XML object and assign it to the corresponding type 
+        // Check if the specified root node exists
+        if (!isset($xmlObj->$rootNode))
+            throw new \Exception("The specified root node '{$rootNode}' not existing in the XML.");
+
+        // Extract each node of the XML object starting from the specified root node and assign it to the corresponding type 
         $nodes = [];
-        foreach ($xmlObj->Item as $item) {
+        foreach ($xmlObj->$rootNode as $item) {
+
             foreach ($item->children() as $child) {
+
                 $name = $child->getName();
                 $type = (count($child->children()) > 0) ? 'JSON' : 'string';
                 $nodes[$name] = $type;
