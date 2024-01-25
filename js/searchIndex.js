@@ -1261,11 +1261,6 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020node\u0020array\u0020is\u0020given\u0020as\u0020input.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureByInvalidNodesInput"
         },                {
-            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlFailureOfChildCreation\u0028\u0029",
-            "name": "testAddNodesToXmlFailureOfChildCreation",
-            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020node\u0020name\u0020is\u0020given\u0020to\u0020add.",
-            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureOfChildCreation"
-        },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestSetFirstLevelNodeTypeFromXml\u0028\u0029",
             "name": "testSetFirstLevelNodeTypeFromXml",
             "summary": "Tests\u0020the\u0020\u0027setFirstLevelNodeTypeFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020corresponding\u0020correct\u0020array\u0020is\u0020returned\u0020when\u0020valid\u0020XML\u0020is\u0020given\u0020as\u0020input.",
