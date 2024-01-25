@@ -406,10 +406,10 @@ Search.appendIndex(
             "summary": "The\u0020\u0060addNodesToXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020object\u0020and\u0020an\u0020array\u0020of\u0020nodes\u0020\u0028with\u0020or\u0020without\u0020direct\u0020children\u0029,\nand\u0020adds\u0020the\u0020nodes\u0020to\u0020the\u0020XML.",
             "url": "classes/App-Utility-XmlUtils.html#method_addNodesToXml"
         },                {
-            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AextractNodesFromXml\u0028\u0029",
-            "name": "extractNodesFromXml",
-            "summary": "The\u0020\u0060extractNodesFromXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020a\u0020SimpleXMLElement\u0020object\u0020as\u0020input\u0020and\nreturns\u0020an\u0020array\u0020of\u0020the\u0020first\u0020level\u0020child\u0020nodes\u0020and\u0020their\u0020assigned\u0020types.",
-            "url": "classes/App-Utility-XmlUtils.html#method_extractNodesFromXml"
+            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AsetFirstLevelNodeTypeFromXml\u0028\u0029",
+            "name": "setFirstLevelNodeTypeFromXml",
+            "summary": "The\u0020\u0060setFirstLevelNodeTypeFromXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020a\u0020SimpleXMLElement\u0020object\u0020as\u0020input\u0020and\nreturns\u0020an\u0020array\u0020of\u0020the\u0020first\u0020level\u0020child\u0020nodes\u0020and\u0020their\u0020assigned\u0020types\u0020starting\u0020from\u0020the\u0020specified\u0020root\u0020node.",
+            "url": "classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml"
         },                {
             "fqsen": "\\Tests\\Support\\AcceptanceTester",
             "name": "AcceptanceTester",
@@ -1066,6 +1066,11 @@ Search.appendIndex(
             "summary": "Tests\u0020whether\u0020the\u0020response\u0020is\u0020a\u0020string\u0020with\u0020expected\u0020content\u0020by\nsetting\u0020up\u0020a\u0020mock\u0020response\u0020for\u0020a\u0020specific\u0020endpoint\u0020on\u0020a\u0020mock\u0020web\u0020server.",
             "url": "classes/Tests-Unit-Utility-CustomCurlTest.html#method_testExecuteCurlSuccess"
         },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest\u003A\u003AtestExecuteCurlWithHeadersSuccess\u0028\u0029",
+            "name": "testExecuteCurlWithHeadersSuccess",
+            "summary": "Tests\u0020whether\u0020the\u0020response\u0020is\u0020a\u0020string\u0020with\u0020expected\u0020content\u0020by\nsetting\u0020up\u0020a\u0020mock\u0020response\u0020for\u0020a\u0020specific\u0020endpoint\u0020on\u0020a\u0020mock\u0020web\u0020server.",
+            "url": "classes/Tests-Unit-Utility-CustomCurlTest.html#method_testExecuteCurlWithHeadersSuccess"
+        },                {
             "fqsen": "\\Tests\\Unit\\Utility\\CustomCurlTest\u003A\u003A\u0024tester",
             "name": "tester",
             "summary": "",
@@ -1241,15 +1246,20 @@ Search.appendIndex(
             "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020node\u0020array\u0020is\u0020given\u0020as\u0020input.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureByInvalidNodesInput"
         },                {
-            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestExtractNodesFromXml\u0028\u0029",
-            "name": "testExtractNodesFromXml",
-            "summary": "Tests\u0020the\u0020\u0027extractNodesFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020corresponding\u0020correct\u0020array\u0020is\u0020returned\u0020when\u0020valid\u0020XML\u0020is\u0020given\u0020as\u0020input.",
-            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml"
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestSetFirstLevelNodeTypeFromXml\u0028\u0029",
+            "name": "testSetFirstLevelNodeTypeFromXml",
+            "summary": "Tests\u0020the\u0020\u0027setFirstLevelNodeTypeFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020corresponding\u0020correct\u0020array\u0020is\u0020returned\u0020when\u0020valid\u0020XML\u0020is\u0020given\u0020as\u0020input.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXml"
         },                {
-            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestExtractNodesFromXmlFailureByInvalidXmlInput\u0028\u0029",
-            "name": "testExtractNodesFromXmlFailureByInvalidXmlInput",
-            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020XML\u0020string\u0020is\u0020given\u0020as\u0020input.",
-            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXmlFailureByInvalidXmlInput"
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput\u0028\u0029",
+            "name": "testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput",
+            "summary": "Tests\u0020the\u0020\u0027setFirstLevelNodeTypeFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020an\u0020invalid\u0020XML\u0020string\u0020is\u0020given\u0020as\u0020input.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput"
+        },                {
+            "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode\u0028\u0029",
+            "name": "testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode",
+            "summary": "Tests\u0020the\u0020\u0027setFirstLevelNodeTypeFromXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nan\u0020exception\u0020is\u0020thrown\u0020with\u0020the\u0020correct\u0020error\u0020message\u0020when\u0020a\u0020non\u002Dexistent\u0020root\u0020node\u0020is\u0020given\u0020as\u0020input.",
+            "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003A\u0024tester",
             "name": "tester",

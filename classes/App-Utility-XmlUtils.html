@@ -192,12 +192,12 @@ and returns the new XML typed the same as given as parameter.</p>
 and adds the nodes to the XML.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml">extractNodesFromXml()</a>
+    <a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml">setFirstLevelNodeTypeFromXml()</a>
     <span>
                                 &nbsp;: array&lt;string, string&gt;    </span>
 </dt>
-<dd>The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
-returns an array of the first level child nodes and their assigned types.</dd>
+<dd>The `setFirstLevelNodeTypeFromXml` method takes an XML string or a SimpleXMLElement object as input and
+returns an array of the first level child nodes and their assigned types starting from the specified root node.</dd>
 
     </dl>
 
@@ -300,24 +300,24 @@ and the values represent either the values of the nodes or an array with possibl
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_extractNodesFromXml">
-        extractNodesFromXml()
-        <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setFirstLevelNodeTypeFromXml">
+        setFirstLevelNodeTypeFromXml()
+        <a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">74</span>
+    <span class="phpdocumentor-element-found-in__line">75</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The `extractNodesFromXml` method takes an XML string or a SimpleXMLElement object as input and
-returns an array of the first level child nodes and their assigned types.</p>
+        <p class="phpdocumentor-summary">The `setFirstLevelNodeTypeFromXml` method takes an XML string or a SimpleXMLElement object as input and
+returns an array of the first level child nodes and their assigned types starting from the specified root node.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">extractNodesFromXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$srcXml</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">setFirstLevelNodeTypeFromXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$srcXml</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rootNode</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -335,12 +335,21 @@ returns an array of the first level child nodes and their assigned types.</p>
 </section>
 
             </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$rootNode</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The root node from which to start extracting child nodes.</p>
+</section>
+
+            </dd>
             </dl>
 
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -350,7 +359,7 @@ returns an array of the first level child nodes and their assigned types.</p>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"><p>If an invalid XML string is  given as input.</p>
+                                                 <section class="phpdocumentor-description"><p>If an invalid XML string or root node is  given as input.</p>
 </section>
 
                                     </dd>
@@ -480,7 +489,7 @@ returns an array of the first level child nodes and their assigned types.</p>
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a></li>
-                                            <li><a href="classes/App-Utility-XmlUtils.html#method_extractNodesFromXml">extractNodesFromXml()</a></li>
+                                            <li><a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml">setFirstLevelNodeTypeFromXml()</a></li>
                                     </ul>
             </li>
                     </ul>

@@ -272,19 +272,27 @@ the the addition of nodes to an XML object regarding
 the correct output type (depending on the input file) with the expected values.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml">testExtractNodesFromXml()</a>
+    <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXml">testSetFirstLevelNodeTypeFromXml()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests the &#039;extractNodesFromXml&#039; method of the &#039;XmlUtils&#039; class whether
+<dd>Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
 the corresponding correct array is returned when valid XML is given as input.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXmlFailureByInvalidXmlInput">testExtractNodesFromXmlFailureByInvalidXmlInput()</a>
+    <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode">testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Tests the &#039;addNodesToXml&#039; method of the &#039;XmlUtils&#039; class whether
+<dd>Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
+an exception is thrown with the correct error message when a non-existent root node is given as input.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput">testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput()</a>
+    <span>
+                                &nbsp;: mixed    </span>
+</dt>
+<dd>Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
 an exception is thrown with the correct error message when an invalid XML string is given as input.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -581,7 +589,7 @@ where each test case is an array with a single element representing an invalid n
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">202</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 
     </aside>
 
@@ -642,7 +650,7 @@ an exception is thrown with the correct error message when an invalid node array
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">189</span>
 
     </aside>
 
@@ -675,7 +683,7 @@ an exception is thrown with the correct error message when an invalid XML string
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">165</span>
+    <span class="phpdocumentor-element-found-in__line">170</span>
 
     </aside>
 
@@ -709,7 +717,7 @@ the correct output type (depending on the input file) with the expected values.<
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 
     </aside>
 
@@ -735,24 +743,24 @@ the correct output type (depending on the input file) with the expected values.<
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testExtractNodesFromXml">
-        testExtractNodesFromXml()
-        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testSetFirstLevelNodeTypeFromXml">
+        testSetFirstLevelNodeTypeFromXml()
+        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXml" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">220</span>
+    <span class="phpdocumentor-element-found-in__line">225</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests the &#039;extractNodesFromXml&#039; method of the &#039;XmlUtils&#039; class whether
+        <p class="phpdocumentor-summary">Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
 the corresponding correct array is returned when valid XML is given as input.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testExtractNodesFromXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$xmlInput</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expectedArray</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testSetFirstLevelNodeTypeFromXml</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$xmlInput</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$rootNode</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$expectedArray</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -769,6 +777,13 @@ the corresponding correct array is returned when valid XML is given as input.</p
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$rootNode</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$expectedArray</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
@@ -780,7 +795,7 @@ the corresponding correct array is returned when valid XML is given as input.</p
     
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXml#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -803,24 +818,57 @@ the corresponding correct array is returned when valid XML is given as input.</p
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testExtractNodesFromXmlFailureByInvalidXmlInput">
-        testExtractNodesFromXmlFailureByInvalidXmlInput()
-        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXmlFailureByInvalidXmlInput" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode">
+        testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode()
+        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">233</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Tests the &#039;addNodesToXml&#039; method of the &#039;XmlUtils&#039; class whether
+        <p class="phpdocumentor-summary">Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
+an exception is thrown with the correct error message when a non-existent root node is given as input.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput">
+        testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput()
+        <a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">238</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Tests the &#039;setFirstLevelNodeTypeFromXml&#039; method of the &#039;XmlUtils&#039; class whether
 an exception is thrown with the correct error message when an invalid XML string is given as input.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testExtractNodesFromXmlFailureByInvalidXmlInput</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -844,7 +892,7 @@ an exception is thrown with the correct error message when an invalid XML string
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/Utility/XmlUtilsTest.php"><a href="files/tests-unit-utility-xmlutilstest.html"><abbr title="tests/Unit/Utility/XmlUtilsTest.php">XmlUtilsTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">89</span>
+    <span class="phpdocumentor-element-found-in__line">88</span>
 
     </aside>
 
@@ -857,7 +905,7 @@ for various valid XML structures and the expected extracted nodes.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
-        <section class="phpdocumentor-description"><p>I is used for testing the 'extractNodesFromXml' method of the 'XmlUtils' class.</p>
+        <section class="phpdocumentor-description"><p>It is used for testing the 'getNodesFromXml' method of the 'XmlUtils' class.</p>
 </section>
 
     
@@ -1038,8 +1086,9 @@ by initializing the XmlUtils object and setting valid variables.</p>
                                             <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlFailureByInvalidXmlInput">testAddNodesToXmlFailureByInvalidXmlInput()</a></li>
                                             <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlObject">testAddNodesToXmlObject()</a></li>
                                             <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlString">testAddNodesToXmlString()</a></li>
-                                            <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXml">testExtractNodesFromXml()</a></li>
-                                            <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testExtractNodesFromXmlFailureByInvalidXmlInput">testExtractNodesFromXmlFailureByInvalidXmlInput()</a></li>
+                                            <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXml">testSetFirstLevelNodeTypeFromXml()</a></li>
+                                            <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode">testSetFirstLevelNodeTypeFromXmlFailureByInvalidRootNode()</a></li>
+                                            <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput">testSetFirstLevelNodeTypeFromXmlFailureByInvalidXmlInput()</a></li>
                                             <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method_validXmlProvider">validXmlProvider()</a></li>
                                             <li><a href="classes/Tests-Unit-Utility-XmlUtilsTest.html#method__before">_before()</a></li>
                                     </ul>

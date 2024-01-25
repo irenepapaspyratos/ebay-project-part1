@@ -227,7 +227,7 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Utility-CustomCurl.html#method_executeCurl">executeCurl()</a>
     <span>
-                                &nbsp;: string    </span>
+                                &nbsp;: array&lt;string, string&gt;|string    </span>
 </dt>
 <dd>The &#039;executeCurl&#039; method executes a cURL request with specified headers &amp; post fields and returns the
 response.</dd>
@@ -526,7 +526,7 @@ response.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">executeCurl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$headers</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$postFields</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">executeCurl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$headers</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$postFields</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$responseHeader</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;|string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -549,6 +549,13 @@ response.</p>
 Although the content can generally be in various formats, for this eBay API an XML string is used.</p>
 </section>
 
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$responseHeader</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
             </dd>
             </dl>
 
@@ -573,9 +580,9 @@ Although the content can generally be in various formats, for this eBay API an X
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
+        <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;|string</span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>The response from the cURL request.</p>
+                <section class="phpdocumentor-description"><p>The response headers and body or the response from the cURL request (depending on the chosen option).</p>
 </section>
 
             </section>
