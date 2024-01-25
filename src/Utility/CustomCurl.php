@@ -45,10 +45,10 @@ class CustomCurl {
      * @param string $postFields Contains the data to be sent in the HTTP POST request. 
      * Although the content can generally be in various formats, for this eBay API an XML string is used.
      * 
-     * @return string The response from the cURL request.
+     * @return array<string, string>|string The response headers and body or the response from the cURL request (depending on the chosen option).
      * @throws \Exception If a cURL error occurs.
      */
-    public function executeCurl(array $headers, string $postFields): string {
+    public function executeCurl(array $headers, string $postFields, ?bool $responseHeader = false): array|string {
 
         $ch = curl_init();
 
@@ -61,6 +61,7 @@ class CustomCurl {
             CURLOPT_POST => $this->post,
             CURLOPT_POSTFIELDS => $postFields,
             CURLOPT_RETURNTRANSFER => $this->returnTransfer,
+            CURLOPT_HEADER => $responseHeader,
         ]);
 
         $response = curl_exec($ch);
@@ -70,8 +71,13 @@ class CustomCurl {
             throw new \Exception('cURL ERROR: ' . curl_error($ch));
         }
 
+        // Separate headers and body
+        $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        $resHeaders = substr($response, 0, $headerSize);
+        $resBody = substr($response, $headerSize);
+
         curl_close($ch);
 
-        return $response;
+        return $responseHeader ? ['headers' => $resHeaders, 'body' => $resBody] : $response;
     }
 }
