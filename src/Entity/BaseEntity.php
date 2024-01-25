@@ -48,7 +48,7 @@ abstract class BaseEntity {
      * @return void
      * @throws \Exception If an invalid property or type is tried to be set.
      */
-    public function __set(string $name, int|string|float|\DateTime|null $value): void {
+    public function __set(string $name, int|string|float|\DateTime $value): void {
 
         // Validate property
         if (!array_key_exists($name, $this->validColumns))
@@ -58,38 +58,34 @@ abstract class BaseEntity {
         $actualType = gettype($value);
 
         // Validate special cases
-        if ($actualType === 'NULL') {
-            $expectedType = 'NULL';
-        } else {
+        switch ($expectedType) {
 
-            switch ($expectedType) {
+            case 'DateTime':
 
-                case 'DateTime':
+                // Validate DateTime and set UTC timezone
+                if ($actualType === 'object' && $value instanceof \DateTime) {
+                    $expectedType = 'object';
+                    $value->setTimezone(new \DateTimeZone('UTC'));
+                }
+                break;
 
-                    // Validate DateTime and set UTC timezone
-                    if ($actualType === 'object' && $value instanceof \DateTime) {
-                        $expectedType = 'object';
-                        $value->setTimezone(new \DateTimeZone('UTC'));
-                    }
-                    break;
+            case 'float':
+                $expectedType = 'double';
+                break;
 
-                case 'float':
-                    $expectedType = 'double';
-                    break;
+            case 'boolean':
+                $expectedType = 'integer';
+                break;
 
-                case 'boolean':
-                    $expectedType = 'integer';
-                    break;
+            case 'JSON':
+                $expectedType = 'string';
 
-                case 'JSON':
-                    $expectedType = 'string';
-
-                    // Validate JSON
-                    if (json_decode($value) === null && json_last_error() !== JSON_ERROR_NONE)
-                        throw new \InvalidArgumentException("Invalid JSON data for '$name'");
-                    break;
-            }
+                // Validate JSON
+                if (json_decode($value) === null && json_last_error() !== JSON_ERROR_NONE)
+                    throw new \InvalidArgumentException("Invalid JSON data for '$name'");
+                break;
         }
+
 
         // Validate type
         if ($actualType !== $expectedType)
