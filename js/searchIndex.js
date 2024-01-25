@@ -401,9 +401,24 @@ Search.appendIndex(
             "summary": "The\u0020\u0027AddElementsToXml\u0027\u0020class\u0020provides\u0020methods\u0020to\u0020deal\u0020with\u0020XML\u0020objects\u0020or\u0020strings.",
             "url": "classes/App-Utility-XmlUtils.html"
         },                {
+            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AneedsCData\u0028\u0029",
+            "name": "needsCData",
+            "summary": "The\u0020\u0027isCData\u0027\u0020method\u0020checks\u0020via\u0020regex\u0020match\u0020if\u0020a\u0020given\u0020value\u0020contains\u0020special\u0020characters\u0020that\u0020are\ninterpreted\u0020as\u0020markup\u0020in\u0020XML\u0020and\u0020will\u0020break\u0020it,\u0020resulting\u0020in\u0020the\u0020need\u0020to\u0020escape\u0020them\u003A\u0020\u003C,\u0020\u003E,\u0020\u0026,\u0020\u0027\u0020and\u0020\u0022.",
+            "url": "classes/App-Utility-XmlUtils.html#method_needsCData"
+        },                {
+            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AaddChildWithCData\u0028\u0029",
+            "name": "addChildWithCData",
+            "summary": "The\u0020\u0027addChildWithCData\u0027\u0020method\u0020adds\u0020a\u0020child\u0020node\u0020with\u0020a\u0020CData\u0020section\u0020as\u0020node\u0020value\nto\u0020a\u0020given\u0020parent\u0020node\u0020in\u0020a\u0020SimpleXMLElement\u0020object\u0020using\u0020the\u0020\u0027DOMDocument\u0027\u0020class.",
+            "url": "classes/App-Utility-XmlUtils.html#method_addChildWithCData"
+        },                {
+            "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AextendedSimpleXmlAddChild\u0028\u0029",
+            "name": "extendedSimpleXmlAddChild",
+            "summary": "The\u0020\u0027extendedSimpleXmlAddChild\u0027\u0020method\u0020adds\u0020a\u0020child\u0020element\nwith\u0020a\u0020given\u0020name\u0020and\u0020value\u0020to\u0020a\u0020parent\u0020SimpleXMLElement\u0020object.",
+            "url": "classes/App-Utility-XmlUtils.html#method_extendedSimpleXmlAddChild"
+        },                {
             "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AaddNodesToXml\u0028\u0029",
             "name": "addNodesToXml",
-            "summary": "The\u0020\u0060addNodesToXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020object\u0020and\u0020an\u0020array\u0020of\u0020nodes\u0020\u0028with\u0020or\u0020without\u0020direct\u0020children\u0029,\nand\u0020adds\u0020the\u0020nodes\u0020to\u0020the\u0020XML.",
+            "summary": "The\u0020\u0060addNodesToXml\u0060\u0020method\u0020takes\u0020an\u0020XML\u0020string\u0020or\u0020object\u0020and\u0020adds\u0020an\u0020array\u0020of\u0020nodes\u0020\u0028with\u0020or\u0020without\u0020direct\u0020children\u0029\u0020to\u0020it.",
             "url": "classes/App-Utility-XmlUtils.html#method_addNodesToXml"
         },                {
             "fqsen": "\\App\\Utility\\XmlUtils\u003A\u003AsetFirstLevelNodeTypeFromXml\u0028\u0029",
@@ -1228,12 +1243,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlString\u0028\u0029",
             "name": "testAddNodesToXmlString",
-            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020the\u0020addition\u0020of\u0020nodes\u0020to\u0020an\u0020XML\u0020object\u0020regarding\nthe\u0020correct\u0020output\u0020type\u0020\u0028depending\u0020on\u0020the\u0020input\u0020file\u0029\u0020with\u0020the\u0020expected\u0020values.",
+            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020addition\u0020of\u0020nodes\u0020to\u0020an\u0020XML\u0020object\u0020works\u0020correct\u0020regarding\nthe\u0020correct\u0020output\u0020type\u0020\u0028depending\u0020on\u0020the\u0020input\u0020file\u0029\u0020with\u0020the\u0020expected\u0020values\u0020\u0028depending\u0020on\u0020special\u0020characters\u0029.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlString"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlObject\u0028\u0029",
             "name": "testAddNodesToXmlObject",
-            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020the\u0020addition\u0020of\u0020nodes\u0020to\u0020an\u0020XML\u0020object\u0020regarding\nthe\u0020correct\u0020output\u0020type\u0020\u0028depending\u0020on\u0020the\u0020input\u0020file\u0029\u0020with\u0020the\u0020expected\u0020values.",
+            "summary": "Tests\u0020the\u0020\u0027addNodesToXml\u0027\u0020method\u0020of\u0020the\u0020\u0027XmlUtils\u0027\u0020class\u0020whether\nthe\u0020the\u0020addition\u0020of\u0020nodes\u0020to\u0020an\u0020XML\u0020object\u0020works\u0020correct\u0020regarding\nthe\u0020correct\u0020output\u0020type\u0020\u0028depending\u0020on\u0020the\u0020input\u0020file\u0029\u0020with\u0020the\u0020expected\u0020values\u0020\u0028depending\u0020on\u0020special\u0020characters\u0029.",
             "url": "classes/Tests-Unit-Utility-XmlUtilsTest.html#method_testAddNodesToXmlObject"
         },                {
             "fqsen": "\\Tests\\Unit\\Utility\\XmlUtilsTest\u003A\u003AtestAddNodesToXmlFailureByInvalidXmlInput\u0028\u0029",

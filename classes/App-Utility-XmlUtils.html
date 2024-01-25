@@ -188,8 +188,15 @@ and returns the new XML typed the same as given as parameter.</p>
     <span>
                                 &nbsp;: string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>    </span>
 </dt>
-<dd>The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
-and adds the nodes to the XML.</dd>
+<dd>The `addNodesToXml` method takes an XML string or object and adds an array of nodes (with or without direct children) to it.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/App-Utility-XmlUtils.html#method_extendedSimpleXmlAddChild">extendedSimpleXmlAddChild()</a>
+    <span>
+                                &nbsp;: <abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>    </span>
+</dt>
+<dd>The &#039;extendedSimpleXmlAddChild&#039; method adds a child element
+with a given name and value to a parent SimpleXMLElement object.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml">setFirstLevelNodeTypeFromXml()</a>
@@ -198,6 +205,22 @@ and adds the nodes to the XML.</dd>
 </dt>
 <dd>The `setFirstLevelNodeTypeFromXml` method takes an XML string or a SimpleXMLElement object as input and
 returns an array of the first level child nodes and their assigned types starting from the specified root node.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/App-Utility-XmlUtils.html#method_addChildWithCData">addChildWithCData()</a>
+    <span>
+                                &nbsp;: <abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>    </span>
+</dt>
+<dd>The &#039;addChildWithCData&#039; method adds a child node with a CData section as node value
+to a given parent node in a SimpleXMLElement object using the &#039;DOMDocument&#039; class.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/App-Utility-XmlUtils.html#method_needsCData">needsCData()</a>
+    <span>
+                                &nbsp;: bool    </span>
+</dt>
+<dd>The &#039;isCData&#039; method checks via regex match if a given value contains special characters that are
+interpreted as markup in XML and will break it, resulting in the need to escape them: &lt;, &gt;, &amp;, &#039; and &quot;.</dd>
 
     </dl>
 
@@ -228,12 +251,11 @@ returns an array of the first level child nodes and their assigned types startin
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">The `addNodesToXml` method takes an XML string or object and an array of nodes (with or without direct children),
-and adds the nodes to the XML.</p>
+        <p class="phpdocumentor-summary">The `addNodesToXml` method takes an XML string or object and adds an array of nodes (with or without direct children) to it.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -241,7 +263,10 @@ and adds the nodes to the XML.</p>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>If a node value contains non-safe special characters, a CData section will be added instead of the bare value
+using the customized 'extendedSimpleXmlAddChild' method.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -278,7 +303,7 @@ and the values represent either the values of the nodes or an array with possibl
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"><p>If an invalid XML string or child nodes are  given as input.</p>
+                                                 <section class="phpdocumentor-description"><p>If an invalid XML string or child nodes are given as input.</p>
 </section>
 
                                     </dd>
@@ -300,6 +325,95 @@ and the values represent either the values of the nodes or an array with possibl
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_extendedSimpleXmlAddChild">
+        extendedSimpleXmlAddChild()
+        <a href="classes/App-Utility-XmlUtils.html#method_extendedSimpleXmlAddChild" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;extendedSimpleXmlAddChild&#039; method adds a child element
+with a given name and value to a parent SimpleXMLElement object.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">extendedSimpleXmlAddChild</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentNodeSrc</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$childName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$childValue</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>If the child value needs to be wrapped in a CDATA section is being checked with the 'needsCData' method.
+If positive, it uses the help of the 'addChildWithCData' method instead of the 'addChild' method of the SimpleXml Class.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$parentNodeSrc</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|<abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$childName</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name of the child node to be added.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$childValue</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Content to be assigned to the child element.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Utility-XmlUtils.html#method_extendedSimpleXmlAddChild#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid XML string is given as input.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>a \SimpleXMLElement object of the added child node.</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setFirstLevelNodeTypeFromXml">
         setFirstLevelNodeTypeFromXml()
         <a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml" class="headerlink"><i class="fas fa-link"></i></a>
@@ -308,7 +422,7 @@ and the values represent either the values of the nodes or an array with possibl
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">151</span>
 
     </aside>
 
@@ -370,6 +484,153 @@ returns an array of the first level child nodes and their assigned types startin
         <span class="phpdocumentor-signature__response_type">array&lt;string, string&gt;</span>
                     &mdash;
                 <section class="phpdocumentor-description"><p>Array of nodes extracted from the XML, where each node is represented by name =&gt; type.</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_addChildWithCData">
+        addChildWithCData()
+        <a href="classes/App-Utility-XmlUtils.html#method_addChildWithCData" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">42</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;addChildWithCData&#039; method adds a child node with a CData section as node value
+to a given parent node in a SimpleXMLElement object using the &#039;DOMDocument&#039; class.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">addChildWithCData</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$parentNode</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$childName</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$childValue</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>CData sections are used to escape special characters in XML content ( &lt;, &gt;, &amp;, ' and &quot;), so that they are
+not interpreted as markup and the underlying string stays as it is instead of with the use of e.g. &amp; for &amp; etc..</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$parentNode</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Element to add the new child to.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$childName</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Name of the child element to be added.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$childValue</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Content to be added as CDATA section to the child element.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Utility-XmlUtils.html#method_addChildWithCData#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>If an invalid node is given as input.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\SimpleXMLElement">SimpleXMLElement</abbr></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>New child node as \SimpleXMLElement object.</p>
+</section>
+
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_needsCData">
+        needsCData()
+        <a href="classes/App-Utility-XmlUtils.html#method_needsCData" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Utility/XmlUtils.php"><a href="files/src-utility-xmlutils.html"><abbr title="src/Utility/XmlUtils.php">XmlUtils.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">23</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The &#039;isCData&#039; method checks via regex match if a given value contains special characters that are
+interpreted as markup in XML and will break it, resulting in the need to escape them: &lt;, &gt;, &amp;, &#039; and &quot;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">needsCData</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+        <section class="phpdocumentor-description"><p>However, simply escaping would alter the original string, which has to be avoided sometimes.
+In such cases a CData section can be used for a node value with such characters.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Node value as string to be checked.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>True if the given value contains any non-safe characters, false otherwise.</p>
 </section>
 
             </section>
@@ -489,7 +750,10 @@ returns an array of the first level child nodes and their assigned types startin
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Utility-XmlUtils.html#method_addNodesToXml">addNodesToXml()</a></li>
+                                            <li><a href="classes/App-Utility-XmlUtils.html#method_extendedSimpleXmlAddChild">extendedSimpleXmlAddChild()</a></li>
                                             <li><a href="classes/App-Utility-XmlUtils.html#method_setFirstLevelNodeTypeFromXml">setFirstLevelNodeTypeFromXml()</a></li>
+                                            <li><a href="classes/App-Utility-XmlUtils.html#method_addChildWithCData">addChildWithCData()</a></li>
+                                            <li><a href="classes/App-Utility-XmlUtils.html#method_needsCData">needsCData()</a></li>
                                     </ul>
             </li>
                     </ul>
